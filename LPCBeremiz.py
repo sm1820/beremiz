@@ -1146,6 +1146,8 @@ class LPCBeremiz(Beremiz):
         leftwindowsizer = wx.BoxSizer(wx.HORIZONTAL)
         leftwindowvsizer.AddSizer(leftwindowsizer, 0, border=0, flag=0)
         
+        self.GenerateEnableButton(leftwindow, leftwindowsizer, plugin)
+        
         st = wx.StaticText(leftwindow, -1)
         st.SetFont(wx.Font(faces["size"], wx.DEFAULT, wx.NORMAL, wx.BOLD, faceName = faces["helv"]))
         st.SetLabel(plugin.GetFullIEC_Channel())
