@@ -400,6 +400,8 @@ class RootClass:
                        "slavebootup_register" : "",
                        "post_sync" : "",
                        "post_sync_register" : "",
+                       "pre_op" : "",
+                       "pre_op_register" : "",
                        }
         for child in self.IECSortedChildren():
             childlocstr = "_".join(map(str,child.GetCurrentLocation()))
@@ -425,10 +427,6 @@ class RootClass:
                     format_dict["slavebootups"] += (
                         "static void %s_post_SlaveBootup(CO_Data* d, UNS8 nodeId){}\n"%(nodename))
                 else:
-                    # for id in SlaveIDs:
-                    #     format_dict["slavebootups"] += (
-                    #     "int %s_slave_%d_booted = 0;\n"%(nodename, id))
-                    # define post_SlaveBootup lookup functions
                     format_dict["slavebootups"] += (
                         "static void %s_post_SlaveBootup(CO_Data* d, UNS8 nodeId){\n"%(nodename)+
                         "    check_and_start_node(d, nodeId);\n"+
@@ -436,6 +434,12 @@ class RootClass:
                 # register previously declared func as post_SlaveBootup callback for that node
                 format_dict["slavebootup_register"] += (
                     "%s_Data.post_SlaveBootup = %s_post_SlaveBootup;\n"%(nodename,nodename))
+                format_dict["pre_op"] += (
+                    "static void %s_preOperational(CO_Data* d){\n    "%(nodename)+
+                    "".join(["    masterSendNMTstateChange(d, %d, NMT_Reset_Comunication);\n"%NdId for NdId in SlaveIDs])+
+                    "}\n")
+                format_dict["pre_op_register"] += (
+                    "%s_Data.preOperational = %s_preOperational;\n"%(nodename,nodename))
             else:
                 # Slave node
                 align = child_data.getSync_Align()
