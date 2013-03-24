@@ -26,7 +26,7 @@ void inline copy_to_log(uint8_t level, uint32_t buffpos, void* buf, uint32_t siz
     if(buffpos + size < LOG_BUFFER_SIZE){
         memcpy(&LogBuff[level][buffpos], buf, size);
     }else{
-        uint32_t remaining = LOG_BUFFER_SIZE - buffpos - 1; 
+        uint32_t remaining = LOG_BUFFER_SIZE - buffpos; 
         memcpy(&LogBuff[level][buffpos], buf, remaining);
         memcpy(LogBuff[level], (char*)buf + remaining, size - remaining);
     }
@@ -58,7 +58,7 @@ typedef struct {
    |63 ... 32|31 ... 0|
    | Message | Buffer |
    | counter | Index  | */
-static uint64_t LogCursor[LOG_LEVELS] = {0x0,0x0,0x0,0x0};
+static uint64_t LogCursor[LOG_LEVELS] LOG_BUFFER_ATTRS = {0x0,0x0,0x0,0x0};
 
 /* Store one log message of give size */
 int LogMessage(uint8_t level, uint8_t* buf, uint32_t size){
