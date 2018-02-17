@@ -1,0 +1,21 @@
+# Mercurial sync
+.hgignore
+
+# Temporary files
+*~
+*directory
+*.a
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.py[ocd]
+*.so
+
+# Idea settings
+.idea
+
+# Sphinx build
+doc/build/*
+doc/doxygen/xml/*

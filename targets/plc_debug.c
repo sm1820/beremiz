@@ -1,15 +1,12 @@
-/*
- * DEBUGGER code
- * 
- * On "publish", when buffer is free, debugger stores arbitrary variables 
+/**
+ * @file plc_debug.c
+ * @brief Debugger code
+ *
+ * On "publish", when buffer is free, debugger stores arbitrary variables
  * content into, and mark this buffer as filled
- * 
- * 
- * Buffer content is read asynchronously, (from non real time part), 
+ * Buffer content is read asynchronously, (from non real time part),
  * and then buffer marked free again.
- *  
- * 
- * */
+ */
 
 #ifdef TARGET_DEBUG_DISABLE
 
@@ -26,7 +23,9 @@ void __publish_debug (void){}
 #include <string.h>
 #include <stdio.h>
 
+#ifndef DOXYGEN_SKIP
 #define BUFFER_SIZE %(buffer_size)d
+#endif /* DOXYGEN_SKIP */
 
 /* Atomically accessed variable for buffer state */
 #define BUFFER_FREE 0
@@ -39,15 +38,16 @@ char debug_buffer[BUFFER_SIZE];
 /* Buffer's cursor*/
 static char* buffer_cursor = debug_buffer;
 static unsigned int retain_offset = 0;
-/***
- * Declare programs 
- **/
-%(programs_declarations)s
 
-/***
- * Declare global variables from resources and conf 
- **/
+/* Declare programs */
+#ifndef DOXYGEN_SKIP
+%(programs_declarations)s
+#endif /* DOXYGEN_SKIP */
+
+/* Declare global variables from resources and conf */
+#ifndef DOXYGEN_SKIP
 %(extern_variables_declarations)s
+#endif /* DOXYGEN_SKIP */
 
 typedef const struct {
     void *ptr;
@@ -55,7 +55,9 @@ typedef const struct {
 } dbgvardsc_t;
 
 static dbgvardsc_t dbgvardsc[] = {
+#ifndef DOXYGEN_SKIP
 %(variable_decl_array)s
+#endif /* DOXYGEN_SKIP */
 };
 
 typedef void(*__for_each_variable_do_fp)(dbgvardsc_t*);
@@ -230,7 +232,7 @@ void __publish_debug(void)
             &buffer_state,
             BUFFER_FREE,
             BUFFER_BUSY);
-            
+
         /* If buffer was free */
         if(latest_state == BUFFER_FREE)
         {
@@ -238,9 +240,9 @@ void __publish_debug(void)
             buffer_cursor = debug_buffer;
             /* Iterate over all variables to fill debug buffer */
             __for_each_variable_do(DebugIterator);
-            
+
             /* Leave debug section,
-             * Trigger asynchronous transmission 
+             * Trigger asynchronous transmission
              * (returns immediately) */
             InitiateDebugTransfer(); /* size */
         }else{

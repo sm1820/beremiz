@@ -2,10 +2,11 @@
 #
 
 # You can set these variables from the command line.
-SPHINXOPTS    =
-SPHINXBUILD   = sphinx-build
-PAPER         =
-BUILDDIR      = _build
+SPHINXOPTS  =
+SPHINXBUILD = sphinx-build
+PAPER       =
+BUILDDIR    = ./build
+DOXYDIR     = ./doxygen
 
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
@@ -27,7 +28,7 @@ $$(mos):locale/$(1)/LC_MESSAGES/%.mo: %_$(1).po
 	msgfmt $$^ -o $$@
 mofiles += $$(mos)
 pos = $$(rstfiles:%.rst=%_$(1).po)
-$$(pos):%_$(1).po: $(BUILDDIR)/locale/%.pot 
+$$(pos):%_$(1).po: $(BUILDDIR)/locale/%.pot
 	if [ -e $$@ ] ; then msgmerge -U $$@ $$<; else cat $$< > $$@; fi
 
 site_$(1): $$(mos)
@@ -71,8 +72,14 @@ help:
 
 clean:
 	-rm -rf $(BUILDDIR)/*
+	-rm -rf $(DOXYDIR)/xml
 
-html:
+doxy:
+	doxygen $(DOXYDIR)/Doxyfile
+	@echo
+	@echo "Doxygen routine for targets has been completed."
+
+html: doxy
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
@@ -127,6 +134,8 @@ epub:
 	@echo "Build finished. The epub file is in $(BUILDDIR)/epub."
 
 latex:
+	mkdir -pv $(BUILDDIR)/latex
+	cp -R ./latex/*.sty $(BUILDDIR)/latex
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
 	@echo
 	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/latex."
@@ -134,6 +143,8 @@ latex:
 	      "(use \`make latexpdf' here to do that automatically)."
 
 latexpdf:
+	mkdir -pv $(BUILDDIR)/latex
+	cp -R ./latex/*.sty $(BUILDDIR)/latex
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
 	@echo "Running LaTeX files through pdflatex..."
 	$(MAKE) -C $(BUILDDIR)/latex all-pdf
