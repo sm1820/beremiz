@@ -1,0 +1,301 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Среда разработки «Beremiz» &mdash; Документация Beremiz </title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/brz.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Алфавитный указатель"
+              href="genindex.html"/>
+        <link rel="search" title="Поиск" href="search.html"/>
+    <link rel="top" title="Документация Beremiz " href="#"/>
+        <link rel="next" title="Инструкции по установке" href="install_guide/index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="#" class="icon icon-home"> Beremiz
+          
+
+          
+            
+            <img src="_static/about_brz_logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Содержание</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install_guide/index.html">Инструкции по установке</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_guide/index.html">Руководство программиста</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iec_guide/index.html">Языки стандарта МЭК 61131-3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer_guide/index.html">Beremiz: Руководство разработчика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation_guide/index.html">Участие в разработке документации</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">Beremiz</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="#">Docs</a> &raquo;</li>
+      
+    <li>Среда разработки «Beremiz»</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/index.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="admonition note">
+<p class="first admonition-title">Примечание</p>
+<p>Документация находится в стадии разработки.</p>
+<p class="last">Устаревшая pdf-версия данного руководства <a class="reference external" href="http://www.sm1820.com.ru/files/beremiz/beremiz_manual.pdf">доступна</a> на сайте ИНЭУМ.</p>
+</div>
+<div class="section" id="beremiz">
+<h1>Среда разработки «Beremiz»<a class="headerlink" href="#beremiz" title="Ссылка на этот заголовок">¶</a></h1>
+<p>В данном руководстве представлено описание порядка работы со средой разработки «Beremiz». Документ содержит информацию о назначении программы, условиях выполнения, элементах пользовательского интерфейса, порядке разработки прикладных программ, работе с внешними модулями – плагинами. Рассмотрены основные её компоненты и их назначение с приведёнными примерами. Описан процесс работы с редакторами языков стандарта IEC 61131-3 и режимом отладки созданных прикладных программ. В документе приведены тексты сообщений, выдаваемых в ходе выполнения программы и описание их содержания.</p>
+<p>В приложениях приведены порядок установки среды «Beremiz» под операционные системы Windows и Linux, описание стандартных функциональных блоков доступных для оператора и общие сведения о языках стандарта IEC 61131-3.</p>
+<div class="section" id="id2">
+<h2>Назначение и условия применения программы<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Среда разработки «Beremiz» предназначена для создания и отладки
+прикладных программ на языках стандарта IEC 61131-3 для целевых
+устройств (программируемых логических контроллеров) на базе СМ1820М. В
+качестве языков описания алгоритмов и логики работы данных программ,
+могут выступать как текстовые Structured Text (далее ST) и Instruction
+List (далее IL), так и графические Function Block Diagram (далее FBD),
+Ladder Diagram (далее LD), Sequential Function Chart (далее SFC).</p>
+</div>
+<div class="section" id="id3">
+<h2>Характеристики программы<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Среда разработки «Beremiz» может выполняться на операционных системах
+Windows и Linux. Она написана с использованием кроссплатформенных языков
+Python, C, C++ и дополнительных библиотек к ним. Поэтому для запуска и
+работы «Beremiz», необходима сборка интерпретатора Python с определённым
+набором установленных пакетов (библиотек).</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Содержание</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install_guide/index.html">Инструкции по установке</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install_guide/install_windows7.html">Установка среды разработки «Beremiz» под операционную систему Windows 7</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage_guide/index.html">Руководство программиста</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage_guide/index.html#id2">Введение</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage_guide/manual.html">Обращение к программе. Входные и выходные данные.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage_guide/manual.html#id2">Требования к техническим средствам</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage_guide/manual.html#id3">Основные термины и определения</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage_guide/manual.html#beremiz">Основные компоненты среды разработки «Beremiz»</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage_guide/manual.html#id57">Работа с проектом</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage_guide/manual.html#id72">Сборка, передача на целевое устройство и отладка прикладной программы</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage_guide/manual.html#id93">Библиотека функций и функциональных блоков</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="iec_guide/index.html">Языки стандарта МЭК 61131-3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="iec_guide/st_guide.html">Общие сведения о языке ST</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iec_guide/st_guide.html#id2">Типы данных</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iec_guide/st_guide.html#id3">Конструкции языка</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iec_guide/st_guide.html#id4">Арифметические операции</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iec_guide/il_guide.html">Общие сведения о языке IL</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iec_guide/il_guide.html#id2">Операторы языка</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iec_guide/il_guide.html#id3">Пример программы на языке IL</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iec_guide/ld_guide.html">Общие сведения о языке LD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iec_guide/sfc_guide.html">Общие сведения о языке SFC</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iec_guide/sfc_guide.html#id2">Основные понятия языка SFC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iec_guide/sfc_guide.html#id8">Пример программы на языке SFC</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iec_guide/fbd_guide.html">Общие сведения о языке FBD</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iec_guide/fbd_guide.html#id2">Основные понятия и конструкции языка</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iec_guide/fbd_guide.html#id3">Пример программы на языке FBD</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="developer_guide/index.html">Beremiz: Руководство разработчика</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="developer_guide/soft_plc/index.html">Документация softPLC</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="developer_guide/soft_plc/debugger.html">Отладчик</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="documentation_guide/index.html">Участие в разработке документации</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="documentation_guide/quick_start.html">Быстрый старт</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation_guide/installation.html">Настройка окружения и сборка документации</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="documentation_guide/installation.html#docker">По умолчанию: Использование Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="documentation_guide/installation.html#debian-gnu-linux">Альтернатива: Нативная установка (Debian GNU/Linux)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="documentation_guide/todo_pages.html">TODO</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="install_guide/index.html" class="btn btn-neutral float-right" title="Инструкции по установке" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, JSC &#34;INEUM named after I.S.Bruk&#34;.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

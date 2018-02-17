@@ -1,0 +1,412 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Общие сведения о языке SFC &mdash; Документация Beremiz </title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/brz.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Алфавитный указатель"
+              href="../genindex.html"/>
+        <link rel="search" title="Поиск" href="../search.html"/>
+    <link rel="top" title="Документация Beremiz " href="../index.html"/>
+        <link rel="up" title="Языки стандарта МЭК 61131-3" href="index.html"/>
+        <link rel="next" title="Общие сведения о языке FBD" href="fbd_guide.html"/>
+        <link rel="prev" title="Общие сведения о языке LD" href="ld_guide.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Beremiz
+          
+
+          
+            
+            <img src="../_static/about_brz_logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Содержание</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install_guide/index.html">Инструкции по установке</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage_guide/index.html">Руководство программиста</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Языки стандарта МЭК 61131-3</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="st_guide.html">Общие сведения о языке ST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="il_guide.html">Общие сведения о языке IL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ld_guide.html">Общие сведения о языке LD</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Общие сведения о языке SFC</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Основные понятия языка SFC</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Шаг</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Переход</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Блок действий</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">«Прыжок» – переход на произвольный шаг</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">Дивергенция и конвергенция</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">Пример программы на языке SFC</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="fbd_guide.html">Общие сведения о языке FBD</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_guide/index.html">Beremiz: Руководство разработчика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation_guide/index.html">Участие в разработке документации</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Beremiz</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Языки стандарта МЭК 61131-3</a> &raquo;</li>
+      
+    <li>Общие сведения о языке SFC</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/iec_guide/sfc_guide.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sfc">
+<h1><a class="toc-backref" href="#id9">Общие сведения о языке SFC</a><a class="headerlink" href="#sfc" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="contents topic" id="id1">
+<p class="topic-title first">Содержание</p>
+<ul class="simple">
+<li><a class="reference internal" href="#sfc" id="id9">Общие сведения о языке SFC</a><ul>
+<li><a class="reference internal" href="#id2" id="id10">Основные понятия языка SFC</a><ul>
+<li><a class="reference internal" href="#id3" id="id11">Шаг</a></li>
+<li><a class="reference internal" href="#id4" id="id12">Переход</a></li>
+<li><a class="reference internal" href="#id5" id="id13">Блок действий</a></li>
+<li><a class="reference internal" href="#id6" id="id14">«Прыжок» – переход на произвольный шаг</a></li>
+<li><a class="reference internal" href="#id7" id="id15">Дивергенция и конвергенция</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id8" id="id16">Пример программы на языке SFC</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p><strong>SFC (Sequential Function Chart)</strong> расшифровывается как «Последовательность
+функциональных диаграмм», и является одним из языков стандарта IEC
+61131-3. SFC позволяет легко описывать последовательность протекания
+процессов в системе.</p>
+<p>SFC осуществляет последовательное управление процессом, базируясь на
+системе условий, передающих управления с одной операции на другую. Язык
+SFC состоит из конечного числа базовых элементов, которые используются
+как блоки для построения целостного алгоритма протекания программы.</p>
+<div class="section" id="id2">
+<h2><a class="toc-backref" href="#id10">Основные понятия языка SFC</a><a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Язык SFC использует следующие структурные элементы для создания
+программы: шаг (и начальный шаг), переход, блок действий, прыжок и связи
+типа дивергенция и конвергенция.</p>
+<p>После вызова программного модуля, описанного языком SFC, первым
+выполняется начальный шаг. Шаг, выполняемый в данный момент, называется
+активным. Действия, связанные с активным шагом, выполняются один раз в
+каждом управляющем цикле. В режиме выполнения активные шаги выделяются
+салатовым цветом. Следующий за активным шагом шаг станет активным,
+только если в переходе между этими шагами условие будет истинно.</p>
+<p>В каждом управляющем цикле будут выполнены действия, содержащиеся в
+активных шагах. Далее проверяются условия перехода, и, возможно, уже
+другие шаги становятся активными, но выполняться они будут уже в
+следующем цикле.</p>
+<p>Далее описывается каждый элемент SFC диаграммы.</p>
+<div class="section" id="id3">
+<h3><a class="toc-backref" href="#id11">Шаг</a><a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Наиболее важным элементом языка SFC является шаг, который описывает одну
+операцию. Шаг изображается в виде прямоугольника с собственным именем
+внутри (см. рис. 7.1).</p>
+<p><a class="reference internal" href="../_images/image352.png"><img alt="image345" src="../_images/image352.png" style="width: 1.05139in; height: 0.61389in;" /></a></p>
+<p>Рис. 7.1 – Графическое представление «Шага» языка SFC</p>
+<p>У каждого шага может быть 3 контакта. Сверху и снизу для соединения с
+переходом и справа для соединения с блоком действий. Шаг предваряется
+переходом, который определяет условие для активации данного шага в
+процессе выполнения программы и отображается в виде горизонтальной черты
+на ветви диаграммы процесса с указанием имени и условия. Два шага
+никогда не могут быть соединены непосредственно, они должны всегда
+отделяться переходом (см. рис. 7.2).</p>
+<p><a class="reference internal" href="../_images/image353.png"><img alt="image346" src="../_images/image353.png" style="width: 1.22500in; height: 2.15625in;" /></a></p>
+<p>Рис. 7.2 – Шаги «step2» и «step3», соединённые переходом «tr2_3»</p>
+<p>Любая SFC диаграмма должна содержать начальный шаг (шаг, выделенный
+двойной рамкой), с которого начинается выполнение диаграммы.</p>
+</div>
+<div class="section" id="id4">
+<h3><a class="toc-backref" href="#id12">Переход</a><a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Между шагами находятся так называемые переходы. Условием перехода может
+быть логическая переменная или константа, логический адрес или
+логическое выражение, описанное на любом языке. Условие может включать
+серию инструкций, образующих логический результат, в виде ST выражения,
+например:</p>
+<p>(i&lt;= 100) AND b</p>
+<p>либо на любом другом языке.</p>
+<p>На рис. 7.3 приведён пример перехода между шагом «Step3» и «Step5» с
+именем «transition4».</p>
+<p><a class="reference internal" href="../_images/image354.png"><img alt="image347" src="../_images/image354.png" style="width: 1.29167in; height: 2.33333in;" /></a></p>
+<p>Рис. 7.3 – Переход между шагами «Step3» и «Step5» с предопределённым
+условием «transition4»</p>
+<p>В данном случае «transition4» это имя для предопределённого перехода,
+который может использоваться многократно на SFC диаграмме для
+определения переходов между несколькими шагами. Код для него может быть
+представлен, например, на языке ST:</p>
+<p>:= (flag = True AND level &gt; 10);</p>
+<p>На рис. 7.4 представлен переход между шагами «Step6» и «Step7» в виде
+обычного условия:</p>
+<p>level &gt; 10</p>
+<p><a class="reference internal" href="../_images/image355.png"><img alt="image348" src="../_images/image355.png" style="width: 1.19514in; height: 1.98958in;" /></a></p>
+<p>Рис. 7.4 – Переход между шагами «step6» и «step7» с предопределённым
+условием «transition4»</p>
+<p>На рис. 7.5 представлен переход между шагами «Step8» и «Step9» в виде
+значения логического выражения «AND» на языке FBD:</p>
+<p><a class="reference internal" href="../_images/image356.png"><img alt="image349" src="../_images/image356.png" style="width: 1.54306in; height: 1.84375in;" /></a></p>
+<p>Рис. 7.5 – Переход между шагами «step8» и «step9», заданный «логическим
+И» на языке FBD</p>
+<p>Условие не должно содержать присваивания, вызов программ и экземпляров
+функциональных блоков.</p>
+</div>
+<div class="section" id="id5">
+<h3><a class="toc-backref" href="#id13">Блок действий</a><a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Каждый шаг имеет нулевое или большее количеством действий, объединённых,
+как правило, на диаграмме, в блок действий. На рис. 7.6 показан примера
+шага «evaluateStep» и связанный с ним блок действий.</p>
+<p><a class="reference internal" href="../_images/image357.png"><img alt="image350" src="../_images/image357.png" style="width: 3.45347in; height: 1.18125in;" /></a></p>
+<p>Рис. 7.6 – Шаг «evaluateStep» и связанный с ним блок действий,
+содержащий 3 действия</p>
+<p>Блок действий определяет операции, которые должны выполняться при
+активации (выполнении) шага. Шаги без связанного блока действий
+идентифицируются как ждущий шаг. Блок действий может состоять из
+предопределённых действий. Каждому предопределённому действию
+присваивается имя (на рис. 7.6 это «action0» и «action1»). Одно действие
+может использоваться сразу в нескольких шагах. Действие может
+выполняться непрерывно, пока активен шаг, либо единожды. Это
+определяется специальными квалификаторами, описание которых приведено в
+таблице 6. Квалификаторы также могут ограничивать время выполнения
+каждого действия в шаге.</p>
+</div>
+<div class="section" id="id6">
+<h3><a class="toc-backref" href="#id14">«Прыжок» – переход на произвольный шаг</a><a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Шаг может быть также заменён «прыжком». Последовательности шагов всегда
+ассоциируются с прыжком к другому шагу той же самой последовательности
+шагов. Это означает, что они выполняются циклически. Переход на
+произвольный шаг – это соединение на шаг, имя которого указано под
+знаком «прыжка». Такие переходы нужны для того, чтобы избежать
+пересекающихся и идущих вверх соединений. На рис. 7.7 показана SFC
+диаграмма, содержащая два «прыжка».</p>
+<p><a class="reference internal" href="../_images/image358.png"><img alt="image351" src="../_images/image358.png" style="width: 3.36667in; height: 3.63403in;" /></a></p>
+<p>Рис. 7.7 – SFC диаграмма, содержащая «прыжки»</p>
+<p>Первый делает переход к шагу «init» в случае выполнения условия
+«transition4», второй делает переход к шагу «step1», в случае выполнения
+условия «transition2».</p>
+</div>
+<div class="section" id="id7">
+<h3><a class="toc-backref" href="#id15">Дивергенция и конвергенция</a><a class="headerlink" href="#id7" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Дивергенция – это множественное соединение в направлении от одного шага
+к нескольким переходам. Активируется только одна из ветвей. Условия,
+связанные с различными переходами в начале дивергенции, не являются
+взаимоисключающими по умолчанию. Взаимоисключение должно быть явно
+задано в условиях переходов, чтобы гарантировать, что во время
+выполнения программы активируется одна конкретная ветвь. Пример
+дивергенции на SFC диаграмме приведён на рис. 7.8 и выделен красным
+цветом:</p>
+<p><a class="reference internal" href="../_images/image359.png"><img alt="image352" src="../_images/image359.png" style="width: 3.03542in; height: 2.70417in;" /></a></p>
+<p>Рис. 7.8 – Дивергенция на SFC диаграмме</p>
+<p>Конвергенция – это множественное соединение, направленное от нескольких
+переходов к одному и тому же шагу. Она обычно используется для
+группировки ветвей SFC – программы, которые берут начало из одинарной
+дивергенции. Пример конвергенции на SFC диаграмме приведён на рис. 7.9 и
+выделен красным цветом:</p>
+<p><a class="reference internal" href="../_images/image360.png"><img alt="image353" src="../_images/image360.png" style="width: 3.11389in; height: 3.24375in;" /></a></p>
+<p>Рис. 7.9 – Конвергенция на SFC диаграмме</p>
+<p>Параллельная дивергенция – это множественное соединение, направленное от
+одного перехода к нескольким шагам. Она соответствует параллельному
+выполнению операций процесса. Пример параллельной дивергенции на SFC
+диаграмме приведён на рис. 7.10 и выделен красным цветом:</p>
+<p><a class="reference internal" href="../_images/image361.png"><img alt="image354" src="../_images/image361.png" style="width: 3.08681in; height: 2.66944in;" /></a></p>
+<p>Рис. 7.10 – Параллельная дивергенция на SFC диаграмме</p>
+<p>Параллельная конвергенция – это соединение нескольких шагов к одному и
+тому же переходу. Обычно она используется для группирования ветвей,
+взявших начало дивергенции. Пример параллельной конвергенции на SFC
+диаграмме приведён на рис. 7.11 и выделен красным цветом:</p>
+<p><a class="reference internal" href="../_images/image362.png"><img alt="image355" src="../_images/image362.png" style="width: 3.07014in; height: 3.02153in;" /></a></p>
+<p>Рис. 7.11 – Параллельная конвергенция на SFC диаграмме</p>
+</div>
+</div>
+<div class="section" id="id8">
+<h2><a class="toc-backref" href="#id16">Пример программы на языке SFC</a><a class="headerlink" href="#id8" title="Ссылка на этот заголовок">¶</a></h2>
+<p>На рис. 7.12 приведен пример SFC диаграммы состоящей из начального шага
+«initStep», шагов «firstStep» и «secondStep» и 3 перехода.</p>
+<p>Переход «startFlag» представляет обычную переменную типа BOOL и
+полностью зависит от её значения. Переход между «firstStep» и
+«secondStep» зависит от LD диаграммы с двумя катушками, ассоциированными
+с переменными типа BOOL: «in1» и «in2». Переход активируется только в
+том случае, если «in1» и «in2» будут TRUE. Переход между «secondStep» и
+прыжком на initStep активирован, когда значение переменной «value»
+меньше -100.</p>
+<p>Во время действия «firstStep» выполняется увеличение переменной count на
+1. Во время действия «secondStep» из переменной «value» вычитается 10.</p>
+<p><a class="reference internal" href="../_images/image363.png"><img alt="image356" src="../_images/image363.png" style="width: 5.41389in; height: 3.02847in;" /></a></p>
+<p>Рис. 7.12 – SFC диаграмма</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="fbd_guide.html" class="btn btn-neutral float-right" title="Общие сведения о языке FBD" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ld_guide.html" class="btn btn-neutral" title="Общие сведения о языке LD" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, JSC &#34;INEUM named after I.S.Bruk&#34;.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

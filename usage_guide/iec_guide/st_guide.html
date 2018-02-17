@@ -1,0 +1,677 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Общие сведения о языке ST &mdash; Документация Beremiz </title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/brz.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Алфавитный указатель"
+              href="../genindex.html"/>
+        <link rel="search" title="Поиск" href="../search.html"/>
+    <link rel="top" title="Документация Beremiz " href="../index.html"/>
+        <link rel="up" title="Языки стандарта МЭК 61131-3" href="index.html"/>
+        <link rel="next" title="Общие сведения о языке IL" href="il_guide.html"/>
+        <link rel="prev" title="Языки стандарта МЭК 61131-3" href="index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Beremiz
+          
+
+          
+            
+            <img src="../_static/about_brz_logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Содержание</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install_guide/index.html">Инструкции по установке</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage_guide/index.html">Руководство программиста</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Языки стандарта МЭК 61131-3</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Общие сведения о языке ST</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Типы данных</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Конструкции языка</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Арифметические операции</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Логические (побитовые) операции</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">Операции сравнения</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">Присвоение</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#for">Цикл FOR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#while">Цикл WHILE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#repeat-until">Цикл REPEAT UNTIL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#case">Конструкция CASE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="il_guide.html">Общие сведения о языке IL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ld_guide.html">Общие сведения о языке LD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sfc_guide.html">Общие сведения о языке SFC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fbd_guide.html">Общие сведения о языке FBD</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_guide/index.html">Beremiz: Руководство разработчика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation_guide/index.html">Участие в разработке документации</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Beremiz</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Языки стандарта МЭК 61131-3</a> &raquo;</li>
+      
+    <li>Общие сведения о языке ST</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/iec_guide/st_guide.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="st">
+<h1><a class="toc-backref" href="#id8">Общие сведения о языке ST</a><a class="headerlink" href="#st" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="contents topic" id="id1">
+<p class="topic-title first">Содержание</p>
+<ul class="simple">
+<li><a class="reference internal" href="#st" id="id8">Общие сведения о языке ST</a><ul>
+<li><a class="reference internal" href="#id2" id="id9">Типы данных</a></li>
+<li><a class="reference internal" href="#id3" id="id10">Конструкции языка</a></li>
+<li><a class="reference internal" href="#id4" id="id11">Арифметические операции</a><ul>
+<li><a class="reference internal" href="#id5" id="id12">Логические (побитовые) операции</a></li>
+<li><a class="reference internal" href="#id6" id="id13">Операции сравнения</a></li>
+<li><a class="reference internal" href="#id7" id="id14">Присвоение</a></li>
+<li><a class="reference internal" href="#for" id="id15">Цикл FOR</a></li>
+<li><a class="reference internal" href="#while" id="id16">Цикл WHILE</a></li>
+<li><a class="reference internal" href="#repeat-until" id="id17">Цикл REPEAT UNTIL</a></li>
+<li><a class="reference internal" href="#case" id="id18">Конструкция CASE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p><strong>ST (Structured Text)</strong> – это текстовый язык высокого уровня общего
+назначения, по синтаксису схожий с языком Pascal. Удобен для программ,
+включающих числовой анализ или сложные алгоритмы. Может использоваться в
+программах, в теле функции или функционального блока, а также для
+описания действия и перехода внутри элементов SFC. Согласно IEC 61131-3
+ключевые слова должны быть введены в символах верхнего регистра. Пробелы
+и метки табуляции не влияют на синтаксис, они могут использоваться
+везде.</p>
+<p>Выражения в ST выглядят точно также, как и в языке Pascal:</p>
+<p>[variable] := [value];</p>
+<p>Порядок их выполнения – справа налево. Выражения состоят из операндов и
+операторов. Операндом является литерал, переменная, структурированная
+переменная, компонент структурированной переменной, обращение к функции
+или прямой адрес.</p>
+<div class="section" id="id2">
+<h2><a class="toc-backref" href="#id9">Типы данных</a><a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Согласно стандарту IEC 61131-3, язык ST поддерживает весь необходимый
+набор типов, аналогичный классическим языкам программирования.
+Целочисленные типы: SINT (char), USINT (unsigned char), INT (short int),
+UINT (unsigned int), DINT (long), UDINT (unsigned long), LINT (64 бит
+целое), ULINT (64 бит целое без знака). Действительные типы: REAL
+(float), LREAL (double). Специальные типы BYTE, WORD, DWORD, LWORD
+представляют собой битовые строки длиной 8, 16, 32 и 64 бит
+соответственно. Битовых полей в ST нет. К битовым строкам можно
+непосредственно обращаться побитно. Например:</p>
+<p>a.3 := 1; (* Установить бит 3 переменной a *)</p>
+<p>Логический тип BOOL может иметь значение TRUE или FALSE. Физически
+переменная типа BOOL может соответствовать одному биту. Строка STRING
+является именно строкой, а не массивом. Есть возможность сравнивать и
+копировать строки стандартными операторами. Например:</p>
+<p>strA := strB;</p>
+<p>Для работы со строками есть стандартный набор функций (см. приложение 2,
+раздел «Строковые операции с переменными типа STRING»).</p>
+<p>Специальные типы в стандарте IEC определены для длительности (TIME),
+времени суток (TOD), календарной даты (DATE) и момента времени (DT).</p>
+<p>В таблице 3.1 приведены значения по умолчанию, соответствующие описанным
+выше типам.</p>
+<p>Таблица 3.1 – Значения по умолчанию для типов данных IEC 61131-3</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="54%" />
+<col width="46%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Тип(ы) данных</td>
+<td>Значение</td>
+</tr>
+<tr class="row-even"><td>BOOL, SINT, INT, DINT, LINT</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td>USINT, UINT, UDINT, ULINT</td>
+<td>0</td>
+</tr>
+<tr class="row-even"><td>BYTE, WORD, DWORD, LWORD</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td>REAL, LREAL</td>
+<td>0.0</td>
+</tr>
+<tr class="row-even"><td>TIME</td>
+<td>T#0S</td>
+</tr>
+<tr class="row-odd"><td>DATE</td>
+<td>D#0001-01-01</td>
+</tr>
+<tr class="row-even"><td>TIME_OF_DAY</td>
+<td>TOD#00:00:00</td>
+</tr>
+<tr class="row-odd"><td>DATE_AND_TIME</td>
+<td>DT#0001-01-01-00:00:00</td>
+</tr>
+<tr class="row-even"><td>STRING</td>
+<td>‘’ (пустая строка)</td>
+</tr>
+</tbody>
+</table>
+<p>По умолчанию, все переменные инициализируются нулем. Иное значение
+переменной можно указать явно при ее объявлении. Например:</p>
+<p>str1: STRING := ‘Hello world’;</p>
+<p>В определённых ситуациях при разработке программных модулей удобно
+использовать обобщения типов, т.е. общее именование группы типов данных.
+Данные обобщения приведены в таблице 3.2.</p>
+<p>Таблица 3.2 – Обобщения типов данных IEC 61131-3</p>
+</div>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id10">Конструкции языка</a><a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+<p>К конструкциям языка ST относятся:</p>
+<ul class="simple">
+<li>арифметические операции;</li>
+<li>логические (побитовые) операции;</li>
+<li>операции сравнения;</li>
+<li>операция присвоения;</li>
+<li>конструкция IF – ELSEIF – ELSE;</li>
+<li>цикл FOR;</li>
+<li>цикл WHILE;</li>
+<li>цикл REPAET UNTIL;</li>
+<li>конструкция CASE.</li>
+</ul>
+<p>При записи арифметических выражений допустимо использование скобок для
+указания порядка вычислений. При записи выражений допустимо использовать
+переменные (локальные и глобальные) и константы.</p>
+</div>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id11">Арифметические операции</a><a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h2>
+<p>К арифметическим операциям относятся:</p>
+<ul class="simple">
+<li>«+» – сложение;</li>
+<li>«-» – вычитание;</li>
+<li>«*» – умножение;</li>
+<li>«/» – деление;</li>
+<li>«mod» – остаток от целочисленного деления.</li>
+</ul>
+<p>Приоритет операций в выражениях указан в таблице 3.4 (чем выше
+приоритет, тем раньше исполняется операция).</p>
+<div class="section" id="id5">
+<h3><a class="toc-backref" href="#id12">Логические (побитовые) операции</a><a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h3>
+<p>К данным операциям относятся:</p>
+<ul class="simple">
+<li>«OR» – Логическое (побитовое) сложение;</li>
+<li>«AND» – Логическое (побитовое) умножение;</li>
+<li>«XOR» – Логическое (побитовое) «исключающее ИЛИ»;</li>
+<li>«NOT» – Логическое (побитовое) отрицание.</li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h3><a class="toc-backref" href="#id13">Операции сравнения</a><a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Поддерживаются следующие операции сравнения:</p>
+<ul class="simple">
+<li>«=» – сравнение на равенство;</li>
+<li>«&lt;&gt;» – сравнение на неравенство;</li>
+<li>«&gt;» – сравнение на больше;</li>
+<li>«&gt;=» – сравнение на не меньше;</li>
+<li>«&lt;» – сравнение на меньше;</li>
+<li>«&lt;=» – сравнение на не больше.</li>
+</ul>
+<p>В качестве результата сравнения всегда используется значение типа BOOL.</p>
+</div>
+<div class="section" id="id7">
+<h3><a class="toc-backref" href="#id14">Присвоение</a><a class="headerlink" href="#id7" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Для обозначения присвоения используется парный знак «:=». В правой и
+левой части выражения должны быть операнды одного типа (автоматического
+приведения типов не предусмотрено). В левой части выражения (принимающая
+сторона) может быть использована только переменная. Правая часть может
+содержать выражение или константу.</p>
+<p>В таблице 3.4 приведены приоритеты при выполнении описанных выше
+операций.</p>
+<p>Таблица 3.4 – Приоритеты операций</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="64%" />
+<col width="36%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Операция</td>
+<td>Приоритет</td>
+</tr>
+<tr class="row-even"><td>Сравнения</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>Сложение, вычитание</td>
+<td>2</td>
+</tr>
+<tr class="row-even"><td>Умножение, деление</td>
+<td>3</td>
+</tr>
+<tr class="row-odd"><td>OR</td>
+<td>4</td>
+</tr>
+<tr class="row-even"><td>AND, XOR</td>
+<td>5</td>
+</tr>
+<tr class="row-odd"><td>NOT</td>
+<td>6</td>
+</tr>
+<tr class="row-even"><td>Унарный минус</td>
+<td>7</td>
+</tr>
+<tr class="row-odd"><td>Вызов функции</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<p>Конструкция IF – ELSEIF – ELSE</p>
+<p>Для описания некоторых конструкций языка удобно использовать фигурные и
+квадратные скобки. Считается, что:</p>
+<ul class="simple">
+<li>выражение в фигурных скобках может использоваться ноль или больше раз
+подряд;</li>
+<li>выражение в квадратных скобках не обязательно к использованию.</li>
+</ul>
+<p>Конструкция IF-ELSEIF-ELSE имеет следующий формат:</p>
+<p>IF &lt;boolean expression&gt; THEN &lt;statement list&gt;</p>
+<p>[ELSEIF &lt;boolean expression&gt; THEN &lt;statement list&gt;]</p>
+<p>[ELSE &lt;statement list&gt;]</p>
+<p>END_IF;</p>
+<p>Например:</p>
+<p>IF Var &lt;&gt; 0</p>
+<p>THEN Var := 1</p>
+<p>ELSEIF Var &gt; 0</p>
+<p>THEN Var := 0;</p>
+<p>ELSE Var := 10;</p>
+<p>END_IF;</p>
+<p>Конструкция допускает вложенность, т.е. внутри одного IF может быть еще
+один и т.д. Например:</p>
+<p>IF Var &gt; 10 THEN</p>
+<p>IF Var &lt; Var2 + 1</p>
+<p>THEN Var := 10;</p>
+<p>ELSE Var := 0;</p>
+<p>END_IF;</p>
+<p>END_IF;</p>
+</div>
+<div class="section" id="for">
+<h3><a class="toc-backref" href="#id15">Цикл FOR</a><a class="headerlink" href="#for" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Служит для задания цикла с фиксированным количеством итераций. Формат
+конструкции следующий:</p>
+<p>FOR &lt;Control Variable&gt; := &lt;expression1&gt; TO &lt;expression2&gt;</p>
+<p>[BY &lt;expression3&gt;] DO</p>
+<p>&lt;statement list&gt;</p>
+<p>END_FOR;</p>
+<p>При задании условий цикла считается, что &lt;Control Variable&gt;,
+&lt;expression1&gt; … &lt;expression3&gt; имеют тип INT. Выход из цикла будет
+произведен в том случае, если значение переменной цикла превысит
+значение &lt;expression2&gt;. Например:</p>
+<p>FOR i := 1 TO 10 BY 2 DO</p>
+<p>k := k * 2;</p>
+<p>END_FOR;</p>
+<p>Оператор BY задает приращение переменной цикла (в данном случае i будет
+увеличиваться на 2 при каждом проходе по циклу). Если оператор BY не
+указан, то приращение равно 1. Например:</p>
+<p>FOR i := 1 TO k / 2 DO</p>
+<p>var := var + k;</p>
+<p>k := k – 1;</p>
+<p>END_FOR;</p>
+<p>Внутри цикла могут использоваться другие циклы, операторы IF и CASE. Для
+выхода из цикла (любого типа) может использоваться оператор EXIT.
+Например:</p>
+<p>FOR i := 1 TO 10 BY 2 DO</p>
+<p>k := k * 2;</p>
+<p>IF k &gt; 20 THEN</p>
+<p>EXIT;</p>
+<p>END_IF;</p>
+<p>END_FOR;</p>
+<p>Примечание 1: Выражения &lt;expression1&gt; … &lt;expression3&gt; вычисляются до
+входа в цикл, поэтому изменения значений переменных, входящих в любое из
+этих выражений не приведет к изменению числа итераций. Например:</p>
+<p>01: k := 10;</p>
+<p>02: FOR I := 1 TO k / 2 DO</p>
+<p>03: k := 20;</p>
+<p>04: END_FOR;</p>
+<p>В строке 3 производится изменение переменной k, но цикл все равно
+выполнится только пять раз. Примечание 2: Значение переменной цикла
+может изменяться внутри тела цикла, но в начале очередной итерации
+значение данной переменной будет выставлено в соответствие с условиями
+цикла. Например:</p>
+<p>01: FOR I := 1 TO 5 DO</p>
+<p>02: I := 55;</p>
+<p>03: END_FOR;</p>
+<p>При первом проходе значение I будет равно 1, потом в строке 2 изменится
+на 55, но на втором проходе значение I станет равно 2 – следующему
+значению по условиям цикла.</p>
+</div>
+<div class="section" id="while">
+<h3><a class="toc-backref" href="#id16">Цикл WHILE</a><a class="headerlink" href="#while" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Служит для определения цикла с предусловием. Цикл будет исполняться до
+тех пор, пока выражение в предложении WHILE возвращает TRUE. Формат
+конструкции следующий:</p>
+<p>WHILE &lt;Boolean-Expression&gt; DO</p>
+<p>&lt;Statement List&gt;</p>
+<p>END_WHILE;</p>
+<p>Значение &lt;Boolean-Expression&gt; проверяется на каждой итерации. Завершение
+цикла произойдет, если выражение &lt;Boolean-Expression&gt; вернет FALSE.
+Например:</p>
+<p>k := 10;</p>
+<p>WHILE k &gt; 0 DO</p>
+<p>i := I + k;</p>
+<p>k := k –1;</p>
+<p>END_WHILE;</p>
+<p>Внутри цикла могут использоваться другие циклы, операторы IF и CASE. Для
+досрочного завершения цикла используется оператор EXIT (см. пример в
+описание цикла FOR).</p>
+</div>
+<div class="section" id="repeat-until">
+<h3><a class="toc-backref" href="#id17">Цикл REPEAT UNTIL</a><a class="headerlink" href="#repeat-until" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Служит для определения цикла с постусловием. Завершение цикла произойдет
+тогда, когда выражение в предложении UNTIL вернет FALSE. Другими
+словами: цикл будет выполняться, пока условие в предложении UNTIL не
+выполнятся. Формат конструкции следующий:</p>
+<p>REPEAT</p>
+<p>&lt;Statement List&gt;</p>
+<p>UNTIL &lt;Boolean Expression&gt;;</p>
+<p>END_REPEAT;</p>
+<p>Например:</p>
+<p>k := 10;</p>
+<p>REPEAT</p>
+<p>i := i + k;</p>
+<p>k := k – 1;</p>
+<p>UNTIL k = 0;</p>
+<p>END_REPEAT;</p>
+<p>Внутри цикла могут использоваться другие циклы, операторы IF и CASE. Для
+досрочного завершения цикла используется оператор EXIT (см. пример в
+описании цикла FOR).</p>
+</div>
+<div class="section" id="case">
+<h3><a class="toc-backref" href="#id18">Конструкция CASE</a><a class="headerlink" href="#case" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Данная конструкция служит для организации выбора из диапазона значений.
+Формат конструкции следующий:</p>
+<p>CASE &lt;Expression&gt; OF</p>
+<p>CASE_ELEMENT {CASE_ELEMENT}</p>
+<p>[ELSE &lt;Statement List&gt;]</p>
+<p>END_CASE;</p>
+<p>CASE_ELEMENT – это список значений, перечисленных через запятую.
+Элементом списка может быть целое число или диапазон целых чисел.
+Диапазон задается следующим образом BEGIN_VAL .. END_VAL.</p>
+<p>Если текущее значение &lt;Expression&gt; не попало ни в один CASE_ELEMENT, то
+управление будет передано на предложение ELSE. Если предложение ELSE не
+указано, то никаких действий выполнено не будет.</p>
+<p>Значение &lt;Expression&gt; может быть только целым. Например:</p>
+<p>01: CASE k OF</p>
+<p>02: 1:</p>
+<p>03: k := k * 10;</p>
+<p>04: 2..5:</p>
+<p>05: k := k * 5;</p>
+<p>06: i := 0;</p>
+<p>07: 6, 9..20:</p>
+<p>08: k := k – 1;</p>
+<p>09: ELSE</p>
+<p>10: k := 0;</p>
+<p>11: i := 1;</p>
+<p>12: END_CASE;</p>
+<p>Строка 4 содержит диапазон значений. Если значение k принадлежит
+числовому отрезку [2, 5], то будут выполнены строки 5 и 6.</p>
+<p>В строке 7 использован список значений. Строка 8 выполнится, если
+значение k будет равно 6 или будет принадлежать числовому отрезку [9,
+20].</p>
+<p>Строки 10 и 11 будут выполнены в том случае, если k &lt; 1, или 6 &lt; k &lt; 9,
+или k &gt; 20 (в данном случае сработает предложение ELSE).</p>
+<p>При задании списка значений необходимо выполнять следующие условия:</p>
+<ul class="simple">
+<li>наборы значений внутри одного CASE не должны пересекаться;</li>
+<li>при указании диапазона значений начало диапазона должно быть меньше
+его конца.</li>
+</ul>
+<p>В таблице 3.5 приведены примеры кода записи правильной и неправильной
+записи конструкции CASE.</p>
+<p>Действия, предусмотренные для обработки каждого из случаев CASE, могут
+использовать циклы, операторы IF и CASE.</p>
+<p>Таблица 3.5 – Запись конструкции CASE</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="71%" />
+<col width="29%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Неправильная запись</td>
+<td>Правильная запись</td>
+</tr>
+<tr class="row-even"><td><p class="first">01: CASE k OF</p>
+<p>02: 1:</p>
+<p>03: k := k * 10;</p>
+<p>04: 2..5:</p>
+<p>05: k := k * 5;</p>
+<p>06: i := 0;</p>
+<p>07: 5, 9..20:</p>
+<p>08: k := k – 1;</p>
+<p>09: ELSE</p>
+<p>10: k := 0;</p>
+<p>11: i := 1;</p>
+<p>12: END_CASE;</p>
+<p class="last">Диапазоны в строках 4 и 7 пересекаются</p>
+</td>
+<td><p class="first">01: CASE k OF</p>
+<p>02: 1:</p>
+<p>03: k := k * 10;</p>
+<p>04: 2..5:</p>
+<p>05: k := k * 5;</p>
+<p>06: i := 0;</p>
+<p>07: 6, 9..20:</p>
+<p>08: k := k – 1;</p>
+<p>09: ELSE</p>
+<p>10: k := 0;</p>
+<p>11: i := 1;</p>
+<p class="last">12: END_CASE;</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first">01: CASE k OF</p>
+<p>02: 1:</p>
+<p>03: k := k * 10;</p>
+<p>04: 2..5:</p>
+<p>05: k := k * 5;</p>
+<p>06: i := 0;</p>
+<p>07: 6, 20..9:</p>
+<p>08: k := k – 1;</p>
+<p>09: ELSE</p>
+<p>10: k := 0;</p>
+<p>11: i := 1;</p>
+<p>12: END_CASE;</p>
+<p class="last">В строке 7 диапазон значений задан неправильно.</p>
+</td>
+<td><p class="first">01: CASE k OF</p>
+<p>02: 1:</p>
+<p>03: k := k * 10;</p>
+<p>04: 2..5:</p>
+<p>05: k := k * 5;</p>
+<p>06: i := 0;</p>
+<p>07: 6, 9..20:</p>
+<p>08: k := k – 1;</p>
+<p>09: ELSE</p>
+<p>10: k := 0;</p>
+<p>11: i := 1;</p>
+<p class="last">12: END_CASE;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>При написании программ на ST возможно использование стандартных и
+пользовательских функций и функциональных блоков.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="il_guide.html" class="btn btn-neutral float-right" title="Общие сведения о языке IL" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Языки стандарта МЭК 61131-3" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, JSC &#34;INEUM named after I.S.Bruk&#34;.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

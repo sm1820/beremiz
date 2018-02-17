@@ -1,0 +1,478 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Отладчик &mdash; Документация Beremiz </title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/brz.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Алфавитный указатель"
+              href="../../genindex.html"/>
+        <link rel="search" title="Поиск" href="../../search.html"/>
+    <link rel="top" title="Документация Beremiz " href="../../index.html"/>
+        <link rel="up" title="Документация softPLC" href="index.html"/>
+        <link rel="next" title="Участие в разработке документации" href="../../documentation_guide/index.html"/>
+        <link rel="prev" title="Документация softPLC" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Beremiz
+          
+
+          
+            
+            <img src="../../_static/about_brz_logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Содержание</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../install_guide/index.html">Инструкции по установке</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../usage_guide/index.html">Руководство программиста</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../iec_guide/index.html">Языки стандарта МЭК 61131-3</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Beremiz: Руководство разработчика</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Документация softPLC</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Отладчик</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../documentation_guide/index.html">Участие в разработке документации</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Beremiz</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Beremiz: Руководство разработчика</a> &raquo;</li>
+      
+          <li><a href="index.html">Документация softPLC</a> &raquo;</li>
+      
+    <li>Отладчик</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/developer_guide/soft_plc/debugger.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>Отладчик<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Debugger code. </p>
+<p>On &#8220;publish&#8221;, when buffer is free, debugger stores arbitrary variables content into, and mark this buffer as filled Buffer content is read asynchronously, (from non real time part), and then buffer marked free again. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Defines</p>
+<dl class="macro">
+<dt id="c.BUFFER_FREE">
+<span class="target" id="beremiz_targetsplc__debug_8c_1a95fea78248a755c58dd4dc1531c85be0"></span><code class="descname">BUFFER_FREE</code><a class="headerlink" href="#c.BUFFER_FREE" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.BUFFER_BUSY">
+<span class="target" id="beremiz_targetsplc__debug_8c_1ab81aa0aee75b5a5857987840efc19d96"></span><code class="descname">BUFFER_BUSY</code><a class="headerlink" href="#c.BUFFER_BUSY" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.__Unpack_case_t">
+<span class="target" id="beremiz_targetsplc__debug_8c_1ac4a861567e0c77f4d3600877c6a3bf07"></span><code class="descname">__Unpack_case_t</code><span class="sig-paren">(</span>TYPENAME<span class="sig-paren">)</span><a class="headerlink" href="#c.__Unpack_case_t" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.__Unpack_case_p">
+<span class="target" id="beremiz_targetsplc__debug_8c_1a2da7a1b17c4e90432c9357ebd8acaa9c"></span><code class="descname">__Unpack_case_p</code><span class="sig-paren">(</span>TYPENAME<span class="sig-paren">)</span><a class="headerlink" href="#c.__Unpack_case_p" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.__RegisterDebugVariable_case_t">
+<span class="target" id="beremiz_targetsplc__debug_8c_1a74ac12a75e81d646fee43b330a1c6ee8"></span><code class="descname">__RegisterDebugVariable_case_t</code><span class="sig-paren">(</span>TYPENAME<span class="sig-paren">)</span><a class="headerlink" href="#c.__RegisterDebugVariable_case_t" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.__RegisterDebugVariable_case_p">
+<span class="target" id="beremiz_targetsplc__debug_8c_1ab454aa9d376dbdaba0f5076b3ad9c47e"></span><code class="descname">__RegisterDebugVariable_case_p</code><span class="sig-paren">(</span>TYPENAME<span class="sig-paren">)</span><a class="headerlink" href="#c.__RegisterDebugVariable_case_p" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.__ResetDebugVariablesIterator_case_t">
+<span class="target" id="beremiz_targetsplc__debug_8c_1a9bad34b0f76281bc871cc0d470267152"></span><code class="descname">__ResetDebugVariablesIterator_case_t</code><span class="sig-paren">(</span>TYPENAME<span class="sig-paren">)</span><a class="headerlink" href="#c.__ResetDebugVariablesIterator_case_t" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.__ResetDebugVariablesIterator_case_p">
+<span class="target" id="beremiz_targetsplc__debug_8c_1ad75b84baa8f23d6d8aa0b71816ade4be"></span><code class="descname">__ResetDebugVariablesIterator_case_p</code><span class="sig-paren">(</span>TYPENAME<span class="sig-paren">)</span><a class="headerlink" href="#c.__ResetDebugVariablesIterator_case_p" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Typedefs</p>
+<dl class="type">
+<dt id="_CPPv225__for_each_variable_do_fp">
+<span id="__for_each_variable_do_fp"></span><span class="target" id="beremiz_targetsplc__debug_8c_1a676fc44b4a3a029d8e24b0c5caf4b67c"></span><em class="property">typedef </em>void (*<code class="descname">__for_each_variable_do_fp</code>)<span class="sig-paren">(</span><a class="reference internal" href="#_CPPv211dbgvardsc_t" title="dbgvardsc_t">dbgvardsc_t</a> *<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv225__for_each_variable_do_fp" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv222__for_each_variable_do25__for_each_variable_do_fp">
+<span id="__for_each_variable_do____for_each_variable_do_fp"></span><span class="target" id="beremiz_targetsplc__debug_8c_1ad40543d87da75cc90f0b8686b4baf8dc"></span>void <code class="descname">__for_each_variable_do</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv225__for_each_variable_do_fp" title="__for_each_variable_do_fp">__for_each_variable_do_fp</a> <em>fp</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv222__for_each_variable_do25__for_each_variable_do_fp" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv29UnpackVarP11dbgvardsc_tPPvPc">
+<span id="UnpackVar__dbgvardsc_tP.voidPP.cP"></span><span class="target" id="beremiz_targetsplc__debug_8c_1ac777523459e2bfcefb8bfafa12578e6a"></span>void *<code class="descname">UnpackVar</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv211dbgvardsc_t" title="dbgvardsc_t">dbgvardsc_t</a> *<em>dsc</em>, void **<em>real_value_p</em>, char *<em>flags</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv29UnpackVarP11dbgvardsc_tPPvPc" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv26RemindjjPv">
+<span id="Remind__unsigned-i.unsigned-i.voidP"></span><span class="target" id="beremiz_targetsplc__debug_8c_1aea9cd655ebc20489eca22e0ce880e3fe"></span>void <code class="descname">Remind</code><span class="sig-paren">(</span>unsigned int <em>offset</em>, unsigned int <em>count</em>, void *<em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26RemindjjPv" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv214RemindIteratorP11dbgvardsc_t">
+<span id="RemindIterator__dbgvardsc_tP"></span><span class="target" id="beremiz_targetsplc__debug_8c_1a25b3b2a0ee28b64464686a83bb71c890"></span>void <code class="descname">RemindIterator</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv211dbgvardsc_t" title="dbgvardsc_t">dbgvardsc_t</a> *<em>dsc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv214RemindIteratorP11dbgvardsc_t" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv217CheckRetainBufferv">
+<span id="CheckRetainBuffer__void"></span><span class="target" id="beremiz_targetsplc__debug_8c_1adeeb7602f45001228912c24a33564f63"></span>int <code class="descname">CheckRetainBuffer</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv217CheckRetainBufferv" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv210InitRetainv">
+<span id="InitRetain__void"></span><span class="target" id="beremiz_targetsplc__debug_8c_1a146a11b5307a7d6cfb709c0f8b50f0b3"></span>void <code class="descname">InitRetain</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv210InitRetainv" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv212__init_debugv">
+<span id="__init_debug__void"></span><span class="target" id="beremiz_targetsplc__debug_8c_1aeb464eeaefb94c2159257d418b216958"></span>void <code class="descname">__init_debug</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212__init_debugv" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv221InitiateDebugTransferv">
+<span id="InitiateDebugTransfer__void"></span><span class="target" id="beremiz_targetsplc__debug_8c_1a9d1a5b4d6626c0f88d0081820cee1283"></span>void <code class="descname">InitiateDebugTransfer</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv221InitiateDebugTransferv" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv213CleanupRetainv">
+<span id="CleanupRetain__void"></span><span class="target" id="beremiz_targetsplc__debug_8c_1aba498c5b81b472ebc42c92e000f79cd1"></span>void <code class="descname">CleanupRetain</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv213CleanupRetainv" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv215__cleanup_debugv">
+<span id="__cleanup_debug__void"></span><span class="target" id="beremiz_targetsplc__debug_8c_1ad2a8f8251f5a001a66c1147a0b57ef5a"></span>void <code class="descname">__cleanup_debug</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv215__cleanup_debugv" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv216__retrieve_debugv">
+<span id="__retrieve_debug__void"></span><span class="target" id="beremiz_targetsplc__debug_8c_1a074de87df478c7d0490d23f796d20ffc"></span>void <code class="descname">__retrieve_debug</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv216__retrieve_debugv" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv26RetainjjPv">
+<span id="Retain__unsigned-i.unsigned-i.voidP"></span><span class="target" id="beremiz_targetsplc__debug_8c_1a1735854400b858da6d96197b78745f57"></span>void <code class="descname">Retain</code><span class="sig-paren">(</span>unsigned int <em>offset</em>, unsigned int <em>count</em>, void *<em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv26RetainjjPv" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv214BufferIteratorP11dbgvardsc_ti">
+<span id="BufferIterator__dbgvardsc_tP.i"></span><span class="target" id="beremiz_targetsplc__debug_8c_1a1d1cdc9e6409e0b110bc0084d5ec8385"></span><em class="property">static</em> void <code class="descname">BufferIterator</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv211dbgvardsc_t" title="dbgvardsc_t">dbgvardsc_t</a> *<em>dsc</em>, int <em>do_debug</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv214BufferIteratorP11dbgvardsc_ti" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv213DebugIteratorP11dbgvardsc_t">
+<span id="DebugIterator__dbgvardsc_tP"></span><span class="target" id="beremiz_targetsplc__debug_8c_1aca05d148564a2a8a08c2284a1b2aa370"></span>void <code class="descname">DebugIterator</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv211dbgvardsc_t" title="dbgvardsc_t">dbgvardsc_t</a> *<em>dsc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv213DebugIteratorP11dbgvardsc_t" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv214RetainIteratorP11dbgvardsc_t">
+<span id="RetainIterator__dbgvardsc_tP"></span><span class="target" id="beremiz_targetsplc__debug_8c_1a455409f89dd4443d831238a328f8db98"></span>void <code class="descname">RetainIterator</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv211dbgvardsc_t" title="dbgvardsc_t">dbgvardsc_t</a> *<em>dsc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv214RetainIteratorP11dbgvardsc_t" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv211PLC_GetTimeP8IEC_TIME">
+<span id="PLC_GetTime__IEC_TIMEP"></span><span class="target" id="beremiz_targetsplc__debug_8c_1a2736eabade03ec59d365126c8424daa5"></span>void <code class="descname">PLC_GetTime</code><span class="sig-paren">(</span>IEC_TIME *<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv211PLC_GetTimeP8IEC_TIME" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv220TryEnterDebugSectionv">
+<span id="TryEnterDebugSection__void"></span><span class="target" id="beremiz_targetsplc__debug_8c_1a4b5c2153b5826cda7283f813dfe44e81"></span>int <code class="descname">TryEnterDebugSection</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv220TryEnterDebugSectionv" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv221AtomicCompareExchangePlll">
+<span id="AtomicCompareExchange__lP.l.l"></span><span class="target" id="beremiz_targetsplc__debug_8c_1ac08ed1a6ba408ee94db616120fc03f95"></span>long <code class="descname">AtomicCompareExchange</code><span class="sig-paren">(</span>long *, long, long<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv221AtomicCompareExchangePlll" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv223AtomicCompareExchange64Pxxx">
+<span id="AtomicCompareExchange64__l-lP.l-l.l-l"></span><span class="target" id="beremiz_targetsplc__debug_8c_1a780ae8a52a14f8fdfdcdf907b4dc51cc"></span>long long <code class="descname">AtomicCompareExchange64</code><span class="sig-paren">(</span>long long *, long long, long long<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv223AtomicCompareExchange64Pxxx" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv217LeaveDebugSectionv">
+<span id="LeaveDebugSection__void"></span><span class="target" id="beremiz_targetsplc__debug_8c_1a8eaf82dbd3a424df1231c49540cd0000"></span>void <code class="descname">LeaveDebugSection</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv217LeaveDebugSectionv" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv220ValidateRetainBufferv">
+<span id="ValidateRetainBuffer__void"></span><span class="target" id="beremiz_targetsplc__debug_8c_1a8ff012b8d09fafe99d68ee0a910f0d7f"></span>void <code class="descname">ValidateRetainBuffer</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv220ValidateRetainBufferv" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv222InValidateRetainBufferv">
+<span id="InValidateRetainBuffer__void"></span><span class="target" id="beremiz_targetsplc__debug_8c_1a0ce89cc3436d2510f5dc82cb446fb639"></span>void <code class="descname">InValidateRetainBuffer</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv222InValidateRetainBufferv" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv215__publish_debugv">
+<span id="__publish_debug__void"></span><span class="target" id="beremiz_targetsplc__debug_8c_1a595d415eff968ea28b2f4885584b0436"></span>void <code class="descname">__publish_debug</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv215__publish_debugv" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv221RegisterDebugVariableiPv">
+<span id="RegisterDebugVariable__i.voidP"></span><span class="target" id="beremiz_targetsplc__debug_8c_1a5fad9b8e686f89736ac84a6fa5fa536a"></span>void <code class="descname">RegisterDebugVariable</code><span class="sig-paren">(</span>int <em>idx</em>, void *<em>force</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv221RegisterDebugVariableiPv" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv227ResetDebugVariablesIteratorP11dbgvardsc_t">
+<span id="ResetDebugVariablesIterator__dbgvardsc_tP"></span><span class="target" id="beremiz_targetsplc__debug_8c_1aaee9f3ef84c233eec630cc187f40154e"></span>void <code class="descname">ResetDebugVariablesIterator</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv211dbgvardsc_t" title="dbgvardsc_t">dbgvardsc_t</a> *<em>dsc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv227ResetDebugVariablesIteratorP11dbgvardsc_t" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv219ResetDebugVariablesv">
+<span id="ResetDebugVariables__void"></span><span class="target" id="beremiz_targetsplc__debug_8c_1a62f4226a92546fd7e0fcc29bfbe1e516"></span>void <code class="descname">ResetDebugVariables</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv219ResetDebugVariablesv" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv213FreeDebugDatav">
+<span id="FreeDebugData__void"></span><span class="target" id="beremiz_targetsplc__debug_8c_1a863a3044dbcb9c228cc1bd227a5c5a38"></span>void <code class="descname">FreeDebugData</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv213FreeDebugDatav" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv213WaitDebugDataPm">
+<span id="WaitDebugData__unsigned-lP"></span><span class="target" id="beremiz_targetsplc__debug_8c_1a4caa6b5dbe0770aef060c0b65dd3ff1d"></span>int <code class="descname">WaitDebugData</code><span class="sig-paren">(</span>unsigned long *<em>tick</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv213WaitDebugDataPm" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv212GetDebugDataPmPmPPv">
+<span id="GetDebugData__unsigned-lP.unsigned-lP.voidPP"></span><span class="target" id="beremiz_targetsplc__debug_8c_1ac07fa375c02b2aab116d8f8bb805106e"></span>int <code class="descname">GetDebugData</code><span class="sig-paren">(</span>unsigned long *<em>tick</em>, unsigned long *<em>size</em>, void **<em>buffer</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212GetDebugDataPmPmPPv" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Variables</p>
+<dl class="member">
+<dt id="_CPPv212buffer_state">
+<span id="buffer_state__l"></span><span class="target" id="beremiz_targetsplc__debug_8c_1ab5323aa37543b681d86c6ddcf0b279aa"></span>long <code class="descname">buffer_state</code><a class="headerlink" href="#_CPPv212buffer_state" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv212debug_buffer">
+<span id="debug_buffer__cA"></span><span class="target" id="beremiz_targetsplc__debug_8c_1a93612ad2a6786b453089420d15971ca7"></span>char <code class="descname">debug_buffer</code>[BUFFER_SIZE]<a class="headerlink" href="#_CPPv212debug_buffer" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv213buffer_cursor">
+<span id="buffer_cursor__cP"></span><span class="target" id="beremiz_targetsplc__debug_8c_1a5fadac4feebf48ff29c6a3f6b30aab2c"></span>char *<code class="descname">buffer_cursor</code><a class="headerlink" href="#_CPPv213buffer_cursor" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv213retain_offset">
+<span id="retain_offset__unsigned-i"></span><span class="target" id="beremiz_targetsplc__debug_8c_1ae2065fa52f5faa8a8535c3085304b45c"></span>unsigned int <code class="descname">retain_offset</code><a class="headerlink" href="#_CPPv213retain_offset" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv29dbgvardsc">
+<span id="dbgvardsc__dbgvardsc_tA"></span><span class="target" id="beremiz_targetsplc__debug_8c_1aba8d07200c09c44b0d7e5a439f0d8c23"></span><a class="reference internal" href="#_CPPv211dbgvardsc_t" title="dbgvardsc_t">dbgvardsc_t</a> <code class="descname">dbgvardsc</code>[]<a class="headerlink" href="#_CPPv29dbgvardsc" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv26__tick">
+<span id="__tick__unsigned-l"></span><span class="target" id="beremiz_targetsplc__debug_8c_1a8d1c9c4205a71208ccbde1aeedf1aa5a"></span>unsigned long <code class="descname">__tick</code><a class="headerlink" href="#_CPPv26__tick" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="class">
+<dt id="_CPPv211dbgvardsc_t">
+<span id="dbgvardsc_t"></span><span class="target" id="beremiz_targetsstructdbgvardsc__t"></span><em class="property">struct </em><code class="descname">dbgvardsc_t</code><a class="headerlink" href="#_CPPv211dbgvardsc_t" title="Ссылка на это определение">¶</a></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv2N11dbgvardsc_t3ptrE">
+<span id="dbgvardsc_t::ptr__voidP"></span><span class="target" id="beremiz_targetsstructdbgvardsc__t_1a21dcc7569691fd5b1403212ba6c64f70"></span>void *<code class="descname">ptr</code><a class="headerlink" href="#_CPPv2N11dbgvardsc_t3ptrE" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N11dbgvardsc_t4typeE">
+<span id="dbgvardsc_t::type____IEC_types_enum"></span><span class="target" id="beremiz_targetsstructdbgvardsc__t_1ae389d440dab30b806d7e3c10fc9b06cc"></span>__IEC_types_enum <code class="descname">type</code><a class="headerlink" href="#_CPPv2N11dbgvardsc_t4typeE" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../documentation_guide/index.html" class="btn btn-neutral float-right" title="Участие в разработке документации" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Документация softPLC" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, JSC &#34;INEUM named after I.S.Bruk&#34;.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,375 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Общие сведения о языке IL &mdash; Документация Beremiz </title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/brz.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Алфавитный указатель"
+              href="../genindex.html"/>
+        <link rel="search" title="Поиск" href="../search.html"/>
+    <link rel="top" title="Документация Beremiz " href="../index.html"/>
+        <link rel="up" title="Языки стандарта МЭК 61131-3" href="index.html"/>
+        <link rel="next" title="Общие сведения о языке LD" href="ld_guide.html"/>
+        <link rel="prev" title="Общие сведения о языке ST" href="st_guide.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Beremiz
+          
+
+          
+            
+            <img src="../_static/about_brz_logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Содержание</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install_guide/index.html">Инструкции по установке</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage_guide/index.html">Руководство программиста</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Языки стандарта МЭК 61131-3</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="st_guide.html">Общие сведения о языке ST</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Общие сведения о языке IL</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Операторы языка</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Пример программы на языке IL</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ld_guide.html">Общие сведения о языке LD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sfc_guide.html">Общие сведения о языке SFC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fbd_guide.html">Общие сведения о языке FBD</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_guide/index.html">Beremiz: Руководство разработчика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation_guide/index.html">Участие в разработке документации</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Beremiz</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Языки стандарта МЭК 61131-3</a> &raquo;</li>
+      
+    <li>Общие сведения о языке IL</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/iec_guide/il_guide.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="il">
+<h1><a class="toc-backref" href="#id4">Общие сведения о языке IL</a><a class="headerlink" href="#il" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="contents topic" id="id1">
+<p class="topic-title first">Содержание</p>
+<ul class="simple">
+<li><a class="reference internal" href="#il" id="id4">Общие сведения о языке IL</a><ul>
+<li><a class="reference internal" href="#id2" id="id5">Операторы языка</a></li>
+<li><a class="reference internal" href="#id3" id="id6">Пример программы на языке IL</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p><strong>IL (Instruction List)</strong> представляет собой текстовый язык программирования
+низкого уровня, который очень похож на Assembler, но к конкретной
+архитектуре процессора не привязан. Он позволяет описывать функции,
+функциональные блоки и программы, а также шаги и переходы в языке SFC.
+Одним из ключевых преимуществ IL является его простота и возможность
+добиться оптимизированного кода для реализации критических секторов
+программ. Особенности IL делают его неудобным для описания сложных
+алгоритмов с большим количеством разветвлений.</p>
+<div class="section" id="id2">
+<h2><a class="toc-backref" href="#id5">Операторы языка</a><a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Основа языка программирования IL, как и в случае Assembler, это переходы
+по меткам и аккумулятор. В аккумулятор загружается значения переменной,
+а дальнейшее выполнение алгоритма представляет собой извлечение значения
+из аккумулятора и совершение над ним операций. Далее в таблице 4.1
+приведены операторы языка IL.</p>
+<p>Таблица 1 – Операторы языка IL</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="92%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Оператор</td>
+<td>Описание</td>
+</tr>
+<tr class="row-even"><td>LD</td>
+<td>Загрузить значение операнда в аккумулятор</td>
+</tr>
+<tr class="row-odd"><td>LDN</td>
+<td>Загрузить обратное значение операнда в аккумулятор</td>
+</tr>
+<tr class="row-even"><td>ST</td>
+<td>Присвоить значение аккумулятора операнду</td>
+</tr>
+<tr class="row-odd"><td>STN</td>
+<td>Присвоить обратное значение аккумулятора операнду</td>
+</tr>
+<tr class="row-even"><td>S</td>
+<td>Если значение аккумулятора TRUE, установить логический операнд</td>
+</tr>
+<tr class="row-odd"><td>R</td>
+<td>Если значение аккумулятора FALSE, сбросить логический операнд</td>
+</tr>
+<tr class="row-even"><td>AND</td>
+<td>Поразрядное И аккумулятора и операнда</td>
+</tr>
+<tr class="row-odd"><td>ANDN</td>
+<td>Поразрядное И аккумулятора и обратного операнда</td>
+</tr>
+<tr class="row-even"><td>OR</td>
+<td>Поразрядное ИЛИ аккумулятора и операнда</td>
+</tr>
+<tr class="row-odd"><td>ORN</td>
+<td>Поразрядное ИЛИ аккумулятора и обратного операнда</td>
+</tr>
+<tr class="row-even"><td>XOR</td>
+<td>Поразрядное разделительное ИЛИ аккумулятора и операнда</td>
+</tr>
+<tr class="row-odd"><td>XORN</td>
+<td>Поразрядное разделительное ИЛИ аккумулятора и обратного операнда</td>
+</tr>
+<tr class="row-even"><td>NOT</td>
+<td>Поразрядная инверсия аккумулятора</td>
+</tr>
+<tr class="row-odd"><td>ADD</td>
+<td>Сложение аккумулятора и операнда, результат записывается в аккумулятор</td>
+</tr>
+<tr class="row-even"><td>SUB</td>
+<td>Вычитание операнда из аккумулятора, результат записывается в аккумулятор</td>
+</tr>
+<tr class="row-odd"><td>MUL</td>
+<td>Умножение аккумулятора на операнд, результат записывается в аккумулятор</td>
+</tr>
+<tr class="row-even"><td>DIV</td>
+<td>Деление аккумулятора на операнд, результат записывается в аккумулятор</td>
+</tr>
+<tr class="row-odd"><td>GT</td>
+<td>Значение аккумулятора сравнивается со значением операнда(&gt;(greater than)). Значение (TRUE или FALSE) записывается в аккумулятор</td>
+</tr>
+<tr class="row-even"><td>GE</td>
+<td>Значение аккумулятора сравнивается со значением операнда(&gt;=greater than or equal)). Значение (TRUE или FALSE) записывается в аккумулятор</td>
+</tr>
+<tr class="row-odd"><td>EQ</td>
+<td>Значение аккумулятора сравнивается со значением операнда (=(equal)). Значение (TRUE или FALSE) записывается в аккумулятор</td>
+</tr>
+<tr class="row-even"><td>NE</td>
+<td>Значение аккумулятора сравнивается со значением операнда (&lt;&gt;(not equal). Значение (TRUE или FALSE) записывается в аккумулятор</td>
+</tr>
+<tr class="row-odd"><td>LE</td>
+<td>Значение аккумулятора сравнивается со значением операнда (&lt;=(less than or equal to)). Значение (TRUE или FALSE) записывается в аккумулятор</td>
+</tr>
+<tr class="row-even"><td>LT</td>
+<td>Значение аккумулятора сравнивается со значением операнда (&lt;(less than)). Значение (TRUE или FALSE) записывается в аккумулятор</td>
+</tr>
+<tr class="row-odd"><td>JMP</td>
+<td>Переход к метке</td>
+</tr>
+<tr class="row-even"><td>JMPC</td>
+<td>Переход к метке при условии, что значение аккумулятора TRUE</td>
+</tr>
+<tr class="row-odd"><td>JMPCN</td>
+<td>Переход к метке при условии, что значение аккумулятора FALSE</td>
+</tr>
+<tr class="row-even"><td>CAL</td>
+<td>Вызов программного или функционального блока</td>
+</tr>
+<tr class="row-odd"><td>CALC</td>
+<td>Вызов программного или функционального блока при условии, что значение аккумулятора TRUE</td>
+</tr>
+<tr class="row-even"><td>CALCN</td>
+<td>Вызов программного или функционального блока при условии, что значение аккумулятора FALSE</td>
+</tr>
+<tr class="row-odd"><td>RET</td>
+<td>Выход из POU и возврат в вызывающую программу</td>
+</tr>
+<tr class="row-even"><td>RETC</td>
+<td>Выход из POU и возврат в вызывающую программу при условии, что значение аккумулятора TRUE</td>
+</tr>
+<tr class="row-odd"><td>RETCN</td>
+<td>Выход из POU и возврат в вызывающую программу при условии, что значение аккумулятора FALSE</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id6">Пример программы на языке IL</a><a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+<p>На рис. 1 приведён пример программы на языке IL, которая эквивалентна
+следующему логическому выражению C = A AND NOT B:</p>
+<p><a class="reference internal" href="../_images/image11.png"><img alt="image1" src="../_images/image11.png" style="width: 3.07986in; height: 1.76250in;" /></a></p>
+<p>Рис. 1 – Пример программы на языке IL</p>
+<p>Первый оператор примера LD помещает значение переменной A в аккумулятор,
+способный хранить значения любого типа. Второй оператор ANDN выполняет
+«побитовое И» аккумулятора и обратного значения операнда, результат
+всегда помещается в аккумулятор. Последний оператор примера ST
+присваивает переменной C значение аккумулятора.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ld_guide.html" class="btn btn-neutral float-right" title="Общие сведения о языке LD" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="st_guide.html" class="btn btn-neutral" title="Общие сведения о языке ST" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, JSC &#34;INEUM named after I.S.Bruk&#34;.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
