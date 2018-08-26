@@ -44,6 +44,10 @@ source_suffix = '.rst'
 # The master toctree document.
 master_doc = 'index'
 
+#Turn on numfig ext.
+numfig = True
+numfig_format = {'figure': u'Рисунок %s ', 'table': u'Таблица %s', 'code-block': u'Листинг %s'}
+
 # General information about the project.
 project = u'Beremiz'
 copyright = u'2018, JSC "INEUM named after I.S.Bruk"'
