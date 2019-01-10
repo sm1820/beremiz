@@ -11,13 +11,11 @@
 
 1. `Установить Docker <https://docs.docker.com/install/>`_
 
-2. Загрузить исходники Beremiz:
-  ::
+2. Загрузить исходники Beremiz::
 
       git clone https://github.com/jubnzv/beremiz beremiz
 
-3. Для сборки документации:
-  ::
+3. Для сборки документации::
 
       cd beremiz/doc
       make -f Makefile.docker
@@ -28,8 +26,7 @@
 Альтернатива: Нативная установка (Debian GNU/Linux)
 ---------------------------------------------------
 
-Для Debian Stretch потребуется установить следующие пакеты:
-  ::
+Для Debian Stretch потребуется установить следующие пакеты::
 
 	apt-get -y install make \
 		    python2.7 \
@@ -47,8 +44,7 @@
 		    texlive-latex-extra \
 		    texlive-latex-recommended
 
-После этого сборка может быть запущена нативно:
-  ::
+После этого сборка может быть запущена нативно::
 
      cd beremiz/doc
      make html latexpdf
