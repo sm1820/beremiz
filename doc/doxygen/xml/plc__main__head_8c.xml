@@ -1,0 +1,411 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="plc__main__head_8c" kind="file" language="C++">
+    <compoundname>plc_main_head.c</compoundname>
+    <includes refid="beremiz_8h" local="yes">beremiz.h</includes>
+    <includes local="no">string.h</includes>
+    <incdepgraph>
+      <node id="11">
+        <label>/source/targets/plc_main_head.c</label>
+        <link refid="plc__main__head_8c"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>beremiz.h</label>
+        <link refid="beremiz_8h_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>iec_types.h</label>
+      </node>
+      <node id="14">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="plc__main__head_8c_1a06e3156ced7408046f8f1f7b48a36592" prot="public" static="no" mutable="no">
+        <type>IEC_TIME</type>
+        <definition>IEC_TIME __CURRENT_TIME</definition>
+        <argsstring></argsstring>
+        <name>__CURRENT_TIME</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_head.c" line="25" column="1" bodyfile="/source/targets/plc_main_head.c" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="plc__main__head_8c_1ab34461bbe88d15a8a93e9d944d7a127a" prot="public" static="no" mutable="no">
+        <type>IEC_BOOL</type>
+        <definition>IEC_BOOL __DEBUG</definition>
+        <argsstring></argsstring>
+        <name>__DEBUG</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_head.c" line="26" column="1" bodyfile="/source/targets/plc_main_head.c" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="plc__main__head_8c_1a8d1c9c4205a71208ccbde1aeedf1aa5a" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long __tick</definition>
+        <argsstring></argsstring>
+        <name>__tick</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_head.c" line="27" column="1" bodyfile="/source/targets/plc_main_head.c" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="plc__main__head_8c_1a8dc71cdb2e40ddcc28352ed9df76d4d4" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* PLC_ID</definition>
+        <argsstring></argsstring>
+        <name>PLC_ID</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_head.c" line="28" column="1" bodyfile="/source/targets/plc_main_head.c" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="plc__main__head_8c_1a6cd4e40333cb5e34bb0c14a52415a561" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long greatest_tick_count__</definition>
+        <argsstring></argsstring>
+        <name>greatest_tick_count__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_head.c" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="plc__main__head_8c_1a06c9d8cd227d6dcac4403e718b237fdf" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int init_level</definition>
+        <argsstring></argsstring>
+        <name>init_level</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_head.c" line="36" column="1" bodyfile="/source/targets/plc_main_head.c" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="plc__main__head_8c_1a0e50d101c03bf51943e173101c56e428" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void config_run__</definition>
+        <argsstring>(unsigned long tick)</argsstring>
+        <name>config_run__</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>tick</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Head of code common to all C targets </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_head.c" line="10" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__main__head_8c_1a551e0b3d1f0ba380b3043784f8a1817f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void config_init__</definition>
+        <argsstring>(void)</argsstring>
+        <name>config_init__</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_head.c" line="11" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__main__head_8c_1a780ae8a52a14f8fdfdcdf907b4dc51cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long long</type>
+        <definition>long long AtomicCompareExchange64</definition>
+        <argsstring>(long long *, long long, long long)</argsstring>
+        <name>AtomicCompareExchange64</name>
+        <param>
+          <type>long long *</type>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>long</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>long</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_head.c" line="16" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__main__head_8c_1aeb464eeaefb94c2159257d418b216958" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void __init_debug</definition>
+        <argsstring>(void)</argsstring>
+        <name>__init_debug</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_head.c" line="17" column="1" bodyfile="/source/targets/plc_debug.c" bodystart="128" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__main__head_8c_1ad2a8f8251f5a001a66c1147a0b57ef5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void __cleanup_debug</definition>
+        <argsstring>(void)</argsstring>
+        <name>__cleanup_debug</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_head.c" line="18" column="1" bodyfile="/source/targets/plc_debug.c" bodystart="150" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__main__head_8c_1a595d415eff968ea28b2f4885584b0436" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void __publish_debug</definition>
+        <argsstring>(void)</argsstring>
+        <name>__publish_debug</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_head.c" line="20" column="1" bodyfile="/source/targets/plc_debug.c" bodystart="224" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__main__head_8c_1ab9aef50d8bf75006898dfffbb49a9327" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>calls_prototypes s void</type>
+        <definition>calls_prototypes s void __run</definition>
+        <argsstring>(void)</argsstring>
+        <name>__run</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_head.c" line="46" column="1" bodyfile="/source/targets/plc_main_head.c" bodystart="46" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__main__head_8c_1a68a94204f3c6dc54608e8240ba69f9d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int __init</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>__init</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_head.c" line="68" column="1" bodyfile="/source/targets/plc_main_head.c" bodystart="68" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__main__head_8c_1a32b820532ed08035f60a0dbd96f6caff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void __cleanup</definition>
+        <argsstring>(void)</argsstring>
+        <name>__cleanup</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_head.c" line="85" column="1" bodyfile="/source/targets/plc_main_head.c" bodystart="85" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__main__head_8c_1a9e58388ff593da5d02bfad7da9d830eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PLC_GetTime</definition>
+        <argsstring>(IEC_TIME *CURRENT_TIME)</argsstring>
+        <name>PLC_GetTime</name>
+        <param>
+          <type>IEC_TIME *</type>
+          <declname>CURRENT_TIME</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_head.c" line="91" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__main__head_8c_1a4d2010d32a59cfb97c422ee2a45af102" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PLC_SetTimer</definition>
+        <argsstring>(unsigned long long next, unsigned long long period)</argsstring>
+        <name>PLC_SetTimer</name>
+        <param>
+          <type>unsigned long long</type>
+          <declname>next</declname>
+        </param>
+        <param>
+          <type>unsigned long long</type>
+          <declname>period</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_head.c" line="92" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="5"><highlight class="preprocessor">#include<sp/>&quot;beremiz.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>Prototypes<sp/>of<sp/>functions<sp/>provided<sp/>by<sp/>generated<sp/>C<sp/>softPLC</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>**/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>config_run__(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>tick);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>config_init__(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>Prototypes<sp/>of<sp/>functions<sp/>provided<sp/>by<sp/>generated<sp/>target<sp/>C<sp/>code</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>AtomicCompareExchange64(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__init_debug(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__cleanup_debug(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">/*void<sp/>__retrieve_debug(void);*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__publish_debug(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/><sp/>Variables<sp/>used<sp/>by<sp/>generated<sp/>C<sp/>softPLC<sp/>and<sp/>plugins</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>**/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">IEC_TIME<sp/>__CURRENT_TIME;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">IEC_BOOL<sp/>__DEBUG<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>__tick<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*PLC_ID<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/><sp/>Variable<sp/>generated<sp/>by<sp/>C<sp/>softPLC<sp/>and<sp/>plugins</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>**/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>greatest_tick_count__;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Help<sp/>to<sp/>quit<sp/>cleanly<sp/>when<sp/>init<sp/>fail<sp/>at<sp/>a<sp/>certain<sp/>level<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>init_level<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*<sp/>Prototypes<sp/>of<sp/>functions<sp/>exported<sp/>by<sp/>plugins</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>**/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">%(calls_prototypes)s</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/>*<sp/>Retrieve<sp/>input<sp/>variables,<sp/>run<sp/>PLC<sp/>and<sp/>publish<sp/>output<sp/>variables</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/>**/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__run(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>__tick++;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(greatest_tick_count__)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__tick<sp/>%%=<sp/>greatest_tick_count__;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>%(retrieve_calls)s</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*__retrieve_debug();*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>config_run__(__tick);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>__publish_debug();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>%(publish_calls)s</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/>*<sp/>Initialize<sp/>variables<sp/>according<sp/>to<sp/>PLC&apos;s<sp/>default<sp/>values,</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/>*<sp/>and<sp/>then<sp/>init<sp/>plugins<sp/>with<sp/>that<sp/>values</highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/>**/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>__init(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**argv)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>res<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>init_level<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Effective<sp/>tick<sp/>time<sp/>with<sp/>1ms<sp/>default<sp/>value<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!common_ticktime__)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>common_ticktime__<sp/>=<sp/>1000000;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>config_init__();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>__init_debug();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>%(init_calls)s</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>res;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="83"><highlight class="comment"><sp/>*<sp/>Calls<sp/>plugin<sp/>cleanup<sp/>proc.</highlight></codeline>
+<codeline lineno="84"><highlight class="comment"><sp/>**/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__cleanup(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>%(cleanup_calls)s</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>__cleanup_debug();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PLC_GetTime(IEC_TIME<sp/>*CURRENT_TIME);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PLC_SetTimer(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>next,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>period);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/source/targets/plc_main_head.c"/>
+  </compounddef>
+</doxygen>

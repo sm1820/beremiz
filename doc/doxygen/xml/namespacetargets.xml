@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacetargets" kind="namespace" language="Python">
+    <compoundname>targets</compoundname>
+    <innernamespace refid="namespacetargets_1_1toolchain__gcc">targets::toolchain_gcc</innernamespace>
+    <innernamespace refid="namespacetargets_1_1toolchain__makefile">targets::toolchain_makefile</innernamespace>
+    <innernamespace refid="namespacetargets_1_1typemapping">targets::typemapping</innernamespace>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="____init_____8py_1a0e215b8b6d7f1044d1c36f3c1e852a49" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>targets._base_path</definition>
+        <argsstring></argsstring>
+        <name>_base_path</name>
+        <initializer>=  paths.AbsDir(__file__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/__init__.py" line="42" column="1" bodyfile="/source/targets/__init__.py" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="____init_____8py_1abde692c0078b6d305160d05e2e1b240a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>targets.targets</definition>
+        <argsstring></argsstring>
+        <name>targets</name>
+        <initializer>=  dict([(name, {&quot;xsd&quot;:   path.join(_base_path, name, &quot;XSD&quot;),
+                        &quot;class&quot;: _GetLocalTargetClassFactory(name),
+                        &quot;code&quot;:  {fname: path.join(_base_path, name, fname)
+                                  for fname in listdir(path.join(_base_path, name))
+                                  if (fname.startswith(&quot;plc_%s_main&quot; % name) and
+                                      fname.endswith(&quot;.c&quot;))}})
+                for name in listdir(_base_path)
+                if (path.isdir(path.join(_base_path, name)) and
+                    not name.startswith(&quot;__&quot;))])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/__init__.py" line="49" column="1" bodyfile="/source/targets/__init__.py" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="____init_____8py_1a9a14fb0525feff0a29f43296f362a6fe" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary targets.toolchains</definition>
+        <argsstring></argsstring>
+        <name>toolchains</name>
+        <initializer>=  {&quot;gcc&quot;:  path.join(_base_path, &quot;XSD_toolchain_gcc&quot;),
+              &quot;makefile&quot;:  path.join(_base_path, &quot;XSD_toolchain_makefile&quot;)}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/__init__.py" line="59" column="1" bodyfile="/source/targets/__init__.py" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="____init_____8py_1a78925f1b590e04584313b0f2d0392ed4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets._GetLocalTargetClassFactory</definition>
+        <argsstring>(name)</argsstring>
+        <name>_GetLocalTargetClassFactory</name>
+        <param>
+          <type>name</type>
+          <defname>name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/__init__.py" line="45" column="1" bodyfile="/source/targets/__init__.py" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="____init_____8py_1a286c5a8d24687fde25ca1d84a2af0037" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.GetBuilder</definition>
+        <argsstring>(targetname)</argsstring>
+        <name>GetBuilder</name>
+        <param>
+          <type>targetname</type>
+          <defname>targetname</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/__init__.py" line="63" column="1" bodyfile="/source/targets/__init__.py" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="____init_____8py_1a9c12689f0838bae2a14f27b60d0cacc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.GetTargetChoices</definition>
+        <argsstring>()</argsstring>
+        <name>GetTargetChoices</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/__init__.py" line="67" column="1" bodyfile="/source/targets/__init__.py" bodystart="67" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="____init_____8py_1ae7a7902a4b85e54c41ffc2d458ff250c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.GetTargetCode</definition>
+        <argsstring>(targetname)</argsstring>
+        <name>GetTargetCode</name>
+        <param>
+          <type>targetname</type>
+          <defname>targetname</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/__init__.py" line="84" column="1" bodyfile="/source/targets/__init__.py" bodystart="84" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="____init_____8py_1aa1565e70c107e99d17faa4bf6c2126f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.GetHeader</definition>
+        <argsstring>()</argsstring>
+        <name>GetHeader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/__init__.py" line="90" column="1" bodyfile="/source/targets/__init__.py" bodystart="90" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="____init_____8py_1a1c3d61f924248392f20b695b8f18272b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.GetCode</definition>
+        <argsstring>(name)</argsstring>
+        <name>GetCode</name>
+        <param>
+          <type>name</type>
+          <defname>name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/__init__.py" line="95" column="1" bodyfile="/source/targets/__init__.py" bodystart="95" bodyend="98"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/source/targets/__init__.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

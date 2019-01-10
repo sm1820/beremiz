@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_0b1b62fddf6df8c66e0bcbb711b1f333" kind="dir">
+    <compoundname>/source/targets</compoundname>
+    <innerfile refid="____init_____8py">__init__.py</innerfile>
+    <innerfile refid="beremiz_8h">beremiz.h</innerfile>
+    <innerfile refid="plc__debug_8c">plc_debug.c</innerfile>
+    <innerfile refid="plc__main__head_8c">plc_main_head.c</innerfile>
+    <innerfile refid="plc__main__tail_8c">plc_main_tail.c</innerfile>
+    <innerfile refid="toolchain__gcc_8py">toolchain_gcc.py</innerfile>
+    <innerfile refid="toolchain__makefile_8py">toolchain_makefile.py</innerfile>
+    <innerfile refid="typemapping_8py">typemapping.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/source/targets/"/>
+  </compounddef>
+</doxygen>

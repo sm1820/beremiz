@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="typemapping_8py" kind="file" language="Python">
+    <compoundname>typemapping.py</compoundname>
+    <innerclass refid="classtargets_1_1typemapping_1_1IEC__STRING" prot="public">targets::typemapping::IEC_STRING</innerclass>
+    <innerclass refid="classtargets_1_1typemapping_1_1IEC__TIME" prot="public">targets::typemapping::IEC_TIME</innerclass>
+    <innernamespace refid="namespacetargets_1_1typemapping">targets::typemapping</innernamespace>
+    <innernamespace refid="namespacectypes">ctypes</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">#!/usr/bin/env<sp/>python</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">#<sp/>-*-<sp/>coding:<sp/>utf-8<sp/>-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">#<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>Beremiz,<sp/>runtime<sp/>and<sp/>an<sp/>Integrated<sp/>Development<sp/>Environment<sp/>for</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">#<sp/>programming<sp/>IEC<sp/>61131-3<sp/>automates<sp/>supporting<sp/>plcopen<sp/>standard<sp/>and<sp/>CanFestival.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Copyright<sp/>(C)<sp/>2011:<sp/>Edouard<sp/>TISSERANT<sp/>and<sp/>Laurent<sp/>BESSARD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">#<sp/>See<sp/>COPYING.Runtime<sp/>file<sp/>for<sp/>copyrights<sp/>details.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">#<sp/>This<sp/>library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">#<sp/>modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">#<sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">#<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">#<sp/>This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">#<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">#<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">#<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">#<sp/>License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,<sp/>Fifth<sp/>Floor,<sp/>Boston,<sp/>MA<sp/><sp/>02110-1301<sp/><sp/>USA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>__future__<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>absolute_import</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>ctypes</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>ctypes<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>datetime<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>timedelta<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>td</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">ctypes.pythonapi.PyString_AsString.argtypes<sp/>=<sp/>(ctypes.c_void_p,)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">ctypes.pythonapi.PyString_AsString.restype<sp/>=<sp/>ctypes.POINTER(ctypes.c_char)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="classtargets_1_1typemapping_1_1IEC__STRING" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtargets_1_1typemapping_1_1IEC__STRING" kindref="compound">IEC_STRING</ref>(Structure):</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="37"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Must<sp/>be<sp/>changed<sp/>according<sp/>to<sp/>changes<sp/>in<sp/>iec_types.h</highlight></codeline>
+<codeline lineno="38"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>_fields_<sp/>=<sp/>[(</highlight><highlight class="stringliteral">&quot;len&quot;</highlight><highlight class="normal">,<sp/>c_uint8),</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="stringliteral">&quot;body&quot;</highlight><highlight class="normal">,<sp/>c_char<sp/>*<sp/>126)]</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="classtargets_1_1typemapping_1_1IEC__TIME" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtargets_1_1typemapping_1_1IEC__TIME" kindref="compound">IEC_TIME</ref>(Structure):</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="45"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Must<sp/>be<sp/>changed<sp/>according<sp/>to<sp/>changes<sp/>in<sp/>iec_types.h</highlight></codeline>
+<codeline lineno="46"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>_fields_<sp/>=<sp/>[(</highlight><highlight class="stringliteral">&quot;s&quot;</highlight><highlight class="normal">,<sp/>c_long),<sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>tv_sec</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="stringliteral">&quot;ns&quot;</highlight><highlight class="normal">,<sp/>c_long)]<sp/><sp/></highlight><highlight class="comment">#<sp/>tv_nsec</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">_t(t,<sp/>u=lambda<sp/>x:<sp/>x.value,<sp/>p=</highlight><highlight class="keyword">lambda</highlight><highlight class="normal"><sp/>t,<sp/>x:<sp/>t(x)):</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(t,<sp/>u,<sp/>p)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">_ttime():</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(IEC_TIME,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">lambda</highlight><highlight class="normal"><sp/>x:<sp/>td(0,<sp/>x.s,<sp/>x.ns/1000.0),</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">lambda</highlight><highlight class="normal"><sp/>t,<sp/>x:<sp/>t(x.days<sp/>*<sp/>24<sp/>*<sp/>3600<sp/>+<sp/>x.seconds,<sp/>x.microseconds*1000))</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">SameEndianessTypeTranslator<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;BOOL&quot;</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>_t(c_uint8,<sp/></highlight><highlight class="keyword">lambda</highlight><highlight class="normal"><sp/>x:<sp/>x.value<sp/>!=<sp/>0),</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;STEP&quot;</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>_t(c_uint8),</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;TRANSITION&quot;</highlight><highlight class="normal">:<sp/>_t(c_uint8),</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;ACTION&quot;</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/>_t(c_uint8),</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;SINT&quot;</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>_t(c_int8),</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;USINT&quot;</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/>_t(c_uint8),</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;BYTE&quot;</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>_t(c_uint8),</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;STRING&quot;</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/>(IEC_STRING,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">lambda</highlight><highlight class="normal"><sp/>x:<sp/>x.body[:x.len],</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">lambda</highlight><highlight class="normal"><sp/>t,<sp/>x:<sp/>t(len(x),<sp/>x)),</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;INT&quot;</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_t(c_int16),</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;UINT&quot;</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>_t(c_uint16),</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;WORD&quot;</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>_t(c_uint16),</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;DINT&quot;</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>_t(c_int32),</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;UDINT&quot;</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/>_t(c_uint32),</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;DWORD&quot;</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/>_t(c_uint32),</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;LINT&quot;</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>_t(c_int64),</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;ULINT&quot;</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/>_t(c_uint64),</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;LWORD&quot;</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/>_t(c_uint64),</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;REAL&quot;</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>_t(c_float),</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;LREAL&quot;</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/>_t(c_double),</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;TIME&quot;</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>_ttime(),</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;TOD&quot;</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_ttime(),</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;DATE&quot;</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>_ttime(),</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;DT&quot;</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_ttime(),</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal">SwapedEndianessTypeTranslator<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>TODO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal">TypeTranslator<sp/>=<sp/>SameEndianessTypeTranslator</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Construct<sp/>debugger<sp/>natively<sp/>supported<sp/>types</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal">DebugTypesSize<sp/>=<sp/>dict([(key,<sp/>sizeof(t))<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>key,<sp/>(t,<sp/>p,<sp/>u)<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>SameEndianessTypeTranslator.iteritems()<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>t<sp/></highlight><highlight class="keywordflow">is</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">not</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal">])</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">UnpackDebugBuffer(buff,<sp/>indexes):</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>res<sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>buffoffset<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>buffsize<sp/>=<sp/>len(buff)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>buffptr<sp/>=<sp/>cast(ctypes.pythonapi.PyString_AsString(id(buff)),<sp/>c_void_p).value</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>iectype<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>indexes:</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c_type,<sp/>unpack_func,<sp/>_pack_func<sp/>=<sp/>\</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TypeTranslator.get(iectype,<sp/>(</highlight><highlight class="keywordtype">None</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>c_type<sp/></highlight><highlight class="keywordflow">is</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">not</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">and</highlight><highlight class="normal"><sp/>buffoffset<sp/>&lt;<sp/>buffsize:</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cursor<sp/>=<sp/>c_void_p(buffptr<sp/>+<sp/>buffoffset)</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value<sp/>=<sp/>unpack_func(cast(cursor,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>POINTER(c_type)).contents)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffoffset<sp/>+=<sp/>sizeof(c_type)<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>iectype<sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;STRING&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>len(value)+1</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>res.append(value)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>buffoffset<sp/></highlight><highlight class="keywordflow">and</highlight><highlight class="normal"><sp/>buffoffset<sp/>==<sp/>buffsize:</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>res</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal">LogLevels<sp/>=<sp/>[</highlight><highlight class="stringliteral">&quot;CRITICAL&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;WARNING&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;INFO&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;DEBUG&quot;</highlight><highlight class="normal">]</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">LogLevelsCount<sp/>=<sp/>len(LogLevels)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">LogLevelsDict<sp/>=<sp/>dict(zip(LogLevels,<sp/>range(LogLevelsCount)))</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">LogLevelsDefault<sp/>=<sp/>LogLevelsDict[</highlight><highlight class="stringliteral">&quot;DEBUG&quot;</highlight><highlight class="normal">]</highlight></codeline>
+    </programlisting>
+    <location file="/source/targets/typemapping.py"/>
+  </compounddef>
+</doxygen>

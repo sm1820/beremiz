@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtargets_1_1toolchain__makefile_1_1toolchain__makefile" kind="class" language="Python" prot="public">
+    <compoundname>targets::toolchain_makefile::toolchain_makefile</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">object</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1adf87fd76c218adf6b5dc152aa77fc56d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>targets.toolchain_makefile.toolchain_makefile::CTRInstance</definition>
+        <argsstring></argsstring>
+        <name>CTRInstance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_makefile.py" line="40" column="1" bodyfile="/source/targets/toolchain_makefile.py" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1a1693ebc42c50782c2e27384924a32ebc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>targets.toolchain_makefile.toolchain_makefile::md5key</definition>
+        <argsstring></argsstring>
+        <name>md5key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_makefile.py" line="41" column="1" bodyfile="/source/targets/toolchain_makefile.py" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1ae7dc3737ebca24bd1cea7923633d5887" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>targets.toolchain_makefile.toolchain_makefile::buildpath</definition>
+        <argsstring></argsstring>
+        <name>buildpath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_makefile.py" line="42" column="1" bodyfile="/source/targets/toolchain_makefile.py" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1a17ed4cf1c70f816ff9538f19d5f36492" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.toolchain_makefile.toolchain_makefile.__init__</definition>
+        <argsstring>(self, CTRInstance)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>CTRInstance</type>
+          <defname>CTRInstance</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_makefile.py" line="39" column="1" bodyfile="/source/targets/toolchain_makefile.py" bodystart="39" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1a6617c44fb46658c7b7eb6b7c858c7005" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.toolchain_makefile.toolchain_makefile.SetBuildPath</definition>
+        <argsstring>(self, buildpath)</argsstring>
+        <name>SetBuildPath</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>buildpath</type>
+          <defname>buildpath</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_makefile.py" line="45" column="1" bodyfile="/source/targets/toolchain_makefile.py" bodystart="45" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1a030415926907aaf035dda29ea99a7191" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.toolchain_makefile.toolchain_makefile.GetBinaryCode</definition>
+        <argsstring>(self)</argsstring>
+        <name>GetBinaryCode</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_makefile.py" line="50" column="1" bodyfile="/source/targets/toolchain_makefile.py" bodystart="50" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1a180778325572451565eca458e880d558" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.toolchain_makefile.toolchain_makefile.ResetBinaryCodeMD5</definition>
+        <argsstring>(self)</argsstring>
+        <name>ResetBinaryCodeMD5</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_makefile.py" line="56" column="1" bodyfile="/source/targets/toolchain_makefile.py" bodystart="56" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1ac827160aa5fce1efc6ec20d3e0d40958" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.toolchain_makefile.toolchain_makefile.GetBinaryCodeMD5</definition>
+        <argsstring>(self)</argsstring>
+        <name>GetBinaryCodeMD5</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_makefile.py" line="63" column="1" bodyfile="/source/targets/toolchain_makefile.py" bodystart="63" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1ae1964d09f13c5c00edf3af8cbc6061d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.toolchain_makefile.toolchain_makefile.concat_deps</definition>
+        <argsstring>(self, bn)</argsstring>
+        <name>concat_deps</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>bn</type>
+          <defname>bn</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_makefile.py" line="72" column="1" bodyfile="/source/targets/toolchain_makefile.py" bodystart="72" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1aa45d3b222969090b91793a85fd54ec15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.toolchain_makefile.toolchain_makefile.build</definition>
+        <argsstring>(self)</argsstring>
+        <name>build</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_makefile.py" line="88" column="1" bodyfile="/source/targets/toolchain_makefile.py" bodystart="88" bodyend="132"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1a61d0ca9fbe49d119b79d1317e93ab344" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.toolchain_makefile.toolchain_makefile._GetMD5FileName</definition>
+        <argsstring>(self)</argsstring>
+        <name>_GetMD5FileName</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_makefile.py" line="53" column="1" bodyfile="/source/targets/toolchain_makefile.py" bodystart="53" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="16">
+        <label>targets.toolchain_makefile.toolchain_makefile</label>
+        <link refid="classtargets_1_1toolchain__makefile_1_1toolchain__makefile"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>object</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="18">
+        <label>targets.toolchain_makefile.toolchain_makefile</label>
+        <link refid="classtargets_1_1toolchain__makefile_1_1toolchain__makefile"/>
+        <childnode refid="19" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>object</label>
+      </node>
+    </collaborationgraph>
+    <location file="/source/targets/toolchain_makefile.py" line="38" column="1" bodyfile="/source/targets/toolchain_makefile.py" bodystart="38" bodyend="132"/>
+    <listofallmembers>
+      <member refid="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1a17ed4cf1c70f816ff9538f19d5f36492" prot="public" virt="non-virtual"><scope>targets::toolchain_makefile::toolchain_makefile</scope><name>__init__</name></member>
+      <member refid="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1a61d0ca9fbe49d119b79d1317e93ab344" prot="private" virt="non-virtual"><scope>targets::toolchain_makefile::toolchain_makefile</scope><name>_GetMD5FileName</name></member>
+      <member refid="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1aa45d3b222969090b91793a85fd54ec15" prot="public" virt="non-virtual"><scope>targets::toolchain_makefile::toolchain_makefile</scope><name>build</name></member>
+      <member refid="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1ae7dc3737ebca24bd1cea7923633d5887" prot="public" virt="non-virtual"><scope>targets::toolchain_makefile::toolchain_makefile</scope><name>buildpath</name></member>
+      <member refid="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1ae1964d09f13c5c00edf3af8cbc6061d4" prot="public" virt="non-virtual"><scope>targets::toolchain_makefile::toolchain_makefile</scope><name>concat_deps</name></member>
+      <member refid="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1adf87fd76c218adf6b5dc152aa77fc56d" prot="public" virt="non-virtual"><scope>targets::toolchain_makefile::toolchain_makefile</scope><name>CTRInstance</name></member>
+      <member refid="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1a030415926907aaf035dda29ea99a7191" prot="public" virt="non-virtual"><scope>targets::toolchain_makefile::toolchain_makefile</scope><name>GetBinaryCode</name></member>
+      <member refid="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1ac827160aa5fce1efc6ec20d3e0d40958" prot="public" virt="non-virtual"><scope>targets::toolchain_makefile::toolchain_makefile</scope><name>GetBinaryCodeMD5</name></member>
+      <member refid="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1a1693ebc42c50782c2e27384924a32ebc" prot="public" virt="non-virtual"><scope>targets::toolchain_makefile::toolchain_makefile</scope><name>md5key</name></member>
+      <member refid="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1a180778325572451565eca458e880d558" prot="public" virt="non-virtual"><scope>targets::toolchain_makefile::toolchain_makefile</scope><name>ResetBinaryCodeMD5</name></member>
+      <member refid="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1a6617c44fb46658c7b7eb6b7c858c7005" prot="public" virt="non-virtual"><scope>targets::toolchain_makefile::toolchain_makefile</scope><name>SetBuildPath</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structdbgvardsc__t" kind="struct" language="C++" prot="public">
+    <compoundname>dbgvardsc_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdbgvardsc__t_1a21dcc7569691fd5b1403212ba6c64f70" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* dbgvardsc_t::ptr</definition>
+        <argsstring></argsstring>
+        <name>ptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="53" column="1" bodyfile="/source/targets/plc_debug.c" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdbgvardsc__t_1ae389d440dab30b806d7e3c10fc9b06cc" prot="public" static="no" mutable="no">
+        <type>__IEC_types_enum</type>
+        <definition>__IEC_types_enum dbgvardsc_t::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="54" column="1" bodyfile="/source/targets/plc_debug.c" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/source/targets/plc_debug.c" line="52" column="1" bodyfile="/source/targets/plc_debug.c" bodystart="52" bodyend="55"/>
+    <listofallmembers>
+      <member refid="structdbgvardsc__t_1a21dcc7569691fd5b1403212ba6c64f70" prot="public" virt="non-virtual"><scope>dbgvardsc_t</scope><name>ptr</name></member>
+      <member refid="structdbgvardsc__t_1ae389d440dab30b806d7e3c10fc9b06cc" prot="public" virt="non-virtual"><scope>dbgvardsc_t</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

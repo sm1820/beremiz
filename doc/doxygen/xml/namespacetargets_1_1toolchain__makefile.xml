@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacetargets_1_1toolchain__makefile" kind="namespace" language="Python">
+    <compoundname>targets::toolchain_makefile</compoundname>
+    <innerclass refid="classtargets_1_1toolchain__makefile_1_1toolchain__makefile" prot="public">targets::toolchain_makefile::toolchain_makefile</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="toolchain__makefile_8py_1a654f6e14faec91d4c8613d3cf431f0c1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>targets::toolchain_makefile.includes_re</definition>
+        <argsstring></argsstring>
+        <name>includes_re</name>
+        <initializer>=  re.compile(&apos;\s*#include\s*[&quot;&lt;]([^&quot;&gt;]*)[&quot;&gt;].*&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_makefile.py" line="35" column="1" bodyfile="/source/targets/toolchain_makefile.py" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/source/targets/toolchain_makefile.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

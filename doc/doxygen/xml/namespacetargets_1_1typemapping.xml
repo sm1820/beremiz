@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacetargets_1_1typemapping" kind="namespace" language="Python">
+    <compoundname>targets::typemapping</compoundname>
+    <innerclass refid="classtargets_1_1typemapping_1_1IEC__STRING" prot="public">targets::typemapping::IEC_STRING</innerclass>
+    <innerclass refid="classtargets_1_1typemapping_1_1IEC__TIME" prot="public">targets::typemapping::IEC_TIME</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="typemapping_8py_1a88079558606ee69b96e2c92a6832d483" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>targets::typemapping.argtypes</definition>
+        <argsstring></argsstring>
+        <name>argtypes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/typemapping.py" line="31" column="1" bodyfile="/source/targets/typemapping.py" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="typemapping_8py_1ab241bdff19027d278b91985c70ee0596" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>targets::typemapping.restype</definition>
+        <argsstring></argsstring>
+        <name>restype</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/typemapping.py" line="32" column="1" bodyfile="/source/targets/typemapping.py" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="typemapping_8py_1a8605d51fa1e61147a9d6151126f9fb26" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary targets::typemapping.SameEndianessTypeTranslator</definition>
+        <argsstring></argsstring>
+        <name>SameEndianessTypeTranslator</name>
+        <initializer>=  {
+    &quot;BOOL&quot;:       _t(c_uint8, lambda x: x.value != 0),
+    &quot;STEP&quot;:       _t(c_uint8),
+    &quot;TRANSITION&quot;: _t(c_uint8),
+    &quot;ACTION&quot;:     _t(c_uint8),
+    &quot;SINT&quot;:       _t(c_int8),
+    &quot;USINT&quot;:      _t(c_uint8),
+    &quot;BYTE&quot;:       _t(c_uint8),
+    &quot;STRING&quot;:     (IEC_STRING,
+                   lambda x: x.body[:x.len],
+                   lambda t, x: t(len(x), x)),
+    &quot;INT&quot;:        _t(c_int16),
+    &quot;UINT&quot;:       _t(c_uint16),
+    &quot;WORD&quot;:       _t(c_uint16),
+    &quot;DINT&quot;:       _t(c_int32),
+    &quot;UDINT&quot;:      _t(c_uint32),
+    &quot;DWORD&quot;:      _t(c_uint32),
+    &quot;LINT&quot;:       _t(c_int64),
+    &quot;ULINT&quot;:      _t(c_uint64),
+    &quot;LWORD&quot;:      _t(c_uint64),
+    &quot;REAL&quot;:       _t(c_float),
+    &quot;LREAL&quot;:      _t(c_double),
+    &quot;TIME&quot;:       _ttime(),
+    &quot;TOD&quot;:        _ttime(),
+    &quot;DATE&quot;:       _ttime(),
+    &quot;DT&quot;:         _ttime(),
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/typemapping.py" line="61" column="1" bodyfile="/source/targets/typemapping.py" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="typemapping_8py_1a7dae309c4e41a04586be27f8e8c340fb" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary targets::typemapping.SwapedEndianessTypeTranslator</definition>
+        <argsstring></argsstring>
+        <name>SwapedEndianessTypeTranslator</name>
+        <initializer>=  {
+    # TODO
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/typemapping.py" line="89" column="1" bodyfile="/source/targets/typemapping.py" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="typemapping_8py_1a2a4a4923293211304d13e922401746a6" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary targets::typemapping.TypeTranslator</definition>
+        <argsstring></argsstring>
+        <name>TypeTranslator</name>
+        <initializer>=  SameEndianessTypeTranslator</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/typemapping.py" line="93" column="1" bodyfile="/source/targets/typemapping.py" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="typemapping_8py_1a003770bf48751cf50ab7ff11e8a839c4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>targets::typemapping.DebugTypesSize</definition>
+        <argsstring></argsstring>
+        <name>DebugTypesSize</name>
+        <initializer>=  dict([(key, sizeof(t)) for key, (t, p, u) in SameEndianessTypeTranslator.iteritems() if t is not None])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/typemapping.py" line="96" column="1" bodyfile="/source/targets/typemapping.py" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="typemapping_8py_1a81e9ba52a4280a013a5b8cb25ff1a632" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list targets::typemapping.LogLevels</definition>
+        <argsstring></argsstring>
+        <name>LogLevels</name>
+        <initializer>=  [&quot;CRITICAL&quot;, &quot;WARNING&quot;, &quot;INFO&quot;, &quot;DEBUG&quot;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/typemapping.py" line="120" column="1" bodyfile="/source/targets/typemapping.py" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="typemapping_8py_1a5b0f7931292f0e11ced43258ef0ff8c7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>targets::typemapping.LogLevelsCount</definition>
+        <argsstring></argsstring>
+        <name>LogLevelsCount</name>
+        <initializer>=  len(LogLevels)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/typemapping.py" line="121" column="1" bodyfile="/source/targets/typemapping.py" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="typemapping_8py_1ac14406b15ba2665843024aae8483ab90" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>targets::typemapping.LogLevelsDict</definition>
+        <argsstring></argsstring>
+        <name>LogLevelsDict</name>
+        <initializer>=  dict(zip(LogLevels, range(LogLevelsCount)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/typemapping.py" line="122" column="1" bodyfile="/source/targets/typemapping.py" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="typemapping_8py_1ae2da0f96da569707d66896a7943d4c2a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>targets::typemapping.LogLevelsDefault</definition>
+        <argsstring></argsstring>
+        <name>LogLevelsDefault</name>
+        <initializer>=  LogLevelsDict[&quot;DEBUG&quot;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/typemapping.py" line="123" column="1" bodyfile="/source/targets/typemapping.py" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="typemapping_8py_1a1a3695748721088a87fafbf95ef88d78" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.typemapping._t</definition>
+        <argsstring></argsstring>
+        <name>_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/typemapping.py" line="51" column="1" bodyfile="/source/targets/typemapping.py" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="typemapping_8py_1aac8b562f04d0bba542230269ef53bd1a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.typemapping._ttime</definition>
+        <argsstring>()</argsstring>
+        <name>_ttime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/typemapping.py" line="55" column="1" bodyfile="/source/targets/typemapping.py" bodystart="55" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="typemapping_8py_1a8299aee77f51d56cdf08546644206da7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.typemapping.UnpackDebugBuffer</definition>
+        <argsstring>(buff, indexes)</argsstring>
+        <name>UnpackDebugBuffer</name>
+        <param>
+          <type>buff</type>
+          <defname>buff</defname>
+        </param>
+        <param>
+          <type>indexes</type>
+          <defname>indexes</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/typemapping.py" line="99" column="1" bodyfile="/source/targets/typemapping.py" bodystart="99" bodyend="119"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/source/targets/typemapping.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,473 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtargets_1_1toolchain__gcc_1_1toolchain__gcc" kind="class" language="Python" prot="public">
+    <compoundname>targets::toolchain_gcc::toolchain_gcc</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">object</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a60a65500fbc42f993be639ba48bd88a7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>targets.toolchain_gcc.toolchain_gcc::CTRInstance</definition>
+        <argsstring></argsstring>
+        <name>CTRInstance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_gcc.py" line="46" column="1" bodyfile="/source/targets/toolchain_gcc.py" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1ab58eb3023801e9066f56892a7447ec75" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>targets.toolchain_gcc.toolchain_gcc::buildpath</definition>
+        <argsstring></argsstring>
+        <name>buildpath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_gcc.py" line="47" column="1" bodyfile="/source/targets/toolchain_gcc.py" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1ae02ea86af6e51b2094ded812d28ca211" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>targets.toolchain_gcc.toolchain_gcc::md5key</definition>
+        <argsstring></argsstring>
+        <name>md5key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_gcc.py" line="85" column="1" bodyfile="/source/targets/toolchain_gcc.py" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1aada5665c8f7ff78da1e791fd22f7b0c0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>targets.toolchain_gcc.toolchain_gcc::exe</definition>
+        <argsstring></argsstring>
+        <name>exe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_gcc.py" line="103" column="1" bodyfile="/source/targets/toolchain_gcc.py" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a8b8965f54678fadd9c252b3309a87347" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>targets.toolchain_gcc.toolchain_gcc::exe_path</definition>
+        <argsstring></argsstring>
+        <name>exe_path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_gcc.py" line="104" column="1" bodyfile="/source/targets/toolchain_gcc.py" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a0f10840d5891840270538bf892392cdf" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>targets.toolchain_gcc.toolchain_gcc::srcmd5</definition>
+        <argsstring></argsstring>
+        <name>srcmd5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_gcc.py" line="106" column="1" bodyfile="/source/targets/toolchain_gcc.py" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a8c84efd7cb56ba16c9d606234ce7902e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>targets.toolchain_gcc.toolchain_gcc::compiler</definition>
+        <argsstring></argsstring>
+        <name>compiler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_gcc.py" line="160" column="1" bodyfile="/source/targets/toolchain_gcc.py" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a6517cf193448e8be6c8ddf9d2b8e8723" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>targets.toolchain_gcc.toolchain_gcc::linker</definition>
+        <argsstring></argsstring>
+        <name>linker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_gcc.py" line="161" column="1" bodyfile="/source/targets/toolchain_gcc.py" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a586d6ebf1d306b8bf07cdb09b00a5a1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.toolchain_gcc.toolchain_gcc.__init__</definition>
+        <argsstring>(self, CTRInstance)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>CTRInstance</type>
+          <defname>CTRInstance</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_gcc.py" line="45" column="1" bodyfile="/source/targets/toolchain_gcc.py" bodystart="45" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1acee059542dc1699748c8ade4364a9ddd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.toolchain_gcc.toolchain_gcc.getBuilderCFLAGS</definition>
+        <argsstring>(self)</argsstring>
+        <name>getBuilderCFLAGS</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns list of builder specific CFLAGS
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_gcc.py" line="50" column="1" bodyfile="/source/targets/toolchain_gcc.py" bodystart="50" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1aa0e05d60cabde18b65ea7377f342d19c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.toolchain_gcc.toolchain_gcc.getBuilderLDFLAGS</definition>
+        <argsstring>(self)</argsstring>
+        <name>getBuilderLDFLAGS</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns list of builder specific LDFLAGS
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_gcc.py" line="56" column="1" bodyfile="/source/targets/toolchain_gcc.py" bodystart="56" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1acc7cb3512b79d9da10b037ac2c8db2d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.toolchain_gcc.toolchain_gcc.getCompiler</definition>
+        <argsstring>(self)</argsstring>
+        <name>getCompiler</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns compiler
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_gcc.py" line="63" column="1" bodyfile="/source/targets/toolchain_gcc.py" bodystart="63" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a511e8a7b66290b82bd0ee8d95a68849d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.toolchain_gcc.toolchain_gcc.getLinker</definition>
+        <argsstring>(self)</argsstring>
+        <name>getLinker</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns linker
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_gcc.py" line="69" column="1" bodyfile="/source/targets/toolchain_gcc.py" bodystart="69" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a96a6a3ad6bcb018536553905f25949e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.toolchain_gcc.toolchain_gcc.GetBinaryCode</definition>
+        <argsstring>(self)</argsstring>
+        <name>GetBinaryCode</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_gcc.py" line="75" column="1" bodyfile="/source/targets/toolchain_gcc.py" bodystart="75" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a8fc50a12cb0c7eb475cdc41ba5431941" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.toolchain_gcc.toolchain_gcc.ResetBinaryCodeMD5</definition>
+        <argsstring>(self)</argsstring>
+        <name>ResetBinaryCodeMD5</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_gcc.py" line="84" column="1" bodyfile="/source/targets/toolchain_gcc.py" bodystart="84" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a3edf3ade4eca66e08a0f64718343e11a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.toolchain_gcc.toolchain_gcc.GetBinaryCodeMD5</definition>
+        <argsstring>(self)</argsstring>
+        <name>GetBinaryCodeMD5</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_gcc.py" line="91" column="1" bodyfile="/source/targets/toolchain_gcc.py" bodystart="91" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1ad94739548f4e01ce8906a6c4c2397a8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.toolchain_gcc.toolchain_gcc.SetBuildPath</definition>
+        <argsstring>(self, buildpath)</argsstring>
+        <name>SetBuildPath</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>buildpath</type>
+          <defname>buildpath</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_gcc.py" line="100" column="1" bodyfile="/source/targets/toolchain_gcc.py" bodystart="100" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1adc3723481e6544b51216ce7c07632aca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.toolchain_gcc.toolchain_gcc.append_cfile_deps</definition>
+        <argsstring>(self, src, deps)</argsstring>
+        <name>append_cfile_deps</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>src</type>
+          <defname>src</defname>
+        </param>
+        <param>
+          <type>deps</type>
+          <defname>deps</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_gcc.py" line="108" column="1" bodyfile="/source/targets/toolchain_gcc.py" bodystart="108" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1afb432e8b4bb4bcd3b127673e32cd50e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.toolchain_gcc.toolchain_gcc.concat_deps</definition>
+        <argsstring>(self, bn)</argsstring>
+        <name>concat_deps</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>bn</type>
+          <defname>bn</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_gcc.py" line="116" column="1" bodyfile="/source/targets/toolchain_gcc.py" bodystart="116" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a60e2efedb1a4d3159de75484e5fcda99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.toolchain_gcc.toolchain_gcc.check_and_update_hash_and_deps</definition>
+        <argsstring>(self, bn)</argsstring>
+        <name>check_and_update_hash_and_deps</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>bn</type>
+          <defname>bn</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_gcc.py" line="126" column="1" bodyfile="/source/targets/toolchain_gcc.py" bodystart="126" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a09fd5d634268df87ad9311bc0b1f2fa8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.toolchain_gcc.toolchain_gcc.calc_source_md5</definition>
+        <argsstring>(self)</argsstring>
+        <name>calc_source_md5</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_gcc.py" line="146" column="1" bodyfile="/source/targets/toolchain_gcc.py" bodystart="146" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1ae109dfe28cf507cc9f1374182fb00d6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.toolchain_gcc.toolchain_gcc.calc_md5</definition>
+        <argsstring>(self)</argsstring>
+        <name>calc_md5</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_gcc.py" line="155" column="1" bodyfile="/source/targets/toolchain_gcc.py" bodystart="155" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1acf89fd9e003921a1e0833e7d4aaad043" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.toolchain_gcc.toolchain_gcc.build</definition>
+        <argsstring>(self)</argsstring>
+        <name>build</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_gcc.py" line="158" column="1" bodyfile="/source/targets/toolchain_gcc.py" bodystart="158" bodyend="242"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1abf88ddfdb3f1de36a700b1bcb312c3c3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def targets.toolchain_gcc.toolchain_gcc._GetMD5FileName</definition>
+        <argsstring>(self)</argsstring>
+        <name>_GetMD5FileName</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/toolchain_gcc.py" line="81" column="1" bodyfile="/source/targets/toolchain_gcc.py" bodystart="81" bodyend="83"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>This abstract class contains GCC specific code.
+It cannot be used as this and should be inherited in a target specific
+class such as target_linux or target_win32
+</verbatim> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="13">
+        <label>object</label>
+      </node>
+      <node id="12">
+        <label>targets.toolchain_gcc.toolchain_gcc</label>
+        <link refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="15">
+        <label>object</label>
+      </node>
+      <node id="14">
+        <label>targets.toolchain_gcc.toolchain_gcc</label>
+        <link refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/source/targets/toolchain_gcc.py" line="39" column="1" bodyfile="/source/targets/toolchain_gcc.py" bodystart="39" bodyend="242"/>
+    <listofallmembers>
+      <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a586d6ebf1d306b8bf07cdb09b00a5a1f" prot="public" virt="non-virtual"><scope>targets::toolchain_gcc::toolchain_gcc</scope><name>__init__</name></member>
+      <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1abf88ddfdb3f1de36a700b1bcb312c3c3" prot="private" virt="non-virtual"><scope>targets::toolchain_gcc::toolchain_gcc</scope><name>_GetMD5FileName</name></member>
+      <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1adc3723481e6544b51216ce7c07632aca" prot="public" virt="non-virtual"><scope>targets::toolchain_gcc::toolchain_gcc</scope><name>append_cfile_deps</name></member>
+      <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1acf89fd9e003921a1e0833e7d4aaad043" prot="public" virt="non-virtual"><scope>targets::toolchain_gcc::toolchain_gcc</scope><name>build</name></member>
+      <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1ab58eb3023801e9066f56892a7447ec75" prot="public" virt="non-virtual"><scope>targets::toolchain_gcc::toolchain_gcc</scope><name>buildpath</name></member>
+      <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1ae109dfe28cf507cc9f1374182fb00d6c" prot="public" virt="non-virtual"><scope>targets::toolchain_gcc::toolchain_gcc</scope><name>calc_md5</name></member>
+      <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a09fd5d634268df87ad9311bc0b1f2fa8" prot="public" virt="non-virtual"><scope>targets::toolchain_gcc::toolchain_gcc</scope><name>calc_source_md5</name></member>
+      <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a60e2efedb1a4d3159de75484e5fcda99" prot="public" virt="non-virtual"><scope>targets::toolchain_gcc::toolchain_gcc</scope><name>check_and_update_hash_and_deps</name></member>
+      <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a8c84efd7cb56ba16c9d606234ce7902e" prot="public" virt="non-virtual"><scope>targets::toolchain_gcc::toolchain_gcc</scope><name>compiler</name></member>
+      <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1afb432e8b4bb4bcd3b127673e32cd50e1" prot="public" virt="non-virtual"><scope>targets::toolchain_gcc::toolchain_gcc</scope><name>concat_deps</name></member>
+      <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a60a65500fbc42f993be639ba48bd88a7" prot="public" virt="non-virtual"><scope>targets::toolchain_gcc::toolchain_gcc</scope><name>CTRInstance</name></member>
+      <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1aada5665c8f7ff78da1e791fd22f7b0c0" prot="public" virt="non-virtual"><scope>targets::toolchain_gcc::toolchain_gcc</scope><name>exe</name></member>
+      <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a8b8965f54678fadd9c252b3309a87347" prot="public" virt="non-virtual"><scope>targets::toolchain_gcc::toolchain_gcc</scope><name>exe_path</name></member>
+      <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a96a6a3ad6bcb018536553905f25949e3" prot="public" virt="non-virtual"><scope>targets::toolchain_gcc::toolchain_gcc</scope><name>GetBinaryCode</name></member>
+      <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a3edf3ade4eca66e08a0f64718343e11a" prot="public" virt="non-virtual"><scope>targets::toolchain_gcc::toolchain_gcc</scope><name>GetBinaryCodeMD5</name></member>
+      <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1acee059542dc1699748c8ade4364a9ddd" prot="public" virt="non-virtual"><scope>targets::toolchain_gcc::toolchain_gcc</scope><name>getBuilderCFLAGS</name></member>
+      <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1aa0e05d60cabde18b65ea7377f342d19c" prot="public" virt="non-virtual"><scope>targets::toolchain_gcc::toolchain_gcc</scope><name>getBuilderLDFLAGS</name></member>
+      <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1acc7cb3512b79d9da10b037ac2c8db2d7" prot="public" virt="non-virtual"><scope>targets::toolchain_gcc::toolchain_gcc</scope><name>getCompiler</name></member>
+      <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a511e8a7b66290b82bd0ee8d95a68849d" prot="public" virt="non-virtual"><scope>targets::toolchain_gcc::toolchain_gcc</scope><name>getLinker</name></member>
+      <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a6517cf193448e8be6c8ddf9d2b8e8723" prot="public" virt="non-virtual"><scope>targets::toolchain_gcc::toolchain_gcc</scope><name>linker</name></member>
+      <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1ae02ea86af6e51b2094ded812d28ca211" prot="public" virt="non-virtual"><scope>targets::toolchain_gcc::toolchain_gcc</scope><name>md5key</name></member>
+      <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a8fc50a12cb0c7eb475cdc41ba5431941" prot="public" virt="non-virtual"><scope>targets::toolchain_gcc::toolchain_gcc</scope><name>ResetBinaryCodeMD5</name></member>
+      <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1ad94739548f4e01ce8906a6c4c2397a8a" prot="public" virt="non-virtual"><scope>targets::toolchain_gcc::toolchain_gcc</scope><name>SetBuildPath</name></member>
+      <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a0f10840d5891840270538bf892392cdf" prot="public" virt="non-virtual"><scope>targets::toolchain_gcc::toolchain_gcc</scope><name>srcmd5</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
