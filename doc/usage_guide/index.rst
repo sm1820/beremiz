@@ -6,4 +6,8 @@
    :caption: Содержание
    :maxdepth: 3
 
-   manual
+   overview
+   terms_and_definitions
+   ide_components
+   work_with_project
+   library
