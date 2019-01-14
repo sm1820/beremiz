@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structmTail" kind="struct" language="C++" prot="public">
+    <compoundname>mTail</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmTail_1a838c03859e205be7d22bc0a8ef8f3c6e" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mTail::msgidx</definition>
+        <argsstring></argsstring>
+        <name>msgidx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_tail.c" line="46" column="1" bodyfile="/source/targets/plc_main_tail.c" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmTail_1a55fa2dc4298d5ba2938b701cc0952f83" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mTail::msgsize</definition>
+        <argsstring></argsstring>
+        <name>msgsize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_tail.c" line="47" column="1" bodyfile="/source/targets/plc_main_tail.c" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmTail_1aed6b2027c2309bfd37d2a2665c165cc2" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long mTail::tick</definition>
+        <argsstring></argsstring>
+        <name>tick</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_tail.c" line="48" column="1" bodyfile="/source/targets/plc_main_tail.c" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmTail_1a3a57f2cd9574510b53ddcd35549ddcbb" prot="public" static="no" mutable="no">
+        <type>IEC_TIME</type>
+        <definition>IEC_TIME mTail::time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_tail.c" line="49" column="1" bodyfile="/source/targets/plc_main_tail.c" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/source/targets/plc_main_tail.c" line="45" column="1" bodyfile="/source/targets/plc_main_tail.c" bodystart="45" bodyend="50"/>
+    <listofallmembers>
+      <member refid="structmTail_1a838c03859e205be7d22bc0a8ef8f3c6e" prot="public" virt="non-virtual"><scope>mTail</scope><name>msgidx</name></member>
+      <member refid="structmTail_1a55fa2dc4298d5ba2938b701cc0952f83" prot="public" virt="non-virtual"><scope>mTail</scope><name>msgsize</name></member>
+      <member refid="structmTail_1aed6b2027c2309bfd37d2a2665c165cc2" prot="public" virt="non-virtual"><scope>mTail</scope><name>tick</name></member>
+      <member refid="structmTail_1a3a57f2cd9574510b53ddcd35549ddcbb" prot="public" virt="non-virtual"><scope>mTail</scope><name>time</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

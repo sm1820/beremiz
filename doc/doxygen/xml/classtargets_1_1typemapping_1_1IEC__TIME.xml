@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtargets_1_1typemapping_1_1IEC__TIME" kind="class" language="Python" prot="public">
+    <compoundname>targets::typemapping::IEC_TIME</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Structure</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classtargets_1_1typemapping_1_1IEC__TIME_1ac8014108bf06820b208a20a377bce80f" prot="private" static="yes" mutable="no">
+        <type>list</type>
+        <definition>list targets.typemapping.IEC_TIME::_fields_</definition>
+        <argsstring></argsstring>
+        <name>_fields_</name>
+        <initializer>=  [(&quot;s&quot;, c_long),   # tv_sec
+                (&quot;ns&quot;, c_long)]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/typemapping.py" line="47" column="1" bodyfile="/source/targets/typemapping.py" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Must be changed according to changes in iec_types.h
+</verbatim> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6">
+        <label>targets.typemapping.IEC_TIME</label>
+        <link refid="classtargets_1_1typemapping_1_1IEC__TIME"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Structure</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="8">
+        <label>targets.typemapping.IEC_TIME</label>
+        <link refid="classtargets_1_1typemapping_1_1IEC__TIME"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Structure</label>
+      </node>
+    </collaborationgraph>
+    <location file="/source/targets/typemapping.py" line="43" column="1" bodyfile="/source/targets/typemapping.py" bodystart="43" bodyend="51"/>
+    <listofallmembers>
+      <member refid="classtargets_1_1typemapping_1_1IEC__TIME_1ac8014108bf06820b208a20a377bce80f" prot="private" virt="non-virtual"><scope>targets::typemapping::IEC_TIME</scope><name>_fields_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

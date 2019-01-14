@@ -4,13 +4,11 @@
 
 1. `Установить Docker <https://docs.docker.com/install/>`_
 
-2. Загрузить исходники Beremiz:
-  ::
+2. Загрузить исходники Beremiz::
 
       git clone https://github.com/jubnzv/beremiz beremiz
 
-3. Для сборки документации:
-  ::
+3. Для сборки документации::
 
       cd beremiz/doc
       make -f Makefile.docker

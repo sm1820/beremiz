@@ -35,7 +35,6 @@ Python, C, C++ и дополнительных библиотек к ним. П�
    :caption: Содержание
    :maxdepth: 3
 
-   .
    install_guide/index
    usage_guide/index
    iec_guide/index

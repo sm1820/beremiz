@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
+  <compound refid="structdbgvardsc__t" kind="struct"><name>dbgvardsc_t</name>
+    <member refid="structdbgvardsc__t_1a21dcc7569691fd5b1403212ba6c64f70" kind="variable"><name>ptr</name></member>
+    <member refid="structdbgvardsc__t_1ae389d440dab30b806d7e3c10fc9b06cc" kind="variable"><name>type</name></member>
+  </compound>
+  <compound refid="classtargets_1_1typemapping_1_1IEC__STRING" kind="class"><name>targets::typemapping::IEC_STRING</name>
+    <member refid="classtargets_1_1typemapping_1_1IEC__STRING_1a6cb39ccbf83694c00c8bf6b0338157f8" kind="variable"><name>_fields_</name></member>
+  </compound>
+  <compound refid="classtargets_1_1typemapping_1_1IEC__TIME" kind="class"><name>targets::typemapping::IEC_TIME</name>
+    <member refid="classtargets_1_1typemapping_1_1IEC__TIME_1ac8014108bf06820b208a20a377bce80f" kind="variable"><name>_fields_</name></member>
+  </compound>
+  <compound refid="structmTail" kind="struct"><name>mTail</name>
+    <member refid="structmTail_1a838c03859e205be7d22bc0a8ef8f3c6e" kind="variable"><name>msgidx</name></member>
+    <member refid="structmTail_1a55fa2dc4298d5ba2938b701cc0952f83" kind="variable"><name>msgsize</name></member>
+    <member refid="structmTail_1aed6b2027c2309bfd37d2a2665c165cc2" kind="variable"><name>tick</name></member>
+    <member refid="structmTail_1a3a57f2cd9574510b53ddcd35549ddcbb" kind="variable"><name>time</name></member>
+  </compound>
+  <compound refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc" kind="class"><name>targets::toolchain_gcc::toolchain_gcc</name>
+    <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a60a65500fbc42f993be639ba48bd88a7" kind="variable"><name>CTRInstance</name></member>
+    <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1ab58eb3023801e9066f56892a7447ec75" kind="variable"><name>buildpath</name></member>
+    <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1ae02ea86af6e51b2094ded812d28ca211" kind="variable"><name>md5key</name></member>
+    <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1aada5665c8f7ff78da1e791fd22f7b0c0" kind="variable"><name>exe</name></member>
+    <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a8b8965f54678fadd9c252b3309a87347" kind="variable"><name>exe_path</name></member>
+    <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a0f10840d5891840270538bf892392cdf" kind="variable"><name>srcmd5</name></member>
+    <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a8c84efd7cb56ba16c9d606234ce7902e" kind="variable"><name>compiler</name></member>
+    <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a6517cf193448e8be6c8ddf9d2b8e8723" kind="variable"><name>linker</name></member>
+    <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a586d6ebf1d306b8bf07cdb09b00a5a1f" kind="function"><name>__init__</name></member>
+    <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1acee059542dc1699748c8ade4364a9ddd" kind="function"><name>getBuilderCFLAGS</name></member>
+    <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1aa0e05d60cabde18b65ea7377f342d19c" kind="function"><name>getBuilderLDFLAGS</name></member>
+    <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1acc7cb3512b79d9da10b037ac2c8db2d7" kind="function"><name>getCompiler</name></member>
+    <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a511e8a7b66290b82bd0ee8d95a68849d" kind="function"><name>getLinker</name></member>
+    <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a96a6a3ad6bcb018536553905f25949e3" kind="function"><name>GetBinaryCode</name></member>
+    <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a8fc50a12cb0c7eb475cdc41ba5431941" kind="function"><name>ResetBinaryCodeMD5</name></member>
+    <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a3edf3ade4eca66e08a0f64718343e11a" kind="function"><name>GetBinaryCodeMD5</name></member>
+    <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1ad94739548f4e01ce8906a6c4c2397a8a" kind="function"><name>SetBuildPath</name></member>
+    <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1adc3723481e6544b51216ce7c07632aca" kind="function"><name>append_cfile_deps</name></member>
+    <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1afb432e8b4bb4bcd3b127673e32cd50e1" kind="function"><name>concat_deps</name></member>
+    <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a60e2efedb1a4d3159de75484e5fcda99" kind="function"><name>check_and_update_hash_and_deps</name></member>
+    <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1a09fd5d634268df87ad9311bc0b1f2fa8" kind="function"><name>calc_source_md5</name></member>
+    <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1ae109dfe28cf507cc9f1374182fb00d6c" kind="function"><name>calc_md5</name></member>
+    <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1acf89fd9e003921a1e0833e7d4aaad043" kind="function"><name>build</name></member>
+    <member refid="classtargets_1_1toolchain__gcc_1_1toolchain__gcc_1abf88ddfdb3f1de36a700b1bcb312c3c3" kind="function"><name>_GetMD5FileName</name></member>
+  </compound>
+  <compound refid="classtargets_1_1toolchain__makefile_1_1toolchain__makefile" kind="class"><name>targets::toolchain_makefile::toolchain_makefile</name>
+    <member refid="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1adf87fd76c218adf6b5dc152aa77fc56d" kind="variable"><name>CTRInstance</name></member>
+    <member refid="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1a1693ebc42c50782c2e27384924a32ebc" kind="variable"><name>md5key</name></member>
+    <member refid="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1ae7dc3737ebca24bd1cea7923633d5887" kind="variable"><name>buildpath</name></member>
+    <member refid="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1a17ed4cf1c70f816ff9538f19d5f36492" kind="function"><name>__init__</name></member>
+    <member refid="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1a6617c44fb46658c7b7eb6b7c858c7005" kind="function"><name>SetBuildPath</name></member>
+    <member refid="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1a030415926907aaf035dda29ea99a7191" kind="function"><name>GetBinaryCode</name></member>
+    <member refid="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1a180778325572451565eca458e880d558" kind="function"><name>ResetBinaryCodeMD5</name></member>
+    <member refid="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1ac827160aa5fce1efc6ec20d3e0d40958" kind="function"><name>GetBinaryCodeMD5</name></member>
+    <member refid="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1ae1964d09f13c5c00edf3af8cbc6061d4" kind="function"><name>concat_deps</name></member>
+    <member refid="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1aa45d3b222969090b91793a85fd54ec15" kind="function"><name>build</name></member>
+    <member refid="classtargets_1_1toolchain__makefile_1_1toolchain__makefile_1a61d0ca9fbe49d119b79d1317e93ab344" kind="function"><name>_GetMD5FileName</name></member>
+  </compound>
+  <compound refid="namespacectypes" kind="namespace"><name>ctypes</name>
+  </compound>
+  <compound refid="namespacetargets" kind="namespace"><name>targets</name>
+    <member refid="____init_____8py_1a0e215b8b6d7f1044d1c36f3c1e852a49" kind="variable"><name>_base_path</name></member>
+    <member refid="____init_____8py_1abde692c0078b6d305160d05e2e1b240a" kind="variable"><name>targets</name></member>
+    <member refid="____init_____8py_1a9a14fb0525feff0a29f43296f362a6fe" kind="variable"><name>toolchains</name></member>
+    <member refid="____init_____8py_1a78925f1b590e04584313b0f2d0392ed4" kind="function"><name>_GetLocalTargetClassFactory</name></member>
+    <member refid="____init_____8py_1a286c5a8d24687fde25ca1d84a2af0037" kind="function"><name>GetBuilder</name></member>
+    <member refid="____init_____8py_1a9c12689f0838bae2a14f27b60d0cacc3" kind="function"><name>GetTargetChoices</name></member>
+    <member refid="____init_____8py_1ae7a7902a4b85e54c41ffc2d458ff250c" kind="function"><name>GetTargetCode</name></member>
+    <member refid="____init_____8py_1aa1565e70c107e99d17faa4bf6c2126f0" kind="function"><name>GetHeader</name></member>
+    <member refid="____init_____8py_1a1c3d61f924248392f20b695b8f18272b" kind="function"><name>GetCode</name></member>
+  </compound>
+  <compound refid="namespacetargets_1_1toolchain__gcc" kind="namespace"><name>targets::toolchain_gcc</name>
+    <member refid="toolchain__gcc_8py_1a3a855ccdf232ce31516b8fbb264d35f5" kind="variable"><name>includes_re</name></member>
+  </compound>
+  <compound refid="namespacetargets_1_1toolchain__makefile" kind="namespace"><name>targets::toolchain_makefile</name>
+    <member refid="toolchain__makefile_8py_1a654f6e14faec91d4c8613d3cf431f0c1" kind="variable"><name>includes_re</name></member>
+  </compound>
+  <compound refid="namespacetargets_1_1typemapping" kind="namespace"><name>targets::typemapping</name>
+    <member refid="typemapping_8py_1a88079558606ee69b96e2c92a6832d483" kind="variable"><name>argtypes</name></member>
+    <member refid="typemapping_8py_1ab241bdff19027d278b91985c70ee0596" kind="variable"><name>restype</name></member>
+    <member refid="typemapping_8py_1a8605d51fa1e61147a9d6151126f9fb26" kind="variable"><name>SameEndianessTypeTranslator</name></member>
+    <member refid="typemapping_8py_1a7dae309c4e41a04586be27f8e8c340fb" kind="variable"><name>SwapedEndianessTypeTranslator</name></member>
+    <member refid="typemapping_8py_1a2a4a4923293211304d13e922401746a6" kind="variable"><name>TypeTranslator</name></member>
+    <member refid="typemapping_8py_1a003770bf48751cf50ab7ff11e8a839c4" kind="variable"><name>DebugTypesSize</name></member>
+    <member refid="typemapping_8py_1a81e9ba52a4280a013a5b8cb25ff1a632" kind="variable"><name>LogLevels</name></member>
+    <member refid="typemapping_8py_1a5b0f7931292f0e11ced43258ef0ff8c7" kind="variable"><name>LogLevelsCount</name></member>
+    <member refid="typemapping_8py_1ac14406b15ba2665843024aae8483ab90" kind="variable"><name>LogLevelsDict</name></member>
+    <member refid="typemapping_8py_1ae2da0f96da569707d66896a7943d4c2a" kind="variable"><name>LogLevelsDefault</name></member>
+    <member refid="typemapping_8py_1a1a3695748721088a87fafbf95ef88d78" kind="function"><name>_t</name></member>
+    <member refid="typemapping_8py_1aac8b562f04d0bba542230269ef53bd1a" kind="function"><name>_ttime</name></member>
+    <member refid="typemapping_8py_1a8299aee77f51d56cdf08546644206da7" kind="function"><name>UnpackDebugBuffer</name></member>
+  </compound>
+  <compound refid="____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="beremiz_8h" kind="file"><name>beremiz.h</name>
+    <member refid="beremiz_8h_1a0f910b831c2620d8e095c90406731025" kind="define"><name>LOG_LEVELS</name></member>
+    <member refid="beremiz_8h_1ab62af997ebb13f48b08850fd761d67aa" kind="define"><name>LOG_CRITICAL</name></member>
+    <member refid="beremiz_8h_1adf4476a6a4ea6c74231c826e899d7189" kind="define"><name>LOG_WARNING</name></member>
+    <member refid="beremiz_8h_1aeb4f36db01bd128c7afeac5889dac311" kind="define"><name>LOG_INFO</name></member>
+    <member refid="beremiz_8h_1a6ff63e8955665c4a58b1598f2b07c51a" kind="define"><name>LOG_DEBUG</name></member>
+    <member refid="beremiz_8h_1a021a47b2b6d157636687a6e56af3a21b" kind="variable"><name>common_ticktime__</name></member>
+    <member refid="beremiz_8h_1ab7841b864a3c3a193188717c68ffb3ce" kind="function"><name>LogMessage</name></member>
+    <member refid="beremiz_8h_1af6d0d204706a573e4c31c5d8f194825d" kind="function"><name>AtomicCompareExchange</name></member>
+  </compound>
+  <compound refid="plc__debug_8c" kind="file"><name>plc_debug.c</name>
+    <member refid="plc__debug_8c_1a95fea78248a755c58dd4dc1531c85be0" kind="define"><name>BUFFER_FREE</name></member>
+    <member refid="plc__debug_8c_1ab81aa0aee75b5a5857987840efc19d96" kind="define"><name>BUFFER_BUSY</name></member>
+    <member refid="plc__debug_8c_1ac4a861567e0c77f4d3600877c6a3bf07" kind="define"><name>__Unpack_case_t</name></member>
+    <member refid="plc__debug_8c_1a2da7a1b17c4e90432c9357ebd8acaa9c" kind="define"><name>__Unpack_case_p</name></member>
+    <member refid="plc__debug_8c_1a74ac12a75e81d646fee43b330a1c6ee8" kind="define"><name>__RegisterDebugVariable_case_t</name></member>
+    <member refid="plc__debug_8c_1ab454aa9d376dbdaba0f5076b3ad9c47e" kind="define"><name>__RegisterDebugVariable_case_p</name></member>
+    <member refid="plc__debug_8c_1a9bad34b0f76281bc871cc0d470267152" kind="define"><name>__ResetDebugVariablesIterator_case_t</name></member>
+    <member refid="plc__debug_8c_1ad75b84baa8f23d6d8aa0b71816ade4be" kind="define"><name>__ResetDebugVariablesIterator_case_p</name></member>
+    <member refid="plc__debug_8c_1a676fc44b4a3a029d8e24b0c5caf4b67c" kind="typedef"><name>__for_each_variable_do_fp</name></member>
+    <member refid="plc__debug_8c_1ab5323aa37543b681d86c6ddcf0b279aa" kind="variable"><name>buffer_state</name></member>
+    <member refid="plc__debug_8c_1a93612ad2a6786b453089420d15971ca7" kind="variable"><name>debug_buffer</name></member>
+    <member refid="plc__debug_8c_1a5fadac4feebf48ff29c6a3f6b30aab2c" kind="variable"><name>buffer_cursor</name></member>
+    <member refid="plc__debug_8c_1ae2065fa52f5faa8a8535c3085304b45c" kind="variable"><name>retain_offset</name></member>
+    <member refid="plc__debug_8c_1aba8d07200c09c44b0d7e5a439f0d8c23" kind="variable"><name>dbgvardsc</name></member>
+    <member refid="plc__debug_8c_1a8d1c9c4205a71208ccbde1aeedf1aa5a" kind="variable"><name>__tick</name></member>
+    <member refid="plc__debug_8c_1ad40543d87da75cc90f0b8686b4baf8dc" kind="function"><name>__for_each_variable_do</name></member>
+    <member refid="plc__debug_8c_1ac777523459e2bfcefb8bfafa12578e6a" kind="function"><name>UnpackVar</name></member>
+    <member refid="plc__debug_8c_1aea9cd655ebc20489eca22e0ce880e3fe" kind="function"><name>Remind</name></member>
+    <member refid="plc__debug_8c_1a25b3b2a0ee28b64464686a83bb71c890" kind="function"><name>RemindIterator</name></member>
+    <member refid="plc__debug_8c_1adeeb7602f45001228912c24a33564f63" kind="function"><name>CheckRetainBuffer</name></member>
+    <member refid="plc__debug_8c_1a146a11b5307a7d6cfb709c0f8b50f0b3" kind="function"><name>InitRetain</name></member>
+    <member refid="plc__debug_8c_1aeb464eeaefb94c2159257d418b216958" kind="function"><name>__init_debug</name></member>
+    <member refid="plc__debug_8c_1a9d1a5b4d6626c0f88d0081820cee1283" kind="function"><name>InitiateDebugTransfer</name></member>
+    <member refid="plc__debug_8c_1aba498c5b81b472ebc42c92e000f79cd1" kind="function"><name>CleanupRetain</name></member>
+    <member refid="plc__debug_8c_1ad2a8f8251f5a001a66c1147a0b57ef5a" kind="function"><name>__cleanup_debug</name></member>
+    <member refid="plc__debug_8c_1a074de87df478c7d0490d23f796d20ffc" kind="function"><name>__retrieve_debug</name></member>
+    <member refid="plc__debug_8c_1a1735854400b858da6d96197b78745f57" kind="function"><name>Retain</name></member>
+    <member refid="plc__debug_8c_1a1d1cdc9e6409e0b110bc0084d5ec8385" kind="function"><name>BufferIterator</name></member>
+    <member refid="plc__debug_8c_1aca05d148564a2a8a08c2284a1b2aa370" kind="function"><name>DebugIterator</name></member>
+    <member refid="plc__debug_8c_1a455409f89dd4443d831238a328f8db98" kind="function"><name>RetainIterator</name></member>
+    <member refid="plc__debug_8c_1a2736eabade03ec59d365126c8424daa5" kind="function"><name>PLC_GetTime</name></member>
+    <member refid="plc__debug_8c_1a4b5c2153b5826cda7283f813dfe44e81" kind="function"><name>TryEnterDebugSection</name></member>
+    <member refid="plc__debug_8c_1ac08ed1a6ba408ee94db616120fc03f95" kind="function"><name>AtomicCompareExchange</name></member>
+    <member refid="plc__debug_8c_1a780ae8a52a14f8fdfdcdf907b4dc51cc" kind="function"><name>AtomicCompareExchange64</name></member>
+    <member refid="plc__debug_8c_1a8eaf82dbd3a424df1231c49540cd0000" kind="function"><name>LeaveDebugSection</name></member>
+    <member refid="plc__debug_8c_1a8ff012b8d09fafe99d68ee0a910f0d7f" kind="function"><name>ValidateRetainBuffer</name></member>
+    <member refid="plc__debug_8c_1a0ce89cc3436d2510f5dc82cb446fb639" kind="function"><name>InValidateRetainBuffer</name></member>
+    <member refid="plc__debug_8c_1a595d415eff968ea28b2f4885584b0436" kind="function"><name>__publish_debug</name></member>
+    <member refid="plc__debug_8c_1a5fad9b8e686f89736ac84a6fa5fa536a" kind="function"><name>RegisterDebugVariable</name></member>
+    <member refid="plc__debug_8c_1aaee9f3ef84c233eec630cc187f40154e" kind="function"><name>ResetDebugVariablesIterator</name></member>
+    <member refid="plc__debug_8c_1a62f4226a92546fd7e0fcc29bfbe1e516" kind="function"><name>ResetDebugVariables</name></member>
+    <member refid="plc__debug_8c_1a863a3044dbcb9c228cc1bd227a5c5a38" kind="function"><name>FreeDebugData</name></member>
+    <member refid="plc__debug_8c_1a4caa6b5dbe0770aef060c0b65dd3ff1d" kind="function"><name>WaitDebugData</name></member>
+    <member refid="plc__debug_8c_1ac07fa375c02b2aab116d8f8bb805106e" kind="function"><name>GetDebugData</name></member>
+  </compound>
+  <compound refid="plc__main__head_8c" kind="file"><name>plc_main_head.c</name>
+    <member refid="plc__main__head_8c_1a06e3156ced7408046f8f1f7b48a36592" kind="variable"><name>__CURRENT_TIME</name></member>
+    <member refid="plc__main__head_8c_1ab34461bbe88d15a8a93e9d944d7a127a" kind="variable"><name>__DEBUG</name></member>
+    <member refid="plc__main__head_8c_1a8d1c9c4205a71208ccbde1aeedf1aa5a" kind="variable"><name>__tick</name></member>
+    <member refid="plc__main__head_8c_1a8dc71cdb2e40ddcc28352ed9df76d4d4" kind="variable"><name>PLC_ID</name></member>
+    <member refid="plc__main__head_8c_1a6cd4e40333cb5e34bb0c14a52415a561" kind="variable"><name>greatest_tick_count__</name></member>
+    <member refid="plc__main__head_8c_1a06c9d8cd227d6dcac4403e718b237fdf" kind="variable"><name>init_level</name></member>
+    <member refid="plc__main__head_8c_1a0e50d101c03bf51943e173101c56e428" kind="function"><name>config_run__</name></member>
+    <member refid="plc__main__head_8c_1a551e0b3d1f0ba380b3043784f8a1817f" kind="function"><name>config_init__</name></member>
+    <member refid="plc__main__head_8c_1a780ae8a52a14f8fdfdcdf907b4dc51cc" kind="function"><name>AtomicCompareExchange64</name></member>
+    <member refid="plc__main__head_8c_1aeb464eeaefb94c2159257d418b216958" kind="function"><name>__init_debug</name></member>
+    <member refid="plc__main__head_8c_1ad2a8f8251f5a001a66c1147a0b57ef5a" kind="function"><name>__cleanup_debug</name></member>
+    <member refid="plc__main__head_8c_1a595d415eff968ea28b2f4885584b0436" kind="function"><name>__publish_debug</name></member>
+    <member refid="plc__main__head_8c_1ab9aef50d8bf75006898dfffbb49a9327" kind="function"><name>__run</name></member>
+    <member refid="plc__main__head_8c_1a68a94204f3c6dc54608e8240ba69f9d7" kind="function"><name>__init</name></member>
+    <member refid="plc__main__head_8c_1a32b820532ed08035f60a0dbd96f6caff" kind="function"><name>__cleanup</name></member>
+    <member refid="plc__main__head_8c_1a9e58388ff593da5d02bfad7da9d830eb" kind="function"><name>PLC_GetTime</name></member>
+    <member refid="plc__main__head_8c_1a4d2010d32a59cfb97c422ee2a45af102" kind="function"><name>PLC_SetTimer</name></member>
+  </compound>
+  <compound refid="plc__main__tail_8c" kind="file"><name>plc_main_tail.c</name>
+    <member refid="plc__main__tail_8c_1a381c342b2b34df0b1a5b39c0d94da4e1" kind="define"><name>LOG_BUFFER_SIZE</name></member>
+    <member refid="plc__main__tail_8c_1a82329b9df3811c57c56533542a20db22" kind="define"><name>LOG_BUFFER_ATTRS</name></member>
+    <member refid="plc__main__tail_8c_1aacccd1f267200861693ec9c6cfe3015e" kind="define"><name>LOG_BUFFER_MASK</name></member>
+    <member refid="plc__main__tail_8c_1adae8177b91bb20727e3bc2720862a2c3" kind="define"><name>CALIBRATED</name></member>
+    <member refid="plc__main__tail_8c_1ac9b1bc2eb6be5b132f3dc7ad91af68b7" kind="define"><name>NOT_CALIBRATED</name></member>
+    <member refid="plc__main__tail_8c_1a58df78526f419bd4e6c112bb440031de" kind="variable"><name>LOG_BUFFER_ATTRS</name></member>
+    <member refid="plc__main__tail_8c_1aba628bf35506c6159ebefacbb47d7ebe" kind="variable"><name>calibration_count</name></member>
+    <member refid="plc__main__tail_8c_1aba2b40304bb652946493e7c36faff82f" kind="variable"><name>cal_begin</name></member>
+    <member refid="plc__main__tail_8c_1a942b3a4fa3f48c06711a02d631bf202d" kind="variable"><name>Tsync</name></member>
+    <member refid="plc__main__tail_8c_1a5aa1134135d593b4e259a7d41919503b" kind="variable"><name>FreqCorr</name></member>
+    <member refid="plc__main__tail_8c_1aa2f18986ffdea5263cb4a1341c8c5702" kind="variable"><name>Nticks</name></member>
+    <member refid="plc__main__tail_8c_1aba075b174046c0ea8325a59eca891c5c" kind="variable"><name>last_tick</name></member>
+    <member refid="plc__main__tail_8c_1a2a3e468a56a60d504341f9237061cfd8" kind="function"><name>copy_to_log</name></member>
+    <member refid="plc__main__tail_8c_1a64dc48bc93dfdf574a1841ddfe88b348" kind="function"><name>copy_from_log</name></member>
+    <member refid="plc__main__tail_8c_1a901f80ee34f1a59be1304cdb274b79c4" kind="function"><name>ResetLogCount</name></member>
+    <member refid="plc__main__tail_8c_1ab7841b864a3c3a193188717c68ffb3ce" kind="function"><name>LogMessage</name></member>
+    <member refid="plc__main__tail_8c_1a59774953e1329dbe3c197d35198f2798" kind="function"><name>GetLogCount</name></member>
+    <member refid="plc__main__tail_8c_1a13433f11588944811e70441a570f0146" kind="function"><name>GetLogMessage</name></member>
+    <member refid="plc__main__tail_8c_1ab72bd75b8d409fd3a03c34694a125779" kind="function"><name>align_tick</name></member>
+  </compound>
+  <compound refid="toolchain__gcc_8py" kind="file"><name>toolchain_gcc.py</name>
+  </compound>
+  <compound refid="toolchain__makefile_8py" kind="file"><name>toolchain_makefile.py</name>
+  </compound>
+  <compound refid="typemapping_8py" kind="file"><name>typemapping.py</name>
+  </compound>
+  <compound refid="dir_0b1b62fddf6df8c66e0bcbb711b1f333" kind="dir"><name>/source/targets</name>
+  </compound>
+</doxygenindex>

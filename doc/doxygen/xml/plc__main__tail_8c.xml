@@ -1,0 +1,567 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="plc__main__tail_8c" kind="file" language="C++">
+    <compoundname>plc_main_tail.c</compoundname>
+    <innerclass refid="structmTail" prot="public">mTail</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="plc__main__tail_8c_1a381c342b2b34df0b1a5b39c0d94da4e1" prot="public" static="no">
+        <name>LOG_BUFFER_SIZE</name>
+        <initializer>(1&lt;&lt;14) /*16Ko*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tail of code common to all C targets LOGGING </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_tail.c" line="11" column="9" bodyfile="/source/targets/plc_main_tail.c" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="plc__main__tail_8c_1a82329b9df3811c57c56533542a20db22" prot="public" static="no">
+        <name>LOG_BUFFER_ATTRS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_tail.c" line="14" column="9" bodyfile="/source/targets/plc_main_tail.c" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="plc__main__tail_8c_1aacccd1f267200861693ec9c6cfe3015e" prot="public" static="no">
+        <name>LOG_BUFFER_MASK</name>
+        <initializer>(LOG_BUFFER_SIZE-1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_tail.c" line="17" column="9" bodyfile="/source/targets/plc_main_tail.c" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="plc__main__tail_8c_1adae8177b91bb20727e3bc2720862a2c3" prot="public" static="no">
+        <name>CALIBRATED</name>
+        <initializer>-2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_tail.c" line="142" column="9" bodyfile="/source/targets/plc_main_tail.c" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="plc__main__tail_8c_1ac9b1bc2eb6be5b132f3dc7ad91af68b7" prot="public" static="no">
+        <name>NOT_CALIBRATED</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_tail.c" line="143" column="9" bodyfile="/source/targets/plc_main_tail.c" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="plc__main__tail_8c_1a58df78526f419bd4e6c112bb440031de" prot="public" static="yes" mutable="no">
+        <type>char LogBuff [LOG_LEVELS][LOG_BUFFER_SIZE]</type>
+        <definition>uint64_t LogCursor [LOG_LEVELS] LOG_BUFFER_ATTRS</definition>
+        <argsstring></argsstring>
+        <name>LOG_BUFFER_ATTRS</name>
+        <initializer>= {0x0,0x0,0x0,0x0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_tail.c" line="19" column="1" bodyfile="/source/targets/plc_main_tail.c" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="plc__main__tail_8c_1aba628bf35506c6159ebefacbb47d7ebe" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int calibration_count</definition>
+        <argsstring></argsstring>
+        <name>calibration_count</name>
+        <initializer>= NOT_CALIBRATED</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_tail.c" line="144" column="1" bodyfile="/source/targets/plc_main_tail.c" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="plc__main__tail_8c_1aba2b40304bb652946493e7c36faff82f" prot="public" static="yes" mutable="no">
+        <type>IEC_TIME</type>
+        <definition>IEC_TIME cal_begin</definition>
+        <argsstring></argsstring>
+        <name>cal_begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_tail.c" line="145" column="1" bodyfile="/source/targets/plc_main_tail.c" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="plc__main__tail_8c_1a942b3a4fa3f48c06711a02d631bf202d" prot="public" static="yes" mutable="no">
+        <type>long long</type>
+        <definition>long long Tsync</definition>
+        <argsstring></argsstring>
+        <name>Tsync</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_tail.c" line="146" column="1" bodyfile="/source/targets/plc_main_tail.c" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="plc__main__tail_8c_1a5aa1134135d593b4e259a7d41919503b" prot="public" static="yes" mutable="no">
+        <type>long long</type>
+        <definition>long long FreqCorr</definition>
+        <argsstring></argsstring>
+        <name>FreqCorr</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_tail.c" line="147" column="1" bodyfile="/source/targets/plc_main_tail.c" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="plc__main__tail_8c_1aa2f18986ffdea5263cb4a1341c8c5702" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int Nticks</definition>
+        <argsstring></argsstring>
+        <name>Nticks</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_tail.c" line="148" column="1" bodyfile="/source/targets/plc_main_tail.c" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="plc__main__tail_8c_1aba075b174046c0ea8325a59eca891c5c" prot="public" static="yes" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long last_tick</definition>
+        <argsstring></argsstring>
+        <name>last_tick</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_tail.c" line="149" column="1" bodyfile="/source/targets/plc_main_tail.c" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="plc__main__tail_8c_1a2a3e468a56a60d504341f9237061cfd8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void copy_to_log</definition>
+        <argsstring>(uint8_t level, uint32_t buffpos, void *buf, uint32_t size)</argsstring>
+        <name>copy_to_log</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>buffpos</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_tail.c" line="20" column="1" bodyfile="/source/targets/plc_main_tail.c" bodystart="20" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__main__tail_8c_1a64dc48bc93dfdf574a1841ddfe88b348" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void copy_from_log</definition>
+        <argsstring>(uint8_t level, uint32_t buffpos, void *buf, uint32_t size)</argsstring>
+        <name>copy_from_log</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>buffpos</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_tail.c" line="29" column="1" bodyfile="/source/targets/plc_main_tail.c" bodystart="29" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__main__tail_8c_1a901f80ee34f1a59be1304cdb274b79c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ResetLogCount</definition>
+        <argsstring>(void)</argsstring>
+        <name>ResetLogCount</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_tail.c" line="58" column="1" bodyfile="/source/targets/plc_main_tail.c" bodystart="58" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__main__tail_8c_1ab7841b864a3c3a193188717c68ffb3ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int LogMessage</definition>
+        <argsstring>(uint8_t level, char *buf, uint32_t size)</argsstring>
+        <name>LogMessage</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_tail.c" line="66" column="1" bodyfile="/source/targets/plc_main_tail.c" bodystart="66" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__main__tail_8c_1a59774953e1329dbe3c197d35198f2798" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t GetLogCount</definition>
+        <argsstring>(uint8_t level)</argsstring>
+        <name>GetLogCount</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_tail.c" line="102" column="1" bodyfile="/source/targets/plc_main_tail.c" bodystart="102" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__main__tail_8c_1a13433f11588944811e70441a570f0146" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t GetLogMessage</definition>
+        <argsstring>(uint8_t level, uint32_t msgidx, char *buf, uint32_t max_size, uint32_t *tick, uint32_t *tv_sec, uint32_t *tv_nsec)</argsstring>
+        <name>GetLogMessage</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>msgidx</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>max_size</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>tick</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>tv_sec</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>tv_nsec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_tail.c" line="107" column="1" bodyfile="/source/targets/plc_main_tail.c" bodystart="107" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__main__tail_8c_1ab72bd75b8d409fd3a03c34694a125779" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void align_tick</definition>
+        <argsstring>(int sync_align_ratio)</argsstring>
+        <name>align_tick</name>
+        <param>
+          <type>int</type>
+          <declname>sync_align_ratio</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_main_tail.c" line="159" column="1" bodyfile="/source/targets/plc_main_tail.c" bodystart="159" bodyend="226"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="8"><highlight class="preprocessor">#ifndef<sp/>TARGET_LOGGING_DISABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LOG_BUFFER_SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_BUFFER_SIZE<sp/>(1&lt;&lt;14)<sp/></highlight><highlight class="comment">/*16Ko*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LOG_BUFFER_ATTRS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_BUFFER_ATTRS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_BUFFER_MASK<sp/>(LOG_BUFFER_SIZE-1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>LogBuff[LOG_LEVELS][LOG_BUFFER_SIZE]<sp/>LOG_BUFFER_ATTRS;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>copy_to_log(uint8_t<sp/>level,<sp/>uint32_t<sp/>buffpos,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>buf,<sp/>uint32_t<sp/>size){</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(buffpos<sp/>+<sp/>size<sp/>&lt;<sp/>LOG_BUFFER_SIZE){</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(&amp;LogBuff[level][buffpos],<sp/>buf,<sp/>size);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>remaining<sp/>=<sp/>LOG_BUFFER_SIZE<sp/>-<sp/>buffpos;<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(&amp;LogBuff[level][buffpos],<sp/>buf,<sp/>remaining);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(LogBuff[level],<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)buf<sp/>+<sp/>remaining,<sp/>size<sp/>-<sp/>remaining);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>copy_from_log(uint8_t<sp/>level,<sp/>uint32_t<sp/>buffpos,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>buf,<sp/>uint32_t<sp/>size){</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(buffpos<sp/>+<sp/>size<sp/>&lt;<sp/>LOG_BUFFER_SIZE){</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(buf,<sp/>&amp;LogBuff[level][buffpos],<sp/>size);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>remaining<sp/>=<sp/>LOG_BUFFER_SIZE<sp/>-<sp/>buffpos;<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(buf,<sp/>&amp;LogBuff[level][buffpos],<sp/>remaining);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)buf<sp/>+<sp/>remaining,<sp/>LogBuff[level],<sp/>size<sp/>-<sp/>remaining);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Log<sp/>buffer<sp/>structure</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"></highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>|&lt;-Tail1.msgsize-&gt;|&lt;-sizeof(mTail)-&gt;|&lt;--Tail2.msgsize--&gt;|&lt;-sizeof(mTail)-&gt;|...</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>|<sp/><sp/>Message1<sp/>Body<sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/>Tail1<sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/>Message2<sp/>Body<sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/>Tail2<sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"></highlight></codeline>
+<codeline lineno="44"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="structmTail" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>msgidx;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>msgsize;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>tick;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>IEC_TIME<sp/>time;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}<sp/><ref refid="structmTail" kindref="compound">mTail</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Log<sp/>cursor<sp/>:<sp/>64b</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/><sp/><sp/>|63<sp/>...<sp/>32|31<sp/>...<sp/>0|</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/><sp/><sp/>|<sp/>Message<sp/>|<sp/>Buffer<sp/>|</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/><sp/>|<sp/>counter<sp/>|<sp/>Index<sp/><sp/>|<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint64_t<sp/>LogCursor[LOG_LEVELS]<sp/>LOG_BUFFER_ATTRS<sp/>=<sp/>{0x0,0x0,0x0,0x0};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ResetLogCount(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>level;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(level=0;level&lt;LOG_LEVELS;level++){</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LogCursor[level]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Store<sp/>one<sp/>log<sp/>message<sp/>of<sp/>give<sp/>size<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>LogMessage(uint8_t<sp/>level,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buf,<sp/>uint32_t<sp/>size){</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(size<sp/>&lt;<sp/>LOG_BUFFER_SIZE<sp/>-<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structmTail" kindref="compound">mTail</ref>)){</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>buffpos;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/>new_cursor,<sp/>old_cursor;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structmTail" kindref="compound">mTail</ref><sp/>tail;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tail.msgsize<sp/>=<sp/>size;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tail.tick<sp/>=<sp/>__tick;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PLC_GetTime(&amp;tail.time);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>We<sp/>cannot<sp/>increment<sp/>both<sp/>msg<sp/>index<sp/>and<sp/>string<sp/>pointer<sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>in<sp/>a<sp/>single<sp/>atomic<sp/>operation<sp/>but<sp/>we<sp/>can<sp/>detect<sp/>having<sp/>been<sp/>interrupted.</highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>So<sp/>we<sp/>can<sp/>try<sp/>with<sp/>atomic<sp/>compare<sp/>and<sp/>swap<sp/>in<sp/>a<sp/>loop<sp/>until<sp/>operation</highlight></codeline>
+<codeline lineno="79"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>succeeds<sp/>non<sp/>interrupted<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>old_cursor<sp/>=<sp/>LogCursor[level];</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffpos<sp/>=<sp/>(uint32_t)old_cursor;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tail.msgidx<sp/>=<sp/>(old_cursor<sp/>&gt;&gt;<sp/>32);<sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new_cursor<sp/>=<sp/>((uint64_t)(tail.msgidx<sp/>+<sp/>1)&lt;&lt;32)<sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>(uint64_t)((buffpos<sp/>+<sp/>size<sp/>+<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structmTail" kindref="compound">mTail</ref>))<sp/>&amp;<sp/>LOG_BUFFER_MASK);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(AtomicCompareExchange64(</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">*)&amp;LogCursor[level],</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>long)old_cursor,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">)new_cursor)!=(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">)old_cursor);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>copy_to_log(level,<sp/>buffpos,<sp/>buf,<sp/>size);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>copy_to_log(level,<sp/>(buffpos<sp/>+<sp/>size)<sp/>&amp;<sp/>LOG_BUFFER_MASK,<sp/>&amp;tail,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structmTail" kindref="compound">mTail</ref>));</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;<sp/></highlight><highlight class="comment">/*<sp/>Success<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>mstr[]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Logging<sp/>error<sp/>:<sp/>message<sp/>too<sp/>big&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LogMessage(LOG_CRITICAL,<sp/>mstr,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(mstr));</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">uint32_t<sp/>GetLogCount(uint8_t<sp/>level){</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(uint64_t)LogCursor[level]<sp/>&gt;&gt;<sp/>32;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Return<sp/>message<sp/>size<sp/>and<sp/>content<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal">uint32_t<sp/>GetLogMessage(uint8_t<sp/>level,<sp/>uint32_t<sp/>msgidx,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buf,<sp/>uint32_t<sp/>max_size,<sp/>uint32_t*<sp/>tick,<sp/>uint32_t*<sp/>tv_sec,<sp/>uint32_t*<sp/>tv_nsec){</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>cursor<sp/>=<sp/>LogCursor[level];</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(cursor){</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>seach<sp/>cursor<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>stailpos<sp/>=<sp/>(uint32_t)cursor;<sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>smsgidx;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structmTail" kindref="compound">mTail</ref><sp/>tail;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tail.msgidx<sp/>=<sp/>cursor<sp/>&gt;&gt;<sp/>32;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tail.msgsize<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Message<sp/>search<sp/>loop<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>smsgidx<sp/>=<sp/>tail.msgidx;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stailpos<sp/>=<sp/>(stailpos<sp/>-<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structmTail" kindref="compound">mTail</ref>)<sp/>-<sp/>tail.msgsize<sp/>)<sp/>&amp;<sp/>LOG_BUFFER_MASK;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>copy_from_log(level,<sp/>stailpos,<sp/>&amp;tail,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structmTail" kindref="compound">mTail</ref>));</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">while</highlight><highlight class="normal">((tail.msgidx<sp/>==<sp/>smsgidx<sp/>-<sp/>1)<sp/>&amp;&amp;<sp/>(tail.msgidx<sp/>&gt;<sp/>msgidx));</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(tail.msgidx<sp/>==<sp/>msgidx){</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>sbuffpos<sp/>=<sp/>(stailpos<sp/>-<sp/>tail.msgsize<sp/>)<sp/>&amp;<sp/>LOG_BUFFER_MASK;<sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>totalsize<sp/>=<sp/>tail.msgsize;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*tick<sp/>=<sp/>tail.tick;<sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*tv_sec<sp/>=<sp/>tail.time.tv_sec;<sp/></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*tv_nsec<sp/>=<sp/>tail.time.tv_nsec;<sp/></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>copy_from_log(level,<sp/>sbuffpos,<sp/>buf,<sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>totalsize<sp/>&gt;<sp/>max_size<sp/>?<sp/>max_size<sp/>:<sp/>totalsize);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>totalsize;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TARGET_EXT_SYNC_DISABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CALIBRATED<sp/>-2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NOT_CALIBRATED<sp/>-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>calibration_count<sp/>=<sp/>NOT_CALIBRATED;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>IEC_TIME<sp/>cal_begin;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>Tsync<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>FreqCorr<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Nticks<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>last_tick<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="152"><highlight class="comment"><sp/>*<sp/>Called<sp/>on<sp/>each<sp/>external<sp/>periodic<sp/>sync<sp/>event</highlight></codeline>
+<codeline lineno="153"><highlight class="comment"><sp/>*<sp/>make<sp/>PLC<sp/>tick<sp/>synchronous<sp/>with<sp/>external<sp/>sync</highlight></codeline>
+<codeline lineno="154"><highlight class="comment"><sp/>*<sp/>ratio<sp/>defines<sp/>when<sp/>PLC<sp/>tick<sp/>occurs<sp/>between<sp/>two<sp/>external<sp/>sync</highlight></codeline>
+<codeline lineno="155"><highlight class="comment"><sp/>*<sp/>@param<sp/>sync_align_ratio<sp/></highlight></codeline>
+<codeline lineno="156"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0-&gt;100<sp/>:<sp/>align<sp/>ratio</highlight></codeline>
+<codeline lineno="157"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;<sp/>0<sp/>:<sp/>no<sp/>align,<sp/>calibrate<sp/>period</highlight></codeline>
+<codeline lineno="158"><highlight class="comment"><sp/>**/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>align_tick(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sync_align_ratio)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="162"><highlight class="comment"><sp/><sp/><sp/><sp/>printf(&quot;align_tick(%d)\n&quot;,<sp/>calibrate);</highlight></codeline>
+<codeline lineno="163"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(sync_align_ratio<sp/>&lt;<sp/>0){<sp/></highlight><highlight class="comment">/*<sp/>Calibration<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(calibration_count<sp/>==<sp/>CALIBRATED)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Re-calibration*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>calibration_count<sp/>=<sp/>NOT_CALIBRATED;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(calibration_count<sp/>==<sp/>NOT_CALIBRATED)</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Calibration<sp/>start,<sp/>get<sp/>time*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PLC_GetTime(&amp;cal_begin);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>calibration_count++;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{<sp/></highlight><highlight class="comment">/*<sp/>do<sp/>alignment<sp/>(if<sp/>possible)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(calibration_count<sp/>&gt;=<sp/>0){</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>End<sp/>of<sp/>calibration<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>final<sp/>time<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IEC_TIME<sp/>cal_end;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PLC_GetTime(&amp;cal_end);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*adjust<sp/>calibration_count*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>calibration_count++;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>compute<sp/>mean<sp/>of<sp/>Tsync,<sp/>over<sp/>calibration<sp/>period<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Tsync<sp/>=<sp/>((</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>long)(cal_end.tv_sec<sp/>-<sp/>cal_begin.tv_sec)<sp/>*<sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>long)1000000000<sp/>+</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(cal_end.tv_nsec<sp/>-<sp/>cal_begin.tv_nsec))<sp/>/<sp/>calibration_count;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>(Nticks<sp/>=<sp/>(Tsync<sp/>/<sp/>common_ticktime__))<sp/>&gt;<sp/>0){</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FreqCorr<sp/>=<sp/>(Tsync<sp/>%<sp/>common_ticktime__);<sp/></highlight><highlight class="comment">/*<sp/>to<sp/>be<sp/>divided<sp/>by<sp/>Nticks<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FreqCorr<sp/>=<sp/>Tsync<sp/>-<sp/>(common_ticktime__<sp/>%<sp/>Tsync);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="189"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;Tsync<sp/>=<sp/>%ld\n&quot;,<sp/>Tsync);</highlight></codeline>
+<codeline lineno="190"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;calibration_count<sp/>=<sp/>%d\n&quot;,<sp/>calibration_count);</highlight></codeline>
+<codeline lineno="191"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;Nticks<sp/>=<sp/>%d\n&quot;,<sp/>Nticks);</highlight></codeline>
+<codeline lineno="192"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>calibration_count<sp/>=<sp/>CALIBRATED;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(calibration_count<sp/>==<sp/>CALIBRATED){</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>Elapsed<sp/>time<sp/>since<sp/>last<sp/>PLC<sp/>tick<sp/>(__CURRENT_TIME)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IEC_TIME<sp/>now;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>elapsed;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>Tcorr;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>PhaseCorr;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>PeriodicTcorr;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PLC_GetTime(&amp;now);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elapsed<sp/>=<sp/>(now.tv_sec<sp/>-<sp/>__CURRENT_TIME.tv_sec)<sp/>*<sp/>1000000000<sp/>+<sp/>now.tv_nsec<sp/>-<sp/>__CURRENT_TIME.tv_nsec;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(Nticks<sp/>&gt;<sp/>0){</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PhaseCorr<sp/>=<sp/>elapsed<sp/>-<sp/>(common_ticktime__<sp/>+<sp/>FreqCorr/Nticks)*sync_align_ratio/100;<sp/></highlight><highlight class="comment">/*<sp/>to<sp/>be<sp/>divided<sp/>by<sp/>Nticks<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Tcorr<sp/>=<sp/>common_ticktime__<sp/>+<sp/>(PhaseCorr<sp/>+<sp/>FreqCorr)<sp/>/<sp/>Nticks;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(Nticks<sp/>&lt;<sp/>2){</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>When<sp/>Sync<sp/>source<sp/>period<sp/>is<sp/>near<sp/>Tick<sp/>time<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>PhaseCorr<sp/>may<sp/>not<sp/>be<sp/>applied<sp/>to<sp/>Periodic<sp/>time<sp/>given<sp/>to<sp/>timer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PeriodicTcorr<sp/>=<sp/>common_ticktime__<sp/>+<sp/>FreqCorr<sp/>/<sp/>Nticks;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PeriodicTcorr<sp/>=<sp/>Tcorr;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(__tick<sp/>&gt;<sp/>last_tick){</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>last_tick<sp/>=<sp/>__tick;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PhaseCorr<sp/>=<sp/>elapsed<sp/>-<sp/>(Tsync*sync_align_ratio/100);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PeriodicTcorr<sp/>=<sp/>Tcorr<sp/>=<sp/>common_ticktime__<sp/>+<sp/>PhaseCorr<sp/>+<sp/>FreqCorr;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*PLC<sp/>did<sp/>not<sp/>run<sp/>meanwhile.<sp/>Nothing<sp/>to<sp/>do*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>DO<sp/>ALIGNEMENT<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PLC_SetTimer(Tcorr<sp/>-<sp/>elapsed,<sp/>PeriodicTcorr);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/source/targets/plc_main_tail.c"/>
+  </compounddef>
+</doxygen>

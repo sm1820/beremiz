@@ -1,0 +1,1139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="plc__debug_8c" kind="file" language="C++">
+    <compoundname>plc_debug.c</compoundname>
+    <includes local="yes">iec_types_all.h</includes>
+    <includes local="yes">POUS.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">stdio.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>/source/targets/plc_debug.c</label>
+        <link refid="plc__debug_8c"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>string.h</label>
+      </node>
+      <node id="6">
+        <label>iec_types_all.h</label>
+      </node>
+      <node id="9">
+        <label>stdio.h</label>
+      </node>
+      <node id="7">
+        <label>POUS.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structdbgvardsc__t" prot="public">dbgvardsc_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="plc__debug_8c_1a95fea78248a755c58dd4dc1531c85be0" prot="public" static="no">
+        <name>BUFFER_FREE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="31" column="9" bodyfile="/source/targets/plc_debug.c" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="plc__debug_8c_1ab81aa0aee75b5a5857987840efc19d96" prot="public" static="no">
+        <name>BUFFER_BUSY</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="32" column="9" bodyfile="/source/targets/plc_debug.c" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="plc__debug_8c_1ac4a861567e0c77f4d3600877c6a3bf07" prot="public" static="no">
+        <name>__Unpack_case_t</name>
+        <param><defname>TYPENAME</defname></param>
+        <initializer>case TYPENAME##_ENUM :\
+            *flags = ((__IEC_##TYPENAME##_t *)varp)-&gt;flags;\
+            forced_value_p = *real_value_p = &amp;((__IEC_##TYPENAME##_t *)varp)-&gt;value;\
+            break;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="74" column="9" bodyfile="/source/targets/plc_debug.c" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="plc__debug_8c_1a2da7a1b17c4e90432c9357ebd8acaa9c" prot="public" static="no">
+        <name>__Unpack_case_p</name>
+        <param><defname>TYPENAME</defname></param>
+        <initializer>case TYPENAME##_O_ENUM :\
+            *flags = __IEC_OUTPUT_FLAG;\
+        case TYPENAME##_P_ENUM :\
+            *flags |= ((__IEC_##TYPENAME##_p *)varp)-&gt;flags;\
+            *real_value_p = ((__IEC_##TYPENAME##_p *)varp)-&gt;value;\
+            forced_value_p = &amp;((__IEC_##TYPENAME##_p *)varp)-&gt;fvalue;\
+            break;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="80" column="9" bodyfile="/source/targets/plc_debug.c" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="plc__debug_8c_1a74ac12a75e81d646fee43b330a1c6ee8" prot="public" static="no">
+        <name>__RegisterDebugVariable_case_t</name>
+        <param><defname>TYPENAME</defname></param>
+        <initializer>case TYPENAME##_ENUM :\
+            ((__IEC_##TYPENAME##_t *)varp)-&gt;flags |= flags;\
+            if(force)\
+             ((__IEC_##TYPENAME##_t *)varp)-&gt;value = *((TYPENAME *)force);\
+            break;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="260" column="9" bodyfile="/source/targets/plc_debug.c" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="plc__debug_8c_1ab454aa9d376dbdaba0f5076b3ad9c47e" prot="public" static="no">
+        <name>__RegisterDebugVariable_case_p</name>
+        <param><defname>TYPENAME</defname></param>
+        <initializer>case TYPENAME##_P_ENUM :\
+            ((__IEC_##TYPENAME##_p *)varp)-&gt;flags |= flags;\
+            if(force)\
+             ((__IEC_##TYPENAME##_p *)varp)-&gt;fvalue = *((TYPENAME *)force);\
+            break;\
+        case TYPENAME##_O_ENUM :\
+            ((__IEC_##TYPENAME##_p *)varp)-&gt;flags |= flags;\
+            if(force){\
+             ((__IEC_##TYPENAME##_p *)varp)-&gt;fvalue = *((TYPENAME *)force);\
+             *(((__IEC_##TYPENAME##_p *)varp)-&gt;value) = *((TYPENAME *)force);\
+            }\
+            break;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="266" column="9" bodyfile="/source/targets/plc_debug.c" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="plc__debug_8c_1a9bad34b0f76281bc871cc0d470267152" prot="public" static="no">
+        <name>__ResetDebugVariablesIterator_case_t</name>
+        <param><defname>TYPENAME</defname></param>
+        <initializer>case TYPENAME##_ENUM :\
+            ((__IEC_##TYPENAME##_t *)varp)-&gt;flags &amp;= ~(__IEC_DEBUG_FLAG|__IEC_FORCE_FLAG);\
+            break;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="296" column="9" bodyfile="/source/targets/plc_debug.c" bodystart="296" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="plc__debug_8c_1ad75b84baa8f23d6d8aa0b71816ade4be" prot="public" static="no">
+        <name>__ResetDebugVariablesIterator_case_p</name>
+        <param><defname>TYPENAME</defname></param>
+        <initializer>case TYPENAME##_P_ENUM :\
+        case TYPENAME##_O_ENUM :\
+            ((__IEC_##TYPENAME##_p *)varp)-&gt;flags &amp;= ~(__IEC_DEBUG_FLAG|__IEC_FORCE_FLAG);\
+            break;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="301" column="9" bodyfile="/source/targets/plc_debug.c" bodystart="301" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="plc__debug_8c_1a676fc44b4a3a029d8e24b0c5caf4b67c" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* __for_each_variable_do_fp) (dbgvardsc_t *)</definition>
+        <argsstring>)(dbgvardsc_t *)</argsstring>
+        <name>__for_each_variable_do_fp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="63" column="1" bodyfile="/source/targets/plc_debug.c" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="plc__debug_8c_1ab5323aa37543b681d86c6ddcf0b279aa" prot="public" static="yes" mutable="no">
+        <type>long</type>
+        <definition>long buffer_state</definition>
+        <argsstring></argsstring>
+        <name>buffer_state</name>
+        <initializer>= BUFFER_FREE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="33" column="1" bodyfile="/source/targets/plc_debug.c" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="plc__debug_8c_1a93612ad2a6786b453089420d15971ca7" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char debug_buffer[BUFFER_SIZE]</definition>
+        <argsstring>[BUFFER_SIZE]</argsstring>
+        <name>debug_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="36" column="1" bodyfile="/source/targets/plc_debug.c" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="plc__debug_8c_1a5fadac4feebf48ff29c6a3f6b30aab2c" prot="public" static="yes" mutable="no">
+        <type>char *</type>
+        <definition>char* buffer_cursor</definition>
+        <argsstring></argsstring>
+        <name>buffer_cursor</name>
+        <initializer>= debug_buffer</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="39" column="1" bodyfile="/source/targets/plc_debug.c" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="plc__debug_8c_1ae2065fa52f5faa8a8535c3085304b45c" prot="public" static="yes" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int retain_offset</definition>
+        <argsstring></argsstring>
+        <name>retain_offset</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="40" column="1" bodyfile="/source/targets/plc_debug.c" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="plc__debug_8c_1aba8d07200c09c44b0d7e5a439f0d8c23" prot="public" static="yes" mutable="no">
+        <type><ref refid="structdbgvardsc__t" kindref="compound">dbgvardsc_t</ref></type>
+        <definition>dbgvardsc_t dbgvardsc[]</definition>
+        <argsstring>[]</argsstring>
+        <name>dbgvardsc</name>
+        <initializer>= {
+
+
+ 
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="57" column="1" bodyfile="/source/targets/plc_debug.c" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="plc__debug_8c_1a8d1c9c4205a71208ccbde1aeedf1aa5a" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long __tick</definition>
+        <argsstring></argsstring>
+        <name>__tick</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="148" column="1" bodyfile="/source/targets/plc_main_head.c" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="plc__debug_8c_1ad40543d87da75cc90f0b8686b4baf8dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void __for_each_variable_do</definition>
+        <argsstring>(__for_each_variable_do_fp fp)</argsstring>
+        <name>__for_each_variable_do</name>
+        <param>
+          <type>__for_each_variable_do_fp</type>
+          <declname>fp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="64" column="1" bodyfile="/source/targets/plc_debug.c" bodystart="64" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1ac777523459e2bfcefb8bfafa12578e6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* UnpackVar</definition>
+        <argsstring>(dbgvardsc_t *dsc, void **real_value_p, char *flags)</argsstring>
+        <name>UnpackVar</name>
+        <param>
+          <type><ref refid="structdbgvardsc__t" kindref="compound">dbgvardsc_t</ref> *</type>
+          <declname>dsc</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>real_value_p</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="89" column="1" bodyfile="/source/targets/plc_debug.c" bodystart="89" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1aea9cd655ebc20489eca22e0ce880e3fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Remind</definition>
+        <argsstring>(unsigned int offset, unsigned int count, void *p)</argsstring>
+        <name>Remind</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="106" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1a25b3b2a0ee28b64464686a83bb71c890" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RemindIterator</definition>
+        <argsstring>(dbgvardsc_t *dsc)</argsstring>
+        <name>RemindIterator</name>
+        <param>
+          <type><ref refid="structdbgvardsc__t" kindref="compound">dbgvardsc_t</ref> *</type>
+          <declname>dsc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="108" column="1" bodyfile="/source/targets/plc_debug.c" bodystart="108" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1adeeb7602f45001228912c24a33564f63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CheckRetainBuffer</definition>
+        <argsstring>(void)</argsstring>
+        <name>CheckRetainBuffer</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="125" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1a146a11b5307a7d6cfb709c0f8b50f0b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InitRetain</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitRetain</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="126" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1aeb464eeaefb94c2159257d418b216958" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void __init_debug</definition>
+        <argsstring>(void)</argsstring>
+        <name>__init_debug</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="128" column="1" bodyfile="/source/targets/plc_debug.c" bodystart="128" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1a9d1a5b4d6626c0f88d0081820cee1283" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InitiateDebugTransfer</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitiateDebugTransfer</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="145" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1aba498c5b81b472ebc42c92e000f79cd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CleanupRetain</definition>
+        <argsstring>(void)</argsstring>
+        <name>CleanupRetain</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="146" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1ad2a8f8251f5a001a66c1147a0b57ef5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void __cleanup_debug</definition>
+        <argsstring>(void)</argsstring>
+        <name>__cleanup_debug</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="150" column="1" bodyfile="/source/targets/plc_debug.c" bodystart="150" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1a074de87df478c7d0490d23f796d20ffc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void __retrieve_debug</definition>
+        <argsstring>(void)</argsstring>
+        <name>__retrieve_debug</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="157" column="1" bodyfile="/source/targets/plc_debug.c" bodystart="157" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1a1735854400b858da6d96197b78745f57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Retain</definition>
+        <argsstring>(unsigned int offset, unsigned int count, void *p)</argsstring>
+        <name>Retain</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="162" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1a1d1cdc9e6409e0b110bc0084d5ec8385" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void BufferIterator</definition>
+        <argsstring>(dbgvardsc_t *dsc, int do_debug)</argsstring>
+        <name>BufferIterator</name>
+        <param>
+          <type><ref refid="structdbgvardsc__t" kindref="compound">dbgvardsc_t</ref> *</type>
+          <declname>dsc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>do_debug</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="164" column="1" bodyfile="/source/targets/plc_debug.c" bodystart="164" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1aca05d148564a2a8a08c2284a1b2aa370" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DebugIterator</definition>
+        <argsstring>(dbgvardsc_t *dsc)</argsstring>
+        <name>DebugIterator</name>
+        <param>
+          <type><ref refid="structdbgvardsc__t" kindref="compound">dbgvardsc_t</ref> *</type>
+          <declname>dsc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="208" column="1" bodyfile="/source/targets/plc_debug.c" bodystart="208" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1a455409f89dd4443d831238a328f8db98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RetainIterator</definition>
+        <argsstring>(dbgvardsc_t *dsc)</argsstring>
+        <name>RetainIterator</name>
+        <param>
+          <type><ref refid="structdbgvardsc__t" kindref="compound">dbgvardsc_t</ref> *</type>
+          <declname>dsc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="212" column="1" bodyfile="/source/targets/plc_debug.c" bodystart="212" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1a2736eabade03ec59d365126c8424daa5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PLC_GetTime</definition>
+        <argsstring>(IEC_TIME *)</argsstring>
+        <name>PLC_GetTime</name>
+        <param>
+          <type>IEC_TIME *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="216" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1a4b5c2153b5826cda7283f813dfe44e81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TryEnterDebugSection</definition>
+        <argsstring>(void)</argsstring>
+        <name>TryEnterDebugSection</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="217" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1ac08ed1a6ba408ee94db616120fc03f95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long AtomicCompareExchange</definition>
+        <argsstring>(long *, long, long)</argsstring>
+        <name>AtomicCompareExchange</name>
+        <param>
+          <type>long *</type>
+        </param>
+        <param>
+          <type>long</type>
+        </param>
+        <param>
+          <type>long</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="218" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1a780ae8a52a14f8fdfdcdf907b4dc51cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long long</type>
+        <definition>long long AtomicCompareExchange64</definition>
+        <argsstring>(long long *, long long, long long)</argsstring>
+        <name>AtomicCompareExchange64</name>
+        <param>
+          <type>long long *</type>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>long</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>long</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="219" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1a8eaf82dbd3a424df1231c49540cd0000" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LeaveDebugSection</definition>
+        <argsstring>(void)</argsstring>
+        <name>LeaveDebugSection</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="220" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1a8ff012b8d09fafe99d68ee0a910f0d7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ValidateRetainBuffer</definition>
+        <argsstring>(void)</argsstring>
+        <name>ValidateRetainBuffer</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="221" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1a0ce89cc3436d2510f5dc82cb446fb639" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InValidateRetainBuffer</definition>
+        <argsstring>(void)</argsstring>
+        <name>InValidateRetainBuffer</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="222" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1a595d415eff968ea28b2f4885584b0436" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void __publish_debug</definition>
+        <argsstring>(void)</argsstring>
+        <name>__publish_debug</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="224" column="1" bodyfile="/source/targets/plc_debug.c" bodystart="224" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1a5fad9b8e686f89736ac84a6fa5fa536a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RegisterDebugVariable</definition>
+        <argsstring>(int idx, void *force)</argsstring>
+        <name>RegisterDebugVariable</name>
+        <param>
+          <type>int</type>
+          <declname>idx</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>force</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="279" column="1" bodyfile="/source/targets/plc_debug.c" bodystart="279" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1aaee9f3ef84c233eec630cc187f40154e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ResetDebugVariablesIterator</definition>
+        <argsstring>(dbgvardsc_t *dsc)</argsstring>
+        <name>ResetDebugVariablesIterator</name>
+        <param>
+          <type><ref refid="structdbgvardsc__t" kindref="compound">dbgvardsc_t</ref> *</type>
+          <declname>dsc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="307" column="1" bodyfile="/source/targets/plc_debug.c" bodystart="307" bodyend="317"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1a62f4226a92546fd7e0fcc29bfbe1e516" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ResetDebugVariables</definition>
+        <argsstring>(void)</argsstring>
+        <name>ResetDebugVariables</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="319" column="1" bodyfile="/source/targets/plc_debug.c" bodystart="319" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1a863a3044dbcb9c228cc1bd227a5c5a38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FreeDebugData</definition>
+        <argsstring>(void)</argsstring>
+        <name>FreeDebugData</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="324" column="1" bodyfile="/source/targets/plc_debug.c" bodystart="324" bodyend="331"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1a4caa6b5dbe0770aef060c0b65dd3ff1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int WaitDebugData</definition>
+        <argsstring>(unsigned long *tick)</argsstring>
+        <name>WaitDebugData</name>
+        <param>
+          <type>unsigned long *</type>
+          <declname>tick</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="332" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="plc__debug_8c_1ac07fa375c02b2aab116d8f8bb805106e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int GetDebugData</definition>
+        <argsstring>(unsigned long *tick, unsigned long *size, void **buffer)</argsstring>
+        <name>GetDebugData</name>
+        <param>
+          <type>unsigned long *</type>
+          <declname>tick</declname>
+        </param>
+        <param>
+          <type>unsigned long *</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/plc_debug.c" line="334" column="1" bodyfile="/source/targets/plc_debug.c" bodystart="334" bodyend="341"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Debugger code. </para>    </briefdescription>
+    <detaileddescription>
+<para>On &quot;publish&quot;, when buffer is free, debugger stores arbitrary variables content into, and mark this buffer as filled Buffer content is read asynchronously, (from non real time part), and then buffer marked free again. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="11"><highlight class="preprocessor">#ifdef<sp/>TARGET_DEBUG_DISABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__init_debug<sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__cleanup_debug<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__retrieve_debug(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__publish_debug<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;iec_types_all.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;POUS.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">/*for<sp/>memcpy*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DOXYGEN_SKIP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUFFER_SIZE<sp/>%(buffer_size)d</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DOXYGEN_SKIP<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Atomically<sp/>accessed<sp/>variable<sp/>for<sp/>buffer<sp/>state<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUFFER_FREE<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUFFER_BUSY<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>buffer_state<sp/>=<sp/>BUFFER_FREE;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>The<sp/>buffer<sp/>itself<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>debug_buffer[BUFFER_SIZE];</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Buffer&apos;s<sp/>cursor*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buffer_cursor<sp/>=<sp/>debug_buffer;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>retain_offset<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Declare<sp/>programs<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DOXYGEN_SKIP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">%(programs_declarations)s</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">#endif<sp/></highlight><highlight class="comment">/*<sp/>DOXYGEN_SKIP<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Declare<sp/>global<sp/>variables<sp/>from<sp/>resources<sp/>and<sp/>conf<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">#ifndef<sp/>DOXYGEN_SKIP</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">%(extern_variables_declarations)s</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DOXYGEN_SKIP<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="structdbgvardsc__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ptr;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>__IEC_types_enum<sp/>type;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}<sp/><ref refid="structdbgvardsc__t" kindref="compound">dbgvardsc_t</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structdbgvardsc__t" kindref="compound">dbgvardsc_t</ref><sp/>dbgvardsc[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DOXYGEN_SKIP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">%(variable_decl_array)s</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">#endif<sp/></highlight><highlight class="comment">/*<sp/>DOXYGEN_SKIP<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void(*__for_each_variable_do_fp)(<ref refid="structdbgvardsc__t" kindref="compound">dbgvardsc_t</ref>*);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__for_each_variable_do(__for_each_variable_do_fp<sp/>fp)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(dbgvardsc)/</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structdbgvardsc__t" kindref="compound">dbgvardsc_t</ref>);<sp/>i++){</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdbgvardsc__t" kindref="compound">dbgvardsc_t</ref><sp/>*dsc<sp/>=<sp/>&amp;dbgvardsc[i];</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(dsc-&gt;type<sp/>!=<sp/>UNKNOWN_ENUM)<sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*fp)(dsc);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__Unpack_case_t(TYPENAME)<sp/>\</highlight></codeline>
+<codeline lineno="75"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>case<sp/>TYPENAME##_ENUM<sp/>:\</highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*flags<sp/>=<sp/>((__IEC_##TYPENAME##_t<sp/>*)varp)-&gt;flags;\</highlight></codeline>
+<codeline lineno="77"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>forced_value_p<sp/>=<sp/>*real_value_p<sp/>=<sp/>&amp;((__IEC_##TYPENAME##_t<sp/>*)varp)-&gt;value;\</highlight></codeline>
+<codeline lineno="78"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__Unpack_case_p(TYPENAME)\</highlight></codeline>
+<codeline lineno="81"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>case<sp/>TYPENAME##_O_ENUM<sp/>:\</highlight></codeline>
+<codeline lineno="82"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*flags<sp/>=<sp/>__IEC_OUTPUT_FLAG;\</highlight></codeline>
+<codeline lineno="83"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>case<sp/>TYPENAME##_P_ENUM<sp/>:\</highlight></codeline>
+<codeline lineno="84"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*flags<sp/>|=<sp/>((__IEC_##TYPENAME##_p<sp/>*)varp)-&gt;flags;\</highlight></codeline>
+<codeline lineno="85"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*real_value_p<sp/>=<sp/>((__IEC_##TYPENAME##_p<sp/>*)varp)-&gt;value;\</highlight></codeline>
+<codeline lineno="86"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>forced_value_p<sp/>=<sp/>&amp;((__IEC_##TYPENAME##_p<sp/>*)varp)-&gt;fvalue;\</highlight></codeline>
+<codeline lineno="87"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>UnpackVar(<ref refid="structdbgvardsc__t" kindref="compound">dbgvardsc_t</ref><sp/>*dsc,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**real_value_p,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*flags)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*varp<sp/>=<sp/>dsc-&gt;ptr;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*forced_value_p<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>*flags<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>find<sp/>data<sp/>to<sp/>copy*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(dsc-&gt;type){</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ANY(__Unpack_case_t)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ANY(__Unpack_case_p)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*flags<sp/>&amp;<sp/>__IEC_FORCE_FLAG)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>forced_value_p;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*real_value_p;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Remind(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>offset,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>p);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>RemindIterator(<ref refid="structdbgvardsc__t" kindref="compound">dbgvardsc_t</ref><sp/>*dsc)</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*real_value_p<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>flags<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>UnpackVar(dsc,<sp/>&amp;real_value_p,<sp/>&amp;flags);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(flags<sp/>&amp;<sp/>__IEC_RETAIN_FLAG){</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>USINT<sp/>size<sp/>=<sp/>__get_type_enum_size(dsc-&gt;type);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>compute<sp/>next<sp/>cursor<sp/>positon*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>next_retain_offset<sp/>=<sp/>retain_offset<sp/>+<sp/>size;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>if<sp/>buffer<sp/>not<sp/>full<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Remind(retain_offset,<sp/>size,<sp/>real_value_p);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>increment<sp/>cursor<sp/>according<sp/>size*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retain_offset<sp/>=<sp/>next_retain_offset;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>CheckRetainBuffer(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>InitRetain(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__init_debug(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>init<sp/>local<sp/>static<sp/>vars<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer_cursor<sp/>=<sp/>debug_buffer;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>retain_offset<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer_state<sp/>=<sp/>BUFFER_FREE;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>InitRetain();</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Iterate<sp/>over<sp/>all<sp/>variables<sp/>to<sp/>fill<sp/>debug<sp/>buffer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(CheckRetainBuffer()){</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__for_each_variable_do(RemindIterator);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>mstr[]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;RETAIN<sp/>memory<sp/>invalid<sp/>-<sp/>defaults<sp/>used&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LogMessage(LOG_WARNING,<sp/>mstr,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(mstr));</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>retain_offset<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>InitiateDebugTransfer(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>CleanupRetain(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>__tick;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__cleanup_debug(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer_cursor<sp/>=<sp/>debug_buffer;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>InitiateDebugTransfer();</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>CleanupRetain();</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__retrieve_debug(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Retain(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>offset,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>p);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>BufferIterator(<ref refid="structdbgvardsc__t" kindref="compound">dbgvardsc_t</ref><sp/>*dsc,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>do_debug)</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*real_value_p<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*visible_value_p<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>flags<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>visible_value_p<sp/>=<sp/>UnpackVar(dsc,<sp/>&amp;real_value_p,<sp/>&amp;flags);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(flags<sp/>&amp;<sp/>(<sp/>__IEC_DEBUG_FLAG<sp/>|<sp/>__IEC_RETAIN_FLAG)){</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>USINT<sp/>size<sp/>=<sp/>__get_type_enum_size(dsc-&gt;type);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(flags<sp/>&amp;<sp/>__IEC_DEBUG_FLAG){</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>copy<sp/>visible<sp/>variable<sp/>to<sp/>buffer<sp/>*/</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(do_debug){</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>compute<sp/>next<sp/>cursor<sp/>positon.</highlight></codeline>
+<codeline lineno="178"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>No<sp/>need<sp/>to<sp/>check<sp/>overflow,<sp/>as<sp/>BUFFER_SIZE</highlight></codeline>
+<codeline lineno="179"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>is<sp/>computed<sp/>large<sp/>enough<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((dsc-&gt;type<sp/>==<sp/>STRING_ENUM)<sp/><sp/><sp/>||</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(dsc-&gt;type<sp/>==<sp/>STRING_P_ENUM)<sp/>||</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(dsc-&gt;type<sp/>==<sp/>STRING_O_ENUM)){</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>optimization<sp/>for<sp/>strings<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size<sp/>=<sp/>((STRING*)visible_value_p)-&gt;len<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>next_cursor<sp/>=<sp/>buffer_cursor<sp/>+<sp/>size;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>copy<sp/>data<sp/>to<sp/>the<sp/>buffer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(buffer_cursor,<sp/>visible_value_p,<sp/>size);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>increment<sp/>cursor<sp/>according<sp/>size*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer_cursor<sp/>=<sp/>next_cursor;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>re-force<sp/>real<sp/>value<sp/>of<sp/>outputs<sp/>(M<sp/>and<sp/>Q)*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((flags<sp/>&amp;<sp/>__IEC_FORCE_FLAG)<sp/>&amp;&amp;<sp/>(flags<sp/>&amp;<sp/>__IEC_OUTPUT_FLAG)){</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(real_value_p,<sp/>visible_value_p,<sp/>size);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(flags<sp/>&amp;<sp/>__IEC_RETAIN_FLAG){</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>compute<sp/>next<sp/>cursor<sp/>positon*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>next_retain_offset<sp/>=<sp/>retain_offset<sp/>+<sp/>size;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>if<sp/>buffer<sp/>not<sp/>full<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Retain(retain_offset,<sp/>size,<sp/>real_value_p);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>increment<sp/>cursor<sp/>according<sp/>size*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retain_offset<sp/>=<sp/>next_retain_offset;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DebugIterator(<ref refid="structdbgvardsc__t" kindref="compound">dbgvardsc_t</ref><sp/>*dsc){</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>BufferIterator(dsc,<sp/>1);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>RetainIterator(<ref refid="structdbgvardsc__t" kindref="compound">dbgvardsc_t</ref><sp/>*dsc){</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>BufferIterator(dsc,<sp/>0);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PLC_GetTime(IEC_TIME*);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>TryEnterDebugSection(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>AtomicCompareExchange(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>AtomicCompareExchange64(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">*<sp/>,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>LeaveDebugSection(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ValidateRetainBuffer(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>InValidateRetainBuffer(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>__publish_debug(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="225"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>retain_offset<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>InValidateRetainBuffer();</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Check<sp/>there<sp/>is<sp/>no<sp/>running<sp/>debugger<sp/>re-configuration<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(TryEnterDebugSection()){</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Lock<sp/>buffer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>latest_state<sp/>=<sp/>AtomicCompareExchange(</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;buffer_state,</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BUFFER_FREE,</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BUFFER_BUSY);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>buffer<sp/>was<sp/>free<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(latest_state<sp/>==<sp/>BUFFER_FREE)</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Reset<sp/>buffer<sp/>cursor<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer_cursor<sp/>=<sp/>debug_buffer;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Iterate<sp/>over<sp/>all<sp/>variables<sp/>to<sp/>fill<sp/>debug<sp/>buffer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__for_each_variable_do(DebugIterator);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Leave<sp/>debug<sp/>section,</highlight></codeline>
+<codeline lineno="245"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Trigger<sp/>asynchronous<sp/>transmission</highlight></codeline>
+<codeline lineno="246"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>(returns<sp/>immediately)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InitiateDebugTransfer();<sp/></highlight><highlight class="comment">/*<sp/>size<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>when<sp/>not<sp/>debugging,<sp/>do<sp/>only<sp/>retain<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__for_each_variable_do(RetainIterator);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LeaveDebugSection();</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>when<sp/>not<sp/>debugging,<sp/>do<sp/>only<sp/>retain<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__for_each_variable_do(RetainIterator);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>ValidateRetainBuffer();</highlight></codeline>
+<codeline lineno="258"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__RegisterDebugVariable_case_t(TYPENAME)<sp/>\</highlight></codeline>
+<codeline lineno="261"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>case<sp/>TYPENAME##_ENUM<sp/>:\</highlight></codeline>
+<codeline lineno="262"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__IEC_##TYPENAME##_t<sp/>*)varp)-&gt;flags<sp/>|=<sp/>flags;\</highlight></codeline>
+<codeline lineno="263"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(force)\</highlight></codeline>
+<codeline lineno="264"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__IEC_##TYPENAME##_t<sp/>*)varp)-&gt;value<sp/>=<sp/>*((TYPENAME<sp/>*)force);\</highlight></codeline>
+<codeline lineno="265"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__RegisterDebugVariable_case_p(TYPENAME)\</highlight></codeline>
+<codeline lineno="267"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>case<sp/>TYPENAME##_P_ENUM<sp/>:\</highlight></codeline>
+<codeline lineno="268"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__IEC_##TYPENAME##_p<sp/>*)varp)-&gt;flags<sp/>|=<sp/>flags;\</highlight></codeline>
+<codeline lineno="269"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(force)\</highlight></codeline>
+<codeline lineno="270"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__IEC_##TYPENAME##_p<sp/>*)varp)-&gt;fvalue<sp/>=<sp/>*((TYPENAME<sp/>*)force);\</highlight></codeline>
+<codeline lineno="271"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;\</highlight></codeline>
+<codeline lineno="272"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>case<sp/>TYPENAME##_O_ENUM<sp/>:\</highlight></codeline>
+<codeline lineno="273"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__IEC_##TYPENAME##_p<sp/>*)varp)-&gt;flags<sp/>|=<sp/>flags;\</highlight></codeline>
+<codeline lineno="274"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(force){\</highlight></codeline>
+<codeline lineno="275"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__IEC_##TYPENAME##_p<sp/>*)varp)-&gt;fvalue<sp/>=<sp/>*((TYPENAME<sp/>*)force);\</highlight></codeline>
+<codeline lineno="276"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*(((__IEC_##TYPENAME##_p<sp/>*)varp)-&gt;value)<sp/>=<sp/>*((TYPENAME<sp/>*)force);\</highlight></codeline>
+<codeline lineno="277"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}\</highlight></codeline>
+<codeline lineno="278"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>RegisterDebugVariable(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>force)</highlight></codeline>
+<codeline lineno="280"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(idx<sp/><sp/>&lt;<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(dbgvardsc)/</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structdbgvardsc__t" kindref="compound">dbgvardsc_t</ref>)){</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>flags<sp/>=<sp/>force<sp/>?</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__IEC_DEBUG_FLAG<sp/>|<sp/>__IEC_FORCE_FLAG<sp/>:</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__IEC_DEBUG_FLAG;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdbgvardsc__t" kindref="compound">dbgvardsc_t</ref><sp/>*dsc<sp/>=<sp/>&amp;dbgvardsc[idx];</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*varp<sp/>=<sp/>dsc-&gt;ptr;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(dsc-&gt;type){</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ANY(__RegisterDebugVariable_case_t)</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ANY(__RegisterDebugVariable_case_p)</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="294"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__ResetDebugVariablesIterator_case_t(TYPENAME)<sp/>\</highlight></codeline>
+<codeline lineno="297"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>case<sp/>TYPENAME##_ENUM<sp/>:\</highlight></codeline>
+<codeline lineno="298"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__IEC_##TYPENAME##_t<sp/>*)varp)-&gt;flags<sp/>&amp;=<sp/>~(__IEC_DEBUG_FLAG|__IEC_FORCE_FLAG);\</highlight></codeline>
+<codeline lineno="299"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__ResetDebugVariablesIterator_case_p(TYPENAME)\</highlight></codeline>
+<codeline lineno="302"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>case<sp/>TYPENAME##_P_ENUM<sp/>:\</highlight></codeline>
+<codeline lineno="303"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>case<sp/>TYPENAME##_O_ENUM<sp/>:\</highlight></codeline>
+<codeline lineno="304"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__IEC_##TYPENAME##_p<sp/>*)varp)-&gt;flags<sp/>&amp;=<sp/>~(__IEC_DEBUG_FLAG|__IEC_FORCE_FLAG);\</highlight></codeline>
+<codeline lineno="305"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ResetDebugVariablesIterator(<ref refid="structdbgvardsc__t" kindref="compound">dbgvardsc_t</ref><sp/>*dsc)</highlight></codeline>
+<codeline lineno="308"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>force<sp/>debug<sp/>flag<sp/>to<sp/>0*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*varp<sp/>=<sp/>dsc-&gt;ptr;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(dsc-&gt;type){</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ANY(__ResetDebugVariablesIterator_case_t)</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ANY(__ResetDebugVariablesIterator_case_p)</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="317"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ResetDebugVariables(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="320"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/>__for_each_variable_do(ResetDebugVariablesIterator);</highlight></codeline>
+<codeline lineno="322"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>FreeDebugData(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="325"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>atomically<sp/>mark<sp/>buffer<sp/>as<sp/>free<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/>AtomicCompareExchange(</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;buffer_state,</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BUFFER_BUSY,</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BUFFER_FREE);</highlight></codeline>
+<codeline lineno="331"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>WaitDebugData(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>*tick);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Wait<sp/>until<sp/>debug<sp/>data<sp/>ready<sp/>and<sp/>return<sp/>pointer<sp/>to<sp/>it<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>GetDebugData(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>*tick,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>*size,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**buffer){</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>wait_error<sp/>=<sp/>WaitDebugData(tick);</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!wait_error){</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*size<sp/>=<sp/>buffer_cursor<sp/>-<sp/>debug_buffer;</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*buffer<sp/>=<sp/>debug_buffer;</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>wait_error;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/source/targets/plc_debug.c"/>
+  </compounddef>
+</doxygen>

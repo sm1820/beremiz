@@ -18,4 +18,4 @@
 
 # Sphinx build
 doc/build/*
-doc/doxygen/xml/*
+

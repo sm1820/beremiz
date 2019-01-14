@@ -5,5 +5,4 @@ Beremiz: Руководство разработчика
    :caption: Содержание
    :maxdepth: 2
 
-   .
    soft_plc/index

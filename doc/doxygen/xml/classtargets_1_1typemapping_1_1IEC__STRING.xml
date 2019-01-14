@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtargets_1_1typemapping_1_1IEC__STRING" kind="class" language="Python" prot="public">
+    <compoundname>targets::typemapping::IEC_STRING</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Structure</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classtargets_1_1typemapping_1_1IEC__STRING_1a6cb39ccbf83694c00c8bf6b0338157f8" prot="private" static="yes" mutable="no">
+        <type>list</type>
+        <definition>list targets.typemapping.IEC_STRING::_fields_</definition>
+        <argsstring></argsstring>
+        <name>_fields_</name>
+        <initializer>=  [(&quot;len&quot;, c_uint8),
+                (&quot;body&quot;, c_char * 126)]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/source/targets/typemapping.py" line="39" column="1" bodyfile="/source/targets/typemapping.py" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Must be changed according to changes in iec_types.h
+</verbatim> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>Structure</label>
+      </node>
+      <node id="2">
+        <label>targets.typemapping.IEC_STRING</label>
+        <link refid="classtargets_1_1typemapping_1_1IEC__STRING"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5">
+        <label>Structure</label>
+      </node>
+      <node id="4">
+        <label>targets.typemapping.IEC_STRING</label>
+        <link refid="classtargets_1_1typemapping_1_1IEC__STRING"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/source/targets/typemapping.py" line="35" column="1" bodyfile="/source/targets/typemapping.py" bodystart="35" bodyend="43"/>
+    <listofallmembers>
+      <member refid="classtargets_1_1typemapping_1_1IEC__STRING_1a6cb39ccbf83694c00c8bf6b0338157f8" prot="private" virt="non-virtual"><scope>targets::typemapping::IEC_STRING</scope><name>_fields_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
