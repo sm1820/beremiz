@@ -3,5 +3,34 @@
 \g@addto@macro\@floatboxreset\centering
 \makeatother
 
+% Fonts
+\usepackage{fontspec}
+\setmainfont{cmun}[
+Extension=.otf,
+UprightFont=*rm,
+ItalicFont=*ti,
+BoldFont=*bx,
+BoldItalicFont=*bi,
+]
+\setsansfont{cmun}[
+Extension=.otf,
+UprightFont=*ss,
+ItalicFont=*si,
+BoldFont=*sx,
+BoldItalicFont=*so,
+]
+\setmonofont{cmun}[
+Extension=.otf,
+UprightFont=*btl,
+ItalicFont=*bto,
+BoldFont=*tb,
+BoldItalicFont=*tx,
+]
+\usepackage{xltxtra}
+\usepackage{xecyr}
+
+% Show pages number
+\usepackage{lastpage}
+
 % Custom packages
 \usepackage{custom}
