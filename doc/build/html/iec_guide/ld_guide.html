@@ -1,0 +1,375 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Общие сведения о языке LD &mdash; Документация Beremiz </title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/brz.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Алфавитный указатель"
+              href="../genindex.html"/>
+        <link rel="search" title="Поиск" href="../search.html"/>
+    <link rel="top" title="Документация Beremiz " href="../index.html"/>
+        <link rel="up" title="Языки стандарта МЭК 61131-3" href="index.html"/>
+        <link rel="next" title="Общие сведения о языке SFC" href="sfc_guide.html"/>
+        <link rel="prev" title="Общие сведения о языке IL" href="il_guide.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Beremiz
+          
+
+          
+            
+            <img src="../_static/about_brz_logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Содержание</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install_guide/index.html">Инструкции по установке</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage_guide/index.html">Руководство программиста</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Языки стандарта МЭК 61131-3</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="st_guide.html">Общие сведения о языке ST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="il_guide.html">Общие сведения о языке IL</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Общие сведения о языке LD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sfc_guide.html">Общие сведения о языке SFC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fbd_guide.html">Общие сведения о языке FBD</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_guide/index.html">Beremiz: Руководство разработчика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation_guide/index.html">Участие в разработке документации</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Beremiz</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Языки стандарта МЭК 61131-3</a> &raquo;</li>
+      
+    <li>Общие сведения о языке LD</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/iec_guide/ld_guide.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ld">
+<h1><a class="toc-backref" href="#id2">Общие сведения о языке LD</a><a class="headerlink" href="#ld" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="contents topic" id="id1">
+<p class="topic-title first">Содержание</p>
+<ul class="simple">
+<li><a class="reference internal" href="#ld" id="id2">Общие сведения о языке LD</a></li>
+</ul>
+</div>
+<p><strong>LD (Ladder Diagram)</strong> – графический язык, основанный на принципах
+релейно-контактных схем (элементами релейно-контактной логики являются:
+контакты, обмотки реле, вертикальные и горизонтальные перемычки и др.) с
+возможностью использования большого количества различных функциональных
+блоков. Достоинствами языка LD являются: представление программы в виде
+электрического потока (близко специалистам по электротехнике), наличие
+простых правил, использование только булевых выражений. На рис. 6.1
+приведён пример программы на языке LD (слева) и ее эквивалент в виде
+электрической цепи с реле и выключателями (справа).</p>
+<p><a class="reference internal" href="../_images/image340.jpeg"><img alt="image333" src="../_images/image340.jpeg" style="width: 6.13472in; height: 2.24097in;" /></a></p>
+<p>Рис. 6.1 – Программа на языке LD (слева) и ее эквивалент в виде
+электрической (справа)</p>
+<p>Схемы, реализованные на данном языке, называются многоступенчатыми. Они
+представляют собой набор горизонтальных цепей, напоминающих ступеньки
+лестницы, соединяющих вертикальные шины питания.</p>
+<p>Объекты языка программирования LD обеспечивают средства для
+структурирования программного модуля в некоторое количество контактов,
+катушек. Эти объекты взаимосвязаны через фактические параметры или
+связи.</p>
+<p>Порядок обработки индивидуальных объектов в LD-секции определяется
+потоком данных внутри секции. Ступени, подключенные к левой шине
+питания, обрабатываются сверху вниз (соединение к левой шине питания).
+Ступени внутри секции, которые не зависят друг от друга, обрабатываются
+в порядке размещения.</p>
+<p>Основные конструкции языка</p>
+<p>Слева и справа схема на языке LD ограничена вертикальными линиями –
+шинами питания. Между ними расположены цепи, образованные контактами и
+катушками реле, по аналогии с обычными электронными цепями. Слева любая
+цепь начинается набором контактов, которые посылают слева направо
+состояние «ON» или «OFF», соответствующие логическим значениям TRUE или
+FALSE. Каждому контакту соответствует логическая переменная (типа BOOL).
+Если переменная имеет значение TRUE, то состояние передается через
+контакт. Иначе – правое соединение получает значение выключено (&#8220;OFF&#8221;).</p>
+<p>Контакты могут быть соединены параллельно, тогда соединение передает
+состояние «логическое ИЛИ». Если контакты соединены последовательно, то
+соединение передаёт «логическое И».</p>
+<p>Контакт может быть инвертируемым. Такой контакт обозначается с помощью
+символа |/| и передает состояние &#8220;ON&#8221;, если значение переменной FALSE.</p>
+<p>Язык LD позволяет:</p>
+<ul class="simple">
+<li>выполнять последовательное соединение контактов;</li>
+<li>выполнять параллельное соединение контактов;</li>
+<li>применять нормально разомкнутые или замкнутые контакты;</li>
+<li>использовать переключаемые контакты;</li>
+<li>записывать комментарии;</li>
+<li>включать Set/Reset-выходы (Установка/Сброс);</li>
+<li>переходы;</li>
+<li>включать в диаграмму функциональные блоки;</li>
+<li>управлять работой блоков по входам EN.</li>
+</ul>
+<p>Контакт</p>
+<p>Контактом является LD-элемент, который передаёт состояние горизонтальной
+связи левой стороны горизонтальной связи на правой стороне. Это
+состояние – результат булевой AND-операции состояния горизонтальной
+связи с левой стороны с состоянием ассоциированной переменной или
+прямого адреса. Контакт не изменяет значения связанной переменой или
+прямого адреса.</p>
+<p>Для нормальных контактов (см. рис. 6.2) состояние левой связи передается
+в правую связь, если состояние связанного логического фактического
+параметра TRUE. Иначе, состояние правой связи FALSE.</p>
+<p><a class="reference internal" href="../_images/image341.png"><img alt="image334" src="../_images/image341.png" style="width: 1.32292in; height: 0.72917in;" /></a></p>
+<p>Рис. 6.2 – Нормальный контакт</p>
+<p>Для инверсных контактов (см. рис. 6.3) состояние левой связи передается
+в правую связь, если состояние связанного логического фактического
+параметра FALSE. Иначе, состояние правой связи TRUE.</p>
+<p><a class="reference internal" href="../_images/image342.png"><img alt="image335" src="../_images/image342.png" style="width: 1.41667in; height: 0.75000in;" /></a></p>
+<p>Рис. 6.3 – Инверсный контакт</p>
+<p>В контактах для обнаружения нарастания фронта (см. рис 6.4) правая связь
+устанавливается в состояние TRUE, если переход связанного фактического
+параметра происходит из FALSE в TRUE, и в то же время состояние левой
+связи TRUE. Иначе, состояние правой связи FALSE.</p>
+<p><a class="reference internal" href="../_images/image343.png"><img alt="image336" src="../_images/image343.png" style="width: 1.63542in; height: 0.62500in;" /></a></p>
+<p>Рис. 6.4 – Контакт для обнаружения нарастания фронта</p>
+<p>В контактах для обнаружения спада фронта (см. рис. 6.5) правая связь
+устанавливается в состояние TRUE, если переход связанного фактического
+параметра происходит из True в False, и состояние левой связи True в то
+же время. Иначе, состояние правой связи FALSE.</p>
+<p><a class="reference internal" href="../_images/image344.png"><img alt="image337" src="../_images/image344.png" style="width: 1.72917in; height: 0.75000in;" /></a></p>
+<p>Рис. 6.5 – Контакт для обнаружения спада фронта</p>
+<p>Катушка</p>
+<p>Катушка является LD-элементом, который передаёт состояние горизонтальной
+связи на левой стороне неизменяемым горизонтальной связи на правой
+стороне. В этом процессе состояние связанной переменной или прямого
+адреса будет сохранено.</p>
+<p>В нормальных катушках (см. рис. 6.6) состояние левой связи передается в
+связанный логический фактический параметр и в правую связь.</p>
+<p><a class="reference internal" href="../_images/image345.png"><img alt="image338" src="../_images/image345.png" style="width: 1.76042in; height: 0.75000in;" /></a></p>
+<p>Рис. 6.6 – Нормальная катушка</p>
+<p>В инвертирующей катушке (см. рис. 6.7) состояние левой связи копируется
+в правую связь. Инвертированное состояние левой связи копируется в
+связанный логический фактический параметр. Если связь находится в
+состоянии FALSE, тогда правая связь тоже будет находиться в состоянии
+FALSE, и связанный логический фактический параметр будет находиться в
+состоянии TRUE.</p>
+<p><a class="reference internal" href="../_images/image346.png"><img alt="image339" src="../_images/image346.png" style="width: 1.70833in; height: 0.69792in;" /></a></p>
+<p>Рис. 6.7 – Инвертирующая катушка</p>
+<p>В катушке установки (см. рис. 6.8) состояние левой связи копируется в
+правую связь. Связанный логический фактический параметр устанавливается
+в состояние TRUE, если левая связь имеет состояние TRUE, иначе он не
+изменяется. Связанный логический фактический параметр может сбрасываться
+только катушкой сброса.</p>
+<p><a class="reference internal" href="../_images/image347.png"><img alt="image340" src="../_images/image347.png" style="width: 1.71875in; height: 0.77083in;" /></a></p>
+<p>Рис. 6.8 – Катушка установки</p>
+<p>В катушке сброса (см. рис. 6.9) состояние левой связи копируется в
+правую связь. Связанный логический фактический параметр устанавливается
+в состояние FALSE, если левая связь имеет состояние TRUE, иначе он не
+изменяется. Связанный логический фактический параметр может
+устанавливаться только катушкой установки.</p>
+<p><a class="reference internal" href="../_images/image348.png"><img alt="image341" src="../_images/image348.png" style="width: 1.63542in; height: 0.75000in;" /></a></p>
+<p>Рис. 6.9 – Катушка сброса</p>
+<p>В катушке обнаружения нарастания фронта (см. рис. 6.10) состояние левой
+связи копируется в правую связь. Связанный фактический параметр типа
+данных BOOL будет установлен в состояние TRUE для цикла программы, если
+произошел переход левой связи из FALSE в TRUE.</p>
+<p><a class="reference internal" href="../_images/image349.png"><img alt="image342" src="../_images/image349.png" style="width: 1.65625in; height: 0.69792in;" /></a></p>
+<p>Рис. 6.10 – Катушка обнаружения нарастания фронта</p>
+<p>В катушке обнаружения спада фронта (см. рис. 6.11) состояние левой связи
+копируется в правую связь. Связанный фактический параметр типа данных
+BOOL будет установлен в состояние TRUE для цикла программы, если
+произошел переход левой связи из TRUE в FALSE.</p>
+<p><a class="reference internal" href="../_images/image350.png"><img alt="image343" src="../_images/image350.png" style="width: 1.65625in; height: 0.65625in;" /></a></p>
+<p>Рис. 6.11 – Катушка обнаружения спада фронта</p>
+<p>Слово «катушка» имеет обобщенный образ исполнительного устройства,
+поэтому в русскоязычной документации обычно говорят о выходе цепочки,
+хотя можно встретить и частные значения термина, например катушка реле.</p>
+<p>Шина питания</p>
+<p>Левая шина питания соответствует единичному сигналу. Ступени,
+подключённые к левой шине питания, обрабатываются сверху вниз
+(соединение к левой шине питания).</p>
+<p>Пример программы на языке LD</p>
+<p>Пример представляет собой реализацию логического выражения:</p>
+<p>C = A AND NOT B</p>
+<p>При создании LD диаграмм можно использовать только переменные типа BOOL.
+Добавим новый контакт и привяжем его к имени A (имени переменной). Далее
+добавляется шина питания слева, шина питания справа, нормальный контакт,
+инверсный контакт и нормальная катушка. Нормальный контакт ассоциируется
+с переменной A, инверсный контакт с переменой B, нормальная катушка с
+переменной C. Далее это всё последовательно соединяется (см. рис. 6.12),
+и результатом является программа, написанная на языке LD, реализующая
+логическое выражение:</p>
+<p>C = A AND NOT B</p>
+<p><a class="reference internal" href="../_images/image351.png"><img alt="image344" src="../_images/image351.png" style="width: 3.10486in; height: 0.75000in;" /></a></p>
+<p>Рис. 6.12 – Пример LD диаграммы, реализующей логическое выражение C = A
+AND NOT B</p>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sfc_guide.html" class="btn btn-neutral float-right" title="Общие сведения о языке SFC" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="il_guide.html" class="btn btn-neutral" title="Общие сведения о языке IL" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, JSC &#34;INEUM named after I.S.Bruk&#34;.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

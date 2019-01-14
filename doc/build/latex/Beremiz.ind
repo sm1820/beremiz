@@ -1,0 +1,97 @@
+\begin{theindex}
+\def\bigletter#1{{\Large\sffamily#1}\nopagebreak\vspace{1mm}}
+
+  \bigletter {Symbols}
+  \item \_\_RegisterDebugVariable\_case\_p (макроподстановка C), \hyperpage{148}
+  \item \_\_RegisterDebugVariable\_case\_t (макроподстановка C), \hyperpage{148}
+  \item \_\_ResetDebugVariablesIterator\_case\_p (макроподстановка C), 
+		\hyperpage{149}
+  \item \_\_ResetDebugVariablesIterator\_case\_t (макроподстановка C), 
+		\hyperpage{149}
+  \item \_\_Unpack\_case\_p (макроподстановка C), \hyperpage{148}
+  \item \_\_Unpack\_case\_t (макроподстановка C), \hyperpage{148}
+  \item \_\_cleanup\_debug (функция C++), \hyperpage{149}
+  \item \_\_for\_each\_variable\_do (функция C++), \hyperpage{149}
+  \item \_\_for\_each\_variable\_do\_fp (тип C++), \hyperpage{149}
+  \item \_\_init\_debug (функция C++), \hyperpage{149}
+  \item \_\_publish\_debug (функция C++), \hyperpage{149}
+  \item \_\_retrieve\_debug (функция C++), \hyperpage{149}
+  \item \_\_tick (поле C++), \hyperpage{150}
+
+  \indexspace
+  \bigletter A
+  \item AtomicCompareExchange (функция C++), \hyperpage{149}
+  \item AtomicCompareExchange64 (функция C++), \hyperpage{149}
+
+  \indexspace
+  \bigletter B
+  \item BUFFER\_BUSY (макроподстановка C), \hyperpage{148}
+  \item buffer\_cursor (поле C++), \hyperpage{150}
+  \item BUFFER\_FREE (макроподстановка C), \hyperpage{148}
+  \item buffer\_state (поле C++), \hyperpage{150}
+  \item BufferIterator (функция C++), \hyperpage{149}
+
+  \indexspace
+  \bigletter C
+  \item CheckRetainBuffer (функция C++), \hyperpage{149}
+  \item CleanupRetain (функция C++), \hyperpage{149}
+
+  \indexspace
+  \bigletter D
+  \item dbgvardsc (поле C++), \hyperpage{150}
+  \item dbgvardsc\_t (класс C++), \hyperpage{150}
+  \item dbgvardsc\_t::ptr (поле C++), \hyperpage{150}
+  \item dbgvardsc\_t::type (поле C++), \hyperpage{150}
+  \item debug\_buffer (поле C++), \hyperpage{150}
+  \item DebugIterator (функция C++), \hyperpage{149}
+
+  \indexspace
+  \bigletter F
+  \item FreeDebugData (функция C++), \hyperpage{149}
+
+  \indexspace
+  \bigletter G
+  \item GetDebugData (функция C++), \hyperpage{150}
+
+  \indexspace
+  \bigletter I
+  \item InitiateDebugTransfer (функция C++), \hyperpage{149}
+  \item InitRetain (функция C++), \hyperpage{149}
+  \item InValidateRetainBuffer (функция C++), \hyperpage{149}
+
+  \indexspace
+  \bigletter L
+  \item LeaveDebugSection (функция C++), \hyperpage{149}
+
+  \indexspace
+  \bigletter P
+  \item PLC\_GetTime (функция C++), \hyperpage{149}
+
+  \indexspace
+  \bigletter R
+  \item RegisterDebugVariable (функция C++), \hyperpage{149}
+  \item Remind (функция C++), \hyperpage{149}
+  \item RemindIterator (функция C++), \hyperpage{149}
+  \item ResetDebugVariables (функция C++), \hyperpage{149}
+  \item ResetDebugVariablesIterator (функция C++), \hyperpage{149}
+  \item Retain (функция C++), \hyperpage{149}
+  \item retain\_offset (поле C++), \hyperpage{150}
+  \item RetainIterator (функция C++), \hyperpage{149}
+
+  \indexspace
+  \bigletter T
+  \item TryEnterDebugSection (функция C++), \hyperpage{149}
+
+  \indexspace
+  \bigletter U
+  \item UnpackVar (функция C++), \hyperpage{149}
+
+  \indexspace
+  \bigletter V
+  \item ValidateRetainBuffer (функция C++), \hyperpage{149}
+
+  \indexspace
+  \bigletter W
+  \item WaitDebugData (функция C++), \hyperpage{149}
+
+\end{theindex}

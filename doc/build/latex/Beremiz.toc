@@ -1,0 +1,95 @@
+\select@language {russian}
+\contentsline {chapter}{\numberline {1}Назначение и условия применения программы}{3}{chapter.1}
+\contentsline {chapter}{\numberline {2}Характеристики программы}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Инструкции по установке}{5}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Установка среды разработки «Beremiz» под операционную систему Windows 7}{5}{subsection.2.1.1}
+\contentsline {section}{\numberline {2.2}Руководство программиста}{8}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Обращение к программе. Входные и выходные данные}{8}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Основные термины и определения}{9}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Основные компоненты среды Beremiz}{11}{subsection.2.2.3}
+\contentsline {subsubsection}{Главное меню программы}{12}{subsubsection*.3}
+\contentsline {subsubsection}{Панель инструментов}{13}{subsubsection*.4}
+\contentsline {subsubsection}{Дерево проекта}{15}{subsubsection*.5}
+\contentsline {subsubsection}{Панель списка переменных и констант}{20}{subsubsection*.6}
+\contentsline {subsubsection}{Панель настройки проекта}{23}{subsubsection*.7}
+\contentsline {subsubsection}{Текстовый редактор языков ST и IL}{27}{subsubsection*.8}
+\contentsline {subsubsection}{Графические редакторы диаграмм языков FBD, SFC, LD}{28}{subsubsection*.9}
+\contentsline {subsubsection}{Панель редактирования ресурса}{51}{subsubsection*.10}
+\contentsline {subsubsection}{Панель редактирования типа данных}{51}{subsubsection*.11}
+\contentsline {subsubsection}{Панель экземпляров проекта}{55}{subsubsection*.12}
+\contentsline {subsubsection}{Панель библиотеки функций и функциональных блоков}{58}{subsubsection*.13}
+\contentsline {subsubsection}{Отладочная консоль}{58}{subsubsection*.14}
+\contentsline {subsubsection}{Поиск элементов в проекте}{60}{subsubsection*.15}
+\contentsline {subsubsection}{Панель отладки}{62}{subsubsection*.16}
+\contentsline {subsubsection}{Панель графика изменения значения переменной в режиме отладки}{63}{subsubsection*.17}
+\contentsline {subsection}{\numberline {2.2.4}Работа с проектом}{63}{subsection.2.2.4}
+\contentsline {subsubsection}{Создание нового проекта}{65}{subsubsection*.18}
+\contentsline {subsubsection}{Настройка проекта}{67}{subsubsection*.19}
+\contentsline {paragraph}{Конфигурационные переменные проекта}{68}{paragraph*.20}
+\contentsline {paragraph}{Настройки сборки проекта и соединения с целевым устройством}{68}{paragraph*.21}
+\contentsline {paragraph}{Данные о проекте}{70}{paragraph*.22}
+\contentsline {subsubsection}{Программные модули}{70}{subsubsection*.23}
+\contentsline {paragraph}{Программа}{71}{paragraph*.24}
+\contentsline {paragraph}{Функциональный блок}{72}{paragraph*.25}
+\contentsline {subsubsection}{Ресурс}{97}{subsubsection*.26}
+\contentsline {paragraph}{Глобальные переменные ресурса}{97}{paragraph*.27}
+\contentsline {paragraph}{Задачи и экземпляры ресурса}{97}{paragraph*.28}
+\contentsline {subsubsection}{Типы данных}{102}{subsubsection*.29}
+\contentsline {subsubsection}{Сборка и передача на целевое устройство прикладной программы}{102}{subsubsection*.30}
+\contentsline {paragraph}{Сборка прикладной программы}{104}{paragraph*.31}
+\contentsline {paragraph}{Запуск серверной части для отладки}{105}{paragraph*.32}
+\contentsline {subsubsection}{Отладка прикладной программы}{108}{subsubsection*.33}
+\contentsline {paragraph}{Retain переменные в прикладной программе}{108}{paragraph*.34}
+\contentsline {paragraph}{Запуск отладчика}{108}{paragraph*.35}
+\contentsline {paragraph}{Отладка текстовых языков}{108}{paragraph*.36}
+\contentsline {paragraph}{Отладка графических языков}{111}{paragraph*.37}
+\contentsline {subsection}{\numberline {2.2.5}Описание библиотеки функций и функциональных блоков}{115}{subsection.2.2.5}
+\contentsline {subsubsection}{Стандартные функциональные блоки}{117}{subsubsection*.38}
+\contentsline {subsubsection}{Дополнительные функциональные блоки}{118}{subsubsection*.39}
+\contentsline {subsubsection}{Числовые операции}{119}{subsubsection*.40}
+\contentsline {subsubsection}{Временные операции}{120}{subsubsection*.41}
+\contentsline {subsubsection}{Побитовые операции}{121}{subsubsection*.42}
+\contentsline {subsubsection}{Операции сравнения}{122}{subsubsection*.43}
+\contentsline {subsubsection}{Строковые операции с переменными типа STRING}{123}{subsubsection*.44}
+\contentsline {section}{\numberline {2.3}Языки стандарта МЭК 61131-3}{124}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Общие сведения о языке ST}{124}{subsection.2.3.1}
+\contentsline {subsubsection}{Типы данных}{125}{subsubsection*.56}
+\contentsline {subsubsection}{Конструкции языка}{126}{subsubsection*.57}
+\contentsline {subsubsection}{Арифметические операции}{126}{subsubsection*.58}
+\contentsline {paragraph}{Логические (побитовые) операции}{127}{paragraph*.59}
+\contentsline {paragraph}{Операции сравнения}{127}{paragraph*.60}
+\contentsline {paragraph}{Присвоение}{127}{paragraph*.61}
+\contentsline {paragraph}{Цикл FOR}{128}{paragraph*.62}
+\contentsline {paragraph}{Цикл WHILE}{129}{paragraph*.63}
+\contentsline {paragraph}{Цикл REPEAT UNTIL}{130}{paragraph*.64}
+\contentsline {paragraph}{Конструкция CASE}{130}{paragraph*.65}
+\contentsline {subsection}{\numberline {2.3.2}Общие сведения о языке IL}{132}{subsection.2.3.2}
+\contentsline {subsubsection}{Операторы языка}{133}{subsubsection*.69}
+\contentsline {subsubsection}{Пример программы на языке IL}{133}{subsubsection*.70}
+\contentsline {subsection}{\numberline {2.3.3}Общие сведения о языке LD}{134}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Общие сведения о языке SFC}{138}{subsection.2.3.4}
+\contentsline {subsubsection}{Основные понятия языка SFC}{138}{subsubsection*.80}
+\contentsline {paragraph}{Шаг}{139}{paragraph*.81}
+\contentsline {paragraph}{Переход}{139}{paragraph*.82}
+\contentsline {paragraph}{Блок действий}{141}{paragraph*.83}
+\contentsline {paragraph}{«Прыжок» – переход на произвольный шаг}{141}{paragraph*.84}
+\contentsline {paragraph}{Дивергенция и конвергенция}{142}{paragraph*.85}
+\contentsline {subsubsection}{Пример программы на языке SFC}{144}{subsubsection*.86}
+\contentsline {subsection}{\numberline {2.3.5}Общие сведения о языке FBD}{145}{subsection.2.3.5}
+\contentsline {subsubsection}{Основные понятия и конструкции языка}{145}{subsubsection*.90}
+\contentsline {subsubsection}{Пример программы на языке FBD}{147}{subsubsection*.91}
+\contentsline {section}{\numberline {2.4}Beremiz: Руководство разработчика}{148}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Документация softPLC}{148}{subsection.2.4.1}
+\contentsline {subsubsection}{Отладчик}{148}{subsubsection*.92}
+\contentsline {paragraph}{Defines}{148}{paragraph*.93}
+\contentsline {paragraph}{Typedefs}{149}{paragraph*.116}
+\contentsline {paragraph}{Functions}{149}{paragraph*.120}
+\contentsline {paragraph}{Variables}{150}{paragraph*.208}
+\contentsline {paragraph}{Public Members}{150}{paragraph*.223}
+\contentsline {section}{\numberline {2.5}Участие в разработке документации}{150}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Быстрый старт}{150}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Настройка окружения и сборка документации}{150}{subsection.2.5.2}
+\contentsline {subsubsection}{По умолчанию: Использование Docker}{150}{subsubsection*.228}
+\contentsline {subsubsection}{Альтернатива: Нативная установка (Debian GNU/Linux)}{151}{subsubsection*.229}
+\contentsline {subsection}{\numberline {2.5.3}TODO}{151}{subsection.2.5.3}
+\contentsline {chapter}{Алфавитный указатель}{153}{section*.230}

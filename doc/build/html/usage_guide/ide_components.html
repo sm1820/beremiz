@@ -1,0 +1,2106 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Основные компоненты среды Beremiz &mdash; Документация Beremiz </title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/brz.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Алфавитный указатель"
+              href="../genindex.html"/>
+        <link rel="search" title="Поиск" href="../search.html"/>
+    <link rel="top" title="Документация Beremiz " href="../index.html"/>
+        <link rel="up" title="Руководство программиста" href="index.html"/>
+        <link rel="next" title="Работа с проектом" href="work_with_project.html"/>
+        <link rel="prev" title="Основные термины и определения" href="terms_and_definitions.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Beremiz
+          
+
+          
+            
+            <img src="../_static/about_brz_logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Содержание</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install_guide/index.html">Инструкции по установке</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Руководство программиста</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="overview.html">Обращение к программе. Входные и выходные данные</a></li>
+<li class="toctree-l2"><a class="reference internal" href="terms_and_definitions.html">Основные термины и определения</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Основные компоненты среды Beremiz</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Главное меню программы</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Панель инструментов</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Дерево проекта</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Панель списка переменных и констант</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Панель настройки проекта</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#st-il">Текстовый редактор языков ST и IL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fbd-sfc-ld">Графические редакторы диаграмм языков FBD, SFC, LD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Панель редактирования ресурса</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Панель редактирования типа данных</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">Панель экземпляров проекта</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">Панель библиотеки функций и функциональных блоков</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Отладочная консоль</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">Поиск элементов в проекте</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">Панель отладки</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">Панель графика изменения значения переменной в режиме отладки</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="work_with_project.html">Работа с проектом</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library.html">Описание библиотеки функций и функциональных блоков</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../iec_guide/index.html">Языки стандарта МЭК 61131-3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_guide/index.html">Beremiz: Руководство разработчика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation_guide/index.html">Участие в разработке документации</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Beremiz</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Руководство программиста</a> &raquo;</li>
+      
+    <li>Основные компоненты среды Beremiz</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/usage_guide/ide_components.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="beremiz">
+<h1>Основные компоненты среды Beremiz<a class="headerlink" href="#beremiz" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Пользовательский интерфейс среды разработки Beremiz состоит из следующих
+компонент:</p>
+<ul class="simple">
+<li>Главное меню программы;</li>
+<li>Панель инструментов;</li>
+<li>Дерево проекта;</li>
+<li>Панель списка переменных и констант;</li>
+<li>Панель настроек проекта;</li>
+<li>Панель файлов проекта;</li>
+<li>Панель отображения промежуточного кода;</li>
+<li>Текстовые редакторы языков ST и IL;</li>
+<li>Графические редакторы языков FBD, SFC, LD;</li>
+<li>Панель редактирования ресурса;</li>
+<li>Панель экземпляров проекта;</li>
+<li>Панель библиотеки функций и функциональных блоков;</li>
+<li>Отладочная консоль;</li>
+<li>Поиск элементов в проекте;</li>
+<li>Панель отладки;</li>
+<li>Панель графика изменения значения переменной в режиме отладки.</li>
+</ul>
+<p>Далее подробно рассказано про каждый компонент среды разработки Beremiz
+в отдельности.</p>
+<div class="section" id="id1">
+<h2>Главное меню программы<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Главное меню программы (см. <a class="reference internal" href="#image2"><span class="std std-numref">Рисунок 2 </span></a>) содержит следующие пункты:</p>
+<ul class="simple">
+<li>«Файл»;</li>
+<li>«Редактировать»;</li>
+<li>«Вид»;</li>
+<li>«Помощь».</li>
+</ul>
+<div class="align-center figure" id="image2">
+<a class="reference internal image-reference" href="../_images/image21.png"><img alt="../_images/image21.png" src="../_images/image21.png" style="width: 3.53125in; height: 0.28542in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 2  </span><span class="caption-text">– Главное меню программы</span></p>
+</div>
+<p>Часть операций, выполняемых с помощью выбора определённого пункта меню
+мышью, могут быть исполнены с помощью «горячих клавиш». На выбор
+пользователя представлено два механизма обработки горячих клавиш. Первый
+механизм использует первые буквы названия пунктов меню, для выбора
+пункта необходимо нажать (ALT + ‘Клавиша первой буквы названия пункта в
+главном меню’) затем можно выбрать операцию или подменю, нажав на
+клавиатуре первую букву названия соответствующего пункта. Второй
+механизм использует установленные клавиатурные сочетания, далее будет
+подробно описан каждый пункт меню и соответствующая ему (если
+определена) «горячая клавиша».</p>
+<p>Меню «Файл» предназначено для работы с проектом и предоставляет
+следующие пункты:</p>
+<ul class="simple">
+<li>«Новый» - создание нового проекта (CTRL + N);</li>
+<li>«Открыть» - открытие существующего проекта (CTRL + O);</li>
+<li>«Недавние проекты» - быстрое открытие одного из десяти последних,
+недавно редактированных проектов;</li>
+<li>«Сохранить» - сохранение текущего проекта пункт (CTRL + S);</li>
+<li>«Сохранить как» - сохранение текущего проекта в папку отличную от
+той, в которой он сохранён на данный момент (CTRL + SHIFT + S);</li>
+<li>«Закрыть вкладку» - закрытие активной вкладки (например, вкладки
+переменных плагина, конфигурации и т.д.) для открытого проекта (CTRL
++ W);</li>
+<li>«Закрыть проект» - закрыть текущий, открытый проект (CTRL + SHIFT +
+W);</li>
+<li>«Настройки страницы» - настройка параметров страницы для печати на
+принтере активной программы, представленной в виде диаграммы (CTRL +
+ALT + P);</li>
+<li>«Просмотр» - предварительный просмотр результата перед печатью на
+принтере активной программы (CTRL + SHIFT + P);</li>
+<li>«Печать» - печать на принтере активной программы (CTRL + P);</li>
+<li>«Выход» - закрытие текущего проекта и выход из программы Beremiz
+(CTRL+ Q).</li>
+<li>Меню «Редактировать» предназначено для работы с редакторами языков
+стандарта МЭК 61131-3 и предоставляет следующие возможности:</li>
+<li>«Отмена» - отмена последней манипуляции в редакторе (CTRL + Z);</li>
+<li>«Повторить» повтор отменённой манипуляции в редакторе (CTRL + Y);</li>
+<li>«Вырезать» - удалить в буфер обмена выделенный(е) элемент(ы) в
+редакторе (CTRL + X);</li>
+<li>«Копировать» - копировать в буфер обмена выделенный(е) элемент(ы) в
+редакторе (CTRL + C);</li>
+<li>«Вставить» - вставить из буфера обмена находящиеся там элемент(ы) в
+редактор (CTRL + V);</li>
+<li>«Поиск» - поиск в текущем функциональном блоке (CTRL + F);</li>
+<li>«Поиск следующего» - подсветка следующего вхождения строки поиска
+(CTRL+K);</li>
+<li>«Поиск предыдущего» - подсветка предыдущего вхождения строки поиска
+(CTRL + SHIFT + K);</li>
+<li>«Поиск в проекте» - вызов диалога поиска данных в проекте (CTRL +
+SHIFT + F);</li>
+<li>«Добавить элемент» - добавление одного из следующих элемента в
+текущий проект:</li>
+<li>«Тип данных» - нового типа данных;</li>
+<li>«Функция» - новой функции;</li>
+<li>«Функциональный блок» - нового функционального блока;</li>
+<li>«Программа» - новую программу;</li>
+<li>«Ресурс» - новый ресурс;</li>
+<li>плагины для модулей УСО;</li>
+<li>«Выделить всё» - выделение всех элементов в активной вкладке
+редактора (CTRL +A);</li>
+<li>«Удалить» - удаление программного модуля, выделенного в дереве
+проекта.</li>
+</ul>
+<p>Меню «Вид» предназначено для работы с редакторами языков стандарта
+IEC-61131 и предоставляет следующие возможности:</p>
+<ul class="simple">
+<li>«Обновить» - обновление данных и снятие выделения в редакторе (CTRL +
+R);</li>
+<li>«Очистить ошибки» - очистка указателей ошибок в редакторе (CTRL + K);</li>
+<li>«Приближение» - пункт, в котором можно выбрать в процентах величину
+масштаба;</li>
+<li>«Сменить представление» - убирает все панели, оставляя только рабочее
+поле(F12)</li>
+<li>«Сброс расположения панелей» - восстановление расположения панелей
+Beremiz в исходное состояние.</li>
+</ul>
+<p>Меню «Помощь» предназначено для обращения к выводу информации в виде
+диалога о создателях данной среды - пункт «О программе».</p>
+</div>
+<div class="section" id="id2">
+<h2>Панель инструментов<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Панель инструментов представляет собой панель с кнопками для быстрого
+обращения к часто используемым функциям среды разработки Beremiz. Она
+состоит из нескольких панелей, содержащих кнопки: главного меню, сборки
+проекта и установки связи с целевым устройством. Подробнее об этих
+панелях рассказано ниже. При редактировании программных модулей,
+написанных на графических языках, появляются дополнительные панели с
+кнопками. Они рассмотрены при описании редакторов графических языков
+стандарта IEC 61131-3 (см. п. 5.7).</p>
+<p>Кнопки главного меню</p>
+<p>Панель инструментов, содержащая кнопки главного меню представлена на
+<a class="reference internal" href="#image3"><span class="std std-numref">Рисунок 3 </span></a>.</p>
+<p>Список кнопок и их функций описывается в таблице 1.</p>
+<div class="align-center figure" id="image3">
+<a class="reference internal image-reference" href="../_images/image31.png"><img alt="../_images/image31.png" src="../_images/image31.png" style="width: 4.66732in; height: 0.4584in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 3  </span><span class="caption-text">– Панель инструментов</span></p>
+</div>
+<p>Таблица 1 – Кнопки панели инструментов</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Внешний вид кнопки</th>
+<th class="head">Название кнопки</th>
+<th class="head">Функция кнопки</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../_images/image41.png"><img alt="image3" src="../_images/image41.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Новый проект</td>
+<td>Создать новый проект</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../_images/image51.png"><img alt="image4" src="../_images/image51.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Открыть проект</td>
+<td>Открыть существующий
+проект</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../_images/image61.png"><img alt="image5" src="../_images/image61.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Сохранить</td>
+<td>Сохранить текущий
+проект</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../_images/image71.png"><img alt="image6" src="../_images/image71.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Сохранить как</td>
+<td>Сохранить текущий
+проект в определенную
+папку</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../_images/image81.png"><img alt="image7" src="../_images/image81.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Печать</td>
+<td>Печать на принтере
+текущей программы</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../_images/image91.png"><img alt="image8" src="../_images/image91.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Отмена</td>
+<td>Отмена последней
+манипуляции в
+редакторе</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../_images/image101.png"><img alt="image9" src="../_images/image101.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Повторить</td>
+<td>Повтор отмененной
+манипуляции в
+редакторе</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../_images/image111.png"><img alt="image10" src="../_images/image111.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Вырезать</td>
+<td>Удалить в буфер
+обмена выделенные в
+редакторе фрагменты</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../_images/image12.png"><img alt="image11" src="../_images/image12.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Вставить</td>
+<td>Вставить фрагменты из
+буфера обмена в
+редактор</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../_images/image13.png"><img alt="image12" src="../_images/image13.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Поиск в проекте</td>
+<td>Вызов диалога поиска
+данных в проекте</td>
+</tr>
+</tbody>
+</table>
+<p>Кнопки сборки проекта и установки связи с целевым устройством</p>
+<p>Панель, содержащая кнопки сборки проекта и соединения с целевым
+устройством, позволяет скомпилировать и скомпоновать текущий проект и, в
+случае, если эта операция завершилась успешно (данную информацию можно
+увидеть в отладочной консоли (см. п. 5.12.)), передать и запустить
+полученный исполняемый файл на целевом устройстве.</p>
+<p>Часть кнопок данной панели показана на <a class="reference internal" href="#image14"><span class="std std-numref">Рисунок 4 </span></a>.</p>
+<div class="align-center figure" id="image14">
+<a class="reference internal image-reference" href="../_images/image14.png"><img alt="../_images/image14.png" src="../_images/image14.png" style="width: 1.70857in; height: 0.46882in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 4  </span><span class="caption-text">– Панель сборки проекта и соединения с целевым устройством</span></p>
+</div>
+<p>Таблица 2 – Кнопки сборки проекта и связи с целевым устройством на
+панели инструментов</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Внешний вид кнопки</th>
+<th class="head">Название кнопки</th>
+<th class="head">Функция кнопки</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../_images/image15.png"><img alt="image14" src="../_images/image15.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Сборка проекта в
+директории сборки</td>
+<td>Полная
+сборка(компиляция и
+компоновка) текущего
+проекта в папку
+build, находящийся в
+папке, где хранится
+проект</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../_images/image16.png"><img alt="image15" src="../_images/image16.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Очистить директорию
+сборки проекта</td>
+<td>Удаление папки build,
+где был собран проект</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../_images/image17.png"><img alt="image16" src="../_images/image17.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Подключиться к
+целевому ПЛК</td>
+<td>Соединиться с целевым
+устройством по адресу
+URI, который был
+указан в настройках
+проекта</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../_images/image18.png"><img alt="image17" src="../_images/image18.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Показать код,
+сгенерированный
+PLCGenerator</td>
+<td>Показать код
+скомпилированного
+проекта языке ST</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../_images/image19.png"><img alt="image18" src="../_images/image19.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Передать ПЛК</td>
+<td>Перенести исполняемый
+файл, полученный в
+ходе сборки проекта,
+на целевое устройство</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../_images/image20.png"><img alt="image19" src="../_images/image20.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Запустить ПЛК</td>
+<td>Запустить на
+исполнение собранную
+прикладную программу
+на целевом устройстве</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../_images/image211.png"><img alt="image20" src="../_images/image211.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Остановить запущенный
+ПЛК</td>
+<td>Остановить исполнение
+прикладной программы
+на целевом устройстве</td>
+</tr>
+</tbody>
+</table>
+<p>В зависимости от того, произведено в настоящий момент времени соединение
+с целевым устройством или выполняется ли прикладная программа на нём,
+появляются и скрываются некоторые кнопки.</p>
+<p>На <a class="reference internal" href="#image22"><span class="std std-numref">Рисунок 5 </span></a> приведено состояние данной в панели, когда соединение с
+целевым устройством установлено и на нём уже есть прикладная программа.
+Соответственно, можно запустить с помощью кнопки «Запуск прикладной
+программы» её или передать новую, используя кнопку «Передача прикладной
+программы».</p>
+<div class="align-center figure" id="image22">
+<a class="reference internal image-reference" href="../_images/image22.png"><img alt="../_images/image22.png" src="../_images/image22.png" style="width: 2.39097in; height: 0.44792in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 5  </span><span class="caption-text">- Панель инструментов сборки проекта и соединения с целевым устройством</span></p>
+</div>
+<p>В случае, когда при установке соединения произошли ошибки, данная
+информация будет выведена в отладочную консоль. Далее
+будет рассмотрен компонент «Дерево проекта», который представляет
+структуру элементов, составляющих проект.</p>
+</div>
+<div class="section" id="id3">
+<h2>Дерево проекта<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Дерево проекта обычно расположено в левой части окна среды разработки
+Beremiz (см. <a class="reference internal" href="#image23"><span class="std std-numref">Рисунок 6 </span></a>) и отображает структуру элементов, из которых
+состоит проект.</p>
+<div class="align-center figure" id="image23">
+<a class="reference internal image-reference" href="../_images/image23.png"><img alt="../_images/image23.png" src="../_images/image23.png" style="width: 2.98889in; height: 3.54097in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 6  </span><span class="caption-text">– Дерево проекта</span></p>
+</div>
+<p>В роли элементов могут выступать:</p>
+<ul class="simple">
+<li>Ресурсы;</li>
+<li>Программные модули (функции, функциональные блоки и программ) и их
+составные части;</li>
+<li>Типы данных;</li>
+<li>Плагины модулей УСО.</li>
+</ul>
+<p>Дерево проекта позволяет добавлять, удалять элементы. Операции
+копирования и вставки только доступны для программных модулей.</p>
+<p>Добавление элемента в дерево проекта</p>
+<p>В правом нижнем углу дерева проекта находится кнопка «+» (см. <a class="reference internal" href="#image24"><span class="std std-numref">Рисунок 7 </span></a>),
+при нажатии на которую, появляется меню для выбора добавления
+необходимого элемента в проект.</p>
+<div class="align-center figure" id="image24">
+<a class="reference internal image-reference" href="../_images/image24.png"><img alt="../_images/image24.png" src="../_images/image24.png" style="width: 3.31458in; height: 4.57569in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 7  </span><span class="caption-text">– Всплывающее меню добавления элементов проекта</span></p>
+</div>
+<p>В случае добавления программного модуля, т.е. выбора пункта «Функция»,
+«Функциональный блок» или «Программа», появится диалог «Создать новый
+программный модуль» (см. <a class="reference internal" href="#image25"><span class="std std-numref">Рисунок 8 </span></a>).</p>
+<div class="align-center figure" id="image25">
+<a class="reference internal image-reference" href="../_images/image25.png"><img alt="../_images/image25.png" src="../_images/image25.png" style="width: 3.13585in; height: 2.33366in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 8  </span><span class="caption-text">– Диалог добавления программного модуля</span></p>
+</div>
+<p>В данном диалоге три поля:</p>
+<ul class="simple">
+<li>«Имя программного модуля»;</li>
+<li>«Тип программного модуля»;</li>
+<li>«Язык».</li>
+</ul>
+<p>Имя, присвоенное по умолчанию, может быть заменено на имя,
+соответствующее назначению данного программного модуля. В зависимости от
+того, какой программный модуль был выбран во всплывающем меню, в поле
+«Тип программного модуля» будет подставлено именование данного
+программного модуля. В поле «Язык» необходимо выбрать из списка (см.
+<a class="reference internal" href="#image26"><span class="std std-numref">Рисунок 9 </span></a>) один из языков стандарта IEC 61131-3 (IL, ST, LD, FBD, SFC), на
+котором будут реализованы алгоритмы и логика работы данного добавляемого
+программного модуля.</p>
+<div class="align-center figure" id="image26">
+<a class="reference internal image-reference" href="../_images/image26.png"><img alt="../_images/image26.png" src="../_images/image26.png" style="width: 3.12544in; height: 3.41714in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 9  </span><span class="caption-text">– Выбор языка программного модуля</span></p>
+</div>
+<p>В случае выбора добавления типа данных, появится диалог (см. <a class="reference internal" href="#image27"><span class="std std-numref">Рисунок 10 </span></a>), в
+котором необходимо указать механизм создания нового типа данных</p>
+<div class="align-center figure" id="image27">
+<a class="reference internal image-reference" href="../_images/image27.png"><img alt="../_images/image27.png" src="../_images/image27.png" style="width: 6.80347in; height: 2.43611in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 10  </span><span class="caption-text">– Добавление пользовательского типа данных</span></p>
+</div>
+<p>Добавление нескольких элементов одного типа, например нескольких
+программ, функций, функциональных блоков приводит к их группировке в
+дереве проекта. Еще одним способом добавления нового элемента
+является нажатие правой клавиши мыши по определённому разделу в
+дереве проекта. Например, при нажатии на «Функциональные блоки»,
+появится всплывающее меню (см. <a class="reference internal" href="#image28"><span class="std std-numref">Рисунок 11 </span></a>). В данном меню можно выбрать
+«Добавить программный модуль» или «Вставить программный модуль», если
+он был скопирован в буфер обмена.</p>
+<p>Добавление нового элемента или выбор существующего в дереве проекта
+приводит к появлению панели редактирования и настроек соответствующего
+элемента:</p>
+<ul class="simple">
+<li>Панель настроек проекта;</li>
+<li>Панель, содержащая текстовый редактор языков ST и IL;</li>
+<li>Панель, содержащая графические редакторы диаграмм языков FBD, SFC,
+LD;</li>
+<li>Панель настроек ресурса;</li>
+<li>Панель редактирование типа данных;</li>
+<li>Панели настроек плагинов модулей УСО.</li>
+</ul>
+<p>Каждая вышеперечисленная панель редактирования будет рассмотрена в
+последующих пунктах.</p>
+<div class="align-center figure" id="image28">
+<a class="reference internal image-reference" href="../_images/image28.png"><img alt="../_images/image28.png" src="../_images/image28.png" style="width: 2.80208in; height: 3.08333in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 11  </span><span class="caption-text">– Всплывающее меню добавления и вставки программного модуля</span></p>
+</div>
+<p>Удаление элемента в дереве проекта</p>
+<p>Удаление осуществляется наведением на определённый элемент в дереве
+проекта и нажатием на него правой клавишей мыши, а далее в появившемся
+меню выбирается пункт «Удалить» (см. <a class="reference internal" href="#image29"><span class="std std-numref">Рисунок 12 </span></a>)</p>
+<div class="align-center figure" id="image29">
+<a class="reference internal image-reference" href="../_images/image29.png"><img alt="../_images/image29.png" src="../_images/image29.png" style="width: 2.78125in; height: 1.35417in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 12  </span><span class="caption-text">– Удаление элемента</span></p>
+</div>
+<p>Переименование, копирование и вставка программных модулей</p>
+<p>Дерево проекта позволяет выполнять операции переименования, копирования
+и вставки для программных модулей. Копирование или переименование
+осуществляются с помощью нажатия правой клавиши мыши на элемент (см.
+<a class="reference internal" href="#img29"><span class="std std-numref">Рисунок 13 </span></a>), соответствующий программному модулю в дереве проекта, и выбор
+соответствующего пункта появившегося меню.</p>
+<div class="align-center figure" id="img29">
+<a class="reference internal image-reference" href="../_images/image29.png"><img alt="../_images/image29.png" src="../_images/image29.png" style="width: 2.77083in; height: 1.35417in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 13  </span><span class="caption-text">– Копирование и переименование элемента</span></p>
+</div>
+<p>Вставка программного модуля осуществляется в меню (нажатие правой
+клавишей мыши по данному элементу) корневого элемента дерева проекта,
+соответствующего проекту (см. <a class="reference internal" href="#image30"><span class="std std-numref">Рисунок 14 </span></a>):</p>
+<div class="align-center figure" id="image30">
+<a class="reference internal image-reference" href="../_images/image30.png"><img alt="../_images/image30.png" src="../_images/image30.png" style="width: 2.76736in; height: 1.06389in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 14  </span><span class="caption-text">– Вставка программного модуля</span></p>
+</div>
+<p>Другим способом выполнения вышеописанной операции является вызов меню
+для элемента группировки программных модулей одного типа (см. <a class="reference internal" href="#image31"><span class="std std-numref">Рисунок 15 </span></a>).</p>
+<p>Далее приводится описание панели переменных и констант, которая
+присутствует при редактировании проекта, ресурса и программных модулей
+(функции, функционального блока, программы).</p>
+<div class="align-center figure" id="image31">
+<a class="reference internal image-reference" href="../_images/image311.png"><img alt="../_images/image311.png" src="../_images/image311.png" style="width: 2.67708in; height: 0.88542in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 15  </span><span class="caption-text">– Вставка программного модуля</span></p>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>Панель списка переменных и констант<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Панель списка переменных и констант (см. <a class="reference internal" href="#image32"><span class="std std-numref">Рисунок 16 </span></a>) отображает с помощью
+таблицы переменные и константы, соответствующие выбранному программному
+модулю, ресурсу или в целом проекту.</p>
+<div class="align-center figure" id="image32">
+<a class="reference internal image-reference" href="../_images/image32.png"><img alt="../_images/image32.png" src="../_images/image32.png" style="width: 7.45in; height: 1.69514in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 16  </span><span class="caption-text">– Панель переменных и констант</span></p>
+</div>
+<p>Каждая переменная имеет следующие параметры:</p>
+<ul class="simple">
+<li>Имя, представляющее собой уникальный идентификатор переменной в
+пределах её области видимости и действия;</li>
+<li>Класс: «Глобальный», «Вход», «Выход», «Вход/Выход», «Локальный»,
+«Внешний», «Временный»;</li>
+<li>Тип, определяющий тип переменной и может принадлежать базовому типу
+(в соответствии со стандартом IEC 61131-3), пользовательскому типу
+(псевдониму и поддиапазону существующего типа, перечислению, массиву,
+структуре) или типу функционального блока (стандартному или
+пользовательскому);</li>
+<li>Размещение - идентификатор, необходимый для связывания данной
+переменной с переменной плагина модуля УСО;</li>
+<li>Исходное значение значение - инициализация переменной некоторым
+начальным значением;</li>
+<li>Настройка - задание константности, реманентности (сохранение её
+значения в энергонезависимой памяти) и нереманентности переменной;</li>
+<li>Описание - комментарий к назначению данной переменной или константы.</li>
+</ul>
+<p>Первый символ имени переменной или константы должен быть буквой, или
+символом подчеркивания, далее могут следовать цифры, буквы латинского
+алфавита и символы подчеркивания. Набор возможных вариантов классов
+переменных зависит от типа элемента проекта, редактирования которого
+осуществляется. Двойной клик на полю «Размещение» вызывает появление
+кнопки «...», показанной на <a class="reference internal" href="#image33"><span class="std std-numref">Рисунок 17 </span></a>:</p>
+<div class="align-center figure" id="image33">
+<a class="reference internal image-reference" href="../_images/image33.png"><img alt="../_images/image33.png" src="../_images/image33.png" style="width: 1.45833in; height: 0.9375in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 17  </span><span class="caption-text">- Поле «Размещение» панели переменных и констант</span></p>
+</div>
+<p>Нажатие на данную кнопку приводит к появлению диалога «Просмотр
+директорий» (см. <a class="reference internal" href="#image34"><span class="std std-numref">Рисунок 18 </span></a>), т.е. списка переменных модулей УСО, которые
+могут быть связанны с переменой в панели переменных и констант. При
+выборе в данном диалоге определённой переменной и нажатии клавиши «OK» в
+поле «Адрес» будет добавлен адрес переменной внешнего модуля УСО.</p>
+<div class="align-center figure" id="image34">
+<a class="reference internal image-reference" href="../_images/image34.png"><img alt="../_images/image34.png" src="../_images/image34.png" style="width: 4.79306in; height: 3.0625in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 18  </span><span class="caption-text">- Диалог «Просмотр адресов», вызываемый из поля «Адрес»</span></p>
+</div>
+<p>Поле опции позволяет определить переменную как константу.
+Соответственно, если компилятор обнаружит в коде фрагмент, в котором
+происходит изменение этой переменной - будет выведена ошибка компиляции
+«Assignment to constant variables is not be allowed» в «Отладочной
+консоли». Квалификатор «Константа» не может быть использован в
+объявлении функциональных блоков. Добавление, удаление и перемещение
+переменных происходит с помощью специальных кнопок на панели переменных
+и констант. Описания данных кнопок представлены в таблице 3.</p>
+<p>Панель переменных и констант предоставляет возможность фильтровать
+отображаемые переменные по их конкретным классам («Вход» ,«Выход»,
+«Вход/Выход»,</p>
+<p>«Внешний», «Локальный», «Временный») или сгруппированным классам
+(«Интерфейс» и «Переменные»). Данная операция выполняется с помощью
+функции «Фильтр класса» (см. <a class="reference internal" href="#image35"><span class="std std-numref">Рисунок 19 </span></a>).</p>
+<div class="align-center figure" id="image35">
+<a class="reference internal image-reference" href="../_images/image35.png"><img alt="../_images/image35.png" src="../_images/image35.png" style="width: 2.30486in; height: 2.82569in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 19  </span><span class="caption-text">- Фильтрация отображения переменных в панели переменных и констант</span></p>
+</div>
+<p>Таблица 3 - Кнопки добавления, удаление и перемещения переменных на
+панели переменных и констант</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Внешний вид кнопки</th>
+<th class="head">Название кнопки</th>
+<th class="head">Функция кнопки</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../_images/image36.png"><img alt="image38" src="../_images/image36.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Добавить переменную</td>
+<td>Добавить новую
+переменную в панель
+переменных и констант
+со значениями по
+умолчанию</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../_images/image37.png"><img alt="image39" src="../_images/image37.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Удалить переменную</td>
+<td>Удалить выделенную
+переменную или
+константу</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../_images/image38.png"><img alt="image40" src="../_images/image38.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Переместить
+переменную вверх</td>
+<td>Перемещение
+переменной в таблице
+переменных и констант
+вверх на одну позицию</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../_images/image39.png"><img alt="image41" src="../_images/image39.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Переместить
+переменную вниз</td>
+<td>Перемещение
+переменной в таблице
+переменных и констант
+вниз на одну позицию</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id5">
+<h2>Панель настройки проекта<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Панель редактирования проекта (см. <a class="reference internal" href="#image40"><span class="std std-numref">Рисунок 20 </span></a>) состоит из панели переменных
+и констант, а также настроек сборки проекта и данных о проекте.</p>
+<div class="align-center figure" id="image40">
+<a class="reference internal image-reference" href="../_images/image40.png"><img alt="../_images/image40.png" src="../_images/image40.png" style="width: 4.29348in; height: 0.38641in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 20  </span><span class="caption-text">- Панели настройки проекта</span></p>
+</div>
+<p>Настройки сборки проекта (см. <a class="reference internal" href="#image41"><span class="std std-numref">Рисунок 21 </span></a>) позволяют задать следующие
+параметры:</p>
+<ul class="simple">
+<li>«URI системы исполнения» - унифицированный (единообразный)
+идентификатор ресурса, в данном случае под ресурсом понимается
+целевое устройство. Данный адрес необходим для режима отладки.</li>
+<li>«Запретить расширения» - установка данного флага позволяет не
+учитывать при сборке проекта внешние плагины;</li>
+<li>«Библиотеки» - подключаемые дополнительные библиотеки:
+«Native_Library», «Python_Library», «SVGUI_Library»;</li>
+<li>«Целевая платформа» - выбор из списка компилятора для архитектуры
+целевого устройства;</li>
+<li>«Компилятор» - имя исполняемого файла компилятора (если он определён
+в глобальных переменных среды), либо полный путь к нему;</li>
+<li>«CFLAGS» - указание флагов С компилятора;</li>
+<li>«Линковщик» - имя исполняемого файла компоновщика (если он определён
+в глобальных переменных среды), либо полный путь к нему;</li>
+<li>«LDFLAGS» - указание флагов компоновщика;</li>
+</ul>
+<div class="align-center figure" id="image41">
+<a class="reference internal image-reference" href="../_images/image411.png"><img alt="../_images/image411.png" src="../_images/image411.png" style="width: 3.37986in; height: 3.07847in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 21  </span><span class="caption-text">- Панель с настройками проекта</span></p>
+</div>
+<p>Также в настройках сборки проекта имеются две кнопки, описание которых
+приведено в таблице 4.</p>
+<p>Таблица 4 - Кнопки в панели настройки сборки проекта</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Внешний вид кнопки</th>
+<th class="head">Название кнопки</th>
+<th class="head">Функция кнопки</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../_images/image42.png"><img alt="image44" src="../_images/image42.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>МЭК - код</td>
+<td>Вызов «Панели
+отображения
+промежуточного кода»
+(см. п. 5.5.1), для
+вывода кода, из
+которого генерируется
+ST код всего проекта</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../_images/image43.png"><img alt="image45" src="../_images/image43.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Файлы проекта</td>
+<td>Вызов «Панели файлов
+проекта», в которой
+можно выбрать файлы
+необходимые для
+передачи на целевое
+устройство вместе с
+исполняемым файлом
+(см. п. 5.5.2)</td>
+</tr>
+</tbody>
+</table>
+<p>Вкладка «Проект» (см. <a class="reference internal" href="#image44"><span class="std std-numref">Рисунок 22 </span></a>) позволяет задать: имя проекта, версию
+проекта, имя продукта, версию продукта и релиз продукта.</p>
+<div class="align-center figure" id="image44">
+<a class="reference internal image-reference" href="../_images/image44.png"><img alt="../_images/image44.png" src="../_images/image44.png" style="width: 7.09167in; height: 2.40417in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 22  </span><span class="caption-text">– Вкладка с данными проекта</span></p>
+</div>
+<p>Вкладка «Автор» (см. <a class="reference internal" href="#image45"><span class="std std-numref">Рисунок 23 </span></a>) позволяет задать: Имя компании, URL-адрес
+компании, Имя автора, Название организации.</p>
+<div class="align-center figure" id="image45">
+<a class="reference internal image-reference" href="../_images/image45.png"><img alt="../_images/image45.png" src="../_images/image45.png" style="width: 6.94028in; height: 1.96736in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 23  </span><span class="caption-text">– Вкладка данные об авторе проекта</span></p>
+</div>
+<p>Вкладка «Графика» (см. <a class="reference internal" href="#image46"><span class="std std-numref">Рисунок 24 </span></a>) позволяет задать размеры страницы и
+разрешение сетки для редакторов диаграмм графических языков FBD, LD и
+SFC.</p>
+<div class="align-center figure" id="image46">
+<a class="reference internal image-reference" href="../_images/image46.png"><img alt="../_images/image46.png" src="../_images/image46.png" style="width: 6.31944in; height: 2.37431in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 24  </span><span class="caption-text">– Вкладка графика</span></p>
+</div>
+<p>Вкладка «Прочее», изображенная на <a class="reference internal" href="#image47"><span class="std std-numref">Рисунок 25 </span></a>, позволяет выбрать язык
+интерфейса для среды разработки Beremiz и указать дополнительное
+текстовое описание для проекта.</p>
+<div class="align-center figure" id="image47">
+<a class="reference internal image-reference" href="../_images/image47.png"><img alt="../_images/image47.png" src="../_images/image47.png" style="width: 6.63207in; height: 1.61956in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 25  </span><span class="caption-text">– Вкладка с настройками языка и описанием проекта</span></p>
+</div>
+<p>При запуске среды разработки Beremiz языком по умолчанию является язык,
+соответствующий текущей локали операционной системы, если файл для
+данной локали присутствуют. В случае отсутствия данных файлов,
+устанавливается английская локаль, которая доступна всегда. Файлы
+доступных локалей располагаются в папке beremiz/locale.</p>
+<p>Панель отображения промежуточного кода</p>
+<p>Данная панель (см. <a class="reference internal" href="#image48"><span class="std std-numref">Рисунок 26 </span></a>) представляет собой текстовый редактор,
+отображающий с подсветкой синтаксиса и нумерацией строк код на языке ST,
+доступный только для чтения, без возможности редактирования.</p>
+<div class="align-center figure" id="image48">
+<a class="reference internal image-reference" href="../_images/image48.png"><img alt="../_images/image48.png" src="../_images/image48.png" style="width: 5.40208in; height: 2.05in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 26  </span><span class="caption-text">– Панель отображения промежуточного кода на языке ST</span></p>
+</div>
+<p>Открытие данной панели доступно после сборки проекта с помощью
+соответствующей кнопки (см. таблицу 2).</p>
+<p>Панель файлов проекта</p>
+<p>Панель файлов проекта (см. <a class="reference internal" href="#image49"><span class="std std-numref">Рисунок 27 </span></a>) содержит встроенный проводник файлов
+(справа), в котором файлы могут быть выделены и перенесены в левую
+часть.</p>
+<div class="align-center figure" id="image49">
+<a class="reference internal image-reference" href="../_images/image49.png"><img alt="../_images/image49.png" src="../_images/image49.png" style="width: 6.20834in; height: 2.97826in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 27  </span><span class="caption-text">– Вкладка файлы проекта</span></p>
+</div>
+<p>Все манипуляции с файлами осуществляются с помощью кнопок, расположенных
+в середине данной панели. Их описание приведено в таблице 5.</p>
+<p>Таблица 5 - Кнопки в панели файлов проекта</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Внешний вид кнопки</th>
+<th class="head">Название кнопки</th>
+<th class="head">Функция кнопки</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../_images/image37.png"><img alt="image39" src="../_images/image37.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Удалить файл из левой
+директории</td>
+<td>Удаление выделенного
+файла из левого
+списка добавленных
+файлов в проект</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../_images/image50.png"><img alt="image52" src="../_images/image50.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Скопировать файл из
+правой директории в
+левую</td>
+<td>Добавить выделенный
+файл из проводника
+файлов в проект</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../_images/image511.png"><img alt="image53" src="../_images/image511.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Скопировать файл из
+левой директории в
+правую</td>
+<td>Добавить в текущую
+папку проводника
+файлов слева
+выделенный файл в
+списке файлов проекта</td>
+</tr>
+</tbody>
+</table>
+<p>Данные файлы будут переданы на целевое устройство вместе с исполняемым
+файлом. Как правило, этими дополнительными файлами проекта являются
+сторонние библиотеки, необходимые для корректной работы плагинов модулей
+УСО.</p>
+</div>
+<div class="section" id="st-il">
+<h2>Текстовый редактор языков ST и IL<a class="headerlink" href="#st-il" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Текстовый редактор языков ST и IL (см. <a class="reference internal" href="#image52"><span class="std std-numref">Рисунок 28 </span></a>) позволяет создавать и
+редактировать алгоритмы и логику выполнения программных модулей на
+языках ST и IL.</p>
+<div class="align-center figure" id="image52">
+<a class="reference internal image-reference" href="../_images/image52.png"><img alt="../_images/image52.png" src="../_images/image52.png" style="width: 6.10833in; height: 2.63889in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 28  </span><span class="caption-text">– Текстовый редактор языков ST и IL</span></p>
+</div>
+<p>Он обеспечивают следующие возможности:</p>
+<ul class="simple">
+<li>Подсветку синтаксиса кода, написанного пользователем, т.е. выделения
+особыми параметрами шрифта ключевых слов данных языков;</li>
+<li>Нумерации строк, что может быть полезным при возникновении ошибок в
+программе, т.к. транслятор кода ST в C выдаёт номер строки, в которой
+найдена ошибка;</li>
+<li>Сворачивание кода структурных элементов языка: определения функции,
+определение типа и т. Д.</li>
+</ul>
+<p>Увеличение или уменьшение размера шрифт выполняется с помощью Ctrl +
+&lt;колёсико мыши&gt;.</p>
+<p>Описание синтаксиса, основных конструкций и примеров использования языков
+ST и IL приведены в описании языков стандарта МЭК 61131-3.</p>
+</div>
+<div class="section" id="fbd-sfc-ld">
+<h2>Графические редакторы диаграмм языков FBD, SFC, LD<a class="headerlink" href="#fbd-sfc-ld" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Данные редакторы позволяют создавать и редактировать алгоритмы и логику
+выполнения программных модулей, написанных на языках FBD, SFC и LD.</p>
+<p>Редактор языка FBD</p>
+<p>Основными элементами языка FBD являются: переменные, функциональные
+блоки и соединения. При редактировании FBD диаграммы, в панели
+инструментов появляется следующая панель (см. <a class="reference internal" href="#image53"><span class="std std-numref">Рисунок 29 </span></a>).</p>
+<div class="align-center figure" id="image53">
+<a class="reference internal image-reference" href="../_images/image53.png"><img alt="../_images/image53.png" src="../_images/image53.png" style="width: 2.44826in; height: 0.48965in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 29  </span><span class="caption-text">– Панель редактирования FBD диаграмм</span></p>
+</div>
+<p>С помощью данной панели можно добавить все элементы языка FBD
+(назначение каждой кнопки описано в таблице 6).</p>
+<p>Таблица 6 - Кнопки в панели файлов проекта</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Внешний вид кнопки</th>
+<th class="head">Название кнопки</th>
+<th class="head">Функция кнопки</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../_images/image54.png"><img alt="image56" src="../_images/image54.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Выделение объектов на
+диаграмме</td>
+<td>Перевод указателя
+мыши в состояние, при
+котором можно
+осуществлять
+выделение объектов
+редакторе одного из
+графических языков</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../_images/image55.png"><img alt="image57" src="../_images/image55.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td><p class="first">Перемещение</p>
+<p class="last">диаграммы</p>
+</td>
+<td>Перевод указателя
+мыши в состояние, при
+котором можно
+изменять размеры
+редактора одного из
+графических языков, с
+помощью его
+перемещения</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../_images/image56.png"><img alt="image58" src="../_images/image56.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Создать новый
+комментарий</td>
+<td>Вызов диалога
+создания комментария</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../_images/image57.png"><img alt="image59" src="../_images/image57.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Добавить переменную</td>
+<td>Вызов диалога
+добавления переменной</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../_images/image58.png"><img alt="image60" src="../_images/image58.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td><p class="first">Добавить</p>
+<p class="last">функциональный блок</p>
+</td>
+<td>Вызов диалога
+добавления
+функционального блока</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../_images/image59.png"><img alt="image61" src="../_images/image59.png" style="width: 0.27153in; height: 0.27153in;" /></a></td>
+<td>Добавить подключение</td>
+<td>Вызов диалога
+добавления соединения</td>
+</tr>
+</tbody>
+</table>
+<p>Для этого необходимо указателем мыши выбрать необходимую кнопку и нажать
+на свободное место в области редактирования FBD диаграммы. В зависимости
+от выбранного элемента появятся определённые диалоги добавления данного
+элемента.</p>
+<p>Аналогичные действия можно выполнить с помощью всплывающего меню в
+области редактирования FBD диаграмм. Вызов данного меню происходит
+нажатием правой клавишей мыши и выбором пункта «Добавить», в котором
+будет: «Блок», «Переменная», «Подключение», «Комментарий» (см. <a class="reference internal" href="#image60"><span class="std std-numref">Рисунок 30 </span></a>).</p>
+<div class="align-center figure" id="image60">
+<a class="reference internal image-reference" href="../_images/image60.png"><img alt="../_images/image60.png" src="../_images/image60.png" style="width: 3.20605in; height: 1.53261in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 30  </span><span class="caption-text">- Всплывающее меню редактора языка FBD</span></p>
+</div>
+<p>Далее рассмотрено добавление каждого элемента в отдельности.</p>
+<p>Добавление функционального блока</p>
+<p>При добавлении функционального блока одним из описанных выше способов,
+появится диалог «Свойства блока» (см. <a class="reference internal" href="#image61"><span class="std std-numref">Рисунок 31 </span></a>).</p>
+<div class="align-center figure" id="image61">
+<a class="reference internal image-reference" href="../_images/image611.png"><img alt="../_images/image611.png" src="../_images/image611.png" style="width: 4.60833in; height: 3.31181in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 31  </span><span class="caption-text">– Свойства функционального блока</span></p>
+</div>
+<p>В данном диалоге приведено краткое описание функционального блока и
+предоставлена возможность задать некоторые свойства (имя, количество
+входов, порядок выполнения и т.д.).</p>
+<p>Опция «Управление исполнением» добавляет в функциональный блок
+дополнительные параметры EN/ENO, о которых подробнее рассказано в
+приложении 5. Для сохранения изменений необходимо нажать «OK». Одним из
+свойств является «Порядок исполнения».</p>
+<p>Добавление (путем копирования существующего блока), удаление и
+переименование функционального блока осуществляется при помощи команд
+меню «Редактирование» в главном меню или с помощью всплывающего меню
+диаграммы (см. <a class="reference internal" href="#image61"><span class="std std-numref">Рисунок 31 </span></a>).</p>
+<p>Следует отметить, что функциональный блок может быть так же добавлен из
+«Панели библиотеки функций и функциональных блоков»,
+перетаскиванием мыши (Drag&amp;Drop) выбранного блока на панель
+редактирования диаграммы FBD.</p>
+<p>Добавление переменной</p>
+<p>Переменные добавляются из панели переменных и констант с помощью
+перетаскивания (Drag&amp;Drop) левой клавишей мыши за область, выделенную
+красным цветом на <a class="reference internal" href="#image62"><span class="std std-numref">Рисунок 32 </span></a>, в область редактирования FBD диаграмм.</p>
+<div class="align-center figure" id="image62">
+<a class="reference internal image-reference" href="../_images/image62.png"><img alt="../_images/image62.png" src="../_images/image62.png" style="width: 6.77639in; height: 2.9125in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 32  </span><span class="caption-text">– Добавление переменной из панели переменных и констант</span></p>
+</div>
+<p>Изменить параметры переменной можно в диалоге «Свойства переменной» (см.
+<a class="reference internal" href="#image63"><span class="std std-numref">Рисунок 33 </span></a>), нажав на неё два раза левой клавишей мыши.</p>
+<div class="align-center figure" id="image63">
+<a class="reference internal image-reference" href="../_images/image63.png"><img alt="../_images/image63.png" src="../_images/image63.png" style="width: 3.02083in; height: 2.75486in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 33  </span><span class="caption-text">– Свойства переменной</span></p>
+</div>
+<p>В данном диалоге можно задать порядок исполнения переменной и изменить
+её класс («Вход», «Выход», «Вход/Выход»).</p>
+<p>Добавление подключения</p>
+<p>В тех случаях, когда необходимо передать выходное значение одного
+функционального блока на один из входов другого, удобно использовать
+элемент «Подключение». При прямом соединении с помощью перетаскивания
+выхода одного функционального блока к входу другого получится прямое
+соединение с помощью чёрной соединительной линии. На схемах с большим
+количеством функциональных блоков элемент «Подключение» позволяет
+избежать пересечения прямых соединений, которые приводит к тому, что
+схема становится менее понятной.</p>
+<p>После выбора добавления элемента «Подключение» появится диалог «Свойства
+подключения» (см. <a class="reference internal" href="#image64"><span class="std std-numref">Рисунок 34 </span></a>).</p>
+<div class="align-center figure" id="image64">
+<a class="reference internal image-reference" href="../_images/image64.png"><img alt="../_images/image64.png" src="../_images/image64.png" style="width: 2.79525in; height: 1.88235in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 34  </span><span class="caption-text">- Диалог добавления подключения для FBD</span></p>
+</div>
+<p>В данном диалоге можно выбрать тип соединения: «Выходное соединение» -
+для выходного значения, «Входное соединение» - для входного значения, а
+так же необходимо указать имя данного соединения. На <a class="reference internal" href="#image65"><span class="std std-numref">Рисунок 35 </span></a> представлен
+пример использования соединений.</p>
+<div class="align-center figure" id="image65">
+<a class="reference internal image-reference" href="../_images/image65.png"><img alt="../_images/image65.png" src="../_images/image65.png" style="width: 4.11667in; height: 1.57708in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 35  </span><span class="caption-text">- Пример FBD диаграммы с использованием подключений</span></p>
+</div>
+<p>Функция «MAX» на выходе «OUT» имеет некоторое значение, которое с
+помощью соединения «RESULT» передаётся на вход «IN1» в функцию «MIN». В
+функции «MAX» используется соединение типа «Выходное соединение», в
+функции «MIN» - типа «Входное соединение». Имена у этих соединений,
+соответственно, одинаковые.</p>
+<p>Добавление комментариев</p>
+<p>Редактор FBD диаграмм (и остальные редакторы, о которых будет рассказано
+ниже) позволяют добавлять комментарии на диаграмму. После выбора на
+панели редактирования комментария и добавления его в область
+редактирования появится диалог (см. <a class="reference internal" href="#image66"><span class="std std-numref">Рисунок 36 </span></a>) для ввода текста
+комментария.</p>
+<div class="align-center figure" id="image66">
+<a class="reference internal image-reference" href="../_images/image66.png"><img alt="../_images/image66.png" src="../_images/image66.png" style="width: 3.38235in; height: 1.87814in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 36  </span><span class="caption-text">– Диалог добавления комментария</span></p>
+</div>
+<p>После нажатия кнопки «ОК» комментарий появится на диаграмме(см. <a class="reference internal" href="#image67"><span class="std std-numref">Рисунок 37 </span></a>)</p>
+<div class="align-center figure" id="image67">
+<a class="reference internal image-reference" href="../_images/image67.png"><img alt="../_images/image67.png" src="../_images/image67.png" style="width: 4.20069in; height: 1.88194in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 37  </span><span class="caption-text">– Добавленный комментарий к FBD диаграмме</span></p>
+</div>
+<p>Порядок выполнения функций и функциональных блоков</p>
+<p>Последовательность исполнения функций и функциональных блоков
+определяется порядком их выполнения. Автоматически он регламентируется
+следующим образом: чем выше и левее расположен верхний левый угол,
+описывающего функцию или функциональный блок прямоугольника, тем раньше
+данная функция или функциональный будет выполнен.</p>
+<p>Если обратиться к <a class="reference internal" href="#image68"><span class="std std-numref">Рисунок 38 </span></a>, то порядок выполнения функций будет
+следующим: 1 – CounterST0; 2 – CounterFBD0; 3 – CounterSFC0.</p>
+<div class="align-center figure" id="image68">
+<a class="reference internal image-reference" href="../_images/image68.png"><img alt="../_images/image68.png" src="../_images/image68.png" style="width: 5.60875in; height: 1.55208in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 38  </span><span class="caption-text">- Схема, содержащая функции с порядком выполнения (обсчета) по расположению</span></p>
+</div>
+<p>Данная опция «Порядок выполнения» выделена красным цветом на <a class="reference internal" href="#image69"><span class="std std-numref">Рисунок 39 </span></a>.</p>
+<div class="align-center figure" id="image69">
+<a class="reference internal image-reference" href="../_images/image69.png"><img alt="../_images/image69.png" src="../_images/image69.png" style="width: 3.88194in; height: 2.79444in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 39  </span><span class="caption-text">- Свойство порядок выполнения функции или функционального блока</span></p>
+</div>
+<p>После задания порядка выполнения для каждой функции или функционального
+блока на схеме в правом нижнем углу будет указан его порядковый номер
+выполнения. Пример представлен на <a class="reference internal" href="#image70"><span class="std std-numref">Рисунок 40 </span></a>.</p>
+<div class="align-center figure" id="image70">
+<a class="reference internal image-reference" href="../_images/image70.png"><img alt="../_images/image70.png" src="../_images/image70.png" style="width: 5.40555in; height: 1.66667in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 40  </span><span class="caption-text">- Схема, содержащая функции с порядком выполнения заданным вручную</span></p>
+</div>
+<p>Описание языка FBD, основных его конструкций и пример использования
+приведены в приложении 5.</p>
+<p>Редактор языка LD</p>
+<p>Язык LD или РКС (Релейно-Контактные Схемы) представляет собой
+графическую форму записи логических выражений в виде контактов и катушек
+реле. Основными элементами языка LD являются: шина питания, катушка,
+контакт. Добавить данные элементы, так же как и элементы языка FBD,
+можно несколькими способами.</p>
+<p>Как только активной становится вкладка с редактированием LD диаграммы, в
+панели инструментов появляется панель (см. <a class="reference internal" href="#image71"><span class="std std-numref">Рисунок 41 </span></a>) с элементами языка
+LD.</p>
+<div class="align-center figure" id="image71">
+<a class="reference internal image-reference" href="../_images/image711.png"><img alt="../_images/image711.png" src="../_images/image711.png" style="width: 3.54216in; height: 0.46882in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 41  </span><span class="caption-text">- Панель редактирования LD диаграмм</span></p>
+</div>
+<p>Аналогично редактору языка FBD с помощью данной панели можно добавить
+все элементы языка LD, а так же и FBD, т.к. есть возможность
+комбинированного применения языков на одной диаграмме. В таблице 7
+приведено описание кнопок данной панели. Описание остальных кнопок,
+относящихся к языку FBD, находится в таблице 6.</p>
+<p>Таблица 7 - Кнопки панели редактирования LD диаграммы</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Внешний вид кнопки</th>
+<th class="head">Название кнопки</th>
+<th class="head">Функция кнопки</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../_images/image72.png"><img alt="image74" src="../_images/image72.png" style="width: 0.26458in; height: 0.26458in;" /></a></td>
+<td>Создать новую шину
+питания</td>
+<td>Вызов диалога
+создания новой шины
+питания</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../_images/image73.png"><img alt="image75" src="../_images/image73.png" style="width: 0.26458in; height: 0.26458in;" /></a></td>
+<td>Создать новую катушку</td>
+<td>Вызов диалога
+создания новой
+катушки</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../_images/image74.png"><img alt="image76" src="../_images/image74.png" style="width: 0.26458in; height: 0.26458in;" /></a></td>
+<td>Создать новый контакт</td>
+<td>Вызов диалога
+создания нового
+контакта</td>
+</tr>
+</tbody>
+</table>
+<p>Во всплывающем меню для редактора LD диаграмм (см. <a class="reference internal" href="#image75"><span class="std std-numref">Рисунок 42 </span></a>), так же как
+и в панели инструментов помимо элементов LD языка, доступны элементы
+языка FBD.</p>
+<div class="align-center figure" id="image75">
+<a class="reference internal image-reference" href="../_images/image75.png"><img alt="../_images/image75.png" src="../_images/image75.png" style="width: 2.51667in; height: 1.92153in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 42  </span><span class="caption-text">- Всплывающее меню редактора языка LD</span></p>
+</div>
+<p>Добавление шины питания</p>
+<p>При добавлении шины питания, одним из описанных выше способов, появится
+диалог «Свойства шины питания» (см. <a class="reference internal" href="#image76"><span class="std std-numref">Рисунок 43 </span></a>).</p>
+<p>В данном диалоге указываются следующие свойства:</p>
+<ul class="simple">
+<li>Тип шины питания: шина питания слева или шина питания справа;</li>
+<li>Количество контактов на добавляемой шине питания.</li>
+</ul>
+<div class="align-center figure" id="image76">
+<a class="reference internal image-reference" href="../_images/image76.png"><img alt="../_images/image76.png" src="../_images/image76.png" style="width: 2.69608in; height: 1.88726in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 43  </span><span class="caption-text">- Свойство шины питания</span></p>
+</div>
+<p>На <a class="reference internal" href="#image77"><span class="std std-numref">Рисунок 44 </span></a> приведены две добавленные шины питания: левая с тремя
+контактами и правая с одним контактом.</p>
+<div class="align-center figure" id="image77">
+<a class="reference internal image-reference" href="../_images/image77.png"><img alt="../_images/image77.png" src="../_images/image77.png" style="width: 1.36275in; height: 1.4875in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 44  </span><span class="caption-text">- Шины питания на LD диаграмме</span></p>
+</div>
+<p>Добавление контакта</p>
+<p>При добавлении контакта на LD диаграмму появится диалог «Редактирование
+значения контакта» (см. <a class="reference internal" href="#image78"><span class="std std-numref">Рисунок 45 </span></a>).</p>
+<div class="align-center figure" id="image78">
+<a class="reference internal image-reference" href="../_images/image78.png"><img alt="../_images/image78.png" src="../_images/image78.png" style="width: 2.3625in; height: 2.04167in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 45  </span><span class="caption-text">- Редактирование контакта</span></p>
+</div>
+<p>Данный диалог позволяет определить модификатор данного контакта:</p>
+<ul class="simple">
+<li>«Обычный»;</li>
+<li>«Инверсия»;</li>
+<li>«Нарастающий фронт»;</li>
+<li>«Спадающий фронт».</li>
+</ul>
+<p>Кроме того, диалог позволяет выбрать из списка «Имя» переменную,
+«связываемую» с данным контактом. Следует отметить, что «связываемые»
+переменные должны быть определены в панели переменных и констант для
+данного программного модуля типом BOOL.</p>
+<p>Еще одним способом добавления контакта на диаграмму является метод
+Drag&amp;Drop из панели переменных и констант переменной типа BOOL и класса:
+«Вход»,</p>
+<p>«Вход/Выход», «Внешний», «Локальный», «Временный». Для этого необходимо
+зажать левой кнопкой мыши за первый столбец (который имеет заголовок #)
+переменную, удовлетворяющую описанным выше критериям и перенести в
+область редактирования диаграммы (см. <a class="reference internal" href="#image79"><span class="std std-numref">Рисунок 46 </span></a>).</p>
+<div class="align-center figure" id="image79">
+<a class="reference internal image-reference" href="../_images/image79.png"><img alt="../_images/image79.png" src="../_images/image79.png" style="width: 2.01944in; height: 2.20278in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 46  </span><span class="caption-text">- Добавление контакт на диаграмму из панели переменных и констант</span></p>
+</div>
+<p>Добавление катушки</p>
+<p>При добавлении катушки на LD диаграмму появится диалог «Редактирование
+значения катушки» (см. <a class="reference internal" href="#image80"><span class="std std-numref">Рисунок 47 </span></a>).</p>
+<div class="align-center figure" id="image80">
+<a class="reference internal image-reference" href="../_images/image80.png"><img alt="../_images/image80.png" src="../_images/image80.png" style="width: 2.51389in; height: 2.60764in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 47  </span><span class="caption-text">– Редактирование катушки</span></p>
+</div>
+<p>В данном диалоге можно определить модификатор данного контакта:</p>
+<ul class="simple">
+<li>«Обычный»;</li>
+<li>«Инверсия»;</li>
+<li>«Установить»;</li>
+<li>«Сброс»;</li>
+<li>«Нарастающий фронт»;</li>
+<li>«Спадающий фронт».</li>
+</ul>
+<p>Кроме того, производится выбор из списка «Имя» переменной, «связываемой»
+с данным контактом. Эти переменные, как и для контактов, должны быть
+определены в панели переменных и констант для данного программного
+модуля типом BOOL.</p>
+<p>Аналогично добавлению контакта с помощью Drag&amp;Drop можно добавить и
+катушки, но в данном случае переменная должна относиться к классу
+«Выход» (см. <a class="reference internal" href="#image81"><span class="std std-numref">Рисунок 48 </span></a>).</p>
+<div class="align-center figure" id="image81">
+<a class="reference internal image-reference" href="../_images/image811.png"><img alt="../_images/image811.png" src="../_images/image811.png" style="width: 1.97485in; height: 2.07843in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 48  </span><span class="caption-text">- Добавление катушки на диаграмму из панели переменных и констант</span></p>
+</div>
+<p>Описание языка LD, основных конструкций и примера его использования
+приведены в описании яызков стандарта МЭК 61131-3.</p>
+<p>Редактор языка SFC</p>
+<p>Основными элементами языка SFC являются: начальный шаг, шаг, переход,
+блок действий, дивергенции, «прыжок». Программа на языке SFC состоит из
+набора шагов, связанных переходами.</p>
+<p>Как только активной становится вкладка с редактированием SFC диаграммы,
+в панели инструментов появляется следующая панель (см. <a class="reference internal" href="#image82"><span class="std std-numref">Рисунок 49 </span></a>).</p>
+<div class="align-center figure" id="image82">
+<a class="reference internal image-reference" href="../_images/image82.png"><img alt="../_images/image82.png" src="../_images/image82.png" style="width: 4.54902in; height: 0.40959in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 49  </span><span class="caption-text">- Панель редактирования SFC диаграмм</span></p>
+</div>
+<p>В таблице 8 приведено описание кнопок данной панели. Описание остальных
+кнопок, относящихся к языку FBD и LD (за исключением катушки) и так же
+находящихся на этой панели, приведены в таблицах 6 и 7 соответственно.</p>
+<p>Таблица 8 - Кнопки панели редактирования LD диаграммы</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Внешний вид кнопки</th>
+<th class="head">Название кнопки</th>
+<th class="head">Функция кнопки</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../_images/image83.png"><img alt="image85" src="../_images/image83.png" style="width: 0.26458in; height: 0.26458in;" /></a></td>
+<td>Создать новый
+начальный шаг</td>
+<td>Вызов диалога
+редактирования шага</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../_images/image84.png"><img alt="image86" src="../_images/image84.png" style="width: 0.26458in; height: 0.26458in;" /></a></td>
+<td>Создать новый шаг</td>
+<td>Вызов диалога
+редактирования шага</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../_images/image85.png"><img alt="image87" src="../_images/image85.png" style="width: 0.26458in; height: 0.26458in;" /></a></td>
+<td>Создать новый переход</td>
+<td>Вызов диалога
+редактирования
+перехода</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../_images/image86.png"><img alt="image88" src="../_images/image86.png" style="width: 0.26458in; height: 0.26458in;" /></a></td>
+<td>Создать новый блок
+действий</td>
+<td>Вызов диалога
+редактирования блока
+действий</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../_images/image87.png"><img alt="image89" src="../_images/image87.png" style="width: 0.26458in; height: 0.26458in;" /></a></td>
+<td>Создать новое
+ветвление</td>
+<td>Вызов диалога
+создания новой
+дивергенции и
+конвергенции</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../_images/image88.png"><img alt="image90" src="../_images/image88.png" style="width: 0.26458in; height: 0.26458in;" /></a></td>
+<td>Создать новый
+безусловный переход</td>
+<td>Вызов диалога
+создания «прыжка»</td>
+</tr>
+</tbody>
+</table>
+<p>Далее даётся описание добавления приведённых в таблице 8 элементов языка
+SFC.</p>
+<p>Добавление шага инициализации и шага</p>
+<p>Процедура добавления шага инициализации и обычного шага ничем не
+отличается. В обоих случаях вызывается диалог «Редактировать шаг» (см.
+<a class="reference internal" href="#image89"><span class="std std-numref">Рисунок 53 </span></a>).</p>
+<div class="align-center figure" id="image90">
+<a class="reference internal image-reference" href="../_images/image90.png"><img alt="../_images/image90.png" src="../_images/image90.png" style="width: 2.91111in; height: 1.92917in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 50  </span><span class="caption-text">- Диалог редактирования шага инициализации SFC диаграммы</span></p>
+</div>
+<p>Согласно стандарту IEC 61131-3, на SFC диаграмме должен быть один шаг
+инициализации, который характеризует начальное состояние SFC-диаграммы и
+отображается со сдвоенными линиями на границах (см. <a class="reference internal" href="#image91"><span class="std std-numref">Рисунок 51 </span></a>).</p>
+<div class="align-center figure" id="image91">
+<a class="reference internal image-reference" href="../_images/image911.png"><img alt="../_images/image911.png" src="../_images/image911.png" style="width: 0.85429in; height: 0.6876in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 51  </span><span class="caption-text">- Шаг инициализации языка SFC</span></p>
+</div>
+<p>В случае, если при добавлении шага не указано его имя - будет выдана
+ошибка (см. <a class="reference internal" href="#image92"><span class="std std-numref">Рисунок 52 </span></a>).</p>
+<div class="align-center figure" id="image92">
+<a class="reference internal image-reference" href="../_images/image92.png"><img alt="../_images/image92.png" src="../_images/image92.png" style="width: 3.12544in; height: 1.58355in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 52  </span><span class="caption-text">– Ошибка отсутствия имени шага при его добавлении в диаграмму</span></p>
+</div>
+<p>При добавлении шага появляется диалог, в котором можно указать, с
+помощью галочек его соединители (см. <a class="reference internal" href="#image89"><span class="std std-numref">Рисунок 53 </span></a>):</p>
+<ul class="simple">
+<li>«Вход»;</li>
+<li>«Выход»;</li>
+<li>«Действие».</li>
+</ul>
+<div class="align-center figure" id="image89">
+<a class="reference internal image-reference" href="../_images/image89.png"><img alt="../_images/image89.png" src="../_images/image89.png" style="width: 2.91111in; height: 1.92917in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 53  </span><span class="caption-text">– Добавление шага SFC на диаграмму</span></p>
+</div>
+<p>«Действие» добавляет соединитель для связывания данного шага с блоком
+действий. «Вход» и «Выход» соединители, как правило, соединены с
+переходом. Соответственно, после нажатия кнопки OK, на диаграмму будет
+добавлен шаг с указанными соединителями (см. <a class="reference internal" href="#image93"><span class="std std-numref">Рисунок 54 </span></a>).</p>
+<div class="align-center figure" id="image93">
+<a class="reference internal image-reference" href="../_images/image93.png"><img alt="../_images/image93.png" src="../_images/image93.png" style="width: 0.77394in; height: 0.54862in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 54  </span><span class="caption-text">- Шаг SFC диаграммы с соединителями входа и действия</span></p>
+</div>
+<p>Добавление перехода</p>
+<p>При добавлении на SFC диаграмму перехода, появится диалог «Редактировать
+переход» (см. <a class="reference internal" href="#image94"><span class="std std-numref">Рисунок 55 </span></a>).</p>
+<div class="align-center figure" id="image94">
+<a class="reference internal image-reference" href="../_images/image94.png"><img alt="../_images/image94.png" src="../_images/image94.png" style="width: 2.66597in; height: 2.53125in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 55  </span><span class="caption-text">– Добавление нового перехода в диаграмму</span></p>
+</div>
+<p>В данном диалоге необходимо выбрать тип перехода и его приоритет. Тип
+перехода может быть:</p>
+<ul class="simple">
+<li>«Ссылка»;</li>
+<li>«Встроенный код»;</li>
+<li>«Соединение».</li>
+</ul>
+<p>При выборе типа перехода «Ссылка» в открывающемся списке (см. <a class="reference internal" href="#image95"><span class="std std-numref">Рисунок 56 </span></a>)
+будут доступны переходы, предопределённые в дереве проекта для данного
+программного модуля, написанного на языке SFC. Добавление
+предопределённого перехода описывается ниже после описания всех
+добавляемых элементов языка SFC.</p>
+<div class="align-center figure" id="image95">
+<a class="reference internal image-reference" href="../_images/image95.png"><img alt="../_images/image95.png" src="../_images/image95.png" style="width: 2.71865in; height: 2.57843in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 56  </span><span class="caption-text">- Всплывающий список с доступными предопределёнными переходами</span></p>
+</div>
+<p>При выборе типа перехода «Непосредственно» (см. <a class="reference internal" href="#image96"><span class="std std-numref">Рисунок 57 </span></a>), условие
+перехода можно написать в виде выражения на языке ST.</p>
+<div class="align-center figure" id="image96">
+<a class="reference internal image-reference" href="../_images/image96.png"><img alt="../_images/image96.png" src="../_images/image96.png" style="width: 2.65625in; height: 2.54097in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 57  </span><span class="caption-text">- Условие перехода в виде встроенного кода, написанного на языке ST</span></p>
+</div>
+<p>Реализация перехода таким способом удобна в случае, когда необходимо
+короткое условие, например: переменные «F3» и «F4» типа INT равны.
+Встроенный код для такого условия выглядит следующим образом (см. <a class="reference internal" href="#image96"><span class="std std-numref">Рисунок 57 </span></a>):</p>
+<p>F3 = F4</p>
+<p>Так же например можно в качестве условия просто указать переменную. В
+случае её значения равного 0 - будет означать FALSE, все остальные
+значения - TRUE.</p>
+<p>При выборе типа перехода «Соединение» (см. <a class="reference internal" href="#image97"><span class="std std-numref">Рисунок 58 </span></a>), в качестве условия
+перехода можно использовать выходные значения элементов языка FBD или
+LD.</p>
+<div class="align-center figure" id="image97">
+<a class="reference internal image-reference" href="../_images/image97.png"><img alt="../_images/image97.png" src="../_images/image97.png" style="width: 2.71667in; height: 2.60764in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 58  </span><span class="caption-text">- Выбор условия перехода как соединение с элементами других графических языков IEC 61131-3</span></p>
+</div>
+<p>При выборе типа перехода «Подключение», у добавленного перехода появится
+слева контакт, который необходимо соединить с выходным значением,
+например, функционального блока языка FBD или катушки LD диаграммы.
+Стоит отметить, что данное выходное значение должно быть типа BOOL.
+Ниже, на <a class="reference internal" href="#image98"><span class="std std-numref">Рисунок 59 </span></a> красным цветом выделен пример перехода, условия
+которого задано с помощью языка LD.</p>
+<div class="align-center figure" id="image98">
+<a class="reference internal image-reference" href="../_images/image98.png"><img alt="../_images/image98.png" src="../_images/image98.png" style="width: 5.88859in; height: 1.52941in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 59  </span><span class="caption-text">– Пример SFC диаграммы, в которой один из переходов задан с помощью языка LD</span></p>
+</div>
+<p>Добавление блока действий</p>
+<p>При добавлении блока действий на диаграмму появится диалог
+«Редактировать свойство блока действий» (см. <a class="reference internal" href="#image99"><span class="std std-numref">Рисунок 60 </span></a>).</p>
+<div class="align-center figure" id="image99">
+<a class="reference internal image-reference" href="../_images/image99.png"><img alt="../_images/image99.png" src="../_images/image99.png" style="width: 3.70588in; height: 2.11019in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 60  </span><span class="caption-text">- Диалог «Редактировать свойство блока действий»</span></p>
+</div>
+<p>Данный блок действий может содержать набор действий. Добавить новое
+действие можно нажав кнопку «Добавить» и установив необходимые
+параметры:</p>
+<ul class="simple">
+<li>«Спецификатор»;</li>
+<li>«Длительность»;</li>
+<li>«Тип»: «Действие», «Переменная», «Непосредственно»;</li>
+<li>«Значение»;</li>
+<li>«Индикатор».</li>
+</ul>
+<p>Поле «Спецификатор» определяет момент времени, когда действие
+начинается, сколько времени продолжается и когда заканчивается. Выбрать
+квалификатор можно из списка (см. <a class="reference internal" href="#image100"><span class="std std-numref">Рисунок 61 </span></a>).</p>
+<div class="align-center figure" id="image100">
+<a class="reference internal image-reference" href="../_images/image100.png"><img alt="../_images/image100.png" src="../_images/image100.png" style="width: 3.52941in; height: 3.41013in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 61  </span><span class="caption-text">- Меню выбора спецификатора для действия в диаграмме SFC</span></p>
+</div>
+<p>Подробное описание спецификаторов, которые выбираются из предлагаемого
+списка при добавлении действия приведено в таблице 9.</p>
+<p>Таблица 9 - Квалификаторы действий SFC диаграммы</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Имя спецификатора</th>
+<th class="head">Поведение блока действия</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>D</td>
+<td>Действие начинает выполняться
+через некоторое заданное время
+(если шаг еще активен) и
+выполняется до тех пор, пока
+данный шаг активен</td>
+</tr>
+<tr class="row-odd"><td>L</td>
+<td>Действие выполняется в течение
+некоторого заданного интервала
+времени, после чего выполнение
+действия останавливается</td>
+</tr>
+<tr class="row-even"><td>N</td>
+<td>Действие выполняется, пока данный
+шаг активен</td>
+</tr>
+<tr class="row-odd"><td>P</td>
+<td>Действие выполняется один раз,
+как только шаг стал активен</td>
+</tr>
+<tr class="row-even"><td>P0</td>
+<td>Действие выполняется один раз,
+как только шаг стал неактивен</td>
+</tr>
+<tr class="row-odd"><td>P1</td>
+<td>Действие выполняется один раз,
+как только шаг стал активен</td>
+</tr>
+<tr class="row-even"><td>S</td>
+<td>Действие активируется и остается
+активным пока SFC диаграмма
+выполняется</td>
+</tr>
+<tr class="row-odd"><td>R</td>
+<td>Действие выполняется, когда
+диаграмма деактивизируется</td>
+</tr>
+<tr class="row-even"><td>DS</td>
+<td>Действие начинается выполняться
+через некоторое заданное время,
+только в том случае если шаг еще
+активен</td>
+</tr>
+<tr class="row-odd"><td>SL</td>
+<td>Действие активно в течении
+некоторого, заданного интервала</td>
+</tr>
+<tr class="row-even"><td>SD</td>
+<td>Действие начинается выполняться
+через некоторое время, даже в том
+случае если шаг уже не активен</td>
+</tr>
+</tbody>
+</table>
+<p>Поле «Длительность» необходимо для установки интервала времени
+необходимого для некоторых квалификаторов, описанных выше в таблице 9.</p>
+<p>«Тип» определяет код или конкретную манипуляцию, которая будет
+выполняться во время активации действия. В случае выбора «Действия»
+появляется возможность, как и в случае с переходом, использовать
+предопределённые действия в дереве проекта для данного программного
+модуля, написанного на языке SFC (см. <a class="reference internal" href="#image101"><span class="std std-numref">Рисунок 62 </span></a>).</p>
+<div class="align-center figure" id="image101">
+<a class="reference internal image-reference" href="../_images/image1011.png"><img alt="../_images/image1011.png" src="../_images/image1011.png" style="width: 3.7451in; height: 2.14006in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 62  </span><span class="caption-text">- Выбор предопределённого действия</span></p>
+</div>
+<p>Добавление предопределённого действия также как добавление
+предопределённого перехода описывается ниже после описания всех
+добавляемых элементов языка SFC.</p>
+<p>В случае выбора типа действия «Переменная» в поле «Значение» появляется
+возможность выбрать переменные (см. <a class="reference internal" href="#image102"><span class="std std-numref">Рисунок 63 </span></a>), относящиеся к данному
+программному модулю.</p>
+<div class="align-center figure" id="image102">
+<a class="reference internal image-reference" href="../_images/image102.png"><img alt="../_images/image102.png" src="../_images/image102.png" style="width: 3.68611in; height: 2.00972in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 63  </span><span class="caption-text">- Выбор предопределённой переменной</span></p>
+</div>
+<p>Как только шаг становится активным, данная переменная в зависимости от
+своего типа принимает значение 0, 0.0, FALSE и другие нулевые значения
+типов. Как только действие начинает выполняться, переменная принимает
+значение 1, 1.0, TRUE и другие единичные значения типов. В случае если
+действие прекратило своё выполнение переменная снова принимает значение
+0, 0.0, FALSE и другое нулевое значение, в зависимости от своего типа.</p>
+<p>В случае выбора «Непосредственно», появляется возможность в поле
+«Значение» написать на языке ST код, который будет выполняться, когда
+действие становится активным (см. <a class="reference internal" href="#image103"><span class="std std-numref">Рисунок 64 </span></a>).</p>
+<div class="align-center figure" id="image103">
+<a class="reference internal image-reference" href="../_images/image103.png"><img alt="../_images/image103.png" src="../_images/image103.png" style="width: 3.83333in; height: 2.14861in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 64  </span><span class="caption-text">- Написание встроенного кода для действия</span></p>
+</div>
+<p>Следует отметить, что в конце встроенного кода для действия необходимо
+поставить «;», в отличие от встроенного кода для перехода.</p>
+<p>После добавления блока действия на диаграмму необходимо его
+ассоциировать с конкретным шагом. Данная операция выполняется обычным
+соединением правого контакта у шага и левого контакта у действия (см.
+<a class="reference internal" href="#image104"><span class="std std-numref">Рисунок 65 </span></a>).</p>
+<div class="align-center figure" id="image104">
+<a class="reference internal image-reference" href="../_images/image104.png"><img alt="../_images/image104.png" src="../_images/image104.png" style="width: 3.16279in; height: 1.11494in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 65  </span><span class="caption-text">- Ассоциирование шага ORANGE блоком действия, содержащим четыре действия</span></p>
+</div>
+<p>Добавление дивергенции и конвергенции</p>
+<p>При добавлении ветвления, появится диалог «Создать новое ветвление» (см.
+<a class="reference internal" href="#image105"><span class="std std-numref">Рисунок 66 </span></a>).</p>
+<div class="align-center figure" id="image105">
+<a class="reference internal image-reference" href="../_images/image105.png"><img alt="../_images/image105.png" src="../_images/image105.png" style="width: 3.66667in; height: 2.08786in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 66  </span><span class="caption-text">– Добавление альтернативного ветвления(дивергенции)</span></p>
+</div>
+<p>В первую очередь следует выбрать тип ветвления:</p>
+<ul class="simple">
+<li>«Альтернативное ветвление»;</li>
+<li>«Альтернативное объединения»;</li>
+<li>«Параллельное ветвление»;</li>
+<li>«Параллельное объединение».</li>
+</ul>
+<p>Вторым параметром является количество разветвлений, которое определяет
+на сколько ветвей будет либо расходится (в случае выбора типа
+дивергенции «Альтернативное ветвление» или «Параллельное ветвление»)
+одна ветвь, либо сколько ветвей будет сходиться в одну ветвь (в случае
+выбора типа дивергенции «Альтернативное объединения» или «Параллельное
+объединение»)</p>
+<p>Пример дивергенции с двумя разветвлениями показан на <a class="reference internal" href="#image106"><span class="std std-numref">Рисунок 67 </span></a> и выделен
+красным цветом.</p>
+<div class="align-center figure" id="image106">
+<a class="reference internal image-reference" href="../_images/image106.png"><img alt="../_images/image106.png" src="../_images/image106.png" style="width: 4.9186in; height: 2.27907in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 67  </span><span class="caption-text">– Пример SFC диаграммы, содержащей альтернативное ветвление</span></p>
+</div>
+<p>Пример конвергенции выделен красным цветом на <a class="reference internal" href="#image106-2"><span class="std std-numref">Рисунок 68 </span></a>.</p>
+<div class="align-center figure" id="image106-2">
+<a class="reference internal image-reference" href="../_images/image106.png"><img alt="../_images/image106.png" src="../_images/image106.png" style="width: 4.39216in; height: 2.19608in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 68  </span><span class="caption-text">– Пример SFC диаграммы, содержащей альтернативное объединение</span></p>
+</div>
+<p>Пример параллельного ветвления показан на <a class="reference internal" href="#image107"><span class="std std-numref">Рисунок 69 </span></a> и выделен красным
+цветом.</p>
+<div class="align-center figure" id="image107">
+<a class="reference internal image-reference" href="../_images/image107.png"><img alt="../_images/image107.png" src="../_images/image107.png" style="width: 2.87255in; height: 2.31373in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 69  </span><span class="caption-text">– Пример SFC диаграммы с параллельным ветвлением</span></p>
+</div>
+<p>Согласно стандарту IEC 61131-3, каждая ветвь альтернативного ветвления
+должна оканчиваться переходом, при альтернативном объединении переход
+должен быть перед каждой ветвью. При параллельном ветвлении переход
+должен быть перед ветвлением, а при параллельном объединении переход
+необходим после объединения.</p>
+<p>Добавление безусловного перехода</p>
+<p>Элемент «безусловный переход» на SFC диаграмме подобен выполнению
+оператора GOTO при переходе на определённую метку в коде в различных
+языках программирования. После выбора добавления «прыжка» на SFC
+диаграмму, появится диалог (см. <a class="reference internal" href="#image108"><span class="std std-numref">Рисунок 70 </span></a>), в котором необходимо выбрать
+из списка шаг, к которому будет происходить «прыжок» - переход от одного
+шага SFC диаграммы к другому.</p>
+<div class="align-center figure" id="image108">
+<a class="reference internal image-reference" href="../_images/image108.png"><img alt="../_images/image108.png" src="../_images/image108.png" style="width: 2.54214in; height: 1.94792in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 70  </span><span class="caption-text">– Диалог добавления безусловного перехода</span></p>
+</div>
+<p>В данном диалоге также присутствует и шаг инициализации (начальный шаг).
+После выбора шага и нажатия кнопки OK. На SFC диаграмме появится
+стрелочка, которую нужно соединить с переходом (см. <a class="reference internal" href="#image109"><span class="std std-numref">Рисунок 71 </span></a>). Справа от
+стрелочки находится имя шага, к которому осуществляется переход в случае
+выполнения условия перехода, находящегося выше и соединённого с ней.</p>
+<div class="align-center figure" id="image109">
+<a class="reference internal image-reference" href="../_images/image109.png"><img alt="../_images/image109.png" src="../_images/image109.png" style="width: 2.95278in; height: 2.725in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 71  </span><span class="caption-text">– Безусловный переход с шага Stop на начальный шаг Start</span></p>
+</div>
+<p>Согласно стандарту IEC 61131-3, между шагом и «прыжком» должен
+обязательно быть определён переход.</p>
+<p>Предопределённые условия перехода и действия в дереве проекта</p>
+<p>В случае, если необходимо использовать определённое условие перехода
+между множеством шагов, есть возможность определить данное условие
+перехода в структуре SFC диаграммы. Данная операция выполняется нажатием
+на данную SFC диаграмму на дереве проекта правой клавишей мыши
+и выбором «Добавить переход» (см. <a class="reference internal" href="#image110"><span class="std std-numref">Рисунок 72 </span></a>).</p>
+<div class="align-center figure" id="image110">
+<a class="reference internal image-reference" href="../_images/image110.png"><img alt="../_images/image110.png" src="../_images/image110.png" style="width: 2.63681in; height: 2.62431in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 72  </span><span class="caption-text">- Всплывающее меню SFC диаграммы в панели проекта</span></p>
+</div>
+<p>Далее появится диалог под названием «Создать новый переход» (см.:numref:<cite>image111</cite>).
+В нём необходимо выбрать уникальное имя перехода и язык, в котором
+будет описано данное условие.</p>
+<div class="align-center figure" id="image111">
+<a class="reference internal image-reference" href="../_images/image1111.png"><img alt="../_images/image1111.png" src="../_images/image1111.png" style="width: 3.03889in; height: 1.60694in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 73  </span><span class="caption-text">- Диалог «Создать новый переход»</span></p>
+</div>
+<p>В случае, если переходы с введённым именем уже существуют, то будет
+выведено сообщение об ошибке (см. <a class="reference internal" href="#image112"><span class="std std-numref">Рисунок 74 </span></a>).</p>
+<div class="align-center figure" id="image112">
+<a class="reference internal image-reference" href="../_images/image112.png"><img alt="../_images/image112.png" src="../_images/image112.png" style="width: 3.93103in; height: 1.26593in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 74  </span><span class="caption-text">- Сообщение об ошибке добавления существующего программного модуля</span></p>
+</div>
+<p>Добавление действия в структуру SFC диаграммы (см. <a class="reference internal" href="#image113"><span class="std std-numref">Рисунок 75 </span></a>) происходит
+аналогично добавлению перехода в данную структуру.</p>
+<div class="align-center figure" id="image113">
+<a class="reference internal image-reference" href="../_images/image113.png"><img alt="../_images/image113.png" src="../_images/image113.png" style="width: 3.25862in; height: 1.81131in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 75  </span><span class="caption-text">- Всплывающее меню SFC для структуры диаграммы</span></p>
+</div>
+<p>После выбора «Добавить действие» во всплывающем меню, вызванном с
+помощью нажатия правой клавиши мыши по программному модулю, написанном с
+помощью языка SFC, появится диалог «Создать новое действие»
+(см. <a class="reference internal" href="#image114"><span class="std std-numref">Рисунок 76 </span></a>).</p>
+<div class="align-center figure" id="image114">
+<a class="reference internal image-reference" href="../_images/image114.png"><img alt="../_images/image114.png" src="../_images/image114.png" style="width: 2.48958in; height: 1.42039in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 76  </span><span class="caption-text">- Диалог «Создать новое действие»</span></p>
+</div>
+<p>В данном диалоге необходимо указать «Имя действия» (должно быть
+уникальным) и выбрать язык (ST, IL, FBD, LD), на котором будет написано
+данное действие. Если имя действия не заполнено будет выведено сообщение
+об ошибке (см. <a class="reference internal" href="#image115"><span class="std std-numref">Рисунок 77 </span></a>).</p>
+<div class="align-center figure" id="image115">
+<a class="reference internal image-reference" href="../_images/image115.png"><img alt="../_images/image115.png" src="../_images/image115.png" style="width: 3.125in; height: 1.23355in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 77  </span><span class="caption-text">- Ошибка не заполнения имени действия при его добавлении</span></p>
+</div>
+<p>После того как действие добавлено, необходимо реализовать его код на
+текстовом или графическом языке, в зависимости от языка, который был
+выбран в диалоге «Создать новое действие» (см. <a class="reference internal" href="#image114"><span class="std std-numref">Рисунок 76 </span></a>). После
+добавления переходов и действий в дерево проекта они будут доступны для
+множественного использования.</p>
+<p>Описание языка SFC, основных конструкций и примера его использования
+приведены в приложении 7.</p>
+</div>
+<div class="section" id="id6">
+<h2>Панель редактирования ресурса<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Панель редактирования ресурса (см. <a class="reference internal" href="#image116"><span class="std std-numref">Рисунок 78 </span></a>) содержит панель переменных и
+констант, которая позволяет определять глобальные переменные на уровне
+ресурса и панели, содержащие задачи и экземпляры.</p>
+<div class="align-center figure" id="image116">
+<a class="reference internal image-reference" href="../_images/image116.png"><img alt="../_images/image116.png" src="../_images/image116.png" style="width: 6.56815in; height: 4.17708in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 78  </span><span class="caption-text">- Вкладка ресурс главной рабочей области</span></p>
+</div>
+<p>Добавление переменных в ресурс ничем не отличается от добавления
+переменных в программные модули, единственное исключение - переменные
+могут быть только класса «Глобальная». Основной задачей данной панели
+является возможность добавить экземпляр, указать для него программный
+модуль типа «Программа», из ранее определённых в проекте, для поля «Тип»
+и выбрать задачу из добавленных в список «Задачи».</p>
+</div>
+<div class="section" id="id7">
+<h2>Панель редактирования типа данных<a class="headerlink" href="#id7" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Панель редактирования типа данных (см. <a class="reference internal" href="#image117"><span class="std std-numref">Рисунок 79 </span></a>) позволяет определить
+различные параметры создаваемого пользовательского типа данных.</p>
+<div class="align-center figure" id="image117">
+<a class="reference internal image-reference" href="../_images/image117.png"><img alt="../_images/image117.png" src="../_images/image117.png" style="width: 4.3125in; height: 2.10947in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 79  </span><span class="caption-text">- Вкладка создания нового типа данных</span></p>
+</div>
+<p>Главным параметром является список под названием «Механизм создания
+нового типа», позволяющим выбрать следующие типы:</p>
+<ul class="simple">
+<li>Синоним;</li>
+<li>Поддиапазон существующего типа (выделение диапазона значений
+стандартного типа);</li>
+<li>Перечисление (перечисляемый тип);</li>
+<li>Массив;</li>
+<li>Структура, позволяющая определять тип, основанный на объединении
+несколько типов.</li>
+</ul>
+<p>Далее рассмотрены подробнее параметры для каждого из вышеперечисленных
+типов.</p>
+<p>Синоним</p>
+<p>При выборе «Синоним» (см. <a class="reference internal" href="#image118"><span class="std std-numref">Рисунок 80 </span></a>), из списка указывается базовый тип и
+его начальное значение.</p>
+<div class="align-center figure" id="image118">
+<a class="reference internal image-reference" href="../_images/image118.png"><img alt="../_images/image118.png" src="../_images/image118.png" style="width: 4.38542in; height: 1.48496in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 80  </span><span class="caption-text">- Добавление псевдонима типа данных</span></p>
+</div>
+<p>Созданный тип представляет собой псевдоним (например, аналогично
+использованию typedef в языке C) уже существующего типа.</p>
+<p>Поддиапазон существующего типа</p>
+<p>В случае выбора механизма создания нового типа «Поддиапазон
+существующего типа», помимо базового типа и начального значения
+производится установка параметров «Минимум» и «Максимум» (см. <a class="reference internal" href="#image119"><span class="std std-numref">Рисунок 81 </span></a>),
+т.е. соответственно минимального и максимального значения, которое может
+принимать создаваемый тип данных.</p>
+<div class="align-center figure" id="image119">
+<a class="reference internal image-reference" href="../_images/image119.png"><img alt="../_images/image119.png" src="../_images/image119.png" style="width: 4.28125in; height: 2.08966in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 81  </span><span class="caption-text">- Добавление нового типа данных, представляющего поддиапазон существующего типа</span></p>
+</div>
+<p>Перечисляемый тип</p>
+<p>При выборе механизма создания нового типа «Перечисляемый тип»
+(см. <a class="reference internal" href="#image120"><span class="std std-numref">Рисунок 82 </span></a>), появится панель,
+содержащая таблицу, в которой можно задать список
+возможных значений данного перечисляемого типа.</p>
+<div class="align-center figure" id="image120">
+<a class="reference internal image-reference" href="../_images/image120.png"><img alt="../_images/image120.png" src="../_images/image120.png" style="width: 4.13542in; height: 2.99656in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 82  </span><span class="caption-text">– Добавление перечисляемого типа данных</span></p>
+</div>
+<p>Добавление, редактирование, удаление, перемещение данных значений
+осуществляется с помощью кнопок, описание которых приведено в таблице 10</p>
+<p>Таблица 10 - Кнопки редактирования значений перечисляемого типа</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Внешний вид кнопки</th>
+<th class="head">Название кнопки</th>
+<th class="head">Функция кнопки</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../_images/image121.png"><img alt="image129" src="../_images/image121.png" style="width: 0.29167in; height: 0.29167in;" /></a></td>
+<td>Редактировать</td>
+<td>Редактировать
+выделенное поле в
+таблице</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../_images/image121_1.png"><img alt="image130" src="../_images/image121_1.png" style="width: 0.27778in; height: 0.27761in;" /></a></td>
+<td>Добавить</td>
+<td>Добавить новое поле в
+таблицу</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../_images/image121_2.png"><img alt="image131" src="../_images/image121_2.png" style="width: 0.27083in; height: 0.27753in;" /></a></td>
+<td>Удалить</td>
+<td>Удалить выделенное
+поле в таблице</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../_images/image121_3.png"><img alt="image132" src="../_images/image121_3.png" style="width: 0.27083in; height: 0.27778in;" /></a></td>
+<td>Переместить вверх</td>
+<td>Переместить вверх
+выделенное поле в
+таблице</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../_images/image121_4.png"><img alt="image133" src="../_images/image121_4.png" style="width: 0.28403in; height: 0.2771in;" /></a></td>
+<td>Переместить вниз</td>
+<td>Переместить вниз
+выделенное поле в
+таблице</td>
+</tr>
+</tbody>
+</table>
+<p>Также есть возможность задать начальное значение данного перечисляемого
+типа в поле «Начальное значение».</p>
+<p>Массив</p>
+<p>При выборе механизма создания нового типа «Массив» (см. <a class="reference internal" href="#image122"><span class="std std-numref">Рисунок 83 </span></a>)
+появится панель, в которой необходимо указать базовый тип, начальное
+значение, а также размерность массива.</p>
+<div class="align-center figure" id="image122">
+<a class="reference internal image-reference" href="../_images/image122.png"><img alt="../_images/image122.png" src="../_images/image122.png" style="width: 3.61769in; height: 2.71875in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 83  </span><span class="caption-text">- Добавление типа данных - массива</span></p>
+</div>
+<p>Размерность массива задаётся в следующем формате: &lt;начальное
+значение&gt;..&lt;конечное значение&gt;</p>
+<p>Структура</p>
+<p>При выборе механизма создания нового типа «Структура» (см. <a class="reference internal" href="#image123"><span class="std std-numref">Рисунок 84 </span></a>), в
+появившейся таблице необходимо добавить необходимое количество полей
+структуры. Каждое поле имеет своё имя, тип и начальное значение.</p>
+<div class="align-center figure" id="image123">
+<a class="reference internal image-reference" href="../_images/image123.png"><img alt="../_images/image123.png" src="../_images/image123.png" style="width: 4.06191in; height: 2.48194in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 84  </span><span class="caption-text">– Добавление типа данных – структура</span></p>
+</div>
+<p>Добавленные типы данных могут использоваться также как и стандартные при
+реализации алгоритмов и логики выполнения программных модулей.</p>
+<p>Выше были рассмотрены варианты редактирования различных элементов, из
+которых состоит проект, согласно стандарту IEC 61131-3. Далее будет
+продолжено рассмотрение остальных компонент среды разработки Beremiz.</p>
+</div>
+<div class="section" id="id8">
+<h2>Панель экземпляров проекта<a class="headerlink" href="#id8" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Панель экземпляров проекта (см. <a class="reference internal" href="#image124"><span class="std std-numref">Рисунок 85 </span></a>) обычно располагается слева в
+среде разработки Beremiz и отображаемые в ней экземпляры зависят от
+выбранного элемента в дереве проекта.</p>
+<div class="align-center figure" id="image124">
+<a class="reference internal image-reference" href="../_images/image124.png"><img alt="../_images/image124.png" src="../_images/image124.png" style="width: 3.24386in; height: 3.44776in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 85  </span><span class="caption-text">– Панель экземпляров проекта</span></p>
+</div>
+<p>При выборе в дереве проекта элемента, соответствующего ресурсу, в панели
+экземпляров проекта будут отображены экземпляры,
+определённые в данном ресурсе, а так же глобальные переменные ресурса.
+На <a class="reference internal" href="#image125"><span class="std std-numref">Рисунок 86 </span></a> показано, как в панели редактирования ресурса определен
+экземпляр для программного модуля «main_program»:</p>
+<div class="align-center figure" id="image125">
+<a class="reference internal image-reference" href="../_images/image125.png"><img alt="../_images/image125.png" src="../_images/image125.png" style="width: 6.40556in; height: 3.07361in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 86  </span><span class="caption-text">– Экземпляр main_instance для программного модуля main_program</span></p>
+</div>
+<p>Соответственно, при выборе в дереве проекта ресурса, в котором
+определены экземпляры (описанные выше) и глобальная переменная, панель
+экземпляров будет выглядеть, как показано на <a class="reference internal" href="#image126"><span class="std std-numref">Рисунок 87 </span></a>:</p>
+<div class="align-center figure" id="image126">
+<a class="reference internal image-reference" href="../_images/image126.png"><img alt="../_images/image126.png" src="../_images/image126.png" style="width: 3.01042in; height: 1.17988in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 87  </span><span class="caption-text">- Панель экземпляров при выборе элемента ресурса в дереве проекта</span></p>
+</div>
+<p>При выборе в дереве проекта элемента, соответствующего программным
+модулям «Программа» и «Функциональный блок» в панели экземпляров будут
+отображены переменные, определённые в них. Ниже на <a class="reference internal" href="#image127"><span class="std std-numref">Рисунок 88 </span></a> приведён
+пример программного модуля типа «Программа» с именем «program0», в
+котором определено 8 переменных различных пользовательских классов.</p>
+<div class="align-center figure" id="image127">
+<a class="reference internal image-reference" href="../_images/image127.png"><img alt="../_images/image127.png" src="../_images/image127.png" style="width: 6.91896in; height: 2.75978in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 88  </span><span class="caption-text">- Программный модуль типа «Программа»</span></p>
+</div>
+<p>Соответственно, при выборе в дереве проекта данного программного модуля
+в панели экземпляров будут отображены, определённые выше переменные
+(см. <a class="reference internal" href="#image128"><span class="std std-numref">Рисунок 89 </span></a>).</p>
+<div class="align-center figure" id="image128">
+<a class="reference internal image-reference" href="../_images/image128.png"><img alt="../_images/image128.png" src="../_images/image128.png" style="width: 3.49844in; height: 2.23864in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 89  </span><span class="caption-text">- Панель экземпляров проекта при выборе в дереве проекта программного модуля main_program</span></p>
+</div>
+<p>В случае выбора других элементов в дереве проекта, панель отладки будет
+пустой. Как можно заметить, с правой стороны от каждого элемента в
+панели отладки располагаются кнопки, назначение которых описано в
+таблице 11.</p>
+<p>Таблица 11 - Кнопки на панели экземпляров проекта</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Внешний вид кнопки</th>
+<th class="head">Название кнопки</th>
+<th class="head">Функция кнопки</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../_images/image129.png"><img alt="image141" src="../_images/image129.png" style="width: 0.26875in; height: 0.26875in;" /></a></td>
+<td>Отладка экземпляра</td>
+<td>Кнопка запуска режима
+отладки для
+экземпляра</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../_images/image129.png"><img alt="image142" src="../_images/image129.png" style="width: 0.26654in; height: 0.26654in;" /></a></td>
+<td>Двойной щелчок по
+кнопке «Отладка
+экземпляра»</td>
+<td>Отображение графика
+изменения значения
+переменной в режиме
+отладки</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../_images/image130.png"><img alt="image143" src="../_images/image130.png" style="width: 0.26654in; height: 0.26654in;" /></a></td>
+<td>Родительский
+экземпляр</td>
+<td>Переход к
+родительскому
+экземпляру и его
+локальным переменным</td>
+</tr>
+</tbody>
+</table>
+<p>В случае нажатия кнопки запуска режима отладки, для экземпляра
+программы, написанной на одном из графических языков (FBD, LD или SFC),
+откроется вкладка с панелью, на которой диаграмма будет отображена в
+режиме отладки. Если кнопка запуска режима отладки нажимается
+для элемента переменной, то переменная будет добавлена в панель отладки.</p>
+<p>Описанные выше кнопки доступны только в режиме отладки прикладной
+программы. Про данный режим подробнее рассказывается в п. 8.</p>
+</div>
+<div class="section" id="id9">
+<h2>Панель библиотеки функций и функциональных блоков<a class="headerlink" href="#id9" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Панель библиотеки функций и функциональных блоков (см. <a class="reference internal" href="#image131"><span class="std std-numref">Рисунок 90 </span></a>), как
+правило, располагается справа в среде разработки Beremiz. Она содержит
+коллекцию стандартных функций и функциональных блоков, разделённых по
+разделам в соответствии с их назначением, которые доступны при написании
+алгоритмов и логики работы программных модулей.</p>
+<div class="align-center figure" id="image131">
+<a class="reference internal image-reference" href="../_images/image131.png"><img alt="../_images/image131.png" src="../_images/image131.png" style="width: 2.83582in; height: 4.78215in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 90  </span><span class="caption-text">– Панель библиотеки функций и функциональных блоков</span></p>
+</div>
+<p>Выделены следующие разделы для функций и функциональных блоков:
+стандартные, дополнительные, преобразования типов данных, операций с
+числовыми данными, арифметических операций, временных операций,
+побитовых и смещения бит, операций выбора, операций сравнения, строковых
+операций, модулей «Python» и «SVGUI».</p>
+<p>Помимо стандартных функций и функциональных блоков, данная панель
+содержит раздел «пользовательские программные модули». В него попадают
+функции и функциональные блоки, добавленные в конкретный проект, т. е.
+содержащиеся в дереве проекта.</p>
+<p>Использование данных функций и функциональных блоков осуществляется
+перетаскиванием необходимого блока с помощью зажатой левой кнопки мыши
+(Drag&amp;Drop) в область редактирования: либо текстовый редактор, либо
+графический редактор.Имеется специальное поле поиска
+функционального блока по имени.</p>
+</div>
+<div class="section" id="id10">
+<h2>Отладочная консоль<a class="headerlink" href="#id10" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Панель, содержащая отладочную консоль (см. <a class="reference internal" href="#image132"><span class="std std-numref">Рисунок 91 </span></a>), как правило,
+располагается в правом нижнем углу среды разработки Beremiz.</p>
+<div class="align-center figure" id="image132">
+<a class="reference internal image-reference" href="../_images/image132.png"><img alt="../_images/image132.png" src="../_images/image132.png" style="width: 6.21844in; height: 2.31343in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 91  </span><span class="caption-text">– Успешная сборка в отладочной консоли</span></p>
+</div>
+<p>Она служит для отображения в виде текстовых сообщений:</p>
+<ul class="simple">
+<li>Результатов генерации ST и C кода;</li>
+<li>Результатов компиляции и компоновки прикладной программы;</li>
+<li>Процесса соединения и передачи прикладной программы на целевое
+устройство;</li>
+<li>Различных промежуточных манипуляций в процессы создания прикладной
+программы.</li>
+</ul>
+<p>В случае, если необходимо вывести предупреждения среды разработки
+Beremiz или ошибки компиляторов (MatlEC или C кода) во время их работы
+цвет вывода текстовых сообщений становится красным. Критические ошибки
+также выделяется красным цветом, но при этом еще желтым фоном (см. <a class="reference internal" href="#image133"><span class="std std-numref">Рисунок 92 </span></a>).</p>
+<div class="align-center figure" id="image133">
+<a class="reference internal image-reference" href="../_images/image133.png"><img alt="../_images/image133.png" src="../_images/image133.png" style="width: 6.3125in; height: 2.31319in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 92  </span><span class="caption-text">- Ошибка сборки проекта в отладочной консоли</span></p>
+</div>
+</div>
+<div class="section" id="id11">
+<h2>Поиск элементов в проекте<a class="headerlink" href="#id11" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Для поиска интересующего элемента в проекте используется диалог «Поиск в
+проекте» (см. <a class="reference internal" href="#image134"><span class="std std-numref">Рисунок 93 </span></a>). Его вызов происходит с помощью главного меню
+программы или панели инструментов.</p>
+<div class="align-center figure" id="image134">
+<a class="reference internal image-reference" href="../_images/image134.png"><img alt="../_images/image134.png" src="../_images/image134.png" style="width: 5.14861in; height: 2.87083in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 93  </span><span class="caption-text">– Диалог поиска в проекте</span></p>
+</div>
+<p>В появившемся диалоге можно установить различные параметры поиска:
+шаблон поиска, область поиска, чувствительность к регистру при поиске, а
+так же записать шаблон поиска в виде регулярного выражения. После того
+как все параметры установлены, необходимо нажать кнопку «Поиск» в этом
+диалоге. Ниже на <a class="reference internal" href="#image135"><span class="std std-numref">Рисунок 94 </span></a> приведен пример поиска элемента с именем
+«LIGHT».</p>
+<div class="align-center figure" id="image135">
+<a class="reference internal image-reference" href="../_images/image135.png"><img alt="../_images/image135.png" src="../_images/image135.png" style="width: 5.17847in; height: 5.52292in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 94  </span><span class="caption-text">– Результаты поиска элемента с именем LIGHT</span></p>
+</div>
+<p>Результат поиска выводится в иерархической структуре. При двойном щелчке
+по одному из результатов - данный элемент будет выделен в проекте
+оранжевым цветом.</p>
+</div>
+<div class="section" id="id12">
+<h2>Панель отладки<a class="headerlink" href="#id12" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Панель отладки располагается в правой части среды разработки Beremiz
+(см. <a class="reference internal" href="#image136"><span class="std std-numref">Рисунок 95 </span></a>).</p>
+<div class="align-center figure" id="image136">
+<a class="reference internal image-reference" href="../_images/image136.png"><img alt="../_images/image136.png" src="../_images/image136.png" style="width: 2.45833in; height: 1.81181in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 95  </span><span class="caption-text">– Панель отладки</span></p>
+</div>
+<p>Данная панель представляет собой таблицу с двумя столбцами «Переменная»
+и «Значение». Соответственно, столбец «Переменная» содержит экземпляры
+переменных, значения которых во время исполнения, отображаются в поле
+«Значение» и могут изменяться. Добавление переменных осуществляется с
+помощью панели экземпляров проекта.</p>
+<p>Изменение значений переменной во время отладки прикладной программы
+осуществляется нажатием левой клавишей мыши на иконку замка напротив
+интересующей переменной (см. <a class="reference internal" href="#image137"><span class="std std-numref">Рисунок 96 </span></a>).</p>
+<div class="align-center figure" id="image137">
+<a class="reference internal image-reference" href="../_images/image137.png"><img alt="../_images/image137.png" src="../_images/image137.png" style="width: 2.42708in; height: 1.86875in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 96  </span><span class="caption-text">– Установка значения переменной</span></p>
+</div>
+<p>Далее появится диалог ввода значения для выбранной переменной (см. <a class="reference internal" href="#image138"><span class="std std-numref">Рисунок 97 </span></a>).</p>
+<div class="align-center figure" id="image138">
+<a class="reference internal image-reference" href="../_images/image138.png"><img alt="../_images/image138.png" src="../_images/image138.png" style="width: 2.97083in; height: 1.48958in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 97  </span><span class="caption-text">– Диалог установки значения для переменной</span></p>
+</div>
+<p>В режиме отладки форсированное значение переменной будет подсвечено
+синим цветом. Для того чтобы освободить значение переменной, необходимо
+нажать на иконку открытого замка (см. <a class="reference internal" href="#image139"><span class="std std-numref">Рисунок 98 </span></a>)</p>
+<div class="align-center figure" id="image139">
+<a class="reference internal image-reference" href="../_images/image139.png"><img alt="../_images/image139.png" src="../_images/image139.png" style="width: 4.0625in; height: 1.71944in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 98  </span><span class="caption-text">– Освобождение значения переменной</span></p>
+</div>
+<p>На данной панели присутствует кнопка удаления переменной из панели
+отладчика, перемещать и передавать ссылку на переменные можно в
+Drag&amp;Drop режиме.</p>
+</div>
+<div class="section" id="id13">
+<h2>Панель графика изменения значения переменной в режиме отладки<a class="headerlink" href="#id13" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Данная панель (см. <a class="reference internal" href="#image140"><span class="std std-numref">Рисунок 99 </span></a>) открывается во вкладке отладчика напротив
+выбранной переменной в случае, если в панели отладчика
+нажать на переменную двойным щелчком мыши. Напротив переменной
+появляется график изменения значения переменной в режиме отладки (см.
+таблицу 11).</p>
+<div class="align-center figure" id="image140">
+<a class="reference internal image-reference" href="../_images/image140.png"><img alt="../_images/image140.png" src="../_images/image140.png" style="width: 3.06181in; height: 4.80972in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 99  </span><span class="caption-text">– Графики изменения значений счетчиков Cnt</span></p>
+</div>
+<p>На данной панели есть возможность установить:</p>
+<ul class="simple">
+<li>«Интервал» - временной отрезок, за который отображается изменений
+графика;</li>
+<li>«Масштаб» - задание приближения отображения графика;</li>
+<li>«Позиция» - перемещение по отображению графика, от начала и до конца.</li>
+</ul>
+<p>Также на данной панели в правом нижнем углу располагаются
+вспомогательные кнопки. Описание данных кнопок приведено в таблице 12:</p>
+<p>Таблица 12 - Кнопки на панели графика изменения значения переменной</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Внешний вид кнопки</th>
+<th class="head">Функция кнопки</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../_images/image141.png"><img alt="image154" src="../_images/image141.png" style="width: 0.26736in; height: 0.26736in;" /></a></td>
+<td>Очистка отображения графика</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../_images/image142.png"><img alt="image155" src="../_images/image142.png" style="width: 0.26736in; height: 0.26736in;" /></a></td>
+<td>Переход к отображению текущего
+значения графика, т.е. сдвиг
+параметра «Позиция» максимально
+вправо</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../_images/image143.png"><img alt="image156" src="../_images/image143.png" style="width: 0.17431in; height: 0.17431in;" /></a></td>
+<td>Сброс настроек масштаба до
+настроек по умолчанию: x 1.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="work_with_project.html" class="btn btn-neutral float-right" title="Работа с проектом" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="terms_and_definitions.html" class="btn btn-neutral" title="Основные термины и определения" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, JSC &#34;INEUM named after I.S.Bruk&#34;.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

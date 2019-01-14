@@ -1,0 +1,1414 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Работа с проектом &mdash; Документация Beremiz </title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/brz.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Алфавитный указатель"
+              href="../genindex.html"/>
+        <link rel="search" title="Поиск" href="../search.html"/>
+    <link rel="top" title="Документация Beremiz " href="../index.html"/>
+        <link rel="up" title="Руководство программиста" href="index.html"/>
+        <link rel="next" title="Описание библиотеки функций и функциональных блоков" href="library.html"/>
+        <link rel="prev" title="Основные компоненты среды Beremiz" href="ide_components.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Beremiz
+          
+
+          
+            
+            <img src="../_static/about_brz_logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Содержание</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install_guide/index.html">Инструкции по установке</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Руководство программиста</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="overview.html">Обращение к программе. Входные и выходные данные</a></li>
+<li class="toctree-l2"><a class="reference internal" href="terms_and_definitions.html">Основные термины и определения</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ide_components.html">Основные компоненты среды Beremiz</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Работа с проектом</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Создание нового проекта</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Настройка проекта</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Конфигурационные переменные проекта</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Настройки сборки проекта и соединения с целевым устройством</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">Данные о проекте</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Программные модули</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id8">Программа</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">Функциональный блок</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Ресурс</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id11">Глобальные переменные ресурса</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">Задачи и экземпляры ресурса</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">Типы данных</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">Сборка и передача на целевое устройство прикладной программы</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id15">Сборка прикладной программы</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">Запуск серверной части для отладки</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">Отладка прикладной программы</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#retain">Retain переменные в прикладной программе</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id18">Запуск отладчика</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id19">Отладка текстовых языков</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id20">Отладка графических языков</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="library.html">Описание библиотеки функций и функциональных блоков</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../iec_guide/index.html">Языки стандарта МЭК 61131-3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_guide/index.html">Beremiz: Руководство разработчика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation_guide/index.html">Участие в разработке документации</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Beremiz</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Руководство программиста</a> &raquo;</li>
+      
+    <li>Работа с проектом</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/usage_guide/work_with_project.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>Работа с проектом<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Данный раздел отражает основные приемы работы в среде разработки
+Beremiz, необходимые при создании прикладной программы. Прикладная
+программа для целевой платформы является результатом сборки проекта с
+определенной конфигурацией.</p>
+<p>Проект в Beremiz представляет собой именованную папку, в которой лежат
+исходные файлы. Папка должна быть обязательно пустой и не защищена от
+записи. Если в папке уже есть файлы, будет выдана соответствующая
+ошибка. В созданной папке будут сохранены следующие файлы и папки:</p>
+<ul class="simple">
+<li>«beremiz.xml» – в данном XML файле сохраняются настройки специфичные
+для среды разработки Beremiz относительно проекта;</li>
+<li>«plc.xml» – в данном XML файле сохраняется полное описание проекта:
+всех программных модулей, ресурсов, пользовательских типов данных,
+данных о проекте, настроек редакторов графических языков IEC 61131-3;</li>
+<li>папка «build», которая хранит генерируемый ST и C код, а также
+получаемый исполняемый бинарный файл прошивки.</li>
+</ul>
+<div class="section" id="id2">
+<h2>Создание нового проекта<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Новый проект создаётся с помощью главного меню «Файл» – «Новый»
+(см. <a class="reference internal" href="#image144"><span class="std std-numref">Рисунок 100 </span></a>), либо с помощью кнопки «Новый»
+на панели управления.</p>
+<div class="align-center figure" id="image144">
+<a class="reference internal image-reference" href="../_images/image1441.png"><img alt="../_images/image1441.png" src="../_images/image1441.png" style="width: 2.71875in; height: 3.65812in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 100  </span><span class="caption-text">- Создание нового проекта с помощью главного меню</span></p>
+</div>
+<p>Далее появится диалог (см. <a class="reference internal" href="#image145"><span class="std std-numref">Рисунок 101 </span></a>) , в котором необходимо выбрать
+папку, где будет храниться данный проект.</p>
+<div class="align-center figure" id="image145">
+<a class="reference internal image-reference" href="../_images/image145.png"><img alt="../_images/image145.png" src="../_images/image145.png" style="width: 5.55208in; height: 3.65973in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 101  </span><span class="caption-text">- Диалог выбора папки для нового проекта</span></p>
+</div>
+<p>В появившемся диалоге вам будет предложено настроить основной
+программный модуль проекта (см. <a class="reference internal" href="#image146"><span class="std std-numref">Рисунок 102 </span></a>). В данном диалоге три поля:</p>
+<ul class="simple">
+<li>«Имя POU»;</li>
+<li>«Тип POU»;</li>
+<li>«Язык».</li>
+</ul>
+<div class="align-center figure" id="image146">
+<a class="reference internal image-reference" href="../_images/image146.png"><img alt="../_images/image146.png" src="../_images/image146.png" style="width: 1.95247in; height: 2.80208in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 102  </span><span class="caption-text">- Диалог добавления основного программного модуля</span></p>
+</div>
+<p>Имя программного модуля, присвоенное по умолчанию, может быть заменено
+на любое имя, соответствующее назначению данного программного модуля.</p>
+<p>Тип основного программного модуля – «Программа», в дальнейшем в проект
+можно добавить дополнительные программные модули, функции и
+функциональные блоки.</p>
+<p>В поле «Язык» необходимо выбрать из списка один из языков стандарта IEC
+61131-3 (IL, ST, LD, FBD, SFC), на котором будут реализованы алгоритмы и
+логика работы данного добавляемого программного модуля.</p>
+<p>При нажатии кнопки ОК в проект будет добавлен основной программный
+модуль с выбранными параметрами, ресурс проекта будет конфигурирован по
+умолчанию: добавлена одна задача циклического выполнения с интервалом 20
+мс, и один экземпляр основной программы. При нажатии кнопки
+Отмена будет создан пустой проект без каких-либо настроек.</p>
+<p>В рамках описания процесса создания нового проекта за основу выбран
+проект «First steps» из стандартного набора тестовых проектов IDE
+Beremiz. Основной программный модуль в этом проекте написан на языке
+FBD, соответственно, в диалоге необходимо выбрать язык FBD, в дальнейшем
+язык основного программного модуля возможно изменить.</p>
+</div>
+<div class="section" id="id3">
+<h2>Настройка проекта<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Следующим шагом после создания проекта является его настройка,
+включающая в себя задание глобальных переменных, установку параметров
+компиляции и компоновки, и заполнение данных о проекте.</p>
+<p>Вызов панели настройки проекта осуществляется при выборе (двойном щелчке
+левой кнопкой мыши) корневого элемента дерева проекта, который по
+умолчанию, сразу после создания проекта называется «Unnamed»(см. <a class="reference internal" href="#image147"><span class="std std-numref">Рисунок 103 </span></a>).</p>
+<div class="align-center figure" id="image147">
+<a class="reference internal image-reference" href="../_images/image147.png"><img alt="../_images/image147.png" src="../_images/image147.png" style="width: 6.26597in; height: 2.92948in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 103  </span><span class="caption-text">- Панель настройки проекта</span></p>
+</div>
+<p>На панели присутствуют три вкладки:</p>
+<ul class="simple">
+<li>Конфигурационные переменные;</li>
+<li>Свойства проекта;</li>
+<li>Конфигурация.</li>
+</ul>
+<div class="section" id="id4">
+<h3>Конфигурационные переменные проекта<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Конфигурационные переменные позволяют программным модулям типа
+«Программа» и «Функциональный блок» использовать общие переменные,
+которые будут определены в глобальной области видимости проекта.</p>
+<p>Ниже, на <a class="reference internal" href="#image149"><span class="std std-numref">Рисунок 104 </span></a>, в панели переменных и констант добавим
+конфигурационную константу «ResetCounterValue» типа INT с начальным
+значением 17, с помощью кнопки «Добавить переменную» (см. таблицу 3).</p>
+<div class="align-center figure" id="image149">
+<a class="reference internal image-reference" href="../_images/image149.png"><img alt="../_images/image149.png" src="../_images/image149.png" style="width: 7.51597in; height: 1.92014in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 104  </span><span class="caption-text">- Объявление конфигурационной переменной</span></p>
+</div>
+<p>Для того чтобы к данной конфигурационной переменной можно было
+обращаться из программных модулей типа «Программа» или «Функциональный
+блок» необходимо в их панели редактирования в панели переменных и
+констант создать переменную с таким же именем, как и ранее объявленная
+глобальная, и установить её класс «Внешний».</p>
+</div>
+<div class="section" id="id5">
+<h3>Настройки сборки проекта и соединения с целевым устройством<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Для использования написанной прикладной программы необходимо её собрать
+(скомпилировать и скомпоновать), т.е. получить исполняемый файл и
+передать на целевое устройство для отладки или просто исполнения. В
+связи с этим основными настройками являются: «URI системы исполнения» -
+адрес целевого устройства, и целевая платформа - архитектура платформы
+целевого устройства (см. <a class="reference internal" href="#image150"><span class="std std-numref">Рисунок 105 </span></a>).</p>
+<div class="align-center figure" id="image150">
+<a class="reference internal image-reference" href="../_images/image150.png"><img alt="../_images/image150.png" src="../_images/image150.png" style="width: 4.30208in; height: 4.4905in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 105  </span><span class="caption-text">- Конфигурация проекта</span></p>
+</div>
+<p>Как правило, «URI системы исполнения» указывается в формате:</p>
+<p>&lt;Тип коннектора&gt;)://&lt;Адрес последовательного порта
+подключения&gt;:&lt;битрейт&gt;</p>
+<p>Тип коннектора выбирается в зависимости от типа сервиса подключения к
+целевому устройству. Например, для отладки прикладной программы на
+локальной машине при помощи Soft PLC, целевым устройством является
+служба «Beremiz service» и тип коннектора следует выбрать «LOCAL». Для
+отладки прикладной программы вне локальной машины используется
+библиотека PYRO, в это случае «URI целевого устройства» указывается в
+формате:</p>
+<p>PYRO://&lt;IP-адрес целевого устройства&gt;:&lt;порт&gt;</p>
+<p>Если в проекте используются дополнительные библиотеки, их следует
+добавить в конфигурации проекта, нажав «checkbox» напротив добавляемой
+библиотеки в подменю «Библиотеки».</p>
+</div>
+<div class="section" id="id6">
+<h3>Данные о проекте<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h3>
+<p>При создании нового проекта, все обязательные поля в настройках
+информации о проекте заполняются значениями по умолчанию. Рекомендуется
+заменить данные настройки по умолчанию на релевантную информацию
+(см.:numref:<cite>image152</cite>), позволяющую удобным образом различать проекты.</p>
+<div class="align-center figure" id="image152">
+<a class="reference internal image-reference" href="../_images/image152.png"><img alt="../_images/image152.png" src="../_images/image152.png" style="width: 4.70833in; height: 3.91046in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 106  </span><span class="caption-text">- Заполнение данных о проекте</span></p>
+</div>
+<p>Большая часть данных в информации проекте являются необязательным для
+заполнения, но обязательные должны быть заполнены, такие поля помечены в
+подсказках в именовании каждого пункта. После задания настроек проекта,
+как правило, следует добавление в проект необходимых программных модулей
+(функций, функциональных блоков и программ), реализация их алгоритмов и
+логики работы с помощью текстовых и графических языков стандарта IEC
+61131-3.</p>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>Программные модули<a class="headerlink" href="#id7" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Добавление программных модулей (программ, функций, функциональных
+блоков) осуществляется с помощью всплывающего меню дерева проекта,
+в котором необходимо выбрать пункт «Функция», «Функциональный
+блок» или «Программа». Далее появится диалог «Создать новый POU».</p>
+<p>Проект «First steps» представляет собой основной программный модуль,
+написанный на языке FBD, в котором используются 5 функциональных блоков,
+написанных на пяти разных языках IEC 61131-3. Каждый функциональный блок
+это счетчик, увеличивающий значение выхода на единицу до тех пор, пока
+на входе Reset не будет установлено значение True. Инкрементация
+значения происходит в каждом цикле основной программы. Регулировать
+интервал цикла можно изменяя длительность задачи для экземпляра основной
+программы в панели ресурсов.</p>
+<p>В созданный проект необходимо добавить программу program0, функцию и 5
+функциональных блоков: CounterST, CounterLD, CounterFBD, CounterSFC,
+CounterIL. Если при создании проекта основной программный модуль
+program0 не был добавлен, его следует добавить вручную. Далее
+рассмотрено добавление каждого программного модуля в отдельности.</p>
+<div class="section" id="id8">
+<h3>Программа<a class="headerlink" href="#id8" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Ниже будет приведён пример добавления в проект программы, написанной на
+языке FBD. Логика и алгоритм работы данного программного модуля
+следующие: определена переменная Reset типа BOOL, отвечающая за сброс
+каждого из пяти счетчиков, определены пять переменных Cnt1..Cnt5 типа
+INT, в них хранится значение каждого из пяти счетчиков, и добавлены пять
+функциональных блоков, представляющих собой инкрементирующий счетчик на
+пяти языках IEC 61131-3. При запуске программы начальное значение
+переменной Reset устанавливается по умолчанию False. Значения счетчиков
+начнут увеличиваться, начиная со значения по умолчанию (для типа INT
+равно 0). Для сброса счетчиков переменную Reset необходимо форсировать
+значением True, затем вернуть значение False. Переменным Cnt1..Cnt5
+будет присвоено начальное значение конфигурационной константы
+ResetCounterValue, таким образом значения счетчиков
+сбросятся, и начнется отсчет начиная с 17.</p>
+<p>Сначала следует добавление программы в проект, осуществляемое с помощью
+меню дерева проекта, выбором пункта «Программа» (см. <a class="reference internal" href="#image153"><span class="std std-numref">Рисунок 107 </span></a>):</p>
+<div class="align-center figure" id="image153">
+<a class="reference internal image-reference" href="../_images/image153.png"><img alt="../_images/image153.png" src="../_images/image153.png" style="width: 2.48837in; height: 3.73256in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 107  </span><span class="caption-text">- Добавление программы в проект</span></p>
+</div>
+<p>В появившемся диалоге (см. <a class="reference internal" href="#image154"><span class="std std-numref">Рисунок 108 </span></a>) выберем язык FBD и тип POU
+«программа».</p>
+<div class="align-center figure" id="image154">
+<a class="reference internal image-reference" href="../_images/image154.png"><img alt="../_images/image154.png" src="../_images/image154.png" style="width: 3.23958in; height: 2.46875in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 108  </span><span class="caption-text">- Диалог добавления программы в проект</span></p>
+</div>
+<p>Добавим в панели переменных и констант переменную Reset типа BOOL,
+отвечающую за сброс каждого из пяти счетчиков, а так же пять переменных
+Cnt1..Cnt5 типа INT, в которых будут храниться значения каждого из пяти
+счетчиков. Далее необходимо обратиться к редактору языка FBD. Для
+написания алгоритма и логики выполнения данной программы нам понадобятся
+функциональные блоки счетчиков, создание которых рассмотрено в п. 6.3.2.</p>
+<p>Для удобства редактирования FBD диаграмм в редакторе существует функция
+Drag&amp;Drop , необходимые функциональные блоки и
+переменные можно добавить в поле редактирования из библиотеки функций и
+функциональных блоков и таблицы переменных путем
+перетаскивания в поле редактирования. необходимо левой
+клавишей мыши зажать столбец «#» для переменной в панели переменных и
+констант, далее перенести указатель на область редактирования FBD
+диаграммы и отпустить кнопку мыши (Drag&amp;Drop).</p>
+<p>Перенесем 5 экземпляров переменной Reset и все переменные Cnt1..Cnt5 в
+поле редактирования диаграммы как показано на <a class="reference internal" href="#image155"><span class="std std-numref">Рисунок 109 </span></a>:</p>
+<div class="align-center figure" id="image155">
+<a class="reference internal image-reference" href="../_images/image155.png"><img alt="../_images/image155.png" src="../_images/image155.png" style="width: 6.08574in; height: 4.35274in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 109  </span><span class="caption-text">- Перенос переменных в поле редактирования</span></p>
+</div>
+<p>Из библиотеки функций и функциональных блоков добавим пользовательские
+функциональные блоки. Добавление данных функциональных блоков удобнее
+осуществить переносом соответствующей функции с помощью мыши (Drag&amp;Drop)
+из панели библиотеки функций и функциональных блоков в область
+редактирования FBD диаграммы данного программного модуля как показано
+на <a class="reference internal" href="#image156"><span class="std std-numref">Рисунок 110 </span></a>:</p>
+<div class="align-center figure" id="image156">
+<a class="reference internal image-reference" href="../_images/image156.png"><img alt="../_images/image156.png" src="../_images/image156.png" style="width: 6.61565in; height: 4.56977in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 110  </span><span class="caption-text">- Программа на языке FBD без связей</span></p>
+</div>
+<p>Добавим связи между функциональными блоками и входными и выходными
+переменными.</p>
+<div class="align-center figure" id="image157">
+<a class="reference internal image-reference" href="../_images/image157.png"><img alt="../_images/image157.png" src="../_images/image157.png" style="width: 6.93338in; height: 5in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 111  </span><span class="caption-text">- Основной программный модуль на языке FBD</span></p>
+</div>
+</div>
+<div class="section" id="id9">
+<h3>Функциональный блок<a class="headerlink" href="#id9" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Добавление пользовательского функционального блока происходит путем
+нажатия на пункт «Функциональный блок» во всплывающем меню дерева
+проекта . В диалоговом окне (см. <a class="reference internal" href="#image158"><span class="std std-numref">Рисунок 112 </span></a>) задайте имя
+функционального блока в поле «Имя POU», в поле «Тип POU» выберите
+«функциональный блок», в поле «Язык» выберите язык, на котором будет
+написан алгоритм работы блока.</p>
+<div class="align-center figure" id="image158">
+<a class="reference internal image-reference" href="../_images/image158.png"><img alt="../_images/image158.png" src="../_images/image158.png" style="width: 2.67442in; height: 2.96774in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 112  </span><span class="caption-text">- Диалог создания нового функционального блока</span></p>
+</div>
+<p><strong>Функциональный блок на языке ST</strong></p>
+<p>Создайте функциональный блок с именем «CounterST» (см. <a class="reference internal" href="#image159"><span class="std std-numref">Рисунок 113 </span></a>), в
+котором инструментами языка ST будет реализован счетчик , принимающий на
+вход переменную Reset типа BOOL, и возвращающий значение счетчика Out.</p>
+<div class="align-center figure" id="image159">
+<a class="reference internal image-reference" href="../_images/image159.png"><img alt="../_images/image159.png" src="../_images/image159.png" style="width: 2.875in; height: 2.18167in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 113  </span><span class="caption-text">- Диалог добавления пользовательского функционального блока</span></p>
+</div>
+<p>В отличие от функции, функциональный блок может быть описан на любом
+языке стандарта IEC 61131-3, включая язык SFC. На <a class="reference internal" href="#image160"><span class="std std-numref">Рисунок 114 </span></a> показана
+реализация данного функционального блока на языке ST.</p>
+<div class="align-center figure" id="image160">
+<a class="reference internal image-reference" href="../_images/image160.png"><img alt="../_images/image160.png" src="../_images/image160.png" style="width: 7.27511in; height: 3.08333in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 114  </span><span class="caption-text">- описание пользовательского функционального блока на языке ST</span></p>
+</div>
+<p>Возвращаемое значение «Out» имеет тип INT и класс «Выход». Добавленные
+локальная переменная «Cnt» и внешняя конфигурационная переменная
+«ResetCounterValue» имеют тип INT, входная переменная «Reset» имеет тип
+BOOL. Реализованный функциональный блок становится доступным в панели
+библиотеки функций и функциональных блоков и может
+использоваться в программных модулях типа «Программа» и «Функциональный
+блок». На <a class="reference internal" href="#image161"><span class="std std-numref">Рисунок 115 </span></a> показано использование созданного функционального
+блока «CounterST» в основном программном модуле, написанном на языке
+FBD.</p>
+<div class="align-center figure" id="image161">
+<a class="reference internal image-reference" href="../_images/image161.png"><img alt="../_images/image161.png" src="../_images/image161.png" style="width: 6.70833in; height: 2.94044in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 115  </span><span class="caption-text">- Использование созданного функционального блока CounterST в основном программном модуле</span></p>
+</div>
+<p>С входом «Reset» соединена общая для всех счетчиков переменная «Reset»
+типа BOOL, результат выполнения помещается в переменную «Cnt1» типа INT.
+Следует отметить, что при попытке удаления функции или функционального
+блока из проекта (см. <a class="reference internal" href="#image162"><span class="std std-numref">Рисунок 116 </span></a>), где эти добавленные программные модули
+уже используются, будет выдана ошибка.</p>
+<div class="align-center figure" id="image162">
+<a class="reference internal image-reference" href="../_images/image162.png"><img alt="../_images/image162.png" src="../_images/image162.png" style="width: 2.75in; height: 1.4537in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 116  </span><span class="caption-text">- Сообщение об ошибке при удалении функционального блока</span></p>
+</div>
+<p>Реализации на других языках полностью идентичны по набору входных,
+выходных и локальных переменных. Далее будут описаны примеры
+функциональных блоков на остальных четырех языках IEC 61131-3.</p>
+<p><strong>Функциональный блок на языке FBD</strong></p>
+<p>Создайте функциональный блок с именем «CounterFBD», в котором
+инструментами языка FBD будет реализован счетчик , принимающий на вход
+переменную «Reset» типа BOOL, и возвращающий значение счетчика «Out».
+Для удобства редактирования FBD диаграмм в редакторе существует функция
+Drag&amp;Drop , необходимые функциональные блоки и
+переменные можно добавить в поле редактирования из библиотеки функций и
+функциональных блоков и таблицы переменных путем
+перетаскивания в поле редактирования (см. <a class="reference internal" href="#image163"><span class="std std-numref">Рисунок 117 </span></a>). необходимо левой
+клавишей мыши зажать столбец «#» для переменной в панели переменных и
+констант, далее перенести указатель на область редактирования FBD
+диаграммы и отпустить кнопку мыши (Drag&amp;Drop).</p>
+<p>Добавим возвращаемое значение «Out» типа INT и класса «Выход», локальную
+переменную «Cnt» типа INT, внешнюю конфигурационную переменную
+«ResetCounterValue» типа INT, и входную переменную «Reset» типа BOOL.</p>
+<div class="align-center figure" id="image163">
+<a class="reference internal image-reference" href="../_images/image163.png"><img alt="../_images/image163.png" src="../_images/image163.png" style="width: 3.97708in; height: 2.63542in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 117  </span><span class="caption-text">- Добавление переменной в поле редактирования</span></p>
+</div>
+<p>Перенесенные на поле редактирования переменные отображаются как
+прямоугольные блоки с коннекторами входа и выхода(см. <a class="reference internal" href="#image164"><span class="std std-numref">Рисунок 118 </span></a>).</p>
+<div class="align-center figure" id="image164">
+<a class="reference internal image-reference" href="../_images/image164.png"><img alt="../_images/image164.png" src="../_images/image164.png" style="width: 4.29167in; height: 1.72917in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 118  </span><span class="caption-text">- Блоки переменных в поле редактирования</span></p>
+</div>
+<p>После переноса в поле редактирования всех переменных, добавьте числовой
+литерал со значением «1» при помощи кнопки «Создать новую
+переменную», в диалоговом окне создания переменной в поле «Выражение»
+напишите «1» (см. <a class="reference internal" href="#image165-2"><span class="std std-numref">Рисунок 119 </span></a>). Таким способом задается шаг инкрементации
+счетчика.</p>
+<div class="align-center figure" id="image165-2">
+<a class="reference internal image-reference" href="../_images/image165.png"><img alt="../_images/image165.png" src="../_images/image165.png" style="width: 2.98958in; height: 3.05219in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 119  </span><span class="caption-text">- Диалог создания переменной</span></p>
+</div>
+<p>Для того чтобы переменной «Cnt» можно было одновременно и присвоить
+значение и передать это значение переменной Out, задайте класс
+переменной «Вход/Выход». Сделать это можно щелчком правой кнопкой мыши
+по блоку переменной, во всплывающем меню следует выбрать «Вход/Выход»
+(см. <a class="reference internal" href="#image166"><span class="std std-numref">Рисунок 120 </span></a>), или щелкнув по блоку двойным щелчком левой кнопки мыши,
+выбрав в выпадающем списке «Класс» вариант «Вход/Выход»(см. <a class="reference internal" href="#image167"><span class="std std-numref">Рисунок 121 </span></a>).</p>
+<div class="align-center figure" id="image166">
+<a class="reference internal image-reference" href="../_images/image166.png"><img alt="../_images/image166.png" src="../_images/image166.png" style="width: 2.46875in; height: 1.64583in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 120  </span><span class="caption-text">- Выбор коннектора для блока переменной</span></p>
+</div>
+<div class="align-center figure" id="image167">
+<a class="reference internal image-reference" href="../_images/image167.png"><img alt="../_images/image167.png" src="../_images/image167.png" style="width: 2.97917in; height: 3.06496in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 121  </span><span class="caption-text">- Диалог редактирования свойств блока переменной</span></p>
+</div>
+<p>Далее необходимо обратиться к редактору языка FBD. Для написания
+алгоритма и логики выполнения данной программы будут добавлены две
+функции: «ADD» и «SEL».</p>
+<p>Функция «ADD» находится во вкладке «Математика» в Библиотеке функций и
+функциональных блоков , обозначает сложение от 2 до 20
+входных значений (в нашем примере их 2) на входах «IN1» и «IN2»,
+возвращает результат вычисления на выход «OUT».</p>
+<p>Функция «SEL» обозначает «Выбор одного из двух значений» и находится во
+вкладке «Операции выбора». Она содержит три входных переменных «G»,
+«IN0», «IN1» и одну выходную «OUT». Если «G» равно 0 (или FALSE), то
+выходной переменной «OUT» присваивается значение «IN0». Если «G» равно 1
+(или TRUE), то выходной переменной «OUT» присваивается значение «IN1».</p>
+<p>Добавление данных функций удобнее осуществить переносом соответствующей
+функции с помощью мыши (Drag&amp;Drop) из панели Библиотеки функций и
+функциональных блоков в область редактирования FBD диаграммы
+функционального блока. Результатом вышеизложенных действий должна стать
+FBD диаграмма без соединений (см. <a class="reference internal" href="#image168"><span class="std std-numref">Рисунок 122 </span></a>).</p>
+<div class="align-center figure" id="image168">
+<a class="reference internal image-reference" href="../_images/image168.png"><img alt="../_images/image168.png" src="../_images/image168.png" style="width: 4.67708in; height: 1.97877in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 122  </span><span class="caption-text">- FBD диаграмма без соединений</span></p>
+</div>
+<p>Следующим шагом станет соединение выходов переменных со входами функций.
+Соединим числовой литерал 1 с входом «IN1» функции ADD, а выход «OUT»
+функции ADD соединим с входом «IN0» функции SEL. В свою очередь, выход
+«OUT» функции SEL соединим с входным коннектором переменной Cnt, а
+выходной коннектор переменной Cnt соединим с входом переменной «Out».
+Соединение блоков осуществляется путем зажатия левой кнопки мыши на
+коннекторе блока, будет создана линия связи которую необходимо протянуть
+до коннектора присоединяемого блока (см. <a class="reference internal" href="#image169"><span class="std std-numref">Рисунок 123 </span></a>).</p>
+<div class="align-center figure" id="image169">
+<a class="reference internal image-reference" href="../_images/image169.png"><img alt="../_images/image169.png" src="../_images/image169.png" style="width: 4.33333in; height: 2.03435in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 123  </span><span class="caption-text">- Соединение блоков в FBD диаграмме</span></p>
+</div>
+<p>Далее присоединим переменную «Reset», управляющую сбросом счетчика, на
+вход «G» функции «SEL», а конфигурационную переменную
+«ResetCounterValue» на вход «IN1». Таким образом, меняя значение
+переменной «Reset» мы управляем значением переменной «Cnt» через функцию
+выбора значения «SEL» . Осталось добавить связь между переменной «Cnt» и
+входом «IN2» функции сложения ADD, тем самым обеспечив увеличение
+значения счетчика на 1 за один цикл ПЛК.</p>
+<p>Полученная реализация алгоритма счетчика на языке FBD представлена
+на <a class="reference internal" href="#image170"><span class="std std-numref">Рисунок 124 </span></a>.</p>
+<div class="align-center figure" id="image170">
+<a class="reference internal image-reference" href="../_images/image170.png"><img alt="../_images/image170.png" src="../_images/image170.png" style="width: 5.95531in; height: 3.46875in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 124  </span><span class="caption-text">- Функциональный блок на языке FBD</span></p>
+</div>
+<p>Функциональный блок становится доступным в панели библиотеки функций и
+функциональных блоков и может использоваться в программных
+модулях типа «Программа» и «Функциональный блок». На <a class="reference internal" href="#image171"><span class="std std-numref">Рисунок 125 </span></a> показано
+использование созданного функционального блока «CounterFBD» в основном
+программном модуле, написанном на языке FBD.</p>
+<div class="align-center figure" id="image171">
+<a class="reference internal image-reference" href="../_images/image171.png"><img alt="../_images/image171.png" src="../_images/image171.png" style="width: 7.02326in; height: 3.22318in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 125  </span><span class="caption-text">- Использование созданного функционального блока CounterFBD в основном программном модуле</span></p>
+</div>
+<p><strong>Функциональный блок на языке SFC</strong></p>
+<p>Создайте функциональный блок с именем «CounterSFC», в котором
+инструментами языка SFC будет реализован счетчик , принимающий на вход
+переменную «Reset» типа BOOL, и возвращающий значение счетчика «Out».</p>
+<p>Добавим в панель переменных и констант возвращаемое значение «Out» типа
+INT и класса «Выход», локальную переменную «Cnt» типа INT, внешнюю
+конфигурационную переменную «ResetCounterValue» типа INT, и входную
+переменную «Reset» типа BOOL.</p>
+<p>Для удобства редактирования SFC диаграмм в редакторе существует функция
+Drag&amp;Drop, необходимые функциональные блоки и
+переменные можно добавить в поле редактирования из библиотеки функций и
+функциональных блоков и таблицы переменных путем
+перетаскивания в поле редактирования (см. <a class="reference internal" href="#image163"><span class="std std-numref">Рисунок 117 </span></a>). необходимо левой
+клавишей мыши зажать столбец «#» для переменной в панели переменных и
+констант, далее перенести указатель на область редактирования SFC
+диаграммы и отпустить кнопку мыши (Drag&amp;Drop).</p>
+<p>Добавим начальный шаг диаграммы, нажав на кнопку «Создать исходный шаг»,
+в диалоге изменим название шага по умолчанию на название «Start»,
+коннектор потребуется только «Выход»(cм. <a class="reference internal" href="#image172"><span class="std std-numref">Рисунок 126 </span></a>)</p>
+<div class="align-center figure" id="image172">
+<a class="reference internal image-reference" href="../_images/image172.png"><img alt="../_images/image172.png" src="../_images/image172.png" style="width: 1.97917in; height: 2.25271in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 126  </span><span class="caption-text">- Добавление начального шага</span></p>
+</div>
+<p>Следуя алгоритму, возможны два состояния – счетчик увеличивается и
+счетчик сброшен. Добавим альтернативное ветвление с двумя ветвями.
+Согласно стандарту IEC 61131-3, каждая ветвь
+альтернативного ветвления должна оканчиваться переходом. Условиями
+переходов будет являться состояние переменной «Reset» : для первой ветви
+выражение «NOT Reset» , для второй ветви просто значения «Reset» (см.:numref:<cite>image173</cite>).</p>
+<div class="align-center figure" id="image173">
+<a class="reference internal image-reference" href="../_images/image173.png"><img alt="../_images/image173.png" src="../_images/image173.png" style="width: 6.38807in; height: 2.94584in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 127  </span><span class="caption-text">- Добавление альтернативного ветвления</span></p>
+</div>
+<p>В первом состоянии добавим шаг с действием «Count» (см. <a class="reference internal" href="#image174"><span class="std std-numref">Рисунок 128 </span></a>), в
+действии на языке ST опишем увеличение счетчика на единицу, и присвоение
+значения переменной «Out» (см. <a class="reference internal" href="#image175"><span class="std std-numref">Рисунок 129 </span></a>).</p>
+<div class="align-center figure" id="image174">
+<a class="reference internal image-reference" href="../_images/image174.png"><img alt="../_images/image174.png" src="../_images/image174.png" style="width: 2.12791in; height: 2.41452in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 128  </span><span class="caption-text">- Добавление шага с коннектором действия</span></p>
+</div>
+<div class="align-center figure" id="image175">
+<a class="reference internal image-reference" href="../_images/image175.png"><img alt="../_images/image175.png" src="../_images/image175.png" style="width: 5.24419in; height: 3.08618in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 129  </span><span class="caption-text">- Добавление действия инкрементации счетчика</span></p>
+</div>
+<p>Во второй ветви добавим шаг с действием «ResetCounter», в действии
+опишем присвоение переменной «Cnt» значение переменной
+«ResetCounterValue», и значению «Out» значение переменной «Cnt» (см.:numref:<cite>image176</cite>).</p>
+<div class="align-center figure" id="image176">
+<a class="reference internal image-reference" href="../_images/image176.png"><img alt="../_images/image176.png" src="../_images/image176.png" style="width: 5.30547in; height: 3.0864in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 130  </span><span class="caption-text">- Добавление действия сброса счетчика</span></p>
+</div>
+<p>Первая ветвь отвечает за инкрементацию счетчика, вторая – за сброс (см. <a class="reference internal" href="#image177"><span class="std std-numref">Рисунок 131 </span></a>).</p>
+<div class="align-center figure" id="image177">
+<a class="reference internal image-reference" href="../_images/image177.png"><img alt="../_images/image177.png" src="../_images/image177.png" style="width: 5.11313in; height: 2.12972in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 131  </span><span class="caption-text">- Шаги с действиями</span></p>
+</div>
+<p>Для выходов из состояния добавим в первой ветви переход с условием
+«Reset», во второй ветви добавим переход с условием «NOT Reset»(см. <a class="reference internal" href="#image178"><span class="std std-numref">Рисунок 132 </span></a>).</p>
+<div class="align-center figure" id="image178">
+<a class="reference internal image-reference" href="../_images/image178.png"><img alt="../_images/image178.png" src="../_images/image178.png" style="width: 5.31358in; height: 2.13954in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 132  </span><span class="caption-text">- Условные переходы для выхода из состояний</span></p>
+</div>
+<p>Далее, объединим ветви альтернативным объединением. Для того чтобы
+программа выполнялась циклически, после объединения добавим безусловный
+переход к начальному шагу «Start». Полученная реализация счетчика на
+языке SFC представлена на <a class="reference internal" href="#image179"><span class="std std-numref">Рисунок 133 </span></a>.</p>
+<div class="align-center figure" id="image179">
+<a class="reference internal image-reference" href="../_images/image179.png"><img alt="../_images/image179.png" src="../_images/image179.png" style="width: 6.47331in; height: 4.20609in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 133  </span><span class="caption-text">- Реализация счетчика на языке SFC</span></p>
+</div>
+<p>Функциональный блок становится доступным в панели библиотеки функций и
+функциональных блоков и может использоваться в программных
+модулях типа «Программа» и «Функциональный блок». На
+<a class="reference internal" href="#image180"><span class="std std-numref">Рисунок 134 </span></a> показано
+использование созданного функционального блока «CounterSFC» в основном
+программном модуле, написанном на языке FBD.</p>
+<div class="align-center figure" id="image180">
+<a class="reference internal image-reference" href="../_images/image180.png"><img alt="../_images/image180.png" src="../_images/image180.png" style="width: 6.92947in; height: 3.67442in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 134  </span><span class="caption-text">- Использование созданного функционального блока CounterSFC в основном программном модуле</span></p>
+</div>
+<p><strong>Функциональный блок на языке IL</strong></p>
+<p>Создайте функциональный блок с именем «CounterIL», в котором
+инструментами языка IL будет реализован счетчик , принимающий на вход
+переменную Reset типа BOOL, и возвращающий значение счетчика Out.</p>
+<p>Добавим в панель переменных и констант возвращаемое значение «Out» типа
+INT и класса «Выход», локальную переменную «Cnt» типа INT, внешнюю
+конфигурационную переменную «ResetCounterValue» типа INT, и входную
+переменную «Reset» типа BOOL.</p>
+<p>Для удобства редактирования кода в редакторе IL существует функция
+Drag&amp;Drop , необходимые переменные можно добавить в поле
+редактирования из таблицы переменных путем перетаскивания в поле
+редактирования (см. <a class="reference internal" href="#image162"><span class="std std-numref">Рисунок 116 </span></a>). необходимо левой клавишей мыши зажать
+столбец «#» для переменной в панели переменных и констант, далее
+перенести указатель на область редактирования и отпустить кнопку мыши
+(Drag&amp;Drop).</p>
+<p>Напишем инструкции для сброса счетчика и сохранения результатов.
+Инструкцию для сброса счетчика назовем «ResetCnt», она загрузит операнд
+ResetCounterValue в аккумулятор:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>ResetCnt:
+(\* reset counter \*)
+LD ResetCounterValue
+</pre></div>
+</div>
+<p>Инструкцию для сохранения результатов назовем «QuitFb», она будет
+сохранять значения операндов «Cnt» и «Out»:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>QuitFb:
+(\* save results \*)
+ST Cnt
+ST Out
+</pre></div>
+</div>
+<p>Загрузим в аккумулятор значение операнда «Reset». Если значение операнда
+«True», следует перейти к инструкции сброса счетчика ResetCnt, в случае
+значения «False» значение операнда должно увеличиться на единицу.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>LD Reset
+JMPC ResetCnt
+(\* increment counter \*)
+LD Cnt
+ADD 1
+JMP QuitFb
+ResetCnt:
+(\* reset counter \*)
+LD ResetCounterValue
+QuitFb:
+(\* save results \*)
+ST Cnt
+ST Out
+</pre></div>
+</div>
+<p>Полученная реализация счетчика на языке IL представлена на <a class="reference internal" href="#image181"><span class="std std-numref">Рисунок 135 </span></a>.</p>
+<div class="align-center figure" id="image181">
+<a class="reference internal image-reference" href="../_images/image181.png"><img alt="../_images/image181.png" src="../_images/image181.png" style="width: 6.64388in; height: 4.2142in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 135  </span><span class="caption-text">- Реализация счетчика на языке IL</span></p>
+</div>
+<p>Функциональный блок становится доступным в панели библиотеки функций и
+функциональных блоков  и может использоваться в программных
+модулях типа «Программа» и «Функциональный блок». На <a class="reference internal" href="#image182"><span class="std std-numref">Рисунок 136 </span></a> показано
+использование созданного функционального блока «CounterIL» в основном
+программном модуле, написанном на языке FBD.</p>
+<div class="align-center figure" id="image182">
+<a class="reference internal image-reference" href="../_images/image182.png"><img alt="../_images/image182.png" src="../_images/image182.png" style="width: 6.44621in; height: 4.75469in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 136  </span><span class="caption-text">- Использование функционального блока CounterIL в основном программном модуле</span></p>
+</div>
+<p><strong>Функциональный блок на языке LD</strong></p>
+<p>Создайте функциональный блок с именем «CounterLD», в котором
+инструментами языка LD будет реализован счетчик , принимающий на вход
+переменную «Reset» типа BOOL, и возвращающий значение счетчика «Out».</p>
+<p>Добавим в панель переменных и констант возвращаемое значение «Out» типа
+INT и класса «Выход», локальную переменную «Cnt» типа INT, внешнюю
+конфигурационную переменную «ResetCounterValue» типа INT, и входную
+переменную «Reset» типа BOOL.</p>
+<p>Для удобства редактирования LD диаграмм в редакторе существует функция
+Drag&amp;Drop , необходимые функциональные блоки и
+переменные можно добавить в поле редактирования из библиотеки функций и
+функциональных блоков  и таблицы переменных путем
+перетаскивания в поле редактирования (см. <a class="reference internal" href="#image163"><span class="std std-numref">Рисунок 117 </span></a>). необходимо левой
+клавишей мыши зажать столбец «#» для переменной в панели переменных и
+констант, далее перенести указатель на область редактирования LD
+диаграммы и отпустить кнопку мыши (Drag&amp;Drop).</p>
+<p>Добавим шину питания, к ней присоединим контакт, связанный с переменной
+«Reset» (см. <a class="reference internal" href="#image183"><span class="std std-numref">Рисунок 137 </span></a>).</p>
+<div class="align-center figure" id="image183">
+<a class="reference internal image-reference" href="../_images/image183.png"><img alt="../_images/image183.png" src="../_images/image183.png" style="width: 3.34884in; height: 2.83296in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 137  </span><span class="caption-text">- Диалог добавления контакта</span></p>
+</div>
+<p>Полученная конструкция будет подавать сигнал на сброс счетчика при
+переходе значения переменной «Reset» в True (см. <a class="reference internal" href="#image184"><span class="std std-numref">Рисунок 138 </span></a>)</p>
+<div class="align-center figure" id="image184">
+<a class="reference internal image-reference" href="../_images/image184.png"><img alt="../_images/image184.png" src="../_images/image184.png" style="width: 1.38542in; height: 0.77083in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 138  </span><span class="caption-text">- Контакт ассоциированный с переменной Reset</span></p>
+</div>
+<p>Далее добавим числовой литерал со значением «1» при
+помощи кнопки «Создать новую переменную», в диалоговом окне создания
+переменной в поле «Выражение» напишите «1» (см. <a class="reference internal" href="#image165"><span class="std std-numref">Рисунок 139 </span></a>). Таким способом
+задается шаг инкрементации счетчика.</p>
+<div class="align-center figure" id="image165">
+<a class="reference internal image-reference" href="../_images/image165.png"><img alt="../_images/image165.png" src="../_images/image165.png" style="width: 2.98958in; height: 3.05219in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 139  </span><span class="caption-text">- Диалог создания переменной</span></p>
+</div>
+<p>Перенесенные на поле редактирования переменные отображаются как
+прямоугольные блоки с коннекторами входа и выхода(см. <a class="reference internal" href="#image185"><span class="std std-numref">Рисунок 140 </span></a>).</p>
+<div class="align-center figure" id="image185">
+<a class="reference internal image-reference" href="../_images/image185.png"><img alt="../_images/image185.png" src="../_images/image185.png" style="width: 4.55208in; height: 1.95833in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 140  </span><span class="caption-text">- Блоки переменных в поле редактирования</span></p>
+</div>
+<p>Для того чтобы переменной «Cnt» можно было одновременно и присвоить
+значение и передать это значение переменной Out, задайте класс
+переменной «Вход/Выход». Сделать это можно щелчком правой кнопкой мыши
+по блоку переменной, во всплывающем меню следует выбрать «Вход/Выход»
+(см. <a class="reference internal" href="#image166-2"><span class="std std-numref">Рисунок 141 </span></a>), или щелкнув по блоку двойным щелчком левой кнопки мыши,
+выбрав в выпадающем списке «Класс» вариант «Вход/Выход»(см. <a class="reference internal" href="#image167-2"><span class="std std-numref">Рисунок 142 </span></a>).</p>
+<div class="align-center figure" id="image166-2">
+<a class="reference internal image-reference" href="../_images/image166.png"><img alt="../_images/image166.png" src="../_images/image166.png" style="width: 2.46875in; height: 1.64583in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 141  </span><span class="caption-text">- Выбор коннектора для блока переменной</span></p>
+</div>
+<div class="align-center figure" id="image167-2">
+<a class="reference internal image-reference" href="../_images/image167.png"><img alt="../_images/image167.png" src="../_images/image167.png" style="width: 2.97917in; height: 3.06496in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 142  </span><span class="caption-text">- Диалог редактирования свойств блока переменной</span></p>
+</div>
+<p>Для написания алгоритма и логики выполнения данной программы будут
+добавлены две функции: «ADD» и «SEL».</p>
+<p>Функция «ADD» находится во вкладке «Математика» в Библиотеке функций и
+функциональных блоков, и обозначает сложение от 2 до 20
+входных значений (в нашем примере их 2) на входах «IN1» и «IN2»,
+возвращает результат вычисления на выход «OUT».</p>
+<p>Функция «SEL» обозначает «Выбор одного из двух значений» и находится во
+вкладке «Операции выбора». Она содержит три входных переменных «G»,
+«IN0», «IN1» и одну выходную «OUT». Если «G» равно 0 (или FALSE), то
+выходной переменной «OUT» присваивается значение «IN0». Если «G» равно 1
+(или TRUE), то выходной переменной «OUT» присваивается значение «IN1».</p>
+<p>Добавление данных функций удобнее осуществить переносом соответствующей
+функции с помощью мыши (Drag&amp;Drop) из панели Библиотеки функций и
+функциональных блоков в область редактирования FBD диаграммы
+функционального блока. Результатом вышеизложенных действий должна стать
+LD диаграмма без соединений.</p>
+<div class="align-center figure" id="image186">
+<a class="reference internal image-reference" href="../_images/image186.png"><img alt="../_images/image186.png" src="../_images/image186.png" style="width: 4.95664in; height: 2.3903in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 143  </span><span class="caption-text">- LD диаграмма без соединений</span></p>
+</div>
+<p>Следующим шагом станет соединение выходов переменных со входами функций.
+Соединим числовой литерал 1 с входом «IN1» функции ADD, а выход «OUT»
+функции ADD соединим с входом «IN0» функции SEL. В свою очередь, выход
+«OUT» функции SEL соединим с входным коннектором переменной Cnt, а
+выходной коннектор переменной Cnt соединим с входом переменной «Out».
+Соединение блоков осуществляется путем зажатия левой кнопки мыши на
+коннекторе блока, будет создана линия связи которую необходимо протянуть
+до коннектора присоединяемого блока .</p>
+<div class="align-center figure" id="image187">
+<a class="reference internal image-reference" href="../_images/image187.png"><img alt="../_images/image187.png" src="../_images/image187.png" style="width: 5.08261in; height: 2.47501in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 144  </span><span class="caption-text">- Соединение блоков</span></p>
+</div>
+<p>Далее присоединим сигнал с контакта, ассоциированного с переменной
+«Reset», управляющей сбросом счетчика, на вход «G» функции «SEL», а
+конфигурационную переменную «ResetCounterValue» на вход «IN1». Таким
+образом, меняя значение переменной «Reset» мы управляем значением
+переменной «Cnt» через функцию выбора значения «SEL» . Осталось добавить
+связь между переменной «Cnt» и входом «IN2» функции сложения ADD, тем
+самым обеспечив увеличение значения счетчика на 1 за один цикл ПЛК.</p>
+<p>Полученная реализация алгоритма счетчика на языке LD представлена
+на <a class="reference internal" href="#image188"><span class="std std-numref">Рисунок 145 </span></a>.</p>
+<div class="align-center figure" id="image188">
+<a class="reference internal image-reference" href="../_images/image188.png"><img alt="../_images/image188.png" src="../_images/image188.png" style="width: 6.91132in; height: 4.22355in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 145  </span><span class="caption-text">- Функциональный блок на языке LD</span></p>
+</div>
+<p>Функциональный блок становится доступным в панели библиотеки функций и
+функциональных блоков и может использоваться в программных
+модулях типа «Программа» и «Функциональный блок». На рис. 146 показано
+использование созданного функционального блока «CounterFBD» в основном
+программном модуле, написанном на языке FBD.</p>
+<div class="align-center figure" id="image189">
+<a class="reference internal image-reference" href="../_images/image189.png"><img alt="../_images/image189.png" src="../_images/image189.png" style="width: 7.03923in; height: 4.89552in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 146  </span><span class="caption-text">- Использование функционального блока на языке LD в основном программном модуле</span></p>
+</div>
+<p>Функция</p>
+<p>Добавление пользовательской функционального блока происходит путем
+нажатия на пункт «Функция» во всплывающем меню дерева проекта.
+В диалоговом окне задайте имя функции в поле
+«Имя POU», в поле «Тип POU» выберите «функция», в поле «Язык» выберите
+язык, на котором будет написан алгоритм работы функции.</p>
+<div class="align-center figure" id="image190">
+<a class="reference internal image-reference" href="../_images/image190.png"><img alt="../_images/image190.png" src="../_images/image190.png" style="width: 3.11275in; height: 2.37209in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 147  </span><span class="caption-text">- Диалог создания функции</span></p>
+</div>
+<p>Создадим функцию «AverageVal» на языке ST, которая будет вычислять
+среднее значение счетчиков в цикле. Поскольку счетчики никак не
+синхронизированы, среднее значение должно быть дробным. Выберем тип
+возвращаемого значения функции – для дробного значения это тип REAL.</p>
+<div class="align-center figure" id="image191">
+<a class="reference internal image-reference" href="../_images/image191.png"><img alt="../_images/image191.png" src="../_images/image191.png" style="width: 2.92288in; height: 3.7907in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 148  </span><span class="caption-text">- Выбор типа возвращаемого значения функции</span></p>
+</div>
+<p>В панели редактирования переменных и констант добавим пять переменных
+«Cnt1»..«Cnt5» типа INT, класса «Вход». К этим входам будут подключены
+выходные значения функциональных блоков, рассмотреных выше.
+Добавим переменную «InputsNumber» типа REAL, класса «Локальный».</p>
+<p>Далее в редакторе языка ST пишется алгоритм и логика работы данной
+функции, как показано на рис. 149:</p>
+<div class="align-center figure" id="image192">
+<a class="reference internal image-reference" href="../_images/image192.png"><img alt="../_images/image192.png" src="../_images/image192.png" style="width: 6.63225in; height: 2.98798in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 149  </span><span class="caption-text">- Определение алгоритма и логики выполнения функции</span></p>
+</div>
+<p>Для приведения типа INT к типу REAL воспользуемся функцией INT_TO_REAL
+из библиотеки функций и функциональных блоков, она преобразует значение
+типа INT на входе IN в значение типа REAL на выходе OUT (INT:IN)
+=&gt;(REAL:OUT).</p>
+<p>Добавим функцию в основной программный модуль. На панели библиотеки
+функций и функциональных блоков в разделе «Пользовательские POU»
+необходимо выбрать функцию «AverageVal» и с помощью указателя мыши
+(зажав левую кнопку мыши) перенести данную функцию (Drag&amp;Drop) в область
+редактирования FBD диаграммы программного модуля «program0».</p>
+<div class="align-center figure" id="image193">
+<a class="reference internal image-reference" href="../_images/image193.png"><img alt="../_images/image193.png" src="../_images/image193.png" style="width: 5.83721in; height: 2.12601in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 150  </span><span class="caption-text">- Добавление на FBD диаграмму пользовательской функции</span></p>
+</div>
+<p>Подключим к входам функции значения пяти счетчиков. Для сохранения
+результата вычисления функции создадим переменную «AVCnt». На <a class="reference internal" href="#image194"><span class="std std-numref">Рисунок 151 </span></a>
+показано использование созданной функции «AverageVal» в основном
+программном модуле, написанном на языке FBD.</p>
+<div class="align-center figure" id="image194">
+<a class="reference internal image-reference" href="../_images/image194.png"><img alt="../_images/image194.png" src="../_images/image194.png" style="width: 6.30667in; height: 4.30564in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 151  </span><span class="caption-text">- Использование функции в основном программном модуле</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>Ресурс<a class="headerlink" href="#id10" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Согласно стандарту IEC 61131-3, каждый проект должен иметь как минимум
+один ресурс, с определённым в нём как минимум одним экземпляром.
+Экземпляр представляет собой элемент, связанный с программным модулем
+типа «Программа» и одной определённой задачей. По умолчанию,
+инструментальная среда разработки Beremiz создаёт для нового проекта
+один ресурс.</p>
+<div class="section" id="id11">
+<h3>Глобальные переменные ресурса<a class="headerlink" href="#id11" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Глобальные переменные ресурса объявляются аналогично глобальным
+переменным проекта на панели переменных и констан
+выбранного ресурса с использованием кнопки «Добавить
+переменную», либо «Добавить переменные» (см. таблицу 3).</p>
+<div class="align-center figure" id="image195">
+<a class="reference internal image-reference" href="../_images/image195.png"><img alt="../_images/image195.png" src="../_images/image195.png" style="width: 7.06977in; height: 1.54159in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 152  </span><span class="caption-text">- Пример объявления в проекте глобальной переменной</span></p>
+</div>
+<p>Использование данных глобальных переменных на уровне ресурса также
+аналогично использованию конфигурационных переменных проекта в
+программных модулях. Для использования в программном модуле глобальной
+переменной ресурса, добавьте в модуль переменную класса «Внешняя» с
+таким же именем, как у глобальной переменной, объявленные выше для
+ресурса.</p>
+</div>
+<div class="section" id="id12">
+<h3>Задачи и экземпляры ресурса<a class="headerlink" href="#id12" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Для создания экземпляра необходимо наличие как минимум одного
+программного модуля типа «Программа» в проекте и как минимум одной
+задачи, определённой в панели редактирования ресурса.</p>
+<p>После добавления задачи с помощью кнопки «Добавить» (данная кнопка
+аналогична кнопки «Добавить» на панели переменных и констант),
+необходимо задать её уникальное имя (поле «Имя») и выбрать тип
+выполнения задачи (поле «Запуск», см. <a class="reference internal" href="#image196"><span class="std std-numref">Рисунок 153 </span></a>):</p>
+<ul class="simple">
+<li>«Циклический» – выполнение программного модуля типа «Программа» через
+заданный интервал времени, указанный в поле «Интервал»;</li>
+<li>«Прерывание» – выполнение программного модуля типа «Программа» один
+раз при наступлении значения TRUE глобальной переменной типа BOOL,
+определённой на уровне проекта, либо на уровне ресурса, указанной в
+поле «Источник».</li>
+</ul>
+<div class="align-center figure" id="image196">
+<a class="reference internal image-reference" href="../_images/image196.png"><img alt="../_images/image196.png" src="../_images/image196.png" style="width: 6.301in; height: 1.68605in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 153  </span><span class="caption-text">- Выбор типа выполнения задачи</span></p>
+</div>
+<p>В случае выбора типа выполнения «Цикличное», в поле «Интервал»
+необходимо указать интервал, с которым будет выполняться данная задача.
+Двойной щелчок левой кнопкой мыши по полю «Интервал» приводит к
+появлению кнопки «...».</p>
+<div class="align-center figure" id="image197">
+<a class="reference internal image-reference" href="../_images/image197.png"><img alt="../_images/image197.png" src="../_images/image197.png" style="width: 6.25436in; height: 0.97545in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 154  </span><span class="caption-text">- Добавление задачи с цикличным режимом выполнения</span></p>
+</div>
+<p>Нажатие данной кнопки вызывает диалог «Редактировать продолжительность»
+в котором можно указать время, используя микросекунды,
+миллисекунды, секунды, минуты, часы и дни.</p>
+<div class="align-center figure" id="image198">
+<a class="reference internal image-reference" href="../_images/image198.png"><img alt="../_images/image198.png" src="../_images/image198.png" style="width: 6.23382in; height: 1.58348in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 155  </span><span class="caption-text">- Диалог редактирования длительности задачи</span></p>
+</div>
+<p>Завершение ввода времени кнопкой «OK» приводит к закрытию диалога и
+добавлению данного интервала времени в поле «Интервал» добавляемой
+задачи.</p>
+<div class="align-center figure" id="image199">
+<a class="reference internal image-reference" href="../_images/image199.png"><img alt="../_images/image199.png" src="../_images/image199.png" style="width: 6.84375in; height: 1in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 156  </span><span class="caption-text">- Добавленный итервал выполнения</span></p>
+</div>
+<p>В случае выбора типа выполнения «Прерывание» в поле «Источник»
+необходимо указать переменную типа BOOL, определённую глобально либо на
+уровне проекта, либо на уровне ресурса.
+На <a class="reference internal" href="#image200"><span class="std std-numref">Рисунок 157 </span></a> выбирается переменная «globalFlag», определённая в данном
+ресурсе.</p>
+<div class="align-center figure" id="image200">
+<a class="reference internal image-reference" href="../_images/image200.png"><img alt="../_images/image200.png" src="../_images/image200.png" style="width: 6.84375in; height: 1.79167in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 157  </span><span class="caption-text">- Выбор переменной типа BOOL как источника прерывания для начала выполнения задачи</span></p>
+</div>
+<p>Задача будет выполнена один раз, как только значение переменной,
+определённой в этом поле, будет TRUE. Поле «Приоритет» позволяет указать
+приоритет выполнения задачи, по умолчанию все задачи имеют приоритет 0.
+Следует отметить, что в ресурсе должна быть определена как минимум одна
+задача с типом выполнения «Цикличное», в противном случае будет ошибка в
+компиляции в отладочной консоли . После того как задачи
+определены, их можно использовать в экземплярах. Создание экземпляра
+происходит аналогичным образом с помощью кнопки «Добавить». Необходимо
+выбрать уникальное имя экземпляра и далее указать программный модуль
+типа «Программа» в поле «Тип» и одну из задач в поле «Задача». Например,
+в проекте определено два программных модуля типа «Программа»: «program0»
+и «program1».</p>
+<div class="align-center figure" id="image201">
+<a class="reference internal image-reference" href="../_images/image201.png"><img alt="../_images/image201.png" src="../_images/image201.png" style="width: 3.04167in; height: 1.64583in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 158  </span><span class="caption-text">- Проект, содержащий два программных модуля типа &#8220;Программа&#8221;</span></p>
+</div>
+<p>Соответственно, при создании экземпляра в поле «Тип» оба этих
+программных модуля будут доступны (см. рис. 159).</p>
+<div class="align-center figure" id="image202">
+<a class="reference internal image-reference" href="../_images/image202.png"><img alt="../_images/image202.png" src="../_images/image202.png" style="width: 5.97382in; height: 3.9311in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 159  </span><span class="caption-text">- Выбор программного модуля типа &#8220;Программа&#8221; для экземпляра</span></p>
+</div>
+<p>Аналогичным образом выбирается задача из списка, в котором будут
+отображены определённые ранее задачи.</p>
+<div class="align-center figure" id="image203">
+<a class="reference internal image-reference" href="../_images/image203.png"><img alt="../_images/image203.png" src="../_images/image203.png" style="width: 5.95507in; height: 3.87351in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 160  </span><span class="caption-text">- Выбор задачи для экземпляра</span></p>
+</div>
+<p>В каждом проекте в ресурсе должен быть определен как минимум один
+экземпляр, в противном случае будет ошибка выдана компиляции в
+отладочной консоли.</p>
+</div>
+</div>
+<div class="section" id="id13">
+<h2>Типы данных<a class="headerlink" href="#id13" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Добавление типа данных происходит выбором пункта «Типа данных» в меню
+дерева проекта (см. <a class="reference internal" href="#image204"><span class="std std-numref">Рисунок 161 </span></a>) в уже созданный проект, содержащий
+программный модуль типа «Программа» – «program0».</p>
+<div class="align-center figure" id="image204">
+<a class="reference internal image-reference" href="../_images/image204.png"><img alt="../_images/image204.png" src="../_images/image204.png" style="width: 2.5in; height: 4.73958in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 161  </span><span class="caption-text">- Выбор пункта меню добавления пользовательского типа данных в дереве проекта</span></p>
+</div>
+<p>Будет создан массив типа INT размерностью 11 элементов. В дереве проекта
+появится панель редактирования добавленного типа данных с именем
+«datatype0». В поле «Механизм создания нового типа»
+необходимо выбрать «Массив» и указать тип INT, как показано на <a class="reference internal" href="#image205"><span class="std std-numref">Рисунок 162 </span></a>:</p>
+<div class="align-center figure" id="image205">
+<a class="reference internal image-reference" href="../_images/image205.png"><img alt="../_images/image205.png" src="../_images/image205.png" style="width: 7.16713in; height: 3.76468in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 162  </span><span class="caption-text">- Выбор базового типа для массива</span></p>
+</div>
+<p>С помощью кнопки «Добавить» (см. таблицу 10) создаётся поле для массива
+с указанием его размерности в соответствующем формате.</p>
+<div class="align-center figure" id="image206">
+<a class="reference internal image-reference" href="../_images/image206.png"><img alt="../_images/image206.png" src="../_images/image206.png" style="width: 6.99974in; height: 2.77907in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 163  </span><span class="caption-text">- Задание размерности для массива</span></p>
+</div>
+<p>После выполнения вышеперечисленных операций тип «datatype0» может быть
+использован для определения переменных в программных модулях, так же как
+и базовые типы данных.</p>
+<div class="align-center figure" id="image207">
+<a class="reference internal image-reference" href="../_images/image207.png"><img alt="../_images/image207.png" src="../_images/image207.png" style="width: 6.70202in; height: 2.01872in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 164  </span><span class="caption-text">- Выбор добавленного типа данных в панели переменных и констант программного модуля</span></p>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>Сборка и передача на целевое устройство прикладной программы<a class="headerlink" href="#id14" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Следующими шагами после создания основных элементов проекта является его
+сборка (компиляция и компоновка), передача полученного исполняемого
+файла на целевое устройство и отладка данной прикладной программы.</p>
+<p>Сборка проекта осуществляется с помощью соответствующих кнопок,
+находящихся на панели инструментов . Для успешного
+завершения данной операции каждый проект должен иметь как минимум один
+ресурс (как уже упоминалось, при создании проекта по умолчанию ресурс
+будет создан). В ресурсе должна быть определена, как минимум, одна
+задача циклического типа и, как минимум, один экземпляр. Соответственно,
+проект обязан содержать, как минимум, один программный модуль типа
+«Программа», причём тело, т.е. алгоритм и логика его выполнения, не
+может быть пустым (в противном случае будет ошибка компиляции).</p>
+<p>Возможность передачи на целевое устройство прикладной программы и её
+отладки определяется наличием запущенной на целевом устройстве серверной
+части среды разработки Beremiz.</p>
+<p>Среда разработки Beremiz предоставляет следующие возможности отладки:</p>
+<ul class="simple">
+<li>Просмотр и изменение значения всех переменных проекта, используя
+панель отладки;</li>
+<li>Визуально отслеживание выполнения программ на графических языках и
+изменение значения различных графических элементов конкретного языка;</li>
+<li>Отображение значений переменных в виде графика.</li>
+</ul>
+<p>Далее подробнее рассказывается про сборку прикладной программы,
+соединение с целевым устройством и передачу на него исполняемого файла и
+его отладке.</p>
+<div class="section" id="id15">
+<h3>Сборка прикладной программы<a class="headerlink" href="#id15" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Прежде чем проект будет передан ПЛК, его необходимо собрать. Настроить
+целевую платформу для сборки можно в окне настройки проекта,
+на вкладке Конфигурация.</p>
+<p>Для сборки проекта нажмите кнопку «Сборка проекта в директории сборки»
+(см. табл. 2). Результаты сборки
+выводятся в консоль, расположенную в нижней части окна программы, ошибки
+сборки выделяются красным цветом. На примере проекта First_steps после
+сборки в консоль выведено сообщение о том, что сборка проведена успешно.</p>
+<div class="align-center figure" id="image209">
+<a class="reference internal image-reference" href="../_images/image209.png"><img alt="../_images/image209.png" src="../_images/image209.png" style="width: 7.1039in; height: 2.3393in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 165  </span><span class="caption-text">- Результаты сборки выведены в консоль</span></p>
+</div>
+<p>Пересборку проекта можно осуществить, очистив директорию сборки проекта
+нажатием на кнопку «Очистить директорию сборки проекта» (см. табл.2).
+Будет удален сгенерированный на языке ST код проекта и скомпилированный
+бинарный файл прошивки ПЛК. После этого нажмите кнопку «Сборка проекта в
+директории сборки», и проект будет собран заново.</p>
+</div>
+<div class="section" id="id16">
+<h3>Запуск серверной части для отладки<a class="headerlink" href="#id16" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Серверная часть среды разработки Beremiz, необходимая для передачи
+исполняемого файла на целевое устройство и его отладки, находится в
+сценарии на языке Python в файле Beremiz_service.py. Запуск данного
+файла осуществляется из командной строки, следующей командой с
+параметрами по умолчанию (см. таблицу 13):</p>
+<p>$ python Beremiz_service.py</p>
+<p>Также, при запуске могут быть указаны параметры, представленные в
+таблице 13.</p>
+<p>Таблица 13 - Параметры командной строки запуска серверной части среды
+Beremiz</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="89%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Параметр</th>
+<th class="head">Операция</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>-i</td>
+<td>Указание IP адреса для обращения клиента,
+по умолчанию 127.0.0.1 (localhost)</td>
+</tr>
+<tr class="row-odd"><td>-p</td>
+<td>Номер порта, по умолчанию 3000</td>
+</tr>
+<tr class="row-even"><td>-h</td>
+<td>Вывод в консоль справки по работе с данным сервером</td>
+</tr>
+<tr class="row-odd"><td>-a</td>
+<td>Автоматический запуск целевого устройства (0 – выключить, 1 – включить),
+по умолчанию 0.</td>
+</tr>
+<tr class="row-even"><td>-x</td>
+<td>Включить/выключить иконку в панели задач (0 – выключить,1 – включить),
+по умолчанию 0.</td>
+</tr>
+<tr class="row-odd"><td>-t</td>
+<td>Web-интерфейс на базе библиотеки Twisted (0 – выключить, 1 – включить),
+по умолчанию 0.
+Он позволяет отслеживать состояние выполнения программы через браузер.
+Адрес: http://&lt;ip-адрес целевого устройства&gt;:&lt;8009&gt;.
+8009 – порт по умолчанию.</td>
+</tr>
+</tbody>
+</table>
+<p>После указания всех параметров команды запуска серверной части Beremiz
+можно ввести адрес директории, в которой будут храниться файлы на
+файловой системе целевого устройства. По умолчанию этой директорией
+является временная папка, созданная для текущего запущенного экземпляра
+службы Beremiz_service.</p>
+<p>Как правило, данный сценарий запускается в автоматическом режиме при
+включении целевого устройства, средствами операционной системы.</p>
+<p>Соединение с целевым устройством и передача исполняемого файла</p>
+<p>После того как скрипт серверной части среды разработки Beremiz запущен,
+можно производить соединение с целевым устройством. В панели настроек
+проекта необходимо указать URI-адрес целевого устройства:</p>
+<p>PYRO://&lt;IP-адрес&gt;:&lt;номер порт&gt;</p>
+<p>На <a class="reference internal" href="#image210"><span class="std std-numref">Рисунок 166 </span></a> показан URI адрес целевого устройства LOCAL://,это адрес
+Soft PLC на локальной машине, и выделена красным цветом кнопка
+«Покдлючиться к целевому ПЛК» (см. таблицу 2), которая используется для
+соединения с целевым устройством.</p>
+<div class="align-center figure" id="image210">
+<a class="reference internal image-reference" href="../_images/image210.png"><img alt="../_images/image210.png" src="../_images/image210.png" style="width: 4.56977in; height: 5.20008in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 166  </span><span class="caption-text">- Соединение с целевым устройством</span></p>
+</div>
+<p>В случае успешного соединения, в отладочной консоли будет выведено
+соответствующее сообщение и выведен статус прикладной программы.</p>
+<div class="align-center figure" id="image211">
+<a class="reference internal image-reference" href="../_images/image2111.png"><img alt="../_images/image2111.png" src="../_images/image2111.png" style="width: 6.16883in; height: 1.73122in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 167  </span><span class="caption-text">- Отладочная консоль после соединения с целевым устройством</span></p>
+</div>
+<p>Статусы прикладной программы могут быть следующие:</p>
+<ul class="simple">
+<li>«PLC Empty» – прикладная программа отсутствует;</li>
+<li>«PLC Started» – прикладная программа на целевом устройстве есть и она
+выполняется;</li>
+<li>«PLC Stopped» – прикладная программа на целевом устройстве есть, но
+остановлена.</li>
+</ul>
+<p>Используя кнопки передачи, запуска и остановки прикладной программы на
+целевом устройстве (см. таблицу 2) можно передать исполняемый файл
+прикладной программы, запустить его и остановить. В отладочной консоли
+будут выведены соответствующие сообщения (после передачи, запуска и
+остановки прикладной программы), как показано на <a class="reference internal" href="#image212"><span class="std std-numref">Рисунок 168 </span></a>:</p>
+<div class="align-center figure" id="image212">
+<a class="reference internal image-reference" href="../_images/image212.png"><img alt="../_images/image212.png" src="../_images/image212.png" style="width: 6.80786in; height: 3.87209in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 168  </span><span class="caption-text">- Отладочная консоль после передачи прикладной программы, запуска и остановки</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="id17">
+<h2>Отладка прикладной программы<a class="headerlink" href="#id17" title="Ссылка на этот заголовок">¶</a></h2>
+<p>После установки соединения с целевым устройством и запуском прикладной
+программы на выполнение, среда разработки Beremiz позволяет отслеживать
+и изменять значения переменных программных модулей, из которых состоит
+проект.</p>
+<div class="section" id="retain">
+<h3>Retain переменные в прикладной программе<a class="headerlink" href="#retain" title="Ссылка на этот заголовок">¶</a></h3>
+<p>В SoftPLC реализована поддержка переменных, для которых в прикладной
+программе определено свойство реманентности (Retain-переменные). При
+подключении к серверной части среды разработки Beremiz, создается
+временная папка для хранения прикладной программы, загружаемой в
+SoftPLC, Retain переменные хранятся в этой временной папке в виде
+бинарного файла, содержащего в себе хеш-сумму проекта, значения Retain
+переменных в бинарном формате, и контрольную сумму файла, вычисляемую по
+алгоритму CRC32.</p>
+</div>
+<div class="section" id="id18">
+<h3>Запуск отладчика<a class="headerlink" href="#id18" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Осуществив передачу скомпилированной программы на SoftPLC, запустите
+отладку, нажав кнопку «Запустить ПЛК» (см. табл. 2).
+Переменные принимают исходные значения, затем
+начинается исполнение программы в ПЛК. Отладчик запущен.</p>
+</div>
+<div class="section" id="id19">
+<h3>Отладка текстовых языков<a class="headerlink" href="#id19" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Работа с отладчиком подразумевает работу с экземпляром загруженной в ПЛК
+программы. Функциональные блоки, функции и переменные тоже имеют свои
+экземпляры, доступные для отладки только после того как программа будет
+запущена на исполнение. В левом нижнем углу основного окна среды
+разработки расположена панель экземпляров проекта.
+В адресной строке написан адрес ресурса, для которого ниже отображены
+экземпляры программ, глобальных переменных и функциональных блоков
+определенных в данном ресурсе.</p>
+<div class="align-center figure" id="image214">
+<a class="reference internal image-reference" href="../_images/image214.png"><img alt="../_images/image214.png" src="../_images/image214.png" style="width: 2.66539in; height: 3.96512in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 169  </span><span class="caption-text">- Панель экземпляров проекта</span></p>
+</div>
+<p>Переход к родительскому экземпляру и его глобальным переменным
+осуществляется кнопкой «Родительский экземпляр»(см. табл. 11).</p>
+<p>Кнопка «Отладка экземпляра» (см. табл. 11) напротив адресной строки в
+верхней части панели запустит отладку выбранного ресурса(программы или
+функционального блока). Для того чтобы включить отладку экземпляра блока
+или переменной, нажмите кнопку напротив этого элемента на панели. На
+панели отладки отобразятся текущие значения добавленных переменных.</p>
+<div class="align-center figure" id="image215">
+<a class="reference internal image-reference" href="../_images/image215.png"><img alt="../_images/image215.png" src="../_images/image215.png" style="width: 2.3704in; height: 2.70903in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 170  </span><span class="caption-text">- Панель отладчика</span></p>
+</div>
+<p>После того как переменная выведена на панель отладки, для того чтобы
+установить значение нажмите кнопку «Форсировать значение».</p>
+<div class="align-center figure" id="image216">
+<a class="reference internal image-reference" href="../_images/image216.png"><img alt="../_images/image216.png" src="../_images/image216.png" style="width: 2.40625in; height: 2.75in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 171  </span><span class="caption-text">- Форсирование переменной в панели отладки</span></p>
+</div>
+<p>В появившемся диалоге введите значение переменной (см. <a class="reference internal" href="#image217"><span class="std std-numref">Рисунок 172 </span></a>). Для
+булевых переменных в диалоге присутствует кнопка «Переключить значение»,
+которая меняет значение переменной на противоположное. После изменения
+значения переменной, она будет выделена синим цветом в таблице
+переменных и их значений во вкладке «Отладчик».</p>
+<div class="align-center figure" id="image217">
+<a class="reference internal image-reference" href="../_images/image217.png"><img alt="../_images/image217.png" src="../_images/image217.png" style="width: 3.46875in; height: 1.82292in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 172  </span><span class="caption-text">- Диалог установки значения</span></p>
+</div>
+<p>Форсируя значение переменной, вы устанавливаете неизменяемое значение,
+переопределение которого выполняемой программой будет невозможно. После
+установки значения, его можно освободить, дав возможность программе
+изменять значение переменной. Для освобождения переменной нажмите кнопку
+«Освободить значение».</p>
+<div class="align-center figure" id="image218">
+<a class="reference internal image-reference" href="../_images/image218.png"><img alt="../_images/image218.png" src="../_images/image218.png" style="width: 2.1706in; height: 2.37209in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 173  </span><span class="caption-text">- Освобождение значения переменной</span></p>
+</div>
+<p>Для корректного изменения, вводимое значение должно соответствовать типу
+переменной, иначе будет выведено сообщение об ошибке, как показано
+на <a class="reference internal" href="#image219"><span class="std std-numref">Рисунок 174 </span></a>:</p>
+<div class="align-center figure" id="image219">
+<a class="reference internal image-reference" href="../_images/image219.png"><img alt="../_images/image219.png" src="../_images/image219.png" style="width: 4.26042in; height: 1.61458in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 174  </span><span class="caption-text">- Ошибка при вводе недопустимого значения изменяемой переменной в режиме отладки</span></p>
+</div>
+</div>
+<div class="section" id="id20">
+<h3>Отладка графических языков<a class="headerlink" href="#id20" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Во время отладки прикладной программы, в которой часть программных
+модулей написаны на графических языках, есть возможность видеть
+изменения всех значений на диаграмме и вносить необходимые изменения
+прямо на ней. Как уже упоминалось ранее, в случае нажатия
+кнопки запуска режима отладки (на <a class="reference internal" href="#image220"><span class="std std-numref">Рисунок 175 </span></a> выделены красным цветом) для
+экземпляра программы, написанной на одном из графических языков,
+откроется вкладка с панелью диаграммы в режиме отладки.</p>
+<div class="align-center figure" id="image220">
+<a class="reference internal image-reference" href="../_images/image220.png"><img alt="../_images/image220.png" src="../_images/image220.png" style="width: 2.51163in; height: 3.73638in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 175  </span><span class="caption-text">- Панель экземпляров проекта</span></p>
+</div>
+<p>Эти вкладки полностью повторяют те, в которых графические диаграммы
+программ или функциональных блоков редактируются, за исключением того
+что во вкладках отладчика невозможно внести какие-либо изменения, а
+связи между элементами выделяются разным цветом в зависимости от
+значения переменной, передаваемого по этой связи.</p>
+<div class="align-center figure" id="image221">
+<a class="reference internal image-reference" href="../_images/image221.png"><img alt="../_images/image221.png" src="../_images/image221.png" style="width: 5.70857in; height: 3.47361in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 176  </span><span class="caption-text">- Пример отлаживаемой FBD диаграммы</span></p>
+</div>
+<p>Линии, не выделенные цветом передают либо булевое значение False, либо
+переменную не булевого типа (INT, DINT, WORD, REAL, TIME, и т.д.).
+Оранжевого цвета связи, передающие константное выражение. Светло-зелёным
+цветом выделены связи, которые передают булевое значение True. Связи,
+выделенные светло-голубым и тёмно-синим цветом передают значения
+непосредственно установленные пользователем, значение
+True соответствует светло-голубому цвету, False - тёмно-синему.</p>
+<p><strong>Отладка FBD диаграммы</strong></p>
+<p>В режиме отладки FBD диаграммы есть возможность устанавливать входные и
+выходные значения переменных (с помощью всплывающего меню, которые
+вызывается нажатием правой клавишей по соединению) для функциональных
+блоков, а также в целом видеть все остальные значения на входах и
+выходах элементов диаграммы.</p>
+<div class="align-center figure" id="image222">
+<a class="reference internal image-reference" href="../_images/image222.png"><img alt="../_images/image222.png" src="../_images/image222.png" style="width: 5.80233in; height: 2.88211in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 177  </span><span class="caption-text">- Отладка FBD диаграммы</span></p>
+</div>
+<p>Изменённые значения в режиме отладки выделяются синим цветом. После
+выбора во всплывающем меню «Освободить значение» значение возвращается в
+то, которое получается в результате выполнения логики и алгоритма
+данного модуля на данном участке, а соединение на диаграмме становятся
+исходного цвета.</p>
+<p><strong>Отладка LD диаграммы</strong></p>
+<p>Отладка LD диаграммы осуществляется аналогично отладке FBD диаграммы.
+Для вызова всплывающего меню (см. рис. 196), в котором можно установить
+желаемое значение для контакта или катушки необходимо нажать правую
+клавишу мыши.</p>
+<div class="align-center figure" id="image223">
+<a class="reference internal image-reference" href="../_images/image223.png"><img alt="../_images/image223.png" src="../_images/image223.png" style="width: 5.23329in; height: 2.38763in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 178  </span><span class="caption-text">- Пример отладки LD диаграммы</span></p>
+</div>
+<p>Появится диалог (см. <a class="reference internal" href="#image224"><span class="std std-numref">Рисунок 179 </span></a>), в котором нужно ввести значение типа
+BOOL: TRUE–контакт «ON», FALSE – контакт «OFF».</p>
+<div class="align-center figure" id="image224">
+<a class="reference internal image-reference" href="../_images/image224.png"><img alt="../_images/image224.png" src="../_images/image224.png" style="width: 3.30233in; height: 2.02464in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 179  </span><span class="caption-text">- Диалог переключения состояния контакта</span></p>
+</div>
+<p><strong>Отладка SFC диаграммы</strong></p>
+<p>Отладка SFC диаграммы происходит аналогично отладке диаграмм FBD и LD. С
+помощью всплывающего меню (см. <a class="reference internal" href="#image225"><span class="std std-numref">Рисунок 180 </span></a>), есть возможность устанавливать
+активность для шагов и переходов.</p>
+<div class="align-center figure" id="image225">
+<a class="reference internal image-reference" href="../_images/image225.png"><img alt="../_images/image225.png" src="../_images/image225.png" style="width: 5.76744in; height: 3.26981in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 180  </span><span class="caption-text">- Пример отладки SFC диаграммы</span></p>
+</div>
+<p>На <a class="reference internal" href="#image226"><span class="std std-numref">Рисунок 181 </span></a> показано, как устанавливается значение (после выбора
+«Форсировать значение», появится диалог) TRUE для шага «ResetCounter».</p>
+<div class="align-center figure" id="image226">
+<a class="reference internal image-reference" href="../_images/image226.png"><img alt="../_images/image226.png" src="../_images/image226.png" style="width: 5.80225in; height: 3.28954in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 181  </span><span class="caption-text">- Изменение состояния шага &#8220;ResetCounter&#8221;</span></p>
+</div>
+<p>После установки значения шага в TRUE с помощью режима отладки, шаг будет
+выделен голубым цветом. Как можно заметить по <a class="reference internal" href="#image227"><span class="std std-numref">Рисунок 182 </span></a>, т.к. шаг
+«ResetCounter» стал активным, блок действий, ассоциированный с ним, так
+же стал активным (выделен зелёным цветом), а действия внутри него, в
+данном случае присвоение переменной «Cnt» значения конфигурационной
+переменной «ResetCounterValue», а переменной «Out» значения переменной
+«Cnt»:</p>
+<p>Cnt := ResetCounterValue;</p>
+<p>Out := Cnt;</p>
+<p>стало выполняться.</p>
+<div class="align-center figure" id="image227">
+<a class="reference internal image-reference" href="../_images/image227.png"><img alt="../_images/image227.png" src="../_images/image227.png" style="width: 5.95349in; height: 3.34762in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 182  </span><span class="caption-text">- Форсирование блока действия</span></p>
+</div>
+<p>Так как квалификатор этого действия – N, то оно будет выполняться до тех
+пор, пока шаг активен.</p>
+<p>График изменения значений переменной</p>
+<p>Среда разработки Beremiz так же позволяет отображать в виде графика
+изменение значения переменной в режиме отладки. Для вывода панели с
+графиком, необходимо два раза кликнуть левой кнопкой мыши по кнопке
+«Отладка экземпляра» напротив переменной в панели экземпляров проекта.</p>
+<p>Появившееся панель графика изменения переменной позволяет
+отслеживать то, как значение определённой переменной изменяется в
+течение времени.</p>
+<div class="align-center figure" id="image228">
+<a class="reference internal image-reference" href="../_images/image228.png"><img alt="../_images/image228.png" src="../_images/image228.png" style="width: 5.03602in; height: 5.43023in;" /></a>
+<p class="caption"><span class="caption-number">Рисунок 183  </span><span class="caption-text">- График изменения переменных</span></p>
+</div>
+<p>На данной панели можно установить интервал обновления и масштаб
+отображения графика, а так же передвигать позицию графика.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="library.html" class="btn btn-neutral float-right" title="Описание библиотеки функций и функциональных блоков" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ide_components.html" class="btn btn-neutral" title="Основные компоненты среды Beremiz" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, JSC &#34;INEUM named after I.S.Bruk&#34;.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

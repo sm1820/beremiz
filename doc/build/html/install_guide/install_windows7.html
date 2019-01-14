@@ -1,0 +1,265 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Установка среды разработки «Beremiz» под операционную систему Windows 7 &mdash; Документация Beremiz </title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/brz.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Алфавитный указатель"
+              href="../genindex.html"/>
+        <link rel="search" title="Поиск" href="../search.html"/>
+    <link rel="top" title="Документация Beremiz " href="../index.html"/>
+        <link rel="up" title="Инструкции по установке" href="index.html"/>
+        <link rel="next" title="Руководство программиста" href="../usage_guide/index.html"/>
+        <link rel="prev" title="Инструкции по установке" href="index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Beremiz
+          
+
+          
+            
+            <img src="../_static/about_brz_logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Содержание</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Инструкции по установке</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Установка среды разработки «Beremiz» под операционную систему Windows 7</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../usage_guide/index.html">Руководство программиста</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../iec_guide/index.html">Языки стандарта МЭК 61131-3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_guide/index.html">Beremiz: Руководство разработчика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation_guide/index.html">Участие в разработке документации</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Beremiz</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Инструкции по установке</a> &raquo;</li>
+      
+    <li>Установка среды разработки «Beremiz» под операционную систему Windows 7</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/install_guide/install_windows7.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="beremiz-windows-7">
+<h1>Установка среды разработки «Beremiz» под операционную систему Windows 7<a class="headerlink" href="#beremiz-windows-7" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Для нормальной работы «Beremiz» под операционной системой Windows
+необходимо наличие следующих программных средств:</p>
+<ul class="simple">
+<li>интерпретатор Python версии 2.7 со всеми необходимыми библиотеками
+(wxPython-2.8, twisted, simplejson, Pyro, numpy, nevow);</li>
+<li>UNIX-подобная среда Cygwin c интерфейсом командной строки для Windows
+и установленным кросскомпиляторам для целевой архитектуры x86.</li>
+</ul>
+<p>Интерпретатор языка Python и UNIX-подобная среда Cygwin находятся в
+папке BeremizProject на DVD диске. Для установки необходимо:</p>
+<ol class="arabic simple">
+<li>скопировать папку BeremizProject в удобное для Вас место на жестком
+диске;</li>
+<li>перенести папку python из BeremizProject, например, на диск C;</li>
+<li>добавить путь к перенесённой папке python в «Переменных среды»</li>
+</ol>
+<p>Добавление интерпретатора Python в переменные среды</p>
+<p>Добавление интерпретатора языка Python осуществляется с помощью настроек
+операционной системы. Необходимо перейти в «Панель управления» и выбрать
+раздел «Система» (см. рис. 1.1).</p>
+<p><a class="reference internal" href="../_images/image324.png"><img alt="image317" src="../_images/image324.png" style="width: 4.86875in; height: 3.36944in;" /></a></p>
+<p>Рис. 1.1 – Панель управления в Windows 7. Раздел «Система и
+безопасность»</p>
+<p>Далее выбирается пункт «Дополнительные параметры системы» в меню слева
+(см. рис. 1.2):</p>
+<p><a class="reference internal" href="../_images/image325.png"><img alt="image318" src="../_images/image325.png" style="width: 1.64028in; height: 2.58194in;" /></a></p>
+<p>Рис. 1.2 – Боковая панель диалога «Система» в Windows 7</p>
+<p>Появится диалог «Свойства системы», в котором следует выбрать вкладку
+«Дополнительно» и нажать «Переменные среды…» (см. рис. 1.3).</p>
+<p><a class="reference internal" href="../_images/image326.png"><img alt="image319" src="../_images/image326.png" style="width: 3.67708in; height: 4.42708in;" /></a></p>
+<p>Рис. 1.3 – Диалог «Свойства системы» в Windows 7</p>
+<p>Необходимо найти в разделе «Системные переменные» переменную «Path» (см.
+рис. 1.4) и нажать кнопку «Изменить».</p>
+<p><a class="reference internal" href="../_images/image327.png"><img alt="image320" src="../_images/image327.png" style="width: 3.42708in; height: 3.79167in;" /></a></p>
+<p>Рис. 1.4 – Диалог «Переменные среды» в Windows 7</p>
+<p>В появившемся диалоге в поле «Значение переменной» добавляем, например,
+в середину строки, строку «C:\Python» (см. рис 1.5).</p>
+<p><a class="reference internal" href="../_images/image328.png"><img alt="image321" src="../_images/image328.png" style="width: 3.34722in; height: 1.38681in;" /></a></p>
+<p>Рис. 1.5 – Диалог изменения системной переменной под операционной
+системой Windows</p>
+<p>Далее во всех открытых диалогах, необходимо нажать «OK», чтобы сохранить
+изменения. Теперь можно создать ярлык на рабочем столе со следующим
+адресом: &#8220;&lt;путь с исполняемому файлу интерпретатора python
+&gt;\pythonw.exe&#8221; &#8220;&lt;путь к Beremiz&gt;\beremiz\Beremiz.py&#8221;.</p>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../usage_guide/index.html" class="btn btn-neutral float-right" title="Руководство программиста" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Инструкции по установке" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, JSC &#34;INEUM named after I.S.Bruk&#34;.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
